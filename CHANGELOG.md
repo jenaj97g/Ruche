@@ -1,5 +1,35 @@
 # Changelog
 
+## 0.1.7 (2026-11-06)
+
+### Added
+- **Theme files**: restyle all of Ruche with a Qt stylesheet (`.qss`) that can set its own
+  colours and use pictures. Settings → Appearance → Theme file imports a `.qss`, a theme
+  folder or a downloaded `.zip`, and Ruche reloads the file in use whenever it's saved. Two
+  examples come with it (Synthwave, Terminal); [THEMES.md](THEMES.md) explains how to make one.
+- **Crash logs**: if Ruche crashes, it saves what it was doing and says so on the next start.
+  At most the 20 newest are kept (5 MB at most); Settings → General shows them, with Open
+  folder and Delete all.
+- Library tabs work like a browser's: **+** makes a tab, **×** or a middle-click closes one
+  (with a warning that can be turned off), drag to reorder, double-click to rename in place.
+  An empty tab offers to add a folder to it.
+- **Date added** column; the sort picked by clicking a column header is kept between runs.
+- Seeking: scroll over the progress bar (5 s a notch, Shift 30 s, Ctrl 1 s), a tooltip shows
+  the time under the cursor, and Shift+← / Shift+→ skip 5 s.
+- Playlists from the sidebar: right-click for New, Rename, Delete and Import, a "New
+  playlist…" entry, and dragging tracks onto a playlist adds them.
+- Discord: **Picture** setting, cover art or Ruche's logo. Radio songs now get their own
+  cover when one is found, with the station's logo as the small picture.
+
+### Changed
+- The library tab bar is always shown in the Music view (it hid with one tab), and only there.
+- Playlist names are checked: no characters a file name can't have, and no duplicates.
+
+### Fixed
+- Moving a tab to the front no longer moved the folders of the old first tab into it.
+- The tab bar showed in Now Playing and playlists when there were several tabs.
+- Playlists saved as `.m3u` (not `.m3u8`) couldn't be deleted.
+
 ## 0.1.6 (2026-11-06)
 
 ### Added
@@ -36,7 +66,7 @@
 
 ### Changed
 - Inside Flatpak, notifications, MPRIS and the Wayland app id use the Flatpak app id
-  (`be.weizkule.Ruche`), so the right icon and name show.
+  (`fr.jenaj97g.Ruche`), so the right icon and name show.
 - Narrow track columns (Year, Time, Plays…) widen to fit their header in any language.
 
 ### Fixed

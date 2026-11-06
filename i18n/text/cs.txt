@@ -56,7 +56,6 @@
 55	Právě hraje
 56	Rádio
 57	SEZNAMY SKLADEB
-58	Zatím žádné seznamy
 59	Zatím žádná složka s hudbou. Nabídka (☰) → Přidat složku s hudbou…
 60	skladba
 61	skladeb
@@ -108,7 +107,6 @@
 107	Karty
 108	Přidat kartu
 109	Odebrat kartu
-110	Když jsou karty dvě nebo víc, nad knihovnou se zobrazí lišta karet pro přepínání (třeba Hudba a Airchecks). Dvojklik na kartu ji přejmenuje; přetažením změníte pořadí.
 111	Složky s hudbou
 112	Složka
 113	Karta
@@ -152,10 +150,8 @@
 151	Zobrazovat na Discordu, co poslouchám
 152	Discord
 153	Včetně rádiových stanic
-154	Zobrazovat obaly alb (hledají se podle interpreta a alba na iTunes a MusicBrainz)
 155	ID aplikace z discord.com/developers
 156	ID aplikace
-157	Funguje s aplikací Discord i s Vesktopem (v něm zapněte arRPC / Rich Presence). Zobrazuje skladbu, interpreta a obal; u rádia jen čisté „Interpret - Název“ a logo stanice. Při pozastavení a zastavení se nezobrazuje nic.
 158	Plocha
 159	Nastavit…
 160	Protokol…
@@ -209,8 +205,6 @@
 208	Restartování do Ruche %1…
 209	<h3>Ruche %1</h3><p>Lehký hudební přehrávač s rozvržením ve stylu MusicBee.</p><p>Přehrávání zajišťuje libmpv, štítky TagLib. Živé názvy z ICY, vložených štítků, HLS #EXTINF a časovaných metadat ID3 v HLS.</p><p><a href="%2">%2</a></p>
 210	Zkontrolovat aktualizace
-211	Přejmenovat kartu
-212	Název:
 213	Zobrazit Ruche
 214	Další
 215	Nic nehraje
@@ -297,3 +291,57 @@
 296	Instalátor %1 se nepodařilo spustit.
 297	Ruche %1 byl stažen do %2. Zavřete Ruche a rozbalte ho přes tuto kopii (%3).
 298	Tato kopie Ruche nebyla nainstalována z vydání; místo toho se otevřela stránka vydání.
+299	Přejmenovat seznam…
+300	Importovat seznam skladeb…
+301	Přidat do této karty složku s hudbou…
+302	Zavřít kartu
+303	Tato karta zatím nemá žádné složky s hudbou.
+304	Dvojklikem na kartu ji přejmenujete; přetažením ji přesunete.
+305	Název seznamu nesmí obsahovat / \ : * ? " < > | ani začínat tečkou.
+306	Seznam s názvem „%1“ už existuje.
+307	Seznam „%1“ vytvořen. Přetáhněte na něj skladby v postranním panelu, nebo klikněte pravým tlačítkem na skladby → Přidat do seznamu skladeb.
+308	Přejmenovat seznam
+309	Seznam se nepodařilo přejmenovat.
+310	Klikněte pravým tlačítkem na seznam, chcete-li ho přejmenovat nebo smazat
+311	Otevřít složku
+312	Smazat vše
+313	Záznamy o pádech
+314	Ukládají se jen při pádu Ruche: co zrovna dělal, k přiložení k hlášení chyby na GitHubu. Uchovává se nejvýše 20 nejnovějších.
+315	Žádné
+316	%1 (%2)
+317	záznam
+318	záznamů
+319	Karty fungují jako v prohlížeči: + na liště vytvoří novou, × nebo prostřední tlačítko myši ji zavře, dvojklik přejmenuje a přetažení změní pořadí. Každá složka níže patří do jedné karty.
+320	Zeptat se před zavřením karty se složkami
+321	Soubor motivu
+322	Importovat…
+323	Otevřít složku motivů
+324	Soubor motivu je styl Qt (.qss), který může změnit vzhled kterékoli části Ruche a nastavit vlastní barvy. Importujte .qss, složku motivu nebo stažený .zip; úpravy používaného souboru se projeví hned. Jak ho vytvořit: THEMES.md (dodáván s Ruche a ve zdrojovém kódu).
+325	Verze %1
+326	Nastavuje vlastní barvy, takže motiv výše platí jen pro to, co nechá beze změny.
+327	Importovat motiv
+328	Soubor motivu nebo .zip…
+329	Motivy (*.qss *.zip)
+330	Složka motivu…
+331	Obal (obal alba, u rádia logo stanice)
+332	Logo Ruche
+333	Obaly se hledají podle interpreta a alba (nebo skladby) na iTunes a MusicBrainz, protože Discord umí zobrazit jen obrázky z webu.
+334	Obrázek
+335	Funguje s aplikací Discord i s Vesktopem (v něm zapněte arRPC / Rich Presence). Zobrazuje skladbu, interpreta a obrázek zvolený výše; u rádia jen čisté „Interpret - Název“, s obalem skladby, pokud se najde. Při pozastavení a zastavení se nesdílí nic.
+336	Ruche
+337	Ruche se minule neočekávaně ukončil.
+338	Byl uložen záznam o pádu. Pokud se to opakuje, založte prosím issue na GitHubu a záznam přiložte; ukazuje, co Ruche dělal, a neobsahuje nic osobního kromě názvů souborů, které právě přehrál.
+339	Karta s názvem „%1“ už existuje.
+340	Nová karta %1
+341	Zavřít kartu „%1“?
+342	Její složky s hudbou se odeberou z knihovny:\n%1\n\nSamotné soubory zůstanou, kde jsou, a když složky přidáte znovu, vrátí se.
+343	Už se neptat
+344	V této složce není žádný soubor .qss.
+345	Motiv se nepodařilo zkopírovat.
+346	Tento soubor zip nelze přečíst.
+347	Tento soubor zip obsahuje nebezpečné cesty.
+348	V tomto zipu není žádný soubor .qss.
+349	Tento zip je na motiv příliš velký.
+350	Motiv se nepodařilo rozbalit.
+351	Vyberte soubor .qss, složku motivu nebo .zip.
+352	Přidáno

@@ -20,7 +20,7 @@ QCollator makeCollator();
 class TrackTableModel : public QAbstractTableModel {
     Q_OBJECT
 public:
-    enum Column { ColNum, ColTitle, ColArtist, ColAlbum, ColYear, ColGenre, ColTime, ColPlays, ColCount };
+    enum Column { ColNum, ColTitle, ColArtist, ColAlbum, ColYear, ColGenre, ColTime, ColPlays, ColAdded, ColCount };
     explicit TrackTableModel(Library *lib, QObject *parent = nullptr);
 
     void setIds(const QVector<qint64> &ids, bool keepSort = true);
@@ -39,6 +39,13 @@ public:
     QVariant headerData(int section, Qt::Orientation o, int role) const override;
     void sort(int column, Qt::SortOrder order) override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
+    // Dragged rows carry their track ids (for the sidebar's playlists) and file URLs
+    // (for file managers and other apps).
+    static constexpr const char *kIdsMime = "application/x-ruche-track-ids";
+    QStringList mimeTypes() const override;
+    QMimeData *mimeData(const QModelIndexList &indexes) const override;
+    Qt::DropActions supportedDragActions() const override { return Qt::CopyAction; }
+    static QVector<qint64> idsFromMime(const QMimeData *m);
 
 private:
     void applySort();

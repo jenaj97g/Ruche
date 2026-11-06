@@ -35,6 +35,8 @@ for p in platforms/qwindows.dll tls/qschannelbackend.dll \
 done
 cp -r "$ROOT/plugins" "$STAGE/plugins"
 cp "$ROOT/PLUGINS.md" "$STAGE/PLUGINS.md"
+cp -r "$ROOT/themes" "$STAGE/themes"
+cp "$ROOT/THEMES.md" "$STAGE/THEMES.md"
 cp "$ROOT/LICENSE" "$STAGE/LICENSE.txt"
 cat > "$STAGE/README.txt" <<EOT
 Ruche $VERSION for Windows

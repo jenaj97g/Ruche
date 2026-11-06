@@ -212,6 +212,10 @@ void Icons::paint(QPainter *p, const QRectF &r, Name n, const QColor &color)
     case Remove:
         line(5, 12, 19, 12, 2);
         break;
+    case Close:
+        line(7, 7, 17, 17, 2);
+        line(17, 7, 7, 17, 2);
+        break;
     case Import: {
         QPainterPath tray;
         tray.moveTo(4, 14.5);

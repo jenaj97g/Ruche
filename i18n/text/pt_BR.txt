@@ -56,7 +56,6 @@
 55	Tocando agora
 56	Rádio
 57	LISTAS DE REPRODUÇÃO
-58	Nenhuma lista ainda
 59	Ainda não há pasta de música. Menu (☰) → Adicionar pasta de música…
 60	faixa
 61	faixas
@@ -108,7 +107,6 @@
 107	Abas
 108	Adicionar aba
 109	Remover aba
-110	Com duas abas ou mais, uma barra de abas acima da biblioteca alterna entre elas (por exemplo, Música e Airchecks). Clique duas vezes em uma aba para renomeá-la; arraste para reordenar.
 111	Pastas de música
 112	Pasta
 113	Aba
@@ -152,10 +150,8 @@
 151	Mostrar no Discord o que estou ouvindo
 152	Discord
 153	Incluir estações de rádio
-154	Mostrar capas (procuradas por artista e álbum no iTunes e no MusicBrainz)
 155	ID de aplicativo de discord.com/developers
 156	ID de aplicativo
-157	Funciona com o aplicativo Discord e com o Vesktop (ative a opção arRPC / Rich Presence). Mostra a música, o artista e a capa; na rádio, só um «Artista - Título» limpo e o logotipo da estação. Nada é compartilhado em pausa ou parado.
 158	Área de trabalho
 159	Configurar…
 160	Registro…
@@ -209,8 +205,6 @@
 208	Reiniciando no Ruche %1…
 209	<h3>Ruche %1</h3><p>Um player de música leve, com o layout do MusicBee.</p><p>Reprodução pelo libmpv. Tags pelo TagLib. Títulos dos fluxos ao vivo a partir de ICY, tags no próprio fluxo, HLS #EXTINF e metadados ID3 temporizados do HLS.</p><p><a href="%2">%2</a></p>
 210	Procurar atualizações
-211	Renomear aba
-212	Nome:
 213	Mostrar o Ruche
 214	Seguinte
 215	Nada tocando
@@ -297,3 +291,57 @@
 296	Não foi possível iniciar o instalador %1.
 297	O Ruche %1 foi baixado para %2. Feche o Ruche e extraia-o por cima desta cópia (%3).
 298	Esta cópia do Ruche não foi instalada a partir de uma versão publicada; foi aberta a página da versão.
+299	Renomear lista…
+300	Importar lista de reprodução…
+301	Adicionar pasta de música a esta aba…
+302	Fechar aba
+303	Esta aba ainda não tem pastas de música.
+304	Clique duas vezes na aba para renomeá-la; arraste-a para movê-la.
+305	O nome de uma lista não pode conter / \ : * ? " < > | nem começar com um ponto.
+306	Já existe uma lista chamada “%1”.
+307	Lista “%1” criada. Arraste faixas para ela na barra lateral, ou clique com o botão direito nas faixas → Adicionar a uma lista.
+308	Renomear lista
+309	Não foi possível renomear a lista.
+310	Clique com o botão direito em uma lista para renomeá-la ou excluí-la
+311	Abrir pasta
+312	Excluir tudo
+313	Registros de falhas
+314	Só são gravados se o Ruche travar: o que ele estava fazendo, para anexar a um relatório de bug no GitHub. São mantidos no máximo os 20 mais recentes.
+315	Nenhum
+316	%1 (%2)
+317	registro
+318	registros
+319	As abas funcionam como as de um navegador: + na barra cria uma, × ou um clique do meio fecha, clique duplo renomeia e arrastar muda a ordem. Cada pasta abaixo pertence a uma aba.
+320	Perguntar antes de fechar uma aba que tem pastas
+321	Arquivo de tema
+322	Importar…
+323	Abrir pasta de temas
+324	Um arquivo de tema é uma folha de estilos do Qt (.qss) que pode mudar a aparência de qualquer parte do Ruche e definir suas próprias cores. Importe um .qss, uma pasta de tema ou um .zip baixado; as alterações no arquivo em uso aparecem na hora. Como fazer um: THEMES.md (incluído no Ruche e no código-fonte).
+325	Versão %1
+326	Define suas próprias cores, então o tema acima só vale para o que ele deixa de lado.
+327	Importar tema
+328	Arquivo de tema ou .zip…
+329	Temas (*.qss *.zip)
+330	Pasta de tema…
+331	Capa (a do álbum, ou o logo da estação para o rádio)
+332	Logo do Ruche
+333	As capas são buscadas por artista e álbum (ou faixa) no iTunes e no MusicBrainz, porque o Discord só mostra imagens da web.
+334	Imagem
+335	Funciona com o aplicativo do Discord e com o Vesktop (ative a opção arRPC / Rich Presence dele). Mostra a faixa, o artista e a imagem escolhida acima; para o rádio, só um “Artista - Título” limpo, com a capa da faixa quando ela é encontrada. Nada é compartilhado em pausa ou parado.
+336	Ruche
+337	O Ruche fechou inesperadamente da última vez.
+338	Um registro da falha foi salvo. Se acontecer de novo, abra uma issue no GitHub e anexe o registro; ele diz o que o Ruche estava fazendo, sem nada pessoal além dos nomes dos arquivos que tinha acabado de tocar.
+339	Já existe uma aba chamada “%1”.
+340	Nova aba %1
+341	Fechar a aba “%1”?
+342	As pastas de música dela saem da biblioteca:\n%1\n\nOs arquivos continuam onde estão, e adicionar as pastas de novo traz tudo de volta.
+343	Não perguntar de novo
+344	Não há nenhum arquivo .qss nessa pasta.
+345	Não foi possível copiar o tema.
+346	Não é possível ler esse arquivo zip.
+347	Esse arquivo zip tem caminhos perigosos.
+348	Não há nenhum arquivo .qss nesse zip.
+349	Esse zip é grande demais para um tema.
+350	Não foi possível descompactar o tema.
+351	Escolha um arquivo .qss, uma pasta de tema ou um .zip.
+352	Adicionada

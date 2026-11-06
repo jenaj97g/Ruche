@@ -56,7 +56,6 @@
 55	În redare
 56	Radio
 57	LISTE DE REDARE
-58	Nicio listă încă
 59	Încă nu există un dosar de muzică. Meniul (☰) → Adaugă un dosar de muzică…
 60	piesă
 61	piese
@@ -108,7 +107,6 @@
 107	File
 108	Adaugă o filă
 109	Elimină fila
-110	Cu două file sau mai multe, o bară de file deasupra bibliotecii comută între ele (de exemplu Muzică și Airchecks). Dublu clic pe o filă pentru a o redenumi; trage pentru a reordona.
 111	Dosare de muzică
 112	Dosar
 113	Filă
@@ -152,10 +150,8 @@
 151	Arată pe Discord ce ascult
 152	Discord
 153	Include posturile de radio
-154	Arată copertele albumelor (căutate după artist și album pe iTunes și MusicBrainz)
 155	ID de aplicație de la discord.com/developers
 156	ID de aplicație
-157	Funcționează cu aplicația Discord și cu Vesktop (activează opțiunea arRPC / Rich Presence). Arată melodia, artistul și coperta; pentru radio, doar un „Artist - Titlu” curat și sigla postului. Nu se partajează nimic în pauză sau oprit.
 158	Desktop
 159	Configurează…
 160	Jurnal…
@@ -209,8 +205,6 @@
 208	Se repornește în Ruche %1…
 209	<h3>Ruche %1</h3><p>Un player de muzică ușor, cu o așezare în stilul MusicBee.</p><p>Redare cu libmpv. Etichete cu TagLib. Titluri ale fluxurilor în direct din ICY, etichete din flux, HLS #EXTINF și metadate ID3 temporizate din HLS.</p><p><a href="%2">%2</a></p>
 210	Caută actualizări
-211	Redenumește fila
-212	Nume:
 213	Arată Ruche
 214	Următoarea
 215	Nu se redă nimic
@@ -297,6 +291,60 @@
 296	Nu s-a putut porni programul de instalare %1.
 297	Ruche %1 a fost descărcat în %2. Închide Ruche și dezarhivează-l peste această copie (%3).
 298	Această copie Ruche nu a fost instalată dintr-o versiune publicată; în schimb a fost deschisă pagina versiunii.
+299	Redenumește lista…
+300	Importă o listă de redare…
+301	Adaugă un dosar de muzică în această filă…
+302	Închide fila
+303	Această filă nu are încă dosare de muzică.
+304	Faceți dublu clic pe filă ca s-o redenumiți; trageți-o ca s-o mutați.
+305	Numele unei liste nu poate conține / \ : * ? " < > | și nici nu poate începe cu un punct.
+306	Există deja o listă numită „%1”.
+307	Lista „%1” a fost creată. Trageți piese peste ea în bara laterală, sau clic dreapta pe piese → Adaugă într-o listă.
+308	Redenumește lista
+309	Lista nu a putut fi redenumită.
+310	Clic dreapta pe o listă ca s-o redenumiți sau s-o ștergeți
+311	Deschide dosarul
+312	Șterge tot
+313	Jurnale de blocare
+314	Scrise doar dacă Ruche se blochează: ce făcea, ca să fie atașat unui raport de eroare pe GitHub. Se păstrează cel mult cele mai noi 20.
+315	Niciunul
+316	%1 (%2)
+317	jurnal
+318	jurnale
+319	Filele funcționează ca într-un navigator: + pe bară creează una, × sau clic pe rotiță o închide, dublu clic o redenumește, iar tragerea schimbă ordinea. Fiecare dosar de mai jos aparține unei file.
+320	Întreabă înainte de a închide o filă care are dosare
+321	Fișier de temă
+322	Importă…
+323	Deschide dosarul de teme
+324	Un fișier de temă este o foaie de stil Qt (.qss) care poate schimba orice parte a lui Ruche și își poate alege propriile culori. Importați un .qss, un dosar de temă sau un .zip descărcat; modificările fișierului folosit apar imediat. Cum se face una: THEMES.md (inclus cu Ruche și în sursă).
+325	Versiunea %1
+326	Își alege propriile culori, așa că tema de mai sus contează doar pentru ce lasă neschimbat.
+327	Importă o temă
+328	Fișier de temă sau .zip…
+329	Teme (*.qss *.zip)
+330	Dosar de temă…
+331	Copertă (coperta albumului, sau sigla postului pentru radio)
+332	Sigla Ruche
+333	Copertele sunt căutate după artist și album (sau piesă) pe iTunes și MusicBrainz, fiindcă Discord poate afișa doar imagini de pe web.
+334	Imagine
+335	Funcționează cu aplicația Discord și cu Vesktop (activați opțiunea arRPC / Rich Presence). Arată piesa, artistul și imaginea aleasă mai sus; pentru radio, doar un „Artist - Titlu” curat, cu coperta piesei când e găsită. Nu se transmite nimic pe pauză sau oprit.
+336	Ruche
+337	Ruche s-a închis neașteptat data trecută.
+338	A fost salvat un jurnal al blocării. Dacă se repetă, deschideți o problemă pe GitHub și atașați-l; arată ce făcea Ruche, fără nimic personal în afară de numele fișierelor pe care tocmai le redase.
+339	Există deja o filă numită „%1”.
+340	Filă nouă %1
+341	Închideți fila „%1”?
+342	Dosarele ei de muzică sunt scoase din bibliotecă:\n%1\n\nFișierele rămân unde sunt, iar adăugarea din nou a dosarelor le aduce înapoi.
+343	Nu mai întreba
+344	Nu există niciun fișier .qss în acel dosar.
+345	Tema nu a putut fi copiată.
+346	Fișierul zip nu poate fi citit.
+347	Fișierul zip conține căi nesigure.
+348	Nu există niciun fișier .qss în acel zip.
+349	Zip-ul e prea mare pentru o temă.
+350	Tema nu a putut fi dezarhivată.
+351	Alegeți un fișier .qss, un dosar de temă sau un .zip.
+352	Adăugată
 qt:OK	OK
 qt:Cancel	Anulează
 qt:Close	Închide

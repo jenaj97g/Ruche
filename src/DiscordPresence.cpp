@@ -351,12 +351,22 @@ QJsonObject DiscordPresence::buildActivity()
             a.insert(QStringLiteral("details"), field(station));
             a.insert(QStringLiteral("state"), field(tr("Live radio")));
         }
-        const QString logo = np.value(QStringLiteral("logo_url")).toString();
-        assets.insert(QStringLiteral("large_image"), logo.isEmpty() ? QStringLiteral("ruche") : logo);
-        assets.insert(QStringLiteral("large_text"), field(station));
-        if (!logo.isEmpty()) {
-            assets.insert(QStringLiteral("small_image"), QStringLiteral("ruche"));
-            assets.insert(QStringLiteral("small_text"), QStringLiteral("Ruche"));
+        // Pictures: the song's cover (looked up like a library track without an album),
+        // with the station's logo as the small badge; else the logo; else Ruche's.
+        const QString logo = m_lookUpCovers ? np.value(QStringLiteral("logo_url")).toString() : QString();
+        const QString cover = (m_lookUpCovers && song) ? coverFor(artist, QString(), title) : QString();
+        if (!cover.isEmpty()) {
+            assets.insert(QStringLiteral("large_image"), cover);
+            assets.insert(QStringLiteral("large_text"), field(title));
+            assets.insert(QStringLiteral("small_image"), logo.isEmpty() ? QStringLiteral("ruche") : logo);
+            assets.insert(QStringLiteral("small_text"), field(station));
+        } else {
+            assets.insert(QStringLiteral("large_image"), logo.isEmpty() ? QStringLiteral("ruche") : logo);
+            assets.insert(QStringLiteral("large_text"), field(station));
+            if (!logo.isEmpty()) {
+                assets.insert(QStringLiteral("small_image"), QStringLiteral("ruche"));
+                assets.insert(QStringLiteral("small_text"), QStringLiteral("Ruche"));
+            }
         }
         // a song counts from when it started; the station alone, from when it was tuned in
         const qint64 since = song ? m_titleSince : m_stationSince;
@@ -469,7 +479,7 @@ void DiscordPresence::lookUpCover(const QString &key, const QString &artist, con
     url.setQuery(q);
     QNetworkRequest req(url);
     req.setTransferTimeout(10000);
-    req.setRawHeader("User-Agent", "Ruche/" RUCHE_VERSION " ( https://weizkule.be )");
+    req.setRawHeader("User-Agent", "Ruche/" RUCHE_VERSION " ( https://github.com/jenaj97g/Ruche )");
     QNetworkReply *r = m_nam->get(req);
     connect(r, &QNetworkReply::finished, this, [=] {
         r->deleteLater();
@@ -515,7 +525,7 @@ void DiscordPresence::lookUpMusicBrainz(const QString &key, const QString &artis
     QNetworkRequest req(url);
     req.setTransferTimeout(10000);
     // MusicBrainz asks every client to say who it is.
-    req.setRawHeader("User-Agent", "Ruche/" RUCHE_VERSION " ( https://weizkule.be )");
+    req.setRawHeader("User-Agent", "Ruche/" RUCHE_VERSION " ( https://github.com/jenaj97g/Ruche )");
     QNetworkReply *r = m_nam->get(req);
     connect(r, &QNetworkReply::finished, this, [=] {
         r->deleteLater();
@@ -536,7 +546,7 @@ void DiscordPresence::lookUpMusicBrainz(const QString &key, const QString &artis
                                 QStringLiteral("/release-group/%1/front-500").arg(id);
             QNetworkRequest head{QUrl(art)};
             head.setTransferTimeout(10000);
-            head.setRawHeader("User-Agent", "Ruche/" RUCHE_VERSION " ( https://weizkule.be )");
+            head.setRawHeader("User-Agent", "Ruche/" RUCHE_VERSION " ( https://github.com/jenaj97g/Ruche )");
             head.setAttribute(QNetworkRequest::RedirectPolicyAttribute, QNetworkRequest::ManualRedirectPolicy);
             QNetworkReply *h = m_nam->head(head);
             connect(h, &QNetworkReply::finished, this, [=] {

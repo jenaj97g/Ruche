@@ -251,10 +251,6 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>ПЛЕЙЛИСТЫ</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Плейлистов пока нет</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Папки с музыкой пока нет. Меню (☰) → Добавить папку с музыкой…</translation>
     </message>
@@ -459,10 +455,6 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>Убрать вкладку</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Если вкладок две или больше, над библиотекой появляется панель вкладок для переключения (например, Музыка и Airchecks). Двойной щелчок по вкладке переименовывает её; перетаскивание меняет порядок.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Папки с музыкой</translation>
     </message>
@@ -635,20 +627,12 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>Включая радиостанции</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Показывать обложки альбомов (ищутся по исполнителю и альбому в iTunes и MusicBrainz)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>ID приложения с discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>ID приложения</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Работает с приложением Discord и с Vesktop (включите в нём arRPC / Rich Presence). Показывает песню, исполнителя и обложку; для радио — только чистое «Исполнитель - Название» и логотип станции. На паузе и при остановке ничего не показывается.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>Проверить обновления</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Переименовать вкладку</translation>
+        <source>Rename playlist…</source>
+        <translation>Переименовать плейлист…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Название:</translation>
+        <source>Import playlist…</source>
+        <translation>Импортировать плейлист…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Добавить папку с музыкой в эту вкладку…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Закрыть вкладку</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>В этой вкладке пока нет папок с музыкой.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Двойной щелчок по вкладке переименовывает её; перетаскивание перемещает.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>Название плейлиста не может содержать / \ : * ? " &lt; &gt; | или начинаться с точки.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Плейлист «%1» уже есть.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>Плейлист «%1» создан. Перетащите на него треки в боковой панели или щёлкните треки правой кнопкой → Добавить в плейлист.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Переименовать плейлист</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Не удалось переименовать плейлист.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Щёлкните плейлист правой кнопкой, чтобы переименовать или удалить его</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Открыть папку</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Удалить все</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Отчёты о сбоях</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Создаются, только если Ruche аварийно завершается: что он делал, чтобы приложить к сообщению об ошибке на GitHub. Хранятся не больше 20 последних.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Нет</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>отчёт</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>отчётов</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>Вкладки работают как в браузере: + на панели создаёт вкладку, × или щелчок колёсиком закрывает, двойной щелчок переименовывает, перетаскивание меняет порядок. Каждая папка ниже принадлежит одной вкладке.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Спрашивать перед закрытием вкладки с папками</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Файл темы</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Импорт…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Открыть папку тем</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>Файл темы — это таблица стилей Qt (.qss), которая может изменить любую часть Ruche и задать свои цвета. Импортируйте .qss, папку темы или скачанный .zip; правки используемого файла видны сразу. Как сделать свою: THEMES.md (поставляется с Ruche и есть в исходниках).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Версия %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Задаёт свои цвета, поэтому тема выше влияет только на то, что этот файл не трогает.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Импорт темы</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Файл темы или .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Темы (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Папка темы…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Обложка (обложка альбома, для радио — логотип станции)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Логотип Ruche</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>Обложки ищутся по исполнителю и альбому (или треку) в iTunes и MusicBrainz, потому что Discord показывает только картинки из интернета.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Картинка</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Работает с приложением Discord и с Vesktop (включите в нём arRPC / Rich Presence). Показывает трек, исполнителя и выбранную выше картинку; для радио — только чистое «Исполнитель - Название», с обложкой трека, если она нашлась. На паузе и при остановке ничего не показывается.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>В прошлый раз Ruche неожиданно закрылся.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>Сохранён отчёт о сбое. Если это повторяется, откройте issue на GitHub и приложите отчёт; в нём видно, что делал Ruche, и нет ничего личного, кроме имён только что игравших файлов.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Вкладка «%1» уже есть.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Новая вкладка %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Закрыть вкладку «%1»?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>Её папки с музыкой убираются из библиотеки:
+%1
+
+Сами файлы остаются на месте, и если снова добавить папки, всё вернётся.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Больше не спрашивать</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <source>Plays</source>
         <translation>Прослушивания</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Добавлено</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Эта копия Ruche установлена не из выпуска; вместо этого открыта страница выпуска.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>В этой папке нет файла .qss.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Не удалось скопировать тему.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>Этот zip-файл не читается.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>В этом zip-файле небезопасные пути.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>В этом zip нет файла .qss.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Этот zip слишком большой для темы.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Не удалось распаковать тему.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Выберите файл .qss, папку темы или .zip.</translation>
     </message>
 </context>
 </TS>

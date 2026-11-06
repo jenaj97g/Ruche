@@ -32,6 +32,7 @@ install -Dm644 "$ROOT/packaging/ruche.metainfo.xml" "$STAGE/usr/share/metainfo/r
 install -Dm644 "$ROOT/README.md" "$STAGE/usr/share/doc/ruche/README.md"
 install -Dm644 "$ROOT/LICENSE" "$STAGE/usr/share/doc/ruche/LICENSE"
 install -Dm644 "$ROOT/PLUGINS.md" "$STAGE/usr/share/doc/ruche/PLUGINS.md"
+install -Dm644 "$ROOT/THEMES.md" "$STAGE/usr/share/doc/ruche/THEMES.md"
 find "$STAGE" -type d -exec chmod 755 {} +
 SIZE_KB=$(du -sk "$STAGE" | cut -f1)
 mkdir -p "$OUT"
@@ -49,12 +50,12 @@ cat > "$DEB/DEBIAN/control" <<EOT
 Package: ruche
 Version: $VERSION-$REL
 Architecture: amd64
-Maintainer: weizkule <noreply@weizkule.be>
+Maintainer: jenaj97g <jenaj97g@users.noreply.github.com>
 Installed-Size: $SIZE_KB
 Depends: $DEPENDS
 Section: sound
 Priority: optional
-Homepage: https://weizkule.be
+Homepage: https://github.com/jenaj97g/Ruche
 Description: light music player with a MusicBee-style layout and live radio titles
  Ruche browses your library by genre, artist and album, plays gapless through
  libmpv, and plays Icecast, Shoutcast and HLS radio with titles that follow the
@@ -73,7 +74,7 @@ Version:        $VERSION
 Release:        $REL
 Summary:        Light music player with a MusicBee-style layout and live radio titles
 License:        GPL-3.0-or-later
-URL:            https://weizkule.be
+URL:            https://github.com/jenaj97g/Ruche
 BuildArch:      x86_64
 AutoReqProv:    yes
 %global __provides_exclude_from ^/opt/ruche/.*\$
@@ -100,6 +101,7 @@ cp -a $STAGE/. %{buildroot}/
 /usr/share/metainfo/ruche.metainfo.xml
 %doc /usr/share/doc/ruche/README.md
 %doc /usr/share/doc/ruche/PLUGINS.md
+%doc /usr/share/doc/ruche/THEMES.md
 %license /usr/share/doc/ruche/LICENSE
 EOT
 rpmbuild --quiet --define "_topdir $RPMTOP" -bb "$RPMTOP/SPECS/ruche.spec"

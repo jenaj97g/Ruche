@@ -251,10 +251,6 @@ Rade tokovi HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>PLEJLISTE</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Još nema plejlista</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Još nema fascikle sa muzikom. Meni (☰) → Dodaj fasciklu sa muzikom…</translation>
     </message>
@@ -459,10 +455,6 @@ Rade tokovi HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Ukloni karticu</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Kada ima dve ili više kartica, iznad biblioteke se pojavljuje traka kartica za prebacivanje (na primer Muzika i Airchecks). Dvoklik na karticu je preimenuje; prevlačenje menja redosled.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Fascikle sa muzikom</translation>
     </message>
@@ -635,20 +627,12 @@ Rade tokovi HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Uključujući radio-stanice</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Prikaži omote albuma (traže se po izvođaču i albumu na iTunes-u i MusicBrainz-u)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>ID aplikacije sa discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>ID aplikacije</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Radi sa aplikacijom Discord i sa Vesktop-om (u njemu uključite arRPC / Rich Presence). Prikazuje pesmu, izvođača i omot; za radio samo čisto „Izvođač - Naslov” i logo stanice. Tokom pauze i zaustavljanja ništa se ne prikazuje.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ Rade tokovi HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Proveri ažuriranja</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Preimenuj karticu</translation>
+        <source>Rename playlist…</source>
+        <translation>Preimenuj plejlistu…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Naziv:</translation>
+        <source>Import playlist…</source>
+        <translation>Uvezi plejlistu…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Dodaj fasciklu sa muzikom u ovu karticu…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Zatvori karticu</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Ova kartica još nema fascikle sa muzikom.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Dvoklik na karticu je preimenuje; prevlačenje je pomera.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>Naziv plejliste ne sme da sadrži / \ : * ? " &lt; &gt; | niti da počinje tačkom.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Već postoji plejlista „%1”.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>Plejlista „%1” je napravljena. Prevucite numere na nju u bočnoj traci ili kliknite desnim tasterom na numere → Dodaj u plejlistu.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Preimenuj plejlistu</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Nije uspelo preimenovanje plejliste.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Kliknite desnim tasterom na plejlistu da biste je preimenovali ili obrisali</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Otvori fasciklu</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Obriši sve</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Izveštaji o padovima</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Zapisuju se samo ako Ruche padne: šta je radio, da se priloži prijavi greške na GitHub-u. Čuva se najviše 20 najnovijih.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Nema</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>izveštaj</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>izveštaja</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>Kartice rade kao u pregledaču: + na traci pravi novu, × ili srednji klik zatvara, dvoklik preimenuje, a prevlačenje menja redosled. Svaka fascikla ispod pripada jednoj kartici.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Pitaj pre zatvaranja kartice koja ima fascikle</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Datoteka teme</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Uvoz…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Otvori fasciklu tema</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>Datoteka teme je Qt list stilova (.qss) koji može da promeni izgled bilo kog dela programa Ruche i da postavi svoje boje. Uvezite .qss, fasciklu teme ili preuzeti .zip; izmene datoteke koja se koristi vide se odmah. Kako napraviti svoju: THEMES.md (dolazi uz Ruche i nalazi se u izvornom kodu).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Verzija %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Postavlja svoje boje, pa tema iznad važi samo za ono što ostavlja netaknuto.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Uvoz teme</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Datoteka teme ili .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Teme (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Fascikla teme…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Omot (omot albuma, a za radio logo stanice)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Logo programa Ruche</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>Omoti se traže po izvođaču i albumu (ili numeri) na iTunes-u i MusicBrainz-u, jer Discord može da prikaže samo slike sa veba.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Slika</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Radi sa aplikacijom Discord i sa Vesktop-om (u njemu uključite arRPC / Rich Presence). Prikazuje numeru, izvođača i sliku izabranu iznad; za radio samo čisto „Izvođač - Naslov”, sa omotom numere ako se pronađe. Tokom pauze i zaustavljanja ništa se ne deli.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>Ruche se prošli put neočekivano zatvorio.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>Sačuvan je izveštaj o padu. Ako se ponavlja, otvorite issue na GitHub-u i priložite izveštaj; u njemu se vidi šta je Ruche radio, bez ičeg ličnog osim naziva datoteka koje je upravo puštao.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Već postoji kartica „%1”.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Nova kartica %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Zatvoriti karticu „%1”?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>Njene fascikle sa muzikom uklanjaju se iz biblioteke:
+%1
+
+Same datoteke ostaju gde jesu, a ako ponovo dodate fascikle, vraćaju se.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Ne pitaj ponovo</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ Rade tokovi HLS (.m3u8), Icecast i Shoutcast.</translation>
         <source>Plays</source>
         <translation>Puštanja</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Dodato</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ Rade tokovi HLS (.m3u8), Icecast i Shoutcast.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Ova kopija programa Ruche nije instalirana iz izdanja; umesto toga je otvorena stranica izdanja.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>U toj fascikli nema .qss datoteke.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Nije uspelo kopiranje teme.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>Ta zip datoteka ne može da se pročita.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>Ta zip datoteka sadrži nebezbedne putanje.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>U tom zip-u nema .qss datoteke.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Taj zip je prevelik za temu.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Nije uspelo raspakivanje teme.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Izaberite .qss datoteku, fasciklu teme ili .zip.</translation>
     </message>
 </context>
 <context>

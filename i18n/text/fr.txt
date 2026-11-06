@@ -56,7 +56,6 @@
 55	Lecture en cours
 56	Radio
 57	LISTES DE LECTURE
-58	Pas encore de liste
 59	Pas encore de dossier de musique. Menu (☰) → Ajouter un dossier de musique…
 60	morceau
 61	morceaux
@@ -108,7 +107,6 @@
 107	Onglets
 108	Ajouter un onglet
 109	Retirer l’onglet
-110	À partir de deux onglets, une barre d’onglets au-dessus de la bibliothèque permet de passer de l’un à l’autre (par exemple Musique et Airchecks). Double-cliquez sur un onglet pour le renommer ; faites-le glisser pour changer l’ordre.
 111	Dossiers de musique
 112	Dossier
 113	Onglet
@@ -152,10 +150,8 @@
 151	Montrer ce que j’écoute sur Discord
 152	Discord
 153	Inclure les stations de radio
-154	Afficher les pochettes (cherchées par artiste et album sur iTunes et MusicBrainz)
 155	Identifiant d’application de discord.com/developers
 156	Identifiant d’application
-157	Fonctionne avec l’application Discord et avec Vesktop (activez son option arRPC / Rich Presence). Affiche la chanson, l’artiste et la pochette ; pour la radio, seulement un « Artiste - Titre » propre et le logo de la station. Rien n’est partagé en pause ou à l’arrêt.
 158	Bureau
 159	Configurer…
 160	Journal…
@@ -209,8 +205,6 @@
 208	Redémarrage vers Ruche %1…
 209	<h3>Ruche %1</h3><p>Un lecteur de musique léger, disposé comme MusicBee.</p><p>Lecture par libmpv. Tags par TagLib. Titres des flux en direct depuis ICY, les tags intégrés, HLS #EXTINF et les métadonnées ID3 de HLS.</p><p><a href="%2">%2</a></p>
 210	Rechercher des mises à jour
-211	Renommer l’onglet
-212	Nom :
 213	Afficher Ruche
 214	Suivant
 215	Rien en lecture
@@ -297,3 +291,57 @@
 296	Impossible de lancer l’installateur %1.
 297	Ruche %1 a été téléchargé dans %2. Fermez Ruche et décompressez-le par-dessus cette copie (%3).
 298	Cette copie de Ruche n’a pas été installée depuis une version publiée ; la page de la version a été ouverte à la place.
+299	Renommer la liste…
+300	Importer une liste de lecture…
+301	Ajouter un dossier de musique à cet onglet…
+302	Fermer l’onglet
+303	Cet onglet n’a pas encore de dossier de musique.
+304	Double-cliquez sur l’onglet pour le renommer ; faites-le glisser pour le déplacer.
+305	Un nom de liste ne peut pas contenir / \ : * ? " < > | ni commencer par un point.
+306	Il existe déjà une liste appelée « %1 ».
+307	Liste « %1 » créée. Faites-y glisser des morceaux dans la barre latérale, ou clic droit sur des morceaux → Ajouter à une liste.
+308	Renommer la liste
+309	Impossible de renommer la liste.
+310	Clic droit sur une liste pour la renommer ou la supprimer
+311	Ouvrir le dossier
+312	Tout supprimer
+313	Rapports de plantage
+314	Écrits seulement si Ruche plante : ce qu’il faisait, à joindre à un signalement de bug sur GitHub. Seuls les 20 plus récents sont gardés.
+315	Aucun
+316	%1 (%2)
+317	rapport
+318	rapports
+319	Les onglets fonctionnent comme ceux d’un navigateur : + sur la barre en crée un, × ou un clic du milieu le ferme, un double-clic le renomme et un glisser le déplace. Chaque dossier ci-dessous appartient à un onglet.
+320	Demander avant de fermer un onglet qui a des dossiers
+321	Fichier de thème
+322	Importer…
+323	Ouvrir le dossier des thèmes
+324	Un fichier de thème est une feuille de style Qt (.qss) qui peut redessiner toute l’interface de Ruche et fixer ses propres couleurs. Importez un .qss, un dossier de thème ou un .zip téléchargé ; les modifications du fichier en cours d’utilisation s’affichent aussitôt. Pour en créer un : THEMES.md (fourni avec Ruche et dans les sources).
+325	Version %1
+326	Fixe ses propres couleurs : le thème choisi plus haut ne compte que pour ce qu’il laisse de côté.
+327	Importer un thème
+328	Fichier de thème ou .zip…
+329	Thèmes (*.qss *.zip)
+330	Dossier de thème…
+331	Pochette (pochette de l’album, ou logo de la station pour la radio)
+332	Logo de Ruche
+333	Les pochettes sont cherchées par artiste et album (ou titre) sur iTunes et MusicBrainz, car Discord ne peut afficher que des images venant du web.
+334	Image
+335	Fonctionne avec l’application Discord et avec Vesktop (activez son option arRPC / Rich Presence). Affiche le titre, l’artiste et l’image choisie ci-dessus ; pour la radio, seulement un « Artiste - Titre » propre, avec la pochette du titre quand elle est trouvée. Rien n’est partagé en pause ou à l’arrêt.
+336	Ruche
+337	Ruche s’est fermé de façon inattendue la dernière fois.
+338	Un rapport de plantage a été enregistré. Si cela se reproduit, ouvrez un ticket sur GitHub et joignez-le ; il indique ce que faisait Ruche, sans rien de personnel à part les noms des fichiers qu’il venait de lire.
+339	Il existe déjà un onglet appelé « %1 ».
+340	Nouvel onglet %1
+341	Fermer l’onglet « %1 » ?
+342	Ses dossiers de musique sont retirés de la bibliothèque :\n%1\n\nLes fichiers eux-mêmes restent où ils sont, et ajouter à nouveau les dossiers les ramène.
+343	Ne plus demander
+344	Il n’y a aucun fichier .qss dans ce dossier.
+345	Impossible de copier le thème.
+346	Impossible de lire ce fichier zip.
+347	Ce fichier zip contient des chemins dangereux.
+348	Il n’y a aucun fichier .qss dans ce zip.
+349	Ce zip est trop gros pour un thème.
+350	Impossible de décompresser le thème.
+351	Choisissez un fichier .qss, un dossier de thème ou un .zip.
+352	Ajouté

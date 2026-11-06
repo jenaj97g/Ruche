@@ -1,0 +1,44 @@
+/**
+ * @name Synthwave
+ * @author Ruche
+ * @version 1.0
+ * @description Night-drive purple with a neon pink accent and a grid under the sidebar.
+ * @window #170f26
+ * @text #f1e6ff
+ * @accent #ff3fa4
+ */
+
+/* Everything below is ordinary Qt stylesheet (QSS). @tokens are Ruche's colours,
+   mixed from the three above; see THEMES.md for the list. */
+
+QWidget#topBar {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #2a1145, stop:0.6 #1b1030, stop:1 #10203a);
+    border-bottom: 1px solid #ff3fa4;
+}
+QLabel#brand { color: #ff7ac6; }
+QLabel#viewTitle { color: #7ef9ff; letter-spacing: 1px; }
+
+/* the image sits next to this file; relative url()s are found there */
+QTreeWidget#navigator {
+    background-color: #140c22;
+    background-image: url(grid.png);
+    border-right: 1px solid #3a1f5c;
+}
+QTreeWidget#navigator::item:selected { background: rgba(255, 63, 164, 0.18); color: #ff9bd3; }
+
+QWidget#playerBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #1d1233, stop:1 #0e0818);
+    border-top: 1px solid #ff3fa4;
+}
+QToolButton#playButton {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #ff3fa4, stop:1 #8a3dff);
+    border: 2px solid #ffb3dd;
+}
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 #8a3dff, stop:1 #ff3fa4);
+}
+QSlider::handle:horizontal { background: #7ef9ff; }
+
+QTabBar#libTabs::tab:selected { color: #7ef9ff; border-bottom: 2px solid #7ef9ff; }
+QHeaderView::section { color: #b48ae0; }
+QLabel#npArtist { color: #7ef9ff; }

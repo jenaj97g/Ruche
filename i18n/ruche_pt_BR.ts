@@ -251,10 +251,6 @@ Fluxos HLS (.m3u8), Icecast e Shoutcast funcionam todos.</translation>
         <translation>LISTAS DE REPRODUÇÃO</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Nenhuma lista ainda</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Ainda não há pasta de música. Menu (☰) → Adicionar pasta de música…</translation>
     </message>
@@ -459,10 +455,6 @@ Fluxos HLS (.m3u8), Icecast e Shoutcast funcionam todos.</translation>
         <translation>Remover aba</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Com duas abas ou mais, uma barra de abas acima da biblioteca alterna entre elas (por exemplo, Música e Airchecks). Clique duas vezes em uma aba para renomeá-la; arraste para reordenar.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Pastas de música</translation>
     </message>
@@ -635,20 +627,12 @@ Fluxos HLS (.m3u8), Icecast e Shoutcast funcionam todos.</translation>
         <translation>Incluir estações de rádio</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Mostrar capas (procuradas por artista e álbum no iTunes e no MusicBrainz)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>ID de aplicativo de discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>ID de aplicativo</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Funciona com o aplicativo Discord e com o Vesktop (ative a opção arRPC / Rich Presence). Mostra a música, o artista e a capa; na rádio, só um «Artista - Título» limpo e o logotipo da estação. Nada é compartilhado em pausa ou parado.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ Fluxos HLS (.m3u8), Icecast e Shoutcast funcionam todos.</translation>
         <translation>Procurar atualizações</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Renomear aba</translation>
+        <source>Rename playlist…</source>
+        <translation>Renomear lista…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Nome:</translation>
+        <source>Import playlist…</source>
+        <translation>Importar lista de reprodução…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Adicionar pasta de música a esta aba…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Fechar aba</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Esta aba ainda não tem pastas de música.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Clique duas vezes na aba para renomeá-la; arraste-a para movê-la.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>O nome de uma lista não pode conter / \ : * ? " &lt; &gt; | nem começar com um ponto.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Já existe uma lista chamada “%1”.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>Lista “%1” criada. Arraste faixas para ela na barra lateral, ou clique com o botão direito nas faixas → Adicionar a uma lista.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Renomear lista</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Não foi possível renomear a lista.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Clique com o botão direito em uma lista para renomeá-la ou excluí-la</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Abrir pasta</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Excluir tudo</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Registros de falhas</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Só são gravados se o Ruche travar: o que ele estava fazendo, para anexar a um relatório de bug no GitHub. São mantidos no máximo os 20 mais recentes.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Nenhum</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>registro</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>registros</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>As abas funcionam como as de um navegador: + na barra cria uma, × ou um clique do meio fecha, clique duplo renomeia e arrastar muda a ordem. Cada pasta abaixo pertence a uma aba.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Perguntar antes de fechar uma aba que tem pastas</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Arquivo de tema</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Importar…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Abrir pasta de temas</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>Um arquivo de tema é uma folha de estilos do Qt (.qss) que pode mudar a aparência de qualquer parte do Ruche e definir suas próprias cores. Importe um .qss, uma pasta de tema ou um .zip baixado; as alterações no arquivo em uso aparecem na hora. Como fazer um: THEMES.md (incluído no Ruche e no código-fonte).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Versão %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Define suas próprias cores, então o tema acima só vale para o que ele deixa de lado.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Importar tema</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Arquivo de tema ou .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Temas (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Pasta de tema…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Capa (a do álbum, ou o logo da estação para o rádio)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Logo do Ruche</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>As capas são buscadas por artista e álbum (ou faixa) no iTunes e no MusicBrainz, porque o Discord só mostra imagens da web.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Imagem</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Funciona com o aplicativo do Discord e com o Vesktop (ative a opção arRPC / Rich Presence dele). Mostra a faixa, o artista e a imagem escolhida acima; para o rádio, só um “Artista - Título” limpo, com a capa da faixa quando ela é encontrada. Nada é compartilhado em pausa ou parado.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>O Ruche fechou inesperadamente da última vez.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>Um registro da falha foi salvo. Se acontecer de novo, abra uma issue no GitHub e anexe o registro; ele diz o que o Ruche estava fazendo, sem nada pessoal além dos nomes dos arquivos que tinha acabado de tocar.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Já existe uma aba chamada “%1”.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Nova aba %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Fechar a aba “%1”?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>As pastas de música dela saem da biblioteca:
+%1
+
+Os arquivos continuam onde estão, e adicionar as pastas de novo traz tudo de volta.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Não perguntar de novo</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ Fluxos HLS (.m3u8), Icecast e Shoutcast funcionam todos.</translation>
         <source>Plays</source>
         <translation>Reproduções</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Adicionada</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ Fluxos HLS (.m3u8), Icecast e Shoutcast funcionam todos.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Esta cópia do Ruche não foi instalada a partir de uma versão publicada; foi aberta a página da versão.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>Não há nenhum arquivo .qss nessa pasta.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Não foi possível copiar o tema.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>Não é possível ler esse arquivo zip.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>Esse arquivo zip tem caminhos perigosos.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>Não há nenhum arquivo .qss nesse zip.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Esse zip é grande demais para um tema.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Não foi possível descompactar o tema.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Escolha um arquivo .qss, uma pasta de tema ou um .zip.</translation>
     </message>
 </context>
 </TS>

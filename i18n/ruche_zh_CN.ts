@@ -251,10 +251,6 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>播放列表</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>还没有播放列表</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>还没有音乐文件夹。菜单 (☰) → 添加音乐文件夹…</translation>
     </message>
@@ -459,10 +455,6 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>移除标签页</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>有两个或更多标签页时,音乐库上方会显示标签栏,可在其间切换(例如“音乐”和 Airchecks)。双击标签页可重命名,拖动可调整顺序。</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>音乐文件夹</translation>
     </message>
@@ -635,20 +627,12 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>包括电台</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>显示专辑封面(按艺术家和专辑在 iTunes 和 MusicBrainz 上查找)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>来自 discord.com/developers 的应用程序 ID</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>应用程序 ID</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>适用于 Discord 应用和 Vesktop(请在 Vesktop 中启用 arRPC / Rich Presence)。显示歌曲、艺术家和封面;电台只显示干净的“艺术家 - 标题”和台标。暂停或停止时不显示任何内容。</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation>检查更新</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>重命名标签页</translation>
+        <source>Rename playlist…</source>
+        <translation>重命名播放列表…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>名称:</translation>
+        <source>Import playlist…</source>
+        <translation>导入播放列表…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>向此标签页添加音乐文件夹…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>关闭标签页</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>此标签页还没有音乐文件夹。</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>双击标签页可重命名,拖动可移动。</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>播放列表名称不能包含 / \ : * ? " &lt; &gt; |,也不能以点开头。</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>已有名为“%1”的播放列表。</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>已创建播放列表“%1”。在侧边栏中把曲目拖到它上面,或右键点击曲目 → 添加到播放列表。</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>重命名播放列表</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>无法重命名播放列表。</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>右键点击播放列表可重命名或删除</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>打开文件夹</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>全部删除</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>崩溃日志</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>仅在 Ruche 崩溃时写入:记录它当时在做什么,可附在 GitHub 的错误报告中。最多保留最新的 20 个。</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>无</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1(%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>个日志</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>个日志</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>标签页的用法和浏览器一样:标签栏上的 + 新建,× 或中键点击关闭,双击重命名,拖动调整顺序。下面的每个文件夹属于一个标签页。</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>关闭含有文件夹的标签页前询问</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>主题文件</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>导入…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>打开主题文件夹</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>主题文件是一个 Qt 样式表(.qss),可以改变 Ruche 任何部分的外观并设置自己的颜色。可导入 .qss、主题文件夹或下载的 .zip;正在使用的文件被修改后会立即生效。如何制作:THEMES.md(随 Ruche 附带,也在源代码中)。</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>版本 %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>它设置了自己的颜色,因此上面的主题只作用于它未改动的部分。</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>导入主题</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>主题文件或 .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>主题 (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>主题文件夹…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>封面(专辑封面,电台则为台标)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Ruche 标志</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>封面按艺术家和专辑(或歌曲)在 iTunes 和 MusicBrainz 上查找,因为 Discord 只能显示来自网络的图片。</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>图片</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>适用于 Discord 应用和 Vesktop(请在 Vesktop 中启用 arRPC / Rich Presence)。显示歌曲、艺术家和上面选择的图片;电台只显示干净的“艺术家 - 标题”,找到歌曲封面时一并显示。暂停或停止时不分享任何内容。</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>Ruche 上次意外关闭。</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>已保存崩溃日志。如果反复发生,请在 GitHub 上提交 issue 并附上日志;日志记录了 Ruche 当时在做什么,除了刚播放过的文件名之外不含任何个人信息。</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>已有名为“%1”的标签页。</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>新标签页 %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>关闭标签页“%1”?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>它的音乐文件夹将从音乐库中移除:
+%1
+
+文件本身仍在原处,重新添加这些文件夹即可恢复。</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>不再询问</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <source>Plays</source>
         <translation>播放次数</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>添加时间</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>此 Ruche 副本并非从发布版本安装,因此已改为打开发布页面。</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>该文件夹中没有 .qss 文件。</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>无法复制主题。</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>无法读取该 zip 文件。</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>该 zip 文件包含不安全的路径。</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>该 zip 中没有 .qss 文件。</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>该 zip 作为主题太大了。</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>无法解压主题。</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>请选择 .qss 文件、主题文件夹或 .zip。</translation>
     </message>
 </context>
 </TS>

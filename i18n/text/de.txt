@@ -56,7 +56,6 @@
 55	Wiedergabe
 56	Radio
 57	WIEDERGABELISTEN
-58	Noch keine Wiedergabelisten
 59	Noch kein Musikordner. Menü (☰) → Musikordner hinzufügen…
 60	Titel
 61	Titel
@@ -108,7 +107,6 @@
 107	Tabs
 108	Tab hinzufügen
 109	Tab entfernen
-110	Ab zwei Tabs wechselt eine Tableiste über der Bibliothek zwischen ihnen (etwa Musik und Airchecks). Doppelklick auf einen Tab benennt ihn um; zum Sortieren ziehen.
 111	Musikordner
 112	Ordner
 113	Tab
@@ -152,10 +150,8 @@
 151	Auf Discord zeigen, was ich höre
 152	Discord
 153	Radiosender einbeziehen
-154	Albumcover zeigen (nach Interpret und Album bei iTunes und MusicBrainz gesucht)
 155	Anwendungs-ID von discord.com/developers
 156	Anwendungs-ID
-157	Funktioniert mit der Discord-App und mit Vesktop (dort die Option arRPC / Rich Presence einschalten). Zeigt Song, Interpret und Cover; bei Radio nur ein sauberes „Interpret - Titel“ und das Senderlogo. Bei Pause oder Stopp wird nichts geteilt.
 158	Desktop
 159	Einrichten…
 160	Protokoll…
@@ -209,8 +205,6 @@
 208	Neustart mit Ruche %1…
 209	<h3>Ruche %1</h3><p>Ein leichter Musikplayer mit einem Aufbau wie MusicBee.</p><p>Wiedergabe mit libmpv. Tags mit TagLib. Live-Streamtitel aus ICY, eingebetteten Tags, HLS #EXTINF und zeitgesteuerten ID3-Metadaten in HLS.</p><p><a href="%2">%2</a></p>
 210	Nach Aktualisierungen suchen
-211	Tab umbenennen
-212	Name:
 213	Ruche zeigen
 214	Weiter
 215	Nichts wird gespielt
@@ -297,3 +291,57 @@
 296	Das Installationsprogramm %1 konnte nicht gestartet werden.
 297	Ruche %1 wurde nach %2 heruntergeladen. Schließe Ruche und entpacke es über diese Kopie (%3).
 298	Diese Ruche-Kopie wurde nicht aus einer Veröffentlichung installiert; stattdessen wurde die Versionsseite geöffnet.
+299	Wiedergabeliste umbenennen…
+300	Wiedergabeliste importieren…
+301	Musikordner zu diesem Tab hinzufügen…
+302	Tab schließen
+303	Dieser Tab hat noch keine Musikordner.
+304	Doppelklick auf den Tab benennt ihn um; Ziehen verschiebt ihn.
+305	Der Name einer Liste darf / \ : * ? " < > | nicht enthalten und nicht mit einem Punkt beginnen.
+306	Es gibt schon eine Liste namens „%1“.
+307	Liste „%1“ angelegt. Titel in der Seitenleiste darauf ziehen, oder Rechtsklick auf Titel → Zu Wiedergabeliste hinzufügen.
+308	Wiedergabeliste umbenennen
+309	Die Liste konnte nicht umbenannt werden.
+310	Rechtsklick auf eine Liste, um sie umzubenennen oder zu löschen
+311	Ordner öffnen
+312	Alle löschen
+313	Absturzprotokolle
+314	Werden nur geschrieben, wenn Ruche abstürzt: was es gerade tat, zum Anhängen an einen Fehlerbericht auf GitHub. Höchstens die 20 neuesten bleiben.
+315	Keine
+316	%1 (%2)
+317	Protokoll
+318	Protokolle
+319	Tabs funktionieren wie im Browser: + auf der Leiste legt einen an, × oder ein Mittelklick schließt ihn, Doppelklick benennt um und Ziehen ändert die Reihenfolge. Jeder Ordner unten gehört zu einem Tab.
+320	Vor dem Schließen eines Tabs mit Ordnern nachfragen
+321	Design-Datei
+322	Importieren…
+323	Design-Ordner öffnen
+324	Eine Design-Datei ist ein Qt-Stylesheet (.qss), das jeden Teil von Ruche umgestalten und eigene Farben festlegen kann. Importieren Sie eine .qss, einen Design-Ordner oder eine heruntergeladene .zip; Änderungen an der verwendeten Datei sind sofort zu sehen. Anleitung: THEMES.md (liegt Ruche bei und ist im Quellcode).
+325	Version %1
+326	Legt eigene Farben fest; das Design oben zählt nur für das, was sie unverändert lässt.
+327	Design importieren
+328	Design-Datei oder .zip…
+329	Designs (*.qss *.zip)
+330	Design-Ordner…
+331	Cover (Albumcover, bei Radio das Senderlogo)
+332	Ruche-Logo
+333	Cover werden nach Interpret und Album (oder Titel) bei iTunes und MusicBrainz gesucht, weil Discord nur Bilder aus dem Web anzeigen kann.
+334	Bild
+335	Funktioniert mit der Discord-App und mit Vesktop (dort die Option arRPC / Rich Presence einschalten). Zeigt Titel, Interpret und das oben gewählte Bild; bei Radio nur ein sauberes „Interpret - Titel“, mit dem Cover des Titels, wenn eines gefunden wird. Bei Pause oder Stopp wird nichts geteilt.
+336	Ruche
+337	Ruche wurde beim letzten Mal unerwartet beendet.
+338	Ein Absturzprotokoll wurde gespeichert. Falls das wieder passiert, eröffnen Sie bitte ein Issue auf GitHub und hängen es an; es zeigt, was Ruche tat, und enthält nichts Persönliches außer den Namen der gerade gespielten Dateien.
+339	Es gibt schon einen Tab namens „%1“.
+340	Neuer Tab %1
+341	Tab „%1“ schließen?
+342	Seine Musikordner werden aus der Bibliothek genommen:\n%1\n\nDie Dateien selbst bleiben, wo sie sind; wenn Sie die Ordner wieder hinzufügen, sind sie zurück.
+343	Nicht mehr fragen
+344	In diesem Ordner ist keine .qss-Datei.
+345	Das Design konnte nicht kopiert werden.
+346	Diese Zip-Datei kann nicht gelesen werden.
+347	Diese Zip-Datei enthält unsichere Pfade.
+348	In dieser Zip-Datei ist keine .qss-Datei.
+349	Diese Zip-Datei ist zu groß für ein Design.
+350	Das Design konnte nicht entpackt werden.
+351	Wählen Sie eine .qss-Datei, einen Design-Ordner oder eine .zip.
+352	Hinzugefügt

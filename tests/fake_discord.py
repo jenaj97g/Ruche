@@ -37,7 +37,7 @@ def main():
                 buf = buf[8 + n:]
                 log.write(json.dumps({"t": round(time.monotonic() - t0, 2), "op": op, "body": body}, ensure_ascii=False) + "\n")
                 if op == 0:
-                    ready = {"cmd": "DISPATCH", "evt": "READY", "data": {"v": 1, "user": {"id": "1", "username": "weizkule", "global_name": "weiz"}}}
+                    ready = {"cmd": "DISPATCH", "evt": "READY", "data": {"v": 1, "user": {"id": "1", "username": "tester", "global_name": "Tester"}}}
                     p = json.dumps(ready).encode()
                     c.sendall(struct.pack("<II", 1, len(p)) + p)
                 elif op == 1:

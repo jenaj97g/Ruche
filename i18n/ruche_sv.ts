@@ -251,10 +251,6 @@ HLS-strömmar (.m3u8), Icecast och Shoutcast fungerar alla.</translation>
         <translation>SPELLISTOR</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Inga spellistor än</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Ingen musikmapp än. Använd menyn (☰) → Lägg till musikmapp…</translation>
     </message>
@@ -459,10 +455,6 @@ HLS-strömmar (.m3u8), Icecast och Shoutcast fungerar alla.</translation>
         <translation>Ta bort flik</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Med två flikar eller fler växlar en flikrad ovanför biblioteket mellan dem (till exempel Musik och Airchecks). Dubbelklicka på en flik för att byta namn; dra för att ändra ordning.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Musikmappar</translation>
     </message>
@@ -635,20 +627,12 @@ HLS-strömmar (.m3u8), Icecast och Shoutcast fungerar alla.</translation>
         <translation>Ta med radiostationer</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Visa skivomslag (söks efter artist och album på iTunes och MusicBrainz)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>Program-ID från discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>Program-ID</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Fungerar med Discord-appen och med Vesktop (slå på dess alternativ arRPC / Rich Presence). Visar låten, artisten och omslaget; för radio bara en ren ”Artist - Titel” och stationens logotyp. Inget delas när uppspelningen är pausad eller stoppad.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ HLS-strömmar (.m3u8), Icecast och Shoutcast fungerar alla.</translation>
         <translation>Leta efter uppdateringar</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Byt namn på flik</translation>
+        <source>Rename playlist…</source>
+        <translation>Byt namn på spellistan…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Namn:</translation>
+        <source>Import playlist…</source>
+        <translation>Importera spellista…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Lägg till musikmapp i den här fliken…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Stäng flik</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Den här fliken har inga musikmappar än.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Dubbelklicka på fliken för att byta namn; dra den för att flytta den.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>Ett spellistnamn får inte innehålla / \ : * ? " &lt; &gt; | eller börja med en punkt.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Det finns redan en spellista som heter ”%1”.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>Spellistan ”%1” skapad. Dra spår till den i sidofältet, eller högerklicka på spår → Lägg till i spellista.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Byt namn på spellistan</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Kunde inte byta namn på spellistan.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Högerklicka på en spellista för att byta namn på den eller ta bort den</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Öppna mappen</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Ta bort alla</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Kraschloggar</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Skrivs bara om Ruche kraschar: vad den höll på med, att bifoga till en felrapport på GitHub. Högst de 20 senaste sparas.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Inga</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>logg</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>loggar</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>Flikar fungerar som i en webbläsare: + på flikraden skapar en, × eller ett mittenklick stänger en, dubbelklick byter namn och dra ändrar ordningen. Varje mapp nedan hör till en flik.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Fråga innan en flik med mappar stängs</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Temafil</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Importera…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Öppna temamappen</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>En temafil är en Qt-stilmall (.qss) som kan ändra utseendet på alla delar av Ruche och sätta egna färger. Importera en .qss, en temamapp eller en nedladdad .zip; ändringar i filen som används syns direkt. Hur man gör en: THEMES.md (följer med Ruche och finns i källkoden).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Version %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Sätter egna färger, så temat ovan gäller bara det den lämnar orört.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Importera tema</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Temafil eller .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Teman (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Temamapp…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Omslag (albumomslaget, eller stationens logga för radio)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Ruches logga</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>Omslag söks efter artist och album (eller låt) på iTunes och MusicBrainz, eftersom Discord bara kan visa bilder från webben.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Bild</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Fungerar med Discord-appen och med Vesktop (slå på dess alternativ arRPC / Rich Presence). Visar låten, artisten och bilden som valts ovan; för radio bara en ren ”Artist - Titel”, med låtens omslag när ett hittas. Inget delas när uppspelningen är pausad eller stoppad.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>Ruche stängdes oväntat förra gången.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>En kraschlogg sparades. Om det händer igen, öppna ett ärende på GitHub och bifoga loggen; den visar vad Ruche gjorde, utan något personligt förutom namnen på filer den just hade spelat.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Det finns redan en flik som heter ”%1”.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Ny flik %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Stäng fliken ”%1”?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>Dess musikmappar tas bort ur biblioteket:
+%1
+
+Själva filerna ligger kvar där de är, och lägger du till mapparna igen kommer de tillbaka.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Fråga inte igen</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ HLS-strömmar (.m3u8), Icecast och Shoutcast fungerar alla.</translation>
         <source>Plays</source>
         <translation>Spelningar</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Tillagd</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ HLS-strömmar (.m3u8), Icecast och Shoutcast fungerar alla.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Den här kopian av Ruche installerades inte från en version; versionssidan öppnades i stället.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>Det finns ingen .qss-fil i den mappen.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Kunde inte kopiera temat.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>Zip-filen kan inte läsas.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>Zip-filen innehåller osäkra sökvägar.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>Det finns ingen .qss-fil i den zip-filen.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Zip-filen är för stor för ett tema.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Kunde inte packa upp temat.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Välj en .qss-fil, en temamapp eller en .zip.</translation>
     </message>
 </context>
 <context>

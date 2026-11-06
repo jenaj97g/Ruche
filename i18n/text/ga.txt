@@ -56,7 +56,6 @@
 55	Á Sheinm Anois
 56	Raidió
 57	SEINNLIOSTAÍ
-58	Níl aon seinnliosta ann fós
 59	Níl aon fhillteán ceoil ann fós. Roghchlár (☰) → Cuir fillteán ceoil leis…
 60	rian
 61	rianta
@@ -108,7 +107,6 @@
 107	Cluaisíní
 108	Cuir cluaisín leis
 109	Bain an cluaisín
-110	Nuair atá dhá chluaisín nó níos mó ann, taispeántar barra cluaisíní os cionn na leabharlainne chun athrú eatarthu (mar shampla Ceol agus Airchecks). Déchliceáil ar chluaisín chun é a athainmniú; tarraing chun an t-ord a athrú.
 111	Fillteáin cheoil
 112	Fillteán
 113	Cluaisín
@@ -152,10 +150,8 @@
 151	Taispeáin ar Discord cad atá á éisteacht agam
 152	Discord
 153	Stáisiúin raidió san áireamh
-154	Taispeáin clúdaigh albam (lorgtar iad de réir ealaíontóra agus albaim ar iTunes agus MusicBrainz)
 155	Aitheantas feidhmchláir ó discord.com/developers
 156	Aitheantas feidhmchláir
-157	Oibríonn sé leis an aip Discord agus le Vesktop (cuir arRPC / Rich Presence ar siúl ann). Taispeánann sé an t-amhrán, an t-ealaíontóir agus an clúdach; don raidió, “Ealaíontóir - Teideal” glan agus lógó an stáisiúin amháin. Ní thaispeántar faic nuair atá sé ar sos nó stoptha.
 158	Deasc
 159	Cumraigh…
 160	Logchomhad…
@@ -209,8 +205,6 @@
 208	Ag atosú i Ruche %1…
 209	<h3>Ruche %1</h3><p>Seinnteoir ceoil éadrom le leagan amach i stíl MusicBee.</p><p>Athsheinm le libmpv. Clibeanna le TagLib. Teidil bheo ó ICY, ó chlibeanna leabaithe, ó HLS #EXTINF agus ó mheiteashonraí ID3 amaithe in HLS.</p><p><a href="%2">%2</a></p>
 210	Seiceáil le haghaidh nuashonruithe
-211	Athainmnigh an cluaisín
-212	Ainm:
 213	Taispeáin Ruche
 214	Ar aghaidh
 215	Níl aon rud á sheinm
@@ -297,6 +291,60 @@
 296	Níorbh fhéidir suiteálaí %1 a thosú.
 297	Íoslódáladh Ruche %1 go %2. Dún Ruche agus bain é amach os cionn na cóipe seo (%3).
 298	Níor suiteáladh an chóip seo de Ruche ó scaoileadh; osclaíodh leathanach an scaoilte ina ionad.
+299	Athainmnigh an seinnliosta…
+300	Iompórtáil seinnliosta…
+301	Cuir fillteán ceoil leis an gcluaisín seo…
+302	Dún an cluaisín
+303	Níl aon fhillteán ceoil sa chluaisín seo fós.
+304	Déchliceáil ar an gcluaisín chun é a athainmniú; tarraing é chun é a bhogadh.
+305	Ní féidir / \ : * ? " < > | a bheith in ainm seinnliosta, ná ponc ag a thús.
+306	Tá seinnliosta darb ainm “%1” ann cheana.
+307	Cruthaíodh an seinnliosta “%1”. Tarraing rianta air sa bharra taoibh, nó deaschliceáil ar rianta → Cuir le seinnliosta.
+308	Athainmnigh an seinnliosta
+309	Níorbh fhéidir an seinnliosta a athainmniú.
+310	Deaschliceáil ar sheinnliosta chun é a athainmniú nó a scriosadh
+311	Oscail an fillteán
+312	Scrios gach ceann
+313	Logchomhaid tuairteála
+314	Ní scríobhtar iad ach má thuairteann Ruche: cad a bhí ar siúl aige, le ceangal le tuairisc fabht ar GitHub. Ní choinnítear ach an 20 is nuaí ar a mhéad.
+315	Dada
+316	%1 (%2)
+317	logchomhad
+318	logchomhaid
+319	Oibríonn na cluaisíní mar a oibríonn siad i mbrabhsálaí: cruthaíonn + ar an mbarra ceann nua, dúnann × nó cliceáil lárnach é, athainmníonn déchliceáil é agus athraíonn tarraingt an t-ord. Baineann gach fillteán thíos le cluaisín amháin.
+320	Fiafraigh sula ndúntar cluaisín a bhfuil fillteáin ann
+321	Comhad téama
+322	Iompórtáil…
+323	Oscail fillteán na dtéamaí
+324	Is stílbhileog Qt (.qss) é comhad téama ar féidir leis cuma aon chuid de Ruche a athrú agus a dhathanna féin a shocrú. Iompórtáil .qss, fillteán téama nó .zip íoslódáilte; taispeántar athruithe ar an gcomhad atá in úsáid láithreach. Conas ceann a dhéanamh: THEMES.md (tagann sé le Ruche agus tá sé sa chód foinseach).
+325	Leagan %1
+326	Socraíonn sé a dhathanna féin, mar sin ní bhaineann an téama thuas ach leis an méid nach n-athraíonn sé.
+327	Iompórtáil téama
+328	Comhad téama nó .zip…
+329	Téamaí (*.qss *.zip)
+330	Fillteán téama…
+331	Clúdach (clúdach an albaim, nó lógó an stáisiúin don raidió)
+332	Lógó Ruche
+333	Lorgaítear clúdaigh de réir ealaíontóra agus albaim (nó amhráin) ar iTunes agus MusicBrainz, mar ní féidir le Discord ach pictiúir ón ngréasán a thaispeáint.
+334	Pictiúr
+335	Oibríonn sé leis an aip Discord agus le Vesktop (cuir arRPC / Rich Presence ar siúl ann). Taispeánann sé an t-amhrán, an t-ealaíontóir agus an pictiúr a roghnaíodh thuas; don raidió, “Ealaíontóir - Teideal” glan amháin, le clúdach an amhráin má aimsítear é. Ní roinntear faic nuair atá sé ar sos nó stoptha.
+336	Ruche
+337	Dúnadh Ruche gan choinne an uair dheireanach.
+338	Sábháladh logchomhad tuairteála. Má tharlaíonn sé arís, oscail ceist ar GitHub agus ceangail an logchomhad léi; insíonn sé cad a bhí Ruche a dhéanamh, gan aon rud pearsanta seachas ainmneacha na gcomhad a bhí díreach seinnte aige.
+339	Tá cluaisín darb ainm “%1” ann cheana.
+340	Cluaisín nua %1
+341	An cluaisín “%1” a dhúnadh?
+342	Baintear a fhillteáin cheoil as an leabharlann:\n%1\n\nFanann na comhaid féin san áit a bhfuil siad, agus má chuireann tú na fillteáin leis arís tagann siad ar ais.
+343	Ná fiafraigh arís
+344	Níl aon chomhad .qss san fhillteán sin.
+345	Níorbh fhéidir an téama a chóipeáil.
+346	Ní féidir an comhad zip sin a léamh.
+347	Tá cosáin neamhshábháilte sa chomhad zip sin.
+348	Níl aon chomhad .qss sa zip sin.
+349	Tá an zip sin rómhór do théama.
+350	Níorbh fhéidir an téama a dhíphacáil.
+351	Roghnaigh comhad .qss, fillteán téama nó .zip.
+352	Curtha leis
 qt:OK	OK
 qt:Cancel	Cealaigh
 qt:Close	Dún

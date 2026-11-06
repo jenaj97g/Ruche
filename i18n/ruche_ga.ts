@@ -251,10 +251,6 @@ Oibríonn sruthanna HLS (.m3u8), Icecast agus Shoutcast.</translation>
         <translation>SEINNLIOSTAÍ</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Níl aon seinnliosta ann fós</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Níl aon fhillteán ceoil ann fós. Roghchlár (☰) → Cuir fillteán ceoil leis…</translation>
     </message>
@@ -459,10 +455,6 @@ Oibríonn sruthanna HLS (.m3u8), Icecast agus Shoutcast.</translation>
         <translation>Bain an cluaisín</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Nuair atá dhá chluaisín nó níos mó ann, taispeántar barra cluaisíní os cionn na leabharlainne chun athrú eatarthu (mar shampla Ceol agus Airchecks). Déchliceáil ar chluaisín chun é a athainmniú; tarraing chun an t-ord a athrú.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Fillteáin cheoil</translation>
     </message>
@@ -635,20 +627,12 @@ Oibríonn sruthanna HLS (.m3u8), Icecast agus Shoutcast.</translation>
         <translation>Stáisiúin raidió san áireamh</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Taispeáin clúdaigh albam (lorgtar iad de réir ealaíontóra agus albaim ar iTunes agus MusicBrainz)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>Aitheantas feidhmchláir ó discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>Aitheantas feidhmchláir</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Oibríonn sé leis an aip Discord agus le Vesktop (cuir arRPC / Rich Presence ar siúl ann). Taispeánann sé an t-amhrán, an t-ealaíontóir agus an clúdach; don raidió, “Ealaíontóir - Teideal” glan agus lógó an stáisiúin amháin. Ní thaispeántar faic nuair atá sé ar sos nó stoptha.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ Oibríonn sruthanna HLS (.m3u8), Icecast agus Shoutcast.</translation>
         <translation>Seiceáil le haghaidh nuashonruithe</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Athainmnigh an cluaisín</translation>
+        <source>Rename playlist…</source>
+        <translation>Athainmnigh an seinnliosta…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Ainm:</translation>
+        <source>Import playlist…</source>
+        <translation>Iompórtáil seinnliosta…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Cuir fillteán ceoil leis an gcluaisín seo…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Dún an cluaisín</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Níl aon fhillteán ceoil sa chluaisín seo fós.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Déchliceáil ar an gcluaisín chun é a athainmniú; tarraing é chun é a bhogadh.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>Ní féidir / \ : * ? " &lt; &gt; | a bheith in ainm seinnliosta, ná ponc ag a thús.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Tá seinnliosta darb ainm “%1” ann cheana.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>Cruthaíodh an seinnliosta “%1”. Tarraing rianta air sa bharra taoibh, nó deaschliceáil ar rianta → Cuir le seinnliosta.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Athainmnigh an seinnliosta</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Níorbh fhéidir an seinnliosta a athainmniú.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Deaschliceáil ar sheinnliosta chun é a athainmniú nó a scriosadh</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Oscail an fillteán</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Scrios gach ceann</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Logchomhaid tuairteála</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Ní scríobhtar iad ach má thuairteann Ruche: cad a bhí ar siúl aige, le ceangal le tuairisc fabht ar GitHub. Ní choinnítear ach an 20 is nuaí ar a mhéad.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Dada</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>logchomhad</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>logchomhaid</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>Oibríonn na cluaisíní mar a oibríonn siad i mbrabhsálaí: cruthaíonn + ar an mbarra ceann nua, dúnann × nó cliceáil lárnach é, athainmníonn déchliceáil é agus athraíonn tarraingt an t-ord. Baineann gach fillteán thíos le cluaisín amháin.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Fiafraigh sula ndúntar cluaisín a bhfuil fillteáin ann</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Comhad téama</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Iompórtáil…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Oscail fillteán na dtéamaí</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>Is stílbhileog Qt (.qss) é comhad téama ar féidir leis cuma aon chuid de Ruche a athrú agus a dhathanna féin a shocrú. Iompórtáil .qss, fillteán téama nó .zip íoslódáilte; taispeántar athruithe ar an gcomhad atá in úsáid láithreach. Conas ceann a dhéanamh: THEMES.md (tagann sé le Ruche agus tá sé sa chód foinseach).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Leagan %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Socraíonn sé a dhathanna féin, mar sin ní bhaineann an téama thuas ach leis an méid nach n-athraíonn sé.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Iompórtáil téama</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Comhad téama nó .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Téamaí (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Fillteán téama…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Clúdach (clúdach an albaim, nó lógó an stáisiúin don raidió)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Lógó Ruche</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>Lorgaítear clúdaigh de réir ealaíontóra agus albaim (nó amhráin) ar iTunes agus MusicBrainz, mar ní féidir le Discord ach pictiúir ón ngréasán a thaispeáint.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Pictiúr</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Oibríonn sé leis an aip Discord agus le Vesktop (cuir arRPC / Rich Presence ar siúl ann). Taispeánann sé an t-amhrán, an t-ealaíontóir agus an pictiúr a roghnaíodh thuas; don raidió, “Ealaíontóir - Teideal” glan amháin, le clúdach an amhráin má aimsítear é. Ní roinntear faic nuair atá sé ar sos nó stoptha.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>Dúnadh Ruche gan choinne an uair dheireanach.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>Sábháladh logchomhad tuairteála. Má tharlaíonn sé arís, oscail ceist ar GitHub agus ceangail an logchomhad léi; insíonn sé cad a bhí Ruche a dhéanamh, gan aon rud pearsanta seachas ainmneacha na gcomhad a bhí díreach seinnte aige.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Tá cluaisín darb ainm “%1” ann cheana.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Cluaisín nua %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>An cluaisín “%1” a dhúnadh?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>Baintear a fhillteáin cheoil as an leabharlann:
+%1
+
+Fanann na comhaid féin san áit a bhfuil siad, agus má chuireann tú na fillteáin leis arís tagann siad ar ais.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Ná fiafraigh arís</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ Oibríonn sruthanna HLS (.m3u8), Icecast agus Shoutcast.</translation>
         <source>Plays</source>
         <translation>Seinmeanna</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Curtha leis</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ Oibríonn sruthanna HLS (.m3u8), Icecast agus Shoutcast.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Níor suiteáladh an chóip seo de Ruche ó scaoileadh; osclaíodh leathanach an scaoilte ina ionad.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>Níl aon chomhad .qss san fhillteán sin.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Níorbh fhéidir an téama a chóipeáil.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>Ní féidir an comhad zip sin a léamh.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>Tá cosáin neamhshábháilte sa chomhad zip sin.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>Níl aon chomhad .qss sa zip sin.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Tá an zip sin rómhór do théama.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Níorbh fhéidir an téama a dhíphacáil.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Roghnaigh comhad .qss, fillteán téama nó .zip.</translation>
     </message>
 </context>
 <context>

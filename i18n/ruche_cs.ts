@@ -251,10 +251,6 @@ Fungují streamy HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>SEZNAMY SKLADEB</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Zatím žádné seznamy</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Zatím žádná složka s hudbou. Nabídka (☰) → Přidat složku s hudbou…</translation>
     </message>
@@ -459,10 +455,6 @@ Fungují streamy HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Odebrat kartu</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Když jsou karty dvě nebo víc, nad knihovnou se zobrazí lišta karet pro přepínání (třeba Hudba a Airchecks). Dvojklik na kartu ji přejmenuje; přetažením změníte pořadí.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Složky s hudbou</translation>
     </message>
@@ -635,20 +627,12 @@ Fungují streamy HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Včetně rádiových stanic</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Zobrazovat obaly alb (hledají se podle interpreta a alba na iTunes a MusicBrainz)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>ID aplikace z discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>ID aplikace</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Funguje s aplikací Discord i s Vesktopem (v něm zapněte arRPC / Rich Presence). Zobrazuje skladbu, interpreta a obal; u rádia jen čisté „Interpret - Název“ a logo stanice. Při pozastavení a zastavení se nezobrazuje nic.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ Fungují streamy HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Zkontrolovat aktualizace</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Přejmenovat kartu</translation>
+        <source>Rename playlist…</source>
+        <translation>Přejmenovat seznam…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Název:</translation>
+        <source>Import playlist…</source>
+        <translation>Importovat seznam skladeb…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Přidat do této karty složku s hudbou…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Zavřít kartu</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Tato karta zatím nemá žádné složky s hudbou.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Dvojklikem na kartu ji přejmenujete; přetažením ji přesunete.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>Název seznamu nesmí obsahovat / \ : * ? " &lt; &gt; | ani začínat tečkou.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Seznam s názvem „%1“ už existuje.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>Seznam „%1“ vytvořen. Přetáhněte na něj skladby v postranním panelu, nebo klikněte pravým tlačítkem na skladby → Přidat do seznamu skladeb.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Přejmenovat seznam</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Seznam se nepodařilo přejmenovat.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Klikněte pravým tlačítkem na seznam, chcete-li ho přejmenovat nebo smazat</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Otevřít složku</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Smazat vše</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Záznamy o pádech</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Ukládají se jen při pádu Ruche: co zrovna dělal, k přiložení k hlášení chyby na GitHubu. Uchovává se nejvýše 20 nejnovějších.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Žádné</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>záznam</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>záznamů</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>Karty fungují jako v prohlížeči: + na liště vytvoří novou, × nebo prostřední tlačítko myši ji zavře, dvojklik přejmenuje a přetažení změní pořadí. Každá složka níže patří do jedné karty.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Zeptat se před zavřením karty se složkami</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Soubor motivu</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Importovat…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Otevřít složku motivů</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>Soubor motivu je styl Qt (.qss), který může změnit vzhled kterékoli části Ruche a nastavit vlastní barvy. Importujte .qss, složku motivu nebo stažený .zip; úpravy používaného souboru se projeví hned. Jak ho vytvořit: THEMES.md (dodáván s Ruche a ve zdrojovém kódu).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Verze %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Nastavuje vlastní barvy, takže motiv výše platí jen pro to, co nechá beze změny.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Importovat motiv</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Soubor motivu nebo .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Motivy (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Složka motivu…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Obal (obal alba, u rádia logo stanice)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Logo Ruche</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>Obaly se hledají podle interpreta a alba (nebo skladby) na iTunes a MusicBrainz, protože Discord umí zobrazit jen obrázky z webu.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Obrázek</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Funguje s aplikací Discord i s Vesktopem (v něm zapněte arRPC / Rich Presence). Zobrazuje skladbu, interpreta a obrázek zvolený výše; u rádia jen čisté „Interpret - Název“, s obalem skladby, pokud se najde. Při pozastavení a zastavení se nesdílí nic.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>Ruche se minule neočekávaně ukončil.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>Byl uložen záznam o pádu. Pokud se to opakuje, založte prosím issue na GitHubu a záznam přiložte; ukazuje, co Ruche dělal, a neobsahuje nic osobního kromě názvů souborů, které právě přehrál.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Karta s názvem „%1“ už existuje.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Nová karta %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Zavřít kartu „%1“?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>Její složky s hudbou se odeberou z knihovny:
+%1
+
+Samotné soubory zůstanou, kde jsou, a když složky přidáte znovu, vrátí se.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Už se neptat</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ Fungují streamy HLS (.m3u8), Icecast i Shoutcast.</translation>
         <source>Plays</source>
         <translation>Přehrání</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Přidáno</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ Fungují streamy HLS (.m3u8), Icecast i Shoutcast.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Tato kopie Ruche nebyla nainstalována z vydání; místo toho se otevřela stránka vydání.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>V této složce není žádný soubor .qss.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Motiv se nepodařilo zkopírovat.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>Tento soubor zip nelze přečíst.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>Tento soubor zip obsahuje nebezpečné cesty.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>V tomto zipu není žádný soubor .qss.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Tento zip je na motiv příliš velký.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Motiv se nepodařilo rozbalit.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Vyberte soubor .qss, složku motivu nebo .zip.</translation>
     </message>
 </context>
 </TS>

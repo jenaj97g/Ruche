@@ -69,6 +69,7 @@ public:
     // Playlists live as .m3u8 files so other players can read them too.
     QStringList playlists() const;
     QVector<qint64> playlistTracks(const QString &name);
+    bool renamePlaylist(const QString &from, const QString &to);
     bool savePlaylist(const QString &name, const QVector<qint64> &ids);
     bool appendToPlaylist(const QString &name, const QVector<qint64> &ids);
     bool deletePlaylist(const QString &name);

@@ -32,10 +32,15 @@ The Windows files aren't code-signed, so SmartScreen may warn the first time
 
 - Library: scans folders with TagLib (MP3, FLAC, Ogg, Opus, M4A/ALAC, WAV, WavPack, APE,
   AIFF, WMA, MPC, TTA), keeps it in SQLite, browses by genre, artist and album, and searches
-  ignoring accents ("ete" finds "Été").
-- Playback through libmpv: gapless, ReplayGain (Settings), shuffle and repeat.
-- Library tabs: keep folders apart, say Music in one tab and radio airchecks in another.
-- Playlists are plain `.m3u8` files in `~/.local/share/ruche/playlists`.
+  ignoring accents ("ete" finds "Été"). Click a column header to sort by it (title,
+  artist, time, plays, date added…); click again to reverse, a third time for album order.
+- Playback through libmpv: gapless, ReplayGain (Settings), shuffle and repeat. Scroll over
+  the progress bar to skip 5 s per notch (Shift: 30 s, Ctrl: 1 s); hovering shows the time
+  under the cursor; Shift+← / Shift+→ skip 5 s from the keyboard.
+- Library tabs that work like a browser's: say Music in one tab and radio airchecks in
+  another. See "Library tabs" below.
+- Playlists are plain `.m3u8` files in `~/.local/share/ruche/playlists`. Make, rename and
+  delete them by right-clicking the sidebar; drag tracks onto one to add them.
 - Radio: Icecast/Shoutcast, `.pls`, M3U/M3U8 station lists, and HLS (`.m3u8`) streams.
   Import a list from a file or URL, or pass it on the command line: `ruche mes-radios.m3u8`.
 - Station logos, shown in the station list, the now-playing panel, the player bar and
@@ -53,6 +58,9 @@ The Windows files aren't code-signed, so SmartScreen may warn the first time
 - Themes: Dark (default), Light, Match the system, and Midnight, Frost, Forest, Plum, Ember,
   Paper and Black (OLED), with any accent colour, or a custom theme from your own background
   and text colours. Icons are drawn in code, so they follow the theme.
+- Theme files: full restyling with Qt stylesheets, imported from a `.qss`, a folder or a
+  downloaded `.zip`. See "Theme files" below and [THEMES.md](THEMES.md).
+- Crash logs, kept only if Ruche crashes, and cleaned up automatically.
 
 ## Screenshots
 
@@ -156,14 +164,14 @@ and `--play-pause`/`--next`/`--previous`, work without a display (TTY, SSH, scri
 
 ☰ → Settings… has these tabs:
 
-- **General**: language, and whether to check for updates on start.
-- **Library**: tabs and the music folders in each.
+- **General**: language, whether to check for updates on start, and crash logs.
+- **Library**: tabs and the music folders in each, and whether closing a tab asks first.
 - **Playback**: ReplayGain.
 - **Appearance**: theme and accent colour. Changes show straight away; Cancel puts the old
   look back. "Match the system" follows the desktop's dark/light setting as it changes.
   A custom theme takes a background and a text colour (plus the accent) and mixes every
   other shade from them; accent colours that would be hard to read as text are darkened
-  or lightened for text automatically.
+  or lightened for text automatically. Below that, a theme file (see "Theme files").
 - **Desktop**: song notifications, close to tray, Discord, applications menu (AppImage).
 - **Plugins**: turn plugins on and off, configure them, read their logs.
 
@@ -189,11 +197,42 @@ how Ruche was installed:
 
 ## Library tabs
 
-With more than one music folder you can split them into tabs, for example **Music** and
-**Airchecks**. In Settings → Library, add tabs, then choose a tab for each folder. With two
-or more tabs a tab bar shows above the library; each tab has its own genres, artists and
-albums. Double-click a tab to rename it; right-click for Rename and Tabs and folders. A
-folder added from ☰ → Add music folder… goes into the tab you're on.
+Music folders can be split into tabs above the library, for example **Music** and
+**Airchecks**, each with its own genres, artists and albums. They work like a browser's:
+
+- **+** makes a tab and lets you type its name; double-clicking the empty bar does too.
+- **Double-click** a tab to rename it; **drag** it to move it.
+- **×** or a **middle-click** closes a tab. Closing a tab takes its folders out of the
+  library (the files stay where they are), so Ruche asks first; "Don't ask again" turns that
+  off, and Settings → Library turns it back on.
+- An empty tab offers **Add music folder to this tab…**. ☰ → Add music folder… also adds
+  to the tab you're on.
+
+Right-click the tab bar for the same actions, and **Tabs and folders…** to move folders
+between tabs in Settings → Library. Play counts stay with the songs, whichever
+tab their folder is in.
+
+## Theme files
+
+Beyond the built-in themes, a theme file can restyle everything: colours, borders, corners,
+fonts, gradients, background pictures. It's a Qt stylesheet (`.qss`), so a downloaded one
+can't run code. Settings → Appearance → **Theme file**:
+
+- **Import…** takes a `.qss`, a theme folder or a downloaded `.zip`.
+- **Open themes folder** for files you made or unzipped yourself.
+- Two examples come with Ruche: *Synthwave* and *Terminal*.
+
+While a theme file is in use, Ruche reloads it every time it's saved, so you can edit one and
+watch it change. [THEMES.md](THEMES.md) explains how to make one: the header, the colour
+tokens and the names of every part.
+
+## Crash logs
+
+If Ruche ever crashes, it leaves a short text file saying what it was doing (a stack trace
+and the last log messages), and says so the next time it starts. Attach it to a bug report.
+Nothing is written while Ruche runs normally. Only the newest 20 logs are kept, and never
+more than 5 MB, so they can't pile up. Settings → General shows how many there are, with
+**Open folder** and **Delete all**.
 
 ## Languages
 
@@ -242,7 +281,7 @@ until you tick them:
   own format), for OBS text sources and other stream overlays.
 
 Your own plugins go in `~/.local/share/ruche/plugins` (Windows:
-`%LOCALAPPDATA%\ruche\plugins`; Flatpak: `~/.var/app/be.weizkule.Ruche/data/ruche/plugins`).
+`%LOCALAPPDATA%\ruche\plugins`; Flatpak: `~/.var/app/fr.jenaj97g.Ruche/data/ruche/plugins`).
 How to write one, and the whole API: [PLUGINS.md](PLUGINS.md).
 
 ## Discord
@@ -252,14 +291,16 @@ Settings → Desktop → **Show what I'm listening to on Discord**. It's off unt
 Discord then shows "Listening to Ruche" with the song, the artist, the album cover and a
 progress bar. While paused or stopped, nothing is shown.
 
-- **Album covers**: Discord can only show pictures that are on the web, so Ruche looks the
-  cover up by artist and album on iTunes, then on MusicBrainz / Cover Art Archive, and
-  remembers what it found. Untick "Show album covers" to keep that from happening (Ruche's
-  logo is shown instead).
-- **Radio**: only a clean "Artist - Title" is shown, with the station's logo (when Ruche
-  downloaded it from a web address). Whatever else a station puts in its title, such as
-  slogans, web addresses, frequencies or ads, never reaches Discord; it shows the station's
-  name instead. "Include radio stations" turns radio off entirely.
+- **Picture**: **Cover art** or **Ruche logo**. Discord can only show pictures that are on
+  the web, so for cover art Ruche looks the cover up by artist and album on iTunes, then on
+  MusicBrainz / Cover Art Archive, and remembers what it found. With **Ruche logo**, nothing
+  is looked up and Ruche's logo is shown for everything.
+- **Radio**: only a clean "Artist - Title" is shown. With cover art, Ruche looks up the
+  song's cover and shows the station's logo as the small picture; when no cover is found, the
+  station's logo (when Ruche downloaded it from a web address) is the picture. Whatever else
+  a station puts in its title, such as slogans, web addresses, frequencies or ads, never
+  reaches Discord; it shows the station's name instead. "Include radio stations" turns radio
+  off entirely.
 
 It talks to Discord through Discord's local socket, so it works with the Discord app
 (stable, PTB, Canary) and with **Vesktop**, whether installed natively, as a Flatpak or
@@ -280,7 +321,7 @@ your home folder and `/media`, `/run/media`, `/mnt` (for music on other drives),
 through PipeWire or PulseAudio, and can reach Discord's and Vesktop's sockets.
 
 Its library, stations and settings are separate from the AppImage's or the package's:
-they live in `~/.var/app/be.weizkule.Ruche/`. Updating is installing the newer bundle.
+they live in `~/.var/app/fr.jenaj97g.Ruche/`. Updating is installing the newer bundle.
 
 ## Close to tray
 

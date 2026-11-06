@@ -13,7 +13,9 @@
 #include "I18n.h"
 #include "PlaybackController.h"
 #include "Stations.h"
+#include "CrashLog.h"
 #include "Theme.h"
+#include "ThemeFiles.h"
 #include "Widgets.h"
 
 #include <QApplication>
@@ -49,7 +51,12 @@
 #include <QMimeData>
 #include <QProgressBar>
 #include <QPushButton>
+#include <QRegularExpression>
+#include <QLocale>
 #include <QSettings>
+#include <QSignalBlocker>
+#include <QFileSystemWatcher>
+#include <QMouseEvent>
 #include <QShortcut>
 #include <QSplitter>
 #include <QStackedWidget>
@@ -248,6 +255,7 @@ MainWindow::MainWindow(Library *lib, PlaybackController *pc, Stations *stations,
 
     // "Match the system": follow the desktop when it switches between dark and light.
     m_themeChoice = Theme::loadChoice();
+    watchThemeFile(); // main() applied the theme before this window existed
 #if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
     connect(QGuiApplication::styleHints(), &QStyleHints::colorSchemeChanged, this, [this] {
         if (m_themeChoice.theme == QLatin1String("system"))
@@ -276,6 +284,7 @@ MainWindow::MainWindow(Library *lib, PlaybackController *pc, Stations *stations,
     });
     m_updater = new Updater(this);
     QTimer::singleShot(1500, this, &MainWindow::startupUpdateCheck);
+    QTimer::singleShot(900, this, &MainWindow::showCrashNotice);
     connect(m_notifier, &Notifier::activated, this, &MainWindow::showFromTray);
     connect(m_notifier, &Notifier::skipRequested, m_pc, &PlaybackController::next);
     m_notifyTimer.setSingleShot(true);
@@ -391,6 +400,8 @@ void MainWindow::buildUi()
     m_nav->setMinimumWidth(150);
     m_nav->setContextMenuPolicy(Qt::CustomContextMenu);
     m_nav->setFocusPolicy(Qt::NoFocus);
+    m_nav->viewport()->setAcceptDrops(true);
+    m_nav->viewport()->installEventFilter(this); // tracks dropped on playlists
     connect(m_nav, &QTreeWidget::itemClicked, this, [this](QTreeWidgetItem *it) {
         const QString kind = it->data(0, NavKind).toString();
         if (kind == QLatin1String("library"))
@@ -401,22 +412,27 @@ void MainWindow::buildUi()
             switchView(View::Radio);
         else if (kind == QLatin1String("playlist"))
             switchView(View::Playlist, it->data(0, NavName).toString());
+        else if (kind == QLatin1String("newplaylist"))
+            newPlaylist();
     });
     connect(m_nav, &QTreeWidget::customContextMenuRequested, this, [this](const QPoint &pos) {
         QTreeWidgetItem *it = m_nav->itemAt(pos);
-        if (!it || it->data(0, NavKind).toString() != QLatin1String("playlist"))
-            return;
-        const QString name = it->data(0, NavName).toString();
         QMenu menu(this);
-        menu.addAction(Icons::icon(Icons::Play), tr("Play"), this, [this, name] { m_pc->playTracks(m_lib->playlistTracks(name), 0); });
-        menu.addAction(Icons::icon(Icons::Queue), tr("Add to Now Playing"), this, [this, name] { m_pc->enqueue(m_lib->playlistTracks(name)); });
-        menu.addSeparator();
-        menu.addAction(Icons::icon(Icons::Remove), tr("Delete playlist"), this, [this, name] {
-            if (QMessageBox::question(this, tr("Delete playlist"), tr("Delete the playlist “%1”?").arg(name)) == QMessageBox::Yes) {
-                if (m_view == View::Playlist && m_playlist == name)
-                    switchView(View::Library);
-                m_lib->deletePlaylist(name);
-            }
+        if (it && it->data(0, NavKind).toString() == QLatin1String("playlist")) {
+            const QString name = it->data(0, NavName).toString();
+            menu.addAction(Icons::icon(Icons::Play), tr("Play"), this, [this, name] { m_pc->playTracks(m_lib->playlistTracks(name), 0); });
+            menu.addAction(Icons::icon(Icons::Queue), tr("Add to Now Playing"), this, [this, name] { m_pc->enqueue(m_lib->playlistTracks(name)); });
+            menu.addSeparator();
+            menu.addAction(Icons::icon(Icons::Edit), tr("Rename playlist…"), this, [this, name] { renamePlaylist(name); });
+            menu.addAction(Icons::icon(Icons::Remove), tr("Delete playlist"), this, [this, name] { deletePlaylist(name); });
+            menu.addSeparator();
+        }
+        // anywhere in the sidebar
+        menu.addAction(Icons::icon(Icons::Add), tr("New playlist…"), this, [this] { newPlaylist(); });
+        menu.addAction(Icons::icon(Icons::Import), tr("Import playlist…"), this, [this] {
+            const QString f = QFileDialog::getOpenFileName(this, tr("Import"), QString(), tr("Playlists (*.m3u *.m3u8 *.pls)"));
+            if (!f.isEmpty())
+                importPlaylistFile(f);
         });
         menu.exec(m_nav->viewport()->mapToGlobal(pos));
     });
@@ -426,25 +442,65 @@ void MainWindow::buildUi()
     auto *lv = new QVBoxLayout(m_libraryPage);
     lv->setContentsMargins(0, 0, 0, 0);
     lv->setSpacing(0);
-    // Library tabs: each music folder belongs to one; the bar shows once there are two.
-    m_libTabs = new QTabBar(m_libraryPage);
+    // Library tabs, like a browser's: drag to reorder, + for a new one, × to close.
+    // Each music folder belongs to one tab.
+    m_tabRow = new QWidget(m_libraryPage);
+    m_tabRow->setObjectName(QStringLiteral("libTabRow"));
+    auto *tabRowLayout = new QHBoxLayout(m_tabRow);
+    tabRowLayout->setContentsMargins(0, 0, 0, 0);
+    tabRowLayout->setSpacing(2);
+    m_libTabs = new QTabBar(m_tabRow);
     m_libTabs->setObjectName(QStringLiteral("libTabs"));
     m_libTabs->setDrawBase(false);
     m_libTabs->setExpanding(false);
+    m_libTabs->setMovable(true);
+    m_libTabs->setUsesScrollButtons(true);
+    m_libTabs->setElideMode(Qt::ElideRight);
     m_libTabs->setContextMenuPolicy(Qt::CustomContextMenu);
-    lv->addWidget(m_libTabs);
+    m_libTabs->installEventFilter(this); // middle-click closes a tab
+    auto *addTab = new QToolButton(m_tabRow);
+    addTab->setObjectName(QStringLiteral("libTabAdd"));
+    addTab->setIcon(Icons::icon(Icons::Add));
+    addTab->setAutoRaise(true);
+    addTab->setToolTip(tr("New tab"));
+    connect(addTab, &QToolButton::clicked, this, &MainWindow::newLibraryTab);
+    tabRowLayout->addWidget(m_libTabs);
+    tabRowLayout->addWidget(addTab);
+    tabRowLayout->addStretch(1);
+    lv->addWidget(m_tabRow);
     connect(m_libTabs, &QTabBar::currentChanged, this, [this](int i) {
         if (i < 0 || m_tabsUpdating)
             return;
         QSettings(paths::configFile(), QSettings::IniFormat).setValue(QStringLiteral("library/currentTab"), tabToStored(m_libTabs->tabText(i)));
         refreshLibrary(0);
     });
-    connect(m_libTabs, &QTabBar::tabBarDoubleClicked, this, [this](int i) { renameLibraryTab(i); });
+    connect(m_libTabs, &QTabBar::tabMoved, this, [this](int from, int to) {
+        if (m_tabsUpdating || from < 0 || to < 0 || from >= m_tabNames.size() || to >= m_tabNames.size())
+            return;
+        pinFolderTabs(); // folders follow their tab, not whichever tab ends up first
+        m_tabNames.move(from, to);
+        saveLibraryTabs();
+    });
+    connect(m_libTabs, &QTabBar::tabBarDoubleClicked, this, [this](int i) {
+        if (i >= 0)
+            renameLibraryTab(i);
+        else
+            newLibraryTab(); // double-click on the empty bar, as in browsers
+    });
     connect(m_libTabs, &QWidget::customContextMenuRequested, this, [this](const QPoint &pos) {
         const int i = m_libTabs->tabAt(pos);
         QMenu menu(this);
-        if (i >= 0)
-            menu.addAction(tr("Rename tab…"), this, [this, i] { renameLibraryTab(i); });
+        menu.addAction(Icons::icon(Icons::Add), tr("New tab"), this, &MainWindow::newLibraryTab);
+        if (i >= 0) {
+            menu.addAction(Icons::icon(Icons::Folder), tr("Add music folder to this tab…"), this, [this, i] {
+                m_libTabs->setCurrentIndex(i);
+                addFolder();
+            });
+            menu.addAction(Icons::icon(Icons::Edit), tr("Rename tab…"), this, [this, i] { renameLibraryTab(i); });
+            QAction *close = menu.addAction(Icons::icon(Icons::Close), tr("Close tab"), this, [this, i] { closeLibraryTab(i); });
+            close->setEnabled(m_tabNames.size() > 1);
+        }
+        menu.addSeparator();
         menu.addAction(tr("Tabs and folders…"), this, [this] { openSettings(QStringLiteral("library")); });
         menu.exec(m_libTabs->mapToGlobal(pos));
     });
@@ -491,6 +547,28 @@ void MainWindow::buildUi()
     m_trackView->setWordWrap(false);
     m_trackView->setTextElideMode(Qt::ElideRight);
     m_trackView->setContextMenuPolicy(Qt::CustomContextMenu);
+    m_tabHint = new QWidget(m_trackView->viewport());
+    {
+        auto *hl = new QVBoxLayout(m_tabHint);
+        hl->addStretch(1);
+        auto *text = new QLabel(tr("This tab has no music folders yet."), m_tabHint);
+        text->setObjectName(QStringLiteral("hint"));
+        text->setAlignment(Qt::AlignCenter);
+        auto *btn = new QPushButton(Icons::icon(Icons::Folder), tr("Add music folder to this tab…"), m_tabHint);
+        connect(btn, &QPushButton::clicked, this, &MainWindow::addFolder);
+        auto *sub = new QLabel(tr("Double-click the tab to rename it; drag it to move it."), m_tabHint);
+        sub->setObjectName(QStringLiteral("hint"));
+        sub->setAlignment(Qt::AlignCenter);
+        hl->addWidget(text);
+        hl->addWidget(btn, 0, Qt::AlignHCenter);
+        hl->addWidget(sub);
+        hl->addStretch(2);
+        m_tabHint->hide();
+        m_trackView->viewport()->installEventFilter(this); // keep the hint the viewport's size
+    }
+    m_trackView->setDragEnabled(true); // onto a playlist in the sidebar, or out to other apps
+    m_trackView->setDragDropMode(QAbstractItemView::DragOnly);
+    m_trackView->setDefaultDropAction(Qt::CopyAction);
     m_trackView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
     QHeaderView *hh = m_trackView->horizontalHeader();
     hh->setSectionsClickable(true);
@@ -507,6 +585,7 @@ void MainWindow::buildUi()
     hh->resizeSection(TrackTableModel::ColGenre, 110);
     hh->resizeSection(TrackTableModel::ColTime, 62);
     hh->resizeSection(TrackTableModel::ColPlays, 52);
+    hh->resizeSection(TrackTableModel::ColAdded, 96);
     for (int c : {int(TrackTableModel::ColTitle), int(TrackTableModel::ColArtist), int(TrackTableModel::ColAlbum)})
         hh->setSectionResizeMode(c, QHeaderView::Stretch);
     fitNarrowColumns();
@@ -708,9 +787,8 @@ void MainWindow::buildUi()
             flash(tr("Now Playing is empty."));
             return;
         }
-        bool ok = false;
-        const QString name = QInputDialog::getText(this, tr("Save playlist"), tr("Playlist name:"), QLineEdit::Normal, QString(), &ok).trimmed();
-        if (ok && !name.isEmpty())
+        const QString name = askPlaylistName(tr("Save playlist"));
+        if (!name.isEmpty())
             m_lib->savePlaylist(name, m_pc->queue());
     });
     menu->addSeparator();
@@ -752,6 +830,8 @@ void MainWindow::setupShortcuts()
     add(QKeySequence(Qt::Key_MediaStop), [this] { m_pc->stop(); });
     add(QKeySequence(Qt::CTRL | Qt::Key_Right), [this] { m_pc->next(); });
     add(QKeySequence(Qt::CTRL | Qt::Key_Left), [this] { m_pc->previous(); });
+    add(QKeySequence(Qt::SHIFT | Qt::Key_Right), [this] { m_bar->seekBy(5000); });
+    add(QKeySequence(Qt::SHIFT | Qt::Key_Left), [this] { m_bar->seekBy(-5000); });
     add(QKeySequence(Qt::CTRL | Qt::Key_Up), [this] { m_bar->setVolume(qMin(100, m_pc->volume() + 5)); });
     add(QKeySequence(Qt::CTRL | Qt::Key_Down), [this] { m_bar->setVolume(qMax(0, m_pc->volume() - 5)); });
     add(QKeySequence::Find, [this] {
@@ -769,6 +849,64 @@ void MainWindow::setupShortcuts()
     connect(spaste, &QShortcut::activated, this, [this] { pasteLogo(m_stationView->currentIndex().row()); });
     auto *senter = new QShortcut(QKeySequence(Qt::Key_Return), m_stationView, nullptr, nullptr, Qt::WidgetShortcut);
     connect(senter, &QShortcut::activated, this, [this] { playStationRow(m_stationView->currentIndex().row()); });
+}
+
+// Asks for a playlist name; empty if cancelled. Refuses names a file can't have and
+// names already taken (other than `current`, when renaming).
+QString MainWindow::askPlaylistName(const QString &title, const QString &current)
+{
+    QString name = current;
+    for (;;) {
+        bool ok = false;
+        name = QInputDialog::getText(this, title, tr("Playlist name:"), QLineEdit::Normal, name, &ok).trimmed();
+        if (!ok || name.isEmpty())
+            return {};
+        static const QRegularExpression bad(QStringLiteral(R"([/\\:*?"<>|]|^\.)"));
+        if (name.contains(bad)) {
+            QMessageBox::warning(this, title, tr("A playlist name can't contain / \\ : * ? \" < > | or start with a dot."));
+            continue;
+        }
+        if (name.compare(current, Qt::CaseSensitive) != 0 && m_lib->playlists().contains(name, Qt::CaseInsensitive) &&
+            name.compare(current, Qt::CaseInsensitive) != 0) {
+            QMessageBox::warning(this, title, tr("There's already a playlist called “%1”.").arg(name));
+            continue;
+        }
+        return name;
+    }
+}
+
+void MainWindow::newPlaylist()
+{
+    const QString name = askPlaylistName(tr("New playlist"));
+    if (name.isEmpty())
+        return;
+    m_lib->savePlaylist(name, {});
+    switchView(View::Playlist, name);
+    rebuildNavigator();
+    flash(tr("Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.").arg(name));
+}
+
+void MainWindow::renamePlaylist(const QString &name)
+{
+    const QString to = askPlaylistName(tr("Rename playlist"), name);
+    if (to.isEmpty() || to == name)
+        return;
+    if (!m_lib->renamePlaylist(name, to)) {
+        QMessageBox::warning(this, tr("Rename playlist"), tr("Couldn't rename the playlist."));
+        return;
+    }
+    if (m_view == View::Playlist && m_playlist == name)
+        switchView(View::Playlist, to);
+    rebuildNavigator();
+}
+
+void MainWindow::deletePlaylist(const QString &name)
+{
+    if (QMessageBox::question(this, tr("Delete playlist"), tr("Delete the playlist “%1”?").arg(name)) != QMessageBox::Yes)
+        return;
+    if (m_view == View::Playlist && m_playlist == name)
+        switchView(View::Library);
+    m_lib->deletePlaylist(name);
 }
 
 void MainWindow::rebuildNavigator()
@@ -798,14 +936,14 @@ void MainWindow::rebuildNavigator()
     entry(Icons::Radio, tr("Radio"), QStringLiteral("radio"));
     const QStringList pls = m_lib->playlists();
     section(tr("PLAYLISTS"));
-    if (pls.isEmpty()) {
-        auto *hint = new QTreeWidgetItem(m_nav, {tr("No playlists yet")});
-        hint->setFlags(Qt::NoItemFlags);
-        hint->setForeground(0, Theme::faint());
-        hint->setToolTip(0, hint->text(0)); // in case a translation is cut off
-    }
     for (const QString &p : pls)
         entry(Icons::Playlist, p, QStringLiteral("playlist"), p);
+    {
+        // always there, so making a playlist is one click away (right-click has more)
+        QTreeWidgetItem *add = entry(Icons::Add, tr("New playlist…"), QStringLiteral("newplaylist"));
+        add->setForeground(0, Theme::dim());
+        add->setToolTip(0, tr("Right-click a playlist to rename or delete it"));
+    }
 
     // reselect the current view
     for (int i = 0; i < m_nav->topLevelItemCount(); ++i) {
@@ -828,7 +966,7 @@ void MainWindow::fitNarrowColumns()
     QHeaderView *hh = m_trackView->horizontalHeader();
     const QFontMetrics fm(hh->font());
     for (int c : {int(TrackTableModel::ColNum), int(TrackTableModel::ColYear), int(TrackTableModel::ColGenre),
-                  int(TrackTableModel::ColTime), int(TrackTableModel::ColPlays)}) {
+                  int(TrackTableModel::ColTime), int(TrackTableModel::ColPlays), int(TrackTableModel::ColAdded)}) {
         const QString label = m_trackModel->headerData(c, Qt::Horizontal, Qt::DisplayRole).toString();
         const int need = fm.horizontalAdvance(label) + 26; // padding + sort arrow
         if (hh->sectionSize(c) < need)
@@ -847,6 +985,9 @@ void MainWindow::switchView(View v, const QString &playlist)
     const View old = m_view;
     m_view = v;
     m_playlist = playlist;
+    m_tabRow->setVisible(v == View::Library);
+    if (v != View::Library)
+        m_tabHint->hide();
     switch (v) {
     case View::Library:
         m_stack->setCurrentWidget(m_libraryPage);
@@ -977,6 +1118,14 @@ static QVector<qint64> filterBy(Library *lib, const QVector<qint64> &ids, const 
     return out;
 }
 
+void MainWindow::updateTabHint()
+{
+    const QStringList tf = currentTabFolders();
+    const bool empty = m_view == View::Library && m_tabNames.size() > 1 && tf.size() == 1 && tf.first() == QStringLiteral("\x01");
+    m_tabHint->setGeometry(m_trackView->viewport()->rect());
+    m_tabHint->setVisible(empty);
+}
+
 void MainWindow::refreshLibrary(int from)
 {
     if (m_view != View::Library)
@@ -998,6 +1147,7 @@ void MainWindow::refreshLibrary(int from)
             return f;
         };
         const QStringList tabFolders = currentTabFolders(); // empty: every folder
+        updateTabHint();
         for (const Track &t : m_lib->tracks()) {
             if (t.id <= 0)
                 continue;
@@ -1251,9 +1401,8 @@ void MainWindow::addToPlaylistMenu(QMenu *menu, const QVector<qint64> &ids)
 {
     QMenu *sub = menu->addMenu(Icons::icon(Icons::Playlist), tr("Add to playlist"));
     sub->addAction(Icons::icon(Icons::Add), tr("New playlist…"), this, [this, ids] {
-        bool ok = false;
-        const QString name = QInputDialog::getText(this, tr("New playlist"), tr("Playlist name:"), QLineEdit::Normal, QString(), &ok).trimmed();
-        if (ok && !name.isEmpty()) {
+        const QString name = askPlaylistName(tr("New playlist"));
+        if (!name.isEmpty()) {
             m_lib->appendToPlaylist(name, ids);
             flash(tr("Added %1 to “%2”").arg(countOf(ids.size(), tr("track"), tr("tracks")), name));
         }
@@ -1577,7 +1726,7 @@ void MainWindow::addFolder()
     QStringList f = m_lib->folders();
     if (!f.contains(dir))
         f << dir;
-    if (m_libTabs->count() > 1) { // into the tab being looked at
+    if (m_libTabs->currentIndex() >= 0) { // into the tab being looked at
         m_folderTab.insert(dir, m_libTabs->tabText(m_libTabs->currentIndex()));
         saveLibraryTabs();
     }
@@ -1627,6 +1776,36 @@ void MainWindow::openSettings(const QString &page)
                            .arg(QStringLiteral(RUCHE_VERSION), Updater::kindName(Updater::kind()), Updater::releasesPage()));
     gf->addRow(QString(), updStatus);
     connect(checkNow, &QPushButton::clicked, &d, [this, updStatus] { checkForUpdates(true, updStatus); });
+    // Crash logs: only exist if Ruche crashed; size shown so they can't go unnoticed
+    auto *crashRow = new QHBoxLayout;
+    auto *crashInfo = new QLabel(genPage);
+    auto *crashOpen = new QPushButton(Icons::icon(Icons::Folder), tr("Open folder"), genPage);
+    auto *crashClear = new QPushButton(Icons::icon(Icons::Remove), tr("Delete all"), genPage);
+    crashRow->addWidget(crashInfo, 1);
+    crashRow->addWidget(crashOpen);
+    crashRow->addWidget(crashClear);
+    gf->addRow(tr("Crash logs"), crashRow);
+    auto *crashHint = new QLabel(tr("Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. "
+                                    "At most the 20 newest are kept."),
+                                 genPage);
+    crashHint->setObjectName(QStringLiteral("hint"));
+    crashHint->setWordWrap(true);
+    gf->addRow(QString(), crashHint);
+    auto showCrashInfo = [crashInfo, crashClear] {
+        const int n = int(crashlog::logs().size());
+        crashInfo->setText(n == 0 ? tr("None")
+                                  : tr("%1 (%2)").arg(countOf(n, tr("log"), tr("logs")), QLocale().formattedDataSize(crashlog::totalSize())));
+        crashClear->setEnabled(n > 0);
+    };
+    showCrashInfo();
+    connect(crashOpen, &QPushButton::clicked, &d, [] {
+        QDir().mkpath(crashlog::dir());
+        QDesktopServices::openUrl(QUrl::fromLocalFile(crashlog::dir()));
+    });
+    connect(crashClear, &QPushButton::clicked, &d, [showCrashInfo] {
+        crashlog::clear();
+        showCrashInfo();
+    });
     tabs->addTab(genPage, tr("General"));
 
     // --- Library: tabs, and which folder goes in which
@@ -1652,12 +1831,15 @@ void MainWindow::openSettings(const QString &page)
     tabRow->addWidget(remTab);
     tabRow->addStretch();
     lv->addLayout(tabRow);
-    auto *tabsHint = new QLabel(tr("With two tabs or more, a tab bar over the library switches between them "
-                                   "(say, Music and Airchecks). Double-click a tab to rename it; drag to reorder."),
+    auto *tabsHint = new QLabel(tr("Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, "
+                                   "double-click renames, and dragging reorders. Each folder below belongs to one tab."),
                                 libPage);
     tabsHint->setObjectName(QStringLiteral("hint"));
     tabsHint->setWordWrap(true);
     lv->addWidget(tabsHint);
+    auto *confirmClose = new QCheckBox(tr("Ask before closing a tab that has folders"), libPage);
+    confirmClose->setChecked(s.value(QStringLiteral("library/confirmCloseTab"), true).toBool());
+    lv->addWidget(confirmClose);
     lv->addSpacing(6);
     auto *lbl = new QLabel(tr("Music folders"), libPage);
     lbl->setObjectName(QStringLiteral("sectionLabel"));
@@ -1946,6 +2128,86 @@ void MainWindow::openSettings(const QString &page)
     connect(moreAccent, &QPushButton::clicked, &d, [=] { pick(&choice->accent, Theme::accent(), tr("Accent colour")); });
     connect(bgBtn, &QPushButton::clicked, &d, [=] { pick(&choice->customWindow, choice->customWindow, tr("Background")); });
     connect(fgBtn, &QPushButton::clicked, &d, [=] { pick(&choice->customText, choice->customText, tr("Text")); });
+
+    // Theme files: stylesheets layered over everything above (THEMES.md)
+    auto *themeFile = new QComboBox(lookPage);
+    auto fillThemeFiles = [themeFile, choice] {
+        QSignalBlocker block(themeFile);
+        themeFile->clear();
+        themeFile->addItem(tr("None"), QString());
+        for (const Theme::File &f : Theme::files()) {
+            QString label = f.name;
+            if (!f.author.isEmpty())
+                label += QStringLiteral("  ·  ") + f.author;
+            if (f.bundled)
+                label += QStringLiteral("  (") + tr("example") + QLatin1Char(')');
+            themeFile->addItem(label, f.id);
+        }
+        themeFile->setCurrentIndex(qMax(0, themeFile->findData(choice->file)));
+    };
+    fillThemeFiles();
+    af->addRow(tr("Theme file"), themeFile);
+    auto *fileInfo = new QLabel(lookPage);
+    fileInfo->setObjectName(QStringLiteral("hint"));
+    fileInfo->setWordWrap(true);
+    af->addRow(QString(), fileInfo);
+    auto *importTheme = new QPushButton(Icons::icon(Icons::Import), tr("Import…"), lookPage);
+    auto *importMenu = new QMenu(importTheme);
+    importTheme->setMenu(importMenu);
+    auto *openThemes = new QPushButton(Icons::icon(Icons::Folder), tr("Open themes folder"), lookPage);
+    auto *fileButtons = new QHBoxLayout;
+    fileButtons->addWidget(importTheme);
+    fileButtons->addWidget(openThemes);
+    fileButtons->addStretch();
+    af->addRow(QString(), fileButtons);
+    auto *fileHint = new QLabel(tr("A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. "
+                                   "Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. "
+                                   "How to make one: THEMES.md (shipped with Ruche and in the source)."),
+                                lookPage);
+    fileHint->setObjectName(QStringLiteral("hint"));
+    fileHint->setWordWrap(true);
+    af->addRow(QString(), fileHint);
+    auto showFileInfo = [fileInfo, choice] {
+        const Theme::File f = Theme::fileById(choice->file);
+        QStringList parts;
+        if (!f.description.isEmpty())
+            parts << f.description;
+        if (!f.version.isEmpty())
+            parts << tr("Version %1").arg(f.version);
+        if (f.window.isValid())
+            parts << tr("Sets its own colours, so the theme above only matters for what it leaves alone.");
+        fileInfo->setText(parts.join(QLatin1Char('\n')));
+        fileInfo->setVisible(!parts.isEmpty());
+    };
+    showFileInfo();
+    connect(themeFile, &QComboBox::currentIndexChanged, &d, [=](int) {
+        choice->file = themeFile->currentData().toString();
+        showFileInfo();
+        preview();
+    });
+    auto doImport = [=, &d](const QString &src) {
+        if (src.isEmpty())
+            return;
+        QString err;
+        const QString id = Theme::importTheme(src, &err);
+        if (id.isEmpty()) {
+            QMessageBox::warning(&d, tr("Import theme"), err);
+            return;
+        }
+        choice->file = id;
+        fillThemeFiles();
+        showFileInfo();
+        preview();
+    };
+    importMenu->addAction(tr("Theme file or .zip…"), &d, [=, &d] {
+        doImport(QFileDialog::getOpenFileName(&d, tr("Import theme"), QString(), tr("Themes (*.qss *.zip)")));
+    });
+    importMenu->addAction(tr("Theme folder…"), &d, [=, &d] { doImport(QFileDialog::getExistingDirectory(&d, tr("Import theme"))); });
+    connect(openThemes, &QPushButton::clicked, &d, [=] {
+        QDir().mkpath(Theme::userThemesDir());
+        QDesktopServices::openUrl(QUrl::fromLocalFile(Theme::userThemesDir()));
+        fillThemeFiles(); // pick up anything dropped in by hand when the dialog comes back
+    });
     refreshLook();
     tabs->addTab(lookPage, tr("Appearance"));
 
@@ -1982,9 +2244,13 @@ void MainWindow::openSettings(const QString &page)
     auto *discordRadio = new QCheckBox(tr("Include radio stations"), deskPage);
     discordRadio->setChecked(s.value(QStringLiteral("discord/radio"), true).toBool());
     df->addRow(QString(), discordRadio);
-    auto *discordCovers = new QCheckBox(tr("Show album covers (looked up by artist and album on iTunes and MusicBrainz)"), deskPage);
-    discordCovers->setChecked(s.value(QStringLiteral("discord/covers"), true).toBool());
-    df->addRow(QString(), discordCovers);
+    auto *discordCovers = new QComboBox(deskPage);
+    discordCovers->addItem(tr("Cover art (album cover, or the station's logo for radio)"), true);
+    discordCovers->addItem(tr("Ruche logo"), false);
+    discordCovers->setCurrentIndex(s.value(QStringLiteral("discord/covers"), true).toBool() ? 0 : 1);
+    discordCovers->setToolTip(tr("Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, "
+                                 "since Discord can only show pictures from the web."));
+    df->addRow(tr("Picture"), discordCovers);
     auto *discordId = new QLineEdit(m_discord->clientId(), deskPage);
     discordId->setPlaceholderText(tr("Application ID from discord.com/developers"));
     df->addRow(tr("Application ID"), discordId);
@@ -1993,8 +2259,8 @@ void MainWindow::openSettings(const QString &page)
     discordStatus->setWordWrap(true);
     df->addRow(QString(), discordStatus);
     auto *discordHint = new QLabel(tr("Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). "
-                                      "Shows the song, the artist and the cover; for radio, only a clean \"Artist - Title\" "
-                                      "and the station's logo. Nothing is shared while paused or stopped."),
+                                      "Shows the song, the artist and the picture chosen above; for radio, only a clean \"Artist - Title\", "
+                                      "with the song's cover when one is found. Nothing is shared while paused or stopped."),
                                    deskPage);
     discordHint->setObjectName(QStringLiteral("hint"));
     discordHint->setWordWrap(true);
@@ -2131,6 +2397,7 @@ void MainWindow::openSettings(const QString &page)
     }
     Theme::saveChoice(*choice);
     s.setValue(QStringLiteral("updates/onStartup"), updBox->isChecked());
+    s.setValue(QStringLiteral("library/confirmCloseTab"), confirmClose->isChecked());
     if (lang->currentData().toString() != langBefore) {
         s.setValue(QStringLiteral("ui/language"), lang->currentData().toString());
         const QString program = Updater::selfProgram();
@@ -2177,8 +2444,8 @@ void MainWindow::openSettings(const QString &page)
         s.setValue(QStringLiteral("discord/clientId"), discordId->text().trimmed());
     m_discord->setClientId(discordId->text());
     m_discord->setShowRadio(discordRadio->isChecked());
-    s.setValue(QStringLiteral("discord/covers"), discordCovers->isChecked());
-    m_discord->setLookUpCovers(discordCovers->isChecked());
+    s.setValue(QStringLiteral("discord/covers"), discordCovers->currentData().toBool());
+    m_discord->setLookUpCovers(discordCovers->currentData().toBool());
     m_discord->setEnabled(discordBox->isChecked());
     if (menuBox && menuBox->isChecked() != DesktopEntry::isInstalled()) {
         QString err;
@@ -2191,10 +2458,28 @@ void MainWindow::openSettings(const QString &page)
     }
 }
 
+// Edits to the theme file in use show up straight away (theme authors' live preview).
+void MainWindow::watchThemeFile()
+{
+    if (!m_themeWatch) {
+        m_themeWatch = new QFileSystemWatcher(this);
+        auto *debounce = new QTimer(this);
+        debounce->setSingleShot(true);
+        debounce->setInterval(250);
+        connect(m_themeWatch, &QFileSystemWatcher::fileChanged, debounce, qOverload<>(&QTimer::start));
+        connect(debounce, &QTimer::timeout, this, [this] { applyTheme(m_themeChoice); });
+    }
+    if (!m_themeWatch->files().isEmpty())
+        m_themeWatch->removePaths(m_themeWatch->files());
+    if (!Theme::activeFilePath().isEmpty())
+        m_themeWatch->addPath(Theme::activeFilePath()); // editors that save by replacing the file drop the watch
+}
+
 void MainWindow::applyTheme(const Theme::Choice &c)
 {
     m_themeChoice = c;
     Theme::apply(*qApp, c);
+    watchThemeFile();
     m_trackModel->setAccent(Theme::accentText());
     m_stationModel->setAccent(Theme::accentText());
     rebuildNavigator();
@@ -2319,8 +2604,55 @@ void MainWindow::openArguments(const QStringList &args)
     openFiles(files, true);
 }
 
+// Tracks dragged from the list onto the sidebar: a playlist gets them appended,
+// "New playlist…" makes a playlist of them.
+bool MainWindow::navDropEvent(QEvent *ev)
+{
+    auto *de = static_cast<QDropEvent *>(ev);
+    if (!de->mimeData()->hasFormat(QString::fromLatin1(TrackTableModel::kIdsMime)))
+        return false;
+    QTreeWidgetItem *it = m_nav->itemAt(de->position().toPoint());
+    const QString kind = it ? it->data(0, NavKind).toString() : QString();
+    const bool target = kind == QLatin1String("playlist") || kind == QLatin1String("newplaylist");
+    if (ev->type() == QEvent::DragEnter) {
+        de->acceptProposedAction(); // keep receiving moves; the target is decided per position
+        return true;
+    }
+    if (ev->type() == QEvent::DragMove) {
+        if (target) {
+            de->acceptProposedAction();
+            m_nav->setCurrentItem(it);
+        } else {
+            de->ignore();
+        }
+        return true;
+    }
+    // Drop
+    const QVector<qint64> ids = TrackTableModel::idsFromMime(de->mimeData());
+    if (target && !ids.isEmpty()) {
+        de->acceptProposedAction();
+        QString name = it->data(0, NavName).toString();
+        if (kind == QLatin1String("newplaylist")) {
+            name = askPlaylistName(tr("New playlist"));
+            if (name.isEmpty()) {
+                rebuildNavigator();
+                return true;
+            }
+        }
+        m_lib->appendToPlaylist(name, ids);
+        flash(tr("Added %1 to “%2”").arg(countOf(ids.size(), tr("track"), tr("tracks")), name));
+        if (m_view == View::Playlist && m_playlist == name)
+            switchView(View::Playlist, name);
+    }
+    rebuildNavigator();
+    return true;
+}
+
 void MainWindow::dragEnterEvent(QDragEnterEvent *e)
 {
+    // Rows dragged from the track list only drop onto the sidebar's playlists
+    if (e->mimeData()->hasFormat(QString::fromLatin1(TrackTableModel::kIdsMime)))
+        return;
     if (e->mimeData()->hasUrls() || e->mimeData()->hasImage())
         e->acceptProposedAction();
 }
@@ -2385,6 +2717,15 @@ void MainWindow::loadSettings()
     for (int c : {int(TrackTableModel::ColTitle), int(TrackTableModel::ColArtist), int(TrackTableModel::ColAlbum)})
         m_trackView->horizontalHeader()->setSectionResizeMode(c, QHeaderView::Stretch);
     fitNarrowColumns();
+    {
+        // the library's sort (clicked column header) survives a restart
+        const int col = s.value(QStringLiteral("library/sortColumn"), -1).toInt();
+        const auto order = Qt::SortOrder(s.value(QStringLiteral("library/sortOrder"), 0).toInt());
+        if (col >= -1 && col < TrackTableModel::ColCount) {
+            m_trackModel->sort(col, order);
+            m_trackView->horizontalHeader()->setSortIndicator(col, order);
+        }
+    }
     const int vol = s.value(QStringLiteral("player/volume"), 80).toInt();
     m_pc->setVolume(vol);
     m_bar->setVolume(vol);
@@ -2419,6 +2760,8 @@ void MainWindow::saveSettings()
     s.setValue(QStringLiteral("window/browserSplit"), m_browserSplit->saveState());
     s.setValue(QStringLiteral("window/trackHeader"),
                m_view == View::Library ? m_trackView->horizontalHeader()->saveState() : m_headerStateLibrary);
+    s.setValue(QStringLiteral("library/sortColumn"), m_trackModel->sortColumn());
+    s.setValue(QStringLiteral("library/sortOrder"), int(m_trackModel->sortOrder()));
     s.setValue(QStringLiteral("player/volume"), m_pc->volume());
     s.setValue(QStringLiteral("player/shuffle"), m_pc->shuffle());
     s.setValue(QStringLiteral("player/repeat"), int(m_pc->repeat()));
@@ -2427,6 +2770,23 @@ void MainWindow::saveSettings()
 
 bool MainWindow::eventFilter(QObject *o, QEvent *e)
 {
+    if (o == m_libTabs && e->type() == QEvent::MouseButtonRelease) {
+        auto *me = static_cast<QMouseEvent *>(e);
+        if (me->button() == Qt::MiddleButton) { // middle-click closes, as in browsers
+            closeLibraryTab(m_libTabs->tabAt(me->position().toPoint()));
+            return true;
+        }
+    }
+    if (m_tabHint && o == m_trackView->viewport() && e->type() == QEvent::Resize)
+        m_tabHint->setGeometry(m_trackView->viewport()->rect());
+    if (o == m_nav->viewport() && (e->type() == QEvent::DragEnter || e->type() == QEvent::DragMove ||
+                                   e->type() == QEvent::DragLeave || e->type() == QEvent::Drop)) {
+        if (e->type() == QEvent::DragLeave ? true : navDropEvent(e)) {
+            if (e->type() == QEvent::DragLeave)
+                rebuildNavigator();
+            return true;
+        }
+    }
     if (m_stationHint && o == m_stationView->viewport() && e->type() == QEvent::Resize)
         m_stationHint->setGeometry(m_stationView->viewport()->rect());
     return QMainWindow::eventFilter(o, e);
@@ -2715,6 +3075,22 @@ void MainWindow::quitApp()
     qApp->quit();
 }
 
+// After a crash, say so once, and point at the log.
+void MainWindow::showCrashNotice()
+{
+    const QStringList fresh = crashlog::unseen();
+    if (fresh.isEmpty())
+        return;
+    QMessageBox box(QMessageBox::Warning, tr("Ruche"), tr("Ruche closed unexpectedly last time."), QMessageBox::Ok, this);
+    box.setInformativeText(tr("A crash log was saved. If it keeps happening, please open an issue on GitHub "
+                              "and attach the log; it says what Ruche was doing, nothing personal beyond file names "
+                              "it had just played."));
+    QPushButton *open = box.addButton(tr("Open folder"), QMessageBox::ActionRole);
+    box.exec();
+    if (box.clickedButton() == open)
+        QDesktopServices::openUrl(QUrl::fromLocalFile(crashlog::dir()));
+}
+
 void MainWindow::startupUpdateCheck()
 {
     QSettings s(paths::configFile(), QSettings::IniFormat);
@@ -2939,10 +3315,29 @@ void MainWindow::rebuildLibraryTabs()
     const QString current = tabFromStored(QSettings(paths::configFile(), QSettings::IniFormat).value(QStringLiteral("library/currentTab")).toString());
     while (m_libTabs->count())
         m_libTabs->removeTab(0);
-    for (const QString &t : std::as_const(m_tabNames))
-        m_libTabs->addTab(t);
+    for (const QString &t : std::as_const(m_tabNames)) {
+        const int i = m_libTabs->addTab(t);
+        if (m_tabNames.size() > 1) { // the last tab can't be closed
+            auto *x = new QToolButton(m_libTabs);
+            x->setObjectName(QStringLiteral("libTabClose"));
+            x->setIcon(Icons::icon(Icons::Close));
+            x->setIconSize(QSize(12, 12));
+            x->setAutoRaise(true);
+            x->setFixedSize(18, 18);
+            x->setToolTip(tr("Close tab"));
+            connect(x, &QToolButton::clicked, this, [this, x] {
+                for (int j = 0; j < m_libTabs->count(); ++j) // tabs move, so look the button up
+                    if (m_libTabs->tabButton(j, QTabBar::RightSide) == x) {
+                        closeLibraryTab(j);
+                        return;
+                    }
+            });
+            m_libTabs->setTabButton(i, QTabBar::RightSide, x);
+        }
+    }
     m_libTabs->setCurrentIndex(qMax(0, int(m_tabNames.indexOf(current))));
-    m_libTabs->setVisible(m_tabNames.size() > 1);
+    // the scroll arrows' room would leave a gap before + when there's only one tab
+    m_libTabs->setUsesScrollButtons(m_tabNames.size() > 1);
     m_libTabs->setFixedHeight(m_libTabs->sizeHint().height());
     m_tabsUpdating = false;
 }
@@ -2970,18 +3365,114 @@ void MainWindow::renameLibraryTab(int i)
 {
     if (i < 0 || i >= m_tabNames.size())
         return;
-    bool ok = false;
+    // Edit the name in place, like a browser bookmark: Enter keeps it, Esc cancels.
     const QString old = m_tabNames.at(i);
-    const QString name = QInputDialog::getText(this, tr("Rename tab"), tr("Name:"), QLineEdit::Normal, old, &ok).trimmed();
-    if (!ok || name.isEmpty() || name == old || m_tabNames.contains(name))
+    auto *edit = new QLineEdit(old, m_libTabs);
+    edit->setObjectName(QStringLiteral("libTabEdit"));
+    edit->setGeometry(m_libTabs->tabRect(i).adjusted(4, 3, -4, -3));
+    edit->selectAll();
+    edit->show();
+    edit->setFocus();
+    auto finish = [this, edit, old](bool keep) {
+        if (edit->property("done").toBool())
+            return;
+        edit->setProperty("done", true);
+        const QString name = edit->text().trimmed();
+        edit->deleteLater();
+        if (!keep || name.isEmpty() || name == old)
+            return;
+        if (m_tabNames.contains(name)) {
+            flash(tr("There's already a tab called “%1”.").arg(name));
+            return;
+        }
+        const int at = m_tabNames.indexOf(old);
+        if (at < 0)
+            return;
+        m_tabNames[at] = name;
+        for (auto it = m_folderTab.begin(); it != m_folderTab.end(); ++it)
+            if (it.value() == old)
+                it.value() = name;
+        QSettings s(paths::configFile(), QSettings::IniFormat);
+        if (tabFromStored(s.value(QStringLiteral("library/currentTab")).toString()) == old)
+            s.setValue(QStringLiteral("library/currentTab"), tabToStored(name));
+        saveLibraryTabs();
+        rebuildLibraryTabs();
+    };
+    connect(edit, &QLineEdit::editingFinished, this, [finish] { finish(true); });
+    auto *esc = new QShortcut(QKeySequence(Qt::Key_Escape), edit, nullptr, nullptr, Qt::WidgetShortcut);
+    connect(esc, &QShortcut::activated, this, [finish] { finish(false); });
+}
+
+// Folders with no tab of their own belong to the first tab. Before tabs move or close,
+// write that down, so they stay where they are.
+void MainWindow::pinFolderTabs()
+{
+    const QString first = m_tabNames.value(0);
+    for (const QString &f : m_lib->folders())
+        if (!m_tabNames.contains(m_folderTab.value(f)))
+            m_folderTab.insert(f, first);
+}
+
+void MainWindow::newLibraryTab()
+{
+    QString name = tr("New tab");
+    for (int n = 2; m_tabNames.contains(name); ++n)
+        name = tr("New tab %1").arg(n);
+    m_tabNames << name;
+    saveLibraryTabs();
+    QSettings(paths::configFile(), QSettings::IniFormat).setValue(QStringLiteral("library/currentTab"), tabToStored(name));
+    rebuildLibraryTabs();
+    if (m_view != View::Library)
+        switchView(View::Library);
+    refreshLibrary(0);
+    // straight into naming it, once the bar has laid the new tab out
+    QTimer::singleShot(0, this, [this] { renameLibraryTab(m_tabNames.size() - 1); });
+}
+
+void MainWindow::closeLibraryTab(int i)
+{
+    if (i < 0 || i >= m_tabNames.size() || m_tabNames.size() <= 1)
         return;
-    m_tabNames[i] = name;
-    for (auto it = m_folderTab.begin(); it != m_folderTab.end(); ++it)
-        if (it.value() == old)
-            it.value() = name;
+    const QString name = m_tabNames.at(i);
+    QStringList folders;
+    for (const QString &f : m_lib->folders()) {
+        QString owner = m_folderTab.value(f, m_tabNames.value(0));
+        if (!m_tabNames.contains(owner))
+            owner = m_tabNames.value(0);
+        if (owner == name)
+            folders << f;
+    }
     QSettings s(paths::configFile(), QSettings::IniFormat);
-    if (tabFromStored(s.value(QStringLiteral("library/currentTab")).toString()) == old)
-        s.setValue(QStringLiteral("library/currentTab"), tabToStored(name));
+    if (!folders.isEmpty() && s.value(QStringLiteral("library/confirmCloseTab"), true).toBool()) {
+        QMessageBox box(QMessageBox::Question, tr("Close tab"),
+                        tr("Close the tab “%1”?").arg(name), QMessageBox::Cancel, this);
+        box.setInformativeText(tr("Its music folders are taken out of the library:\n%1\n\nThe files themselves stay where they are, "
+                                  "and adding the folders again brings them back.")
+                                   .arg(QDir::toNativeSeparators(folders.join(QLatin1Char('\n')))));
+        QPushButton *close = box.addButton(tr("Close tab"), QMessageBox::AcceptRole);
+        box.setDefaultButton(close);
+        auto *dontAsk = new QCheckBox(tr("Don't ask again"), &box);
+        box.setCheckBox(dontAsk);
+        box.exec();
+        if (box.clickedButton() != close)
+            return;
+        if (dontAsk->isChecked())
+            s.setValue(QStringLiteral("library/confirmCloseTab"), false);
+    }
+    pinFolderTabs();
+    m_tabNames.removeAt(i);
+    for (const QString &f : std::as_const(folders))
+        m_folderTab.remove(f);
+    QStringList keep = m_lib->folders();
+    for (const QString &f : std::as_const(folders))
+        keep.removeAll(f);
+    if (tabFromStored(s.value(QStringLiteral("library/currentTab")).toString()) == name)
+        s.setValue(QStringLiteral("library/currentTab"), tabToStored(m_tabNames.value(qMin(i, int(m_tabNames.size()) - 1))));
     saveLibraryTabs();
     rebuildLibraryTabs();
+    if (!folders.isEmpty()) {
+        m_lib->setFolders(keep);
+        m_lib->rescan();
+    }
+    refreshLibrary(0);
 }

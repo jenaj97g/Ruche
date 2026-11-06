@@ -56,7 +56,6 @@
 55	Most szól
 56	Rádió
 57	LEJÁTSZÁSI LISTÁK
-58	Még nincs lista
 59	Még nincs zenei mappa. Menü (☰) → Zenei mappa hozzáadása…
 60	szám
 61	szám
@@ -108,7 +107,6 @@
 107	Lapok
 108	Lap hozzáadása
 109	Lap eltávolítása
-110	Két vagy több lap esetén a könyvtár fölötti lapsávval lehet váltani köztük (például Zene és Airchecks). Dupla kattintással átnevezhető egy lap; húzással átrendezhető.
 111	Zenei mappák
 112	Mappa
 113	Lap
@@ -152,10 +150,8 @@
 151	Mutassa a Discordon, mit hallgatok
 152	Discord
 153	Rádióadók is
-154	Albumborítók megjelenítése (előadó és album szerint keresve az iTunesban és a MusicBrainzben)
 155	Alkalmazásazonosító a discord.com/developers oldalról
 156	Alkalmazásazonosító
-157	A Discord alkalmazással és a Vesktoppal működik (kapcsolja be az arRPC / Rich Presence beállítását). Megmutatja a dalt, az előadót és a borítót; rádiónál csak egy tiszta „Előadó - Cím” párost és az adó logóját. Szünetben vagy leállítva semmit sem oszt meg.
 158	Asztal
 159	Beállítás…
 160	Napló…
@@ -209,8 +205,6 @@
 208	Újraindítás a Ruche %1 verzióval…
 209	<h3>Ruche %1</h3><p>Könnyű zenelejátszó MusicBee-szerű elrendezéssel.</p><p>Lejátszás: libmpv. Címkék: TagLib. Élő stream-címek ICY-ból, a streambe ágyazott címkékből, HLS #EXTINF-ből és HLS időzített ID3-metaadatokból.</p><p><a href="%2">%2</a></p>
 210	Frissítések keresése
-211	Lap átnevezése
-212	Név:
 213	A Ruche megjelenítése
 214	Következő
 215	Nincs lejátszás
@@ -297,3 +291,57 @@
 296	Nem sikerült elindítani a telepítőt: %1.
 297	A Ruche %1 letöltve ide: %2. Zárja be a Ruche-t, és csomagolja ki ennek a példánynak a helyére (%3).
 298	Ez a Ruche-példány nem kiadásból lett telepítve; helyette a kiadás oldala nyílt meg.
+299	Lista átnevezése…
+300	Lejátszási lista importálása…
+301	Zenemappa hozzáadása ehhez a laphoz…
+302	Lap bezárása
+303	Ennek a lapnak még nincs zenemappája.
+304	Kattintson duplán a lapra az átnevezéshez; húzza el az áthelyezéshez.
+305	A lista neve nem tartalmazhat / \ : * ? " < > | jelet, és nem kezdődhet ponttal.
+306	Már van „%1” nevű lista.
+307	„%1” lista létrehozva. Húzzon rá számokat az oldalsávban, vagy jobb klikk a számokon → Hozzáadás lejátszási listához.
+308	Lista átnevezése
+309	Nem sikerült átnevezni a listát.
+310	Jobb klikk egy listára az átnevezéshez vagy törléshez
+311	Mappa megnyitása
+312	Összes törlése
+313	Összeomlási naplók
+314	Csak akkor készülnek, ha a Ruche összeomlik: mit csinált épp, hogy egy GitHub-hibajelentéshez csatolja. Legfeljebb a 20 legújabb marad meg.
+315	Nincs
+316	%1 (%2)
+317	napló
+318	napló
+319	A lapok úgy működnek, mint egy böngészőben: a + a lapsávon újat nyit, a × vagy középső kattintás bezár, dupla kattintás átnevez, húzással pedig átrendezheti őket. Minden lenti mappa egy laphoz tartozik.
+320	Kérdezzen, mielőtt bezár egy mappákat tartalmazó lapot
+321	Témafájl
+322	Importálás…
+323	Témák mappájának megnyitása
+324	A témafájl egy Qt stíluslap (.qss), amely a Ruche bármely részét átszabhatja, és saját színeket állíthat be. Importáljon egy .qss fájlt, egy témamappát vagy egy letöltött .zip fájlt; a használt fájl módosításai azonnal látszanak. Hogyan készítsen egyet: THEMES.md (a Ruche mellett és a forráskódban).
+325	%1. verzió
+326	Saját színeket állít be, így a fenti téma csak abban számít, amit érintetlenül hagy.
+327	Téma importálása
+328	Témafájl vagy .zip…
+329	Témák (*.qss *.zip)
+330	Témamappa…
+331	Borító (az album borítója, rádiónál az adó logója)
+332	Ruche-logó
+333	A borítókat előadó és album (vagy szám) alapján keresi az iTunes és a MusicBrainz oldalán, mert a Discord csak webes képeket tud megjeleníteni.
+334	Kép
+335	Működik a Discord alkalmazással és a Vesktoppal (kapcsolja be benne az arRPC / Rich Presence beállítást). Megjeleníti a számot, az előadót és a fent választott képet; rádiónál csak egy tiszta „Előadó - Cím” látszik, a szám borítójával, ha talál ilyet. Szünet vagy leállítás alatt semmi sem látszik.
+336	Ruche
+337	A Ruche legutóbb váratlanul bezárult.
+338	Összeomlási napló készült. Ha ismét előfordul, nyisson egy hibajegyet a GitHubon, és csatolja a naplót; azt mutatja, mit csinált a Ruche, semmi személyeset nem tartalmaz az épp lejátszott fájlok nevén kívül.
+339	Már van „%1” nevű lap.
+340	Új lap %1
+341	Bezárja a(z) „%1” lapot?
+342	A zenemappái kikerülnek a könyvtárból:\n%1\n\nMaguk a fájlok a helyükön maradnak, és ha újra hozzáadja a mappákat, visszakerülnek.
+343	Ne kérdezze többé
+344	Abban a mappában nincs .qss fájl.
+345	Nem sikerült a témát átmásolni.
+346	A zip fájl nem olvasható.
+347	A zip fájlban nem biztonságos útvonalak vannak.
+348	Abban a zip fájlban nincs .qss fájl.
+349	A zip fájl túl nagy egy témához.
+350	Nem sikerült a témát kicsomagolni.
+351	Válasszon egy .qss fájlt, egy témamappát vagy egy .zip fájlt.
+352	Hozzáadva

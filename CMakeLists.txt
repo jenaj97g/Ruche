@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(ruche VERSION 0.1.6 LANGUAGES C CXX)
+project(ruche VERSION 0.1.7 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -57,6 +57,8 @@ set(RUCHE_SOURCES
   src/Models.cpp
   src/Icons.cpp
   src/Theme.cpp
+  src/ThemeFiles.cpp
+  src/CrashLog.cpp
   src/Stations.cpp
   src/Logo.cpp
   src/Mpris.cpp
@@ -82,6 +84,13 @@ target_compile_definitions(ruche PRIVATE RUCHE_VERSION="${PROJECT_VERSION}" QT_N
   RUCHE_DISCORD_CLIENT_ID="${RUCHE_DISCORD_CLIENT_ID}" RUCHE_UPDATE_REPO="${RUCHE_UPDATE_REPO}")
 target_link_libraries(ruche PRIVATE ruche_meta ruche_lua Qt6::Widgets Qt6::Network
   PkgConfig::MPV PkgConfig::TAGLIB PkgConfig::SQLITE)
+# Theme import reads .zip files with Qt's own (private) zip reader: in QtGui up to
+# Qt 6.6, in QtCore from 6.7.
+foreach(_priv CorePrivate GuiPrivate)
+  if(TARGET Qt6::${_priv})
+    target_link_libraries(ruche PRIVATE Qt6::${_priv})
+  endif()
+endforeach()
 if(RUCHE_DBUS)
   target_compile_definitions(ruche PRIVATE RUCHE_DBUS)
   target_link_libraries(ruche PRIVATE Qt6::DBus)
@@ -99,9 +108,11 @@ install(TARGETS ruche RUNTIME DESTINATION bin)
 # example plugins, listed (disabled) in Settings → Plugins
 if(WIN32)
   install(DIRECTORY plugins/ DESTINATION bin/plugins)
+  install(DIRECTORY themes/ DESTINATION bin/themes)
 else()
   install(DIRECTORY plugins/ DESTINATION share/ruche/plugins)
-  install(FILES PLUGINS.md DESTINATION share/ruche)
+  install(DIRECTORY themes/ DESTINATION share/ruche/themes)
+  install(FILES PLUGINS.md THEMES.md DESTINATION share/ruche)
 endif()
 
 add_executable(test_meta tests/test_meta.cpp)

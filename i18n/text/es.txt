@@ -56,7 +56,6 @@
 55	En reproducción
 56	Radio
 57	LISTAS DE REPRODUCCIÓN
-58	Sin listas todavía
 59	Aún no hay carpeta de música. Menú (☰) → Añadir carpeta de música…
 60	pista
 61	pistas
@@ -108,7 +107,6 @@
 107	Pestañas
 108	Añadir pestaña
 109	Quitar pestaña
-110	Con dos pestañas o más, una barra de pestañas sobre la biblioteca permite cambiar entre ellas (por ejemplo, Música y Airchecks). Haz doble clic en una pestaña para renombrarla; arrástrala para reordenar.
 111	Carpetas de música
 112	Carpeta
 113	Pestaña
@@ -152,10 +150,8 @@
 151	Mostrar en Discord lo que estoy escuchando
 152	Discord
 153	Incluir emisoras de radio
-154	Mostrar portadas (buscadas por artista y álbum en iTunes y MusicBrainz)
 155	ID de aplicación de discord.com/developers
 156	ID de aplicación
-157	Funciona con la aplicación de Discord y con Vesktop (activa su opción arRPC / Rich Presence). Muestra la canción, el artista y la portada; en la radio, solo un «Artista - Título» limpio y el logo de la emisora. No se comparte nada en pausa o detenido.
 158	Escritorio
 159	Configurar…
 160	Registro…
@@ -209,8 +205,6 @@
 208	Reiniciando en Ruche %1…
 209	<h3>Ruche %1</h3><p>Un reproductor de música ligero con una disposición al estilo de MusicBee.</p><p>Reproducción con libmpv. Etiquetas con TagLib. Títulos de los flujos en directo desde ICY, etiquetas en banda, HLS #EXTINF y metadatos ID3 temporizados de HLS.</p><p><a href="%2">%2</a></p>
 210	Buscar actualizaciones
-211	Renombrar pestaña
-212	Nombre:
 213	Mostrar Ruche
 214	Siguiente
 215	Nada en reproducción
@@ -297,3 +291,57 @@
 296	No se pudo iniciar el instalador %1.
 297	Ruche %1 se descargó en %2. Cierra Ruche y descomprímelo sobre esta copia (%3).
 298	Esta copia de Ruche no se instaló desde una versión publicada; se abrió la página de la versión en su lugar.
+299	Renombrar lista…
+300	Importar lista de reproducción…
+301	Añadir carpeta de música a esta pestaña…
+302	Cerrar pestaña
+303	Esta pestaña aún no tiene carpetas de música.
+304	Haz doble clic en la pestaña para renombrarla; arrástrala para moverla.
+305	El nombre de una lista no puede contener / \ : * ? " < > | ni empezar por un punto.
+306	Ya hay una lista llamada «%1».
+307	Lista «%1» creada. Arrastra canciones sobre ella en la barra lateral, o clic derecho en canciones → Añadir a una lista.
+308	Renombrar lista
+309	No se pudo renombrar la lista.
+310	Clic derecho en una lista para renombrarla o borrarla
+311	Abrir carpeta
+312	Borrar todo
+313	Registros de fallos
+314	Solo se escriben si Ruche falla: lo que estaba haciendo, para adjuntar a un informe de error en GitHub. Se guardan como mucho los 20 más recientes.
+315	Ninguno
+316	%1 (%2)
+317	registro
+318	registros
+319	Las pestañas funcionan como las de un navegador: + en la barra crea una, × o un clic central la cierra, doble clic la renombra y arrastrar cambia el orden. Cada carpeta de abajo pertenece a una pestaña.
+320	Preguntar antes de cerrar una pestaña que tiene carpetas
+321	Archivo de tema
+322	Importar…
+323	Abrir carpeta de temas
+324	Un archivo de tema es una hoja de estilo de Qt (.qss) que puede cambiar el aspecto de cualquier parte de Ruche y fijar sus propios colores. Importa un .qss, una carpeta de tema o un .zip descargado; los cambios en el archivo en uso se ven al instante. Cómo hacer uno: THEMES.md (incluido con Ruche y en el código fuente).
+325	Versión %1
+326	Fija sus propios colores, así que el tema de arriba solo cuenta para lo que deja sin tocar.
+327	Importar tema
+328	Archivo de tema o .zip…
+329	Temas (*.qss *.zip)
+330	Carpeta de tema…
+331	Carátula (la del álbum, o el logo de la emisora para la radio)
+332	Logo de Ruche
+333	Las carátulas se buscan por artista y álbum (o canción) en iTunes y MusicBrainz, porque Discord solo puede mostrar imágenes de la web.
+334	Imagen
+335	Funciona con la aplicación de Discord y con Vesktop (activa su opción arRPC / Rich Presence). Muestra la canción, el artista y la imagen elegida arriba; para la radio, solo un «Artista - Título» limpio, con la carátula de la canción si se encuentra. No se comparte nada en pausa o detenido.
+336	Ruche
+337	Ruche se cerró de forma inesperada la última vez.
+338	Se guardó un registro del fallo. Si vuelve a pasar, abre una incidencia en GitHub y adjúntalo; dice lo que estaba haciendo Ruche, sin nada personal aparte de los nombres de los archivos que acababa de reproducir.
+339	Ya hay una pestaña llamada «%1».
+340	Pestaña nueva %1
+341	¿Cerrar la pestaña «%1»?
+342	Sus carpetas de música se quitan de la biblioteca:\n%1\n\nLos archivos se quedan donde están, y al añadir de nuevo las carpetas vuelven.
+343	No volver a preguntar
+344	No hay ningún archivo .qss en esa carpeta.
+345	No se pudo copiar el tema.
+346	No se puede leer ese archivo zip.
+347	Ese archivo zip contiene rutas peligrosas.
+348	No hay ningún archivo .qss en ese zip.
+349	Ese zip es demasiado grande para un tema.
+350	No se pudo descomprimir el tema.
+351	Elige un archivo .qss, una carpeta de tema o un .zip.
+352	Añadida

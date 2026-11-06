@@ -26,6 +26,7 @@ struct Choice {
     QString theme = QStringLiteral("dark"); // a preset id, "system" or "custom"
     QColor accent;                          // invalid: the theme's own accent
     QColor customWindow, customText;        // for "custom"
+    QString file;                           // a theme file's id (ThemeFiles.h), or empty
 };
 Choice loadChoice();
 void saveChoice(const Choice &c);
@@ -34,6 +35,8 @@ bool systemPrefersDark();
 
 // Applies a choice to the whole application: palette, stylesheet, icon colours.
 void apply(QApplication &app, const Choice &c);
+// The theme file in use (absolute path), or empty: watched so edits show at once.
+QString activeFilePath();
 // Bumped by every apply(); caches of themed pixmaps compare against it.
 int generation();
 

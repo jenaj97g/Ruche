@@ -14,8 +14,19 @@ class SeekSlider : public QSlider {
 public:
     explicit SeekSlider(QWidget *parent = nullptr);
 
+Q_SIGNALS:
+    // Mouse wheel over the bar: one notch is 5 s, 30 s with Shift, 1 s with Ctrl.
+    void wheelSeek(int deltaMs);
+
 protected:
     void mousePressEvent(QMouseEvent *e) override;
+    void mouseMoveEvent(QMouseEvent *e) override;
+    void wheelEvent(QWheelEvent *e) override;
+    void leaveEvent(QEvent *e) override;
+
+private:
+    int valueAt(int x) const;
+    int m_wheelAccum = 0;
 };
 
 class ElidedLabel : public QLabel {
@@ -74,6 +85,7 @@ public:
     void setVolume(int v);
     void setQueueControlsEnabled(bool on); // off for live radio: nothing to skip to
     void refreshTheme() { setPlaying(m_active, m_paused); } // the play glyph is drawn in the theme's colours
+    void seekBy(int deltaMs); // relative seek within the current track (wheel, Shift+arrows)
 
 Q_SIGNALS:
     void playPause();
@@ -93,6 +105,8 @@ private:
     QSlider *m_volume;
     QLabel *m_pos, *m_dur;
     bool m_dragging = false;
+    qint64 m_wheelTarget = -1;   // where a run of wheel seeks is heading
+    qint64 m_wheelTime = 0;      // when the last one happened (ms since epoch)
     int m_lastVolume = 80;
     bool m_active = false, m_paused = false;
 };

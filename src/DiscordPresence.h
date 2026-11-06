@@ -33,9 +33,10 @@ public:
     void setClientId(const QString &id);
     QString clientId() const { return m_clientId; }
     void setShowRadio(bool on);
-    // Album covers for library tracks: Discord only shows images from a web address, so
-    // they're looked up (iTunes Search, then MusicBrainz / Cover Art Archive) by artist and
-    // album, and remembered. Off: Ruche's logo instead.
+    // Pictures. On: album covers for library tracks and song covers for radio (Discord only
+    // shows images from a web address, so they're looked up on iTunes Search, then
+    // MusicBrainz / Cover Art Archive, and remembered), station logos as the fallback.
+    // Off: Ruche's logo for everything.
     void setLookUpCovers(bool on);
 
     enum class Status { Off, NoClientId, Searching, NotRunning, Connected };

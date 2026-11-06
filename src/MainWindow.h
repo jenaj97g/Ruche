@@ -61,6 +61,11 @@ private:
 
     void buildUi();
     void setupShortcuts();
+    bool navDropEvent(QEvent *ev);
+    QString askPlaylistName(const QString &title, const QString &current = QString());
+    void newPlaylist();
+    void renamePlaylist(const QString &name);
+    void deletePlaylist(const QString &name);
     void rebuildNavigator();
     void fitNarrowColumns();
     void switchView(View v, const QString &playlist = QString());
@@ -103,7 +108,13 @@ private:
     void rebuildLibraryTabs();
     QStringList currentTabFolders() const;
     void renameLibraryTab(int i);
+    void newLibraryTab();
+    void pinFolderTabs();
+    void closeLibraryTab(int i);
+    void updateTabHint();
     void applyTheme(const Theme::Choice &c);
+    void watchThemeFile();
+    void showCrashNotice();
     void addFolder();
     void openFiles(const QStringList &paths, bool play);
     void importPlaylistFile(const QString &file);
@@ -158,6 +169,9 @@ private:
     DiscordPresence *m_discord = nullptr;
     Updater *m_updater = nullptr;
     class QTabBar *m_libTabs = nullptr;
+    QWidget *m_tabRow = nullptr;
+    QWidget *m_tabHint = nullptr;
+    class QFileSystemWatcher *m_themeWatch = nullptr;
     QStringList m_tabNames;
     QHash<QString, QString> m_folderTab; // folder -> tab name
     bool m_tabsUpdating = false;

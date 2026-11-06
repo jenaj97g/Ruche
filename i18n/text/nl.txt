@@ -56,7 +56,6 @@
 55	Nu aan het spelen
 56	Radio
 57	AFSPEELLIJSTEN
-58	Nog geen afspeellijsten
 59	Nog geen muziekmap. Menu (☰) → Muziekmap toevoegen…
 60	nummer
 61	nummers
@@ -108,7 +107,6 @@
 107	Tabbladen
 108	Tabblad toevoegen
 109	Tabblad verwijderen
-110	Met twee of meer tabbladen verschijnt boven de bibliotheek een tabbalk om te wisselen (bijvoorbeeld Muziek en Airchecks). Dubbelklik op een tabblad om het te hernoemen; sleep om de volgorde te wijzigen.
 111	Muziekmappen
 112	Map
 113	Tabblad
@@ -152,10 +150,8 @@
 151	Op Discord tonen waar ik naar luister
 152	Discord
 153	Ook radiozenders
-154	Albumhoezen tonen (opgezocht op artiest en album bij iTunes en MusicBrainz)
 155	Applicatie-ID van discord.com/developers
 156	Applicatie-ID
-157	Werkt met de Discord-app en met Vesktop (zet daarin arRPC / Rich Presence aan). Toont het nummer, de artiest en de hoes; bij radio alleen een schone ‘Artiest - Titel’ en het zenderlogo. Tijdens pauze of stop wordt niets getoond.
 158	Bureaublad
 159	Instellen…
 160	Logboek…
@@ -209,8 +205,6 @@
 208	Herstarten in Ruche %1…
 209	<h3>Ruche %1</h3><p>Een lichte muziekspeler met een indeling in de stijl van MusicBee.</p><p>Afspelen met libmpv. Tags met TagLib. Livetitels uit ICY, ingebedde tags, HLS #EXTINF en getimede ID3-metadata in HLS.</p><p><a href="%2">%2</a></p>
 210	Op updates controleren
-211	Tabblad hernoemen
-212	Naam:
 213	Ruche tonen
 214	Volgende
 215	Er speelt niets
@@ -297,3 +291,57 @@
 296	Kon het installatieprogramma %1 niet starten.
 297	Ruche %1 is gedownload naar %2. Sluit Ruche en pak het uit over deze kopie (%3).
 298	Deze kopie van Ruche is niet vanuit een release geïnstalleerd; in plaats daarvan is de releasepagina geopend.
+299	Afspeellijst hernoemen…
+300	Afspeellijst importeren…
+301	Muziekmap toevoegen aan dit tabblad…
+302	Tabblad sluiten
+303	Dit tabblad heeft nog geen muziekmappen.
+304	Dubbelklik op het tabblad om het te hernoemen; sleep om het te verplaatsen.
+305	Een lijstnaam mag geen / \ : * ? " < > | bevatten en niet met een punt beginnen.
+306	Er is al een lijst die ‘%1’ heet.
+307	Afspeellijst ‘%1’ gemaakt. Sleep er nummers op in de zijbalk, of klik met rechts op nummers → Toevoegen aan afspeellijst.
+308	Afspeellijst hernoemen
+309	Kon de afspeellijst niet hernoemen.
+310	Klik met rechts op een afspeellijst om hem te hernoemen of te verwijderen
+311	Map openen
+312	Alles verwijderen
+313	Crashlogs
+314	Alleen geschreven als Ruche crasht: wat het aan het doen was, om bij een foutmelding op GitHub te voegen. Hooguit de 20 nieuwste blijven bewaard.
+315	Geen
+316	%1 (%2)
+317	log
+318	logs
+319	Tabbladen werken zoals in een browser: + op de tabbalk maakt er een, × of een middelklik sluit er een, dubbelklikken hernoemt en slepen verandert de volgorde. Elke map hieronder hoort bij één tabblad.
+320	Vragen voordat een tabblad met mappen sluit
+321	Themabestand
+322	Importeren…
+323	Themamap openen
+324	Een themabestand is een Qt-stylesheet (.qss) die elk deel van Ruche kan restylen en eigen kleuren kan instellen. Importeer een .qss, een themamap of een gedownloade .zip; wijzigingen aan het gebruikte bestand zijn meteen te zien. Zelf een maken: THEMES.md (meegeleverd met Ruche en in de broncode).
+325	Versie %1
+326	Stelt eigen kleuren in, dus het thema hierboven telt alleen voor wat het laat staan.
+327	Thema importeren
+328	Themabestand of .zip…
+329	Thema’s (*.qss *.zip)
+330	Themamap…
+331	Hoes (albumhoes, of het zenderlogo bij radio)
+332	Ruche-logo
+333	Hoezen worden opgezocht op artiest en album (of nummer) bij iTunes en MusicBrainz, omdat Discord alleen afbeeldingen van het web kan tonen.
+334	Afbeelding
+335	Werkt met de Discord-app en met Vesktop (zet daarin arRPC / Rich Presence aan). Toont het nummer, de artiest en de afbeelding die hierboven is gekozen; bij radio alleen een schone ‘Artiest - Titel’, met de hoes van het nummer als die gevonden wordt. Tijdens pauze of stop wordt niets gedeeld.
+336	Ruche
+337	Ruche is de vorige keer onverwacht afgesloten.
+338	Er is een crashlog bewaard. Gebeurt het vaker, open dan een issue op GitHub en voeg het log toe; het laat zien wat Ruche deed, zonder iets persoonlijks behalve de namen van bestanden die het net had afgespeeld.
+339	Er is al een tabblad dat ‘%1’ heet.
+340	Nieuw tabblad %1
+341	Tabblad ‘%1’ sluiten?
+342	De muziekmappen ervan gaan uit de bibliotheek:\n%1\n\nDe bestanden zelf blijven waar ze zijn, en als je de mappen weer toevoegt zijn ze terug.
+343	Niet meer vragen
+344	Er staat geen .qss-bestand in die map.
+345	Kon het thema niet kopiëren.
+346	Dat zipbestand kan niet gelezen worden.
+347	Dat zipbestand bevat onveilige paden.
+348	Er staat geen .qss-bestand in die zip.
+349	Die zip is te groot voor een thema.
+350	Kon het thema niet uitpakken.
+351	Kies een .qss-bestand, een themamap of een .zip.
+352	Toegevoegd

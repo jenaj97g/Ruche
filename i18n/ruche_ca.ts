@@ -251,10 +251,6 @@ Funcionen els fluxos HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>LLISTES DE REPRODUCCIÓ</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Encara cap llista</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Encara no hi ha cap carpeta de música. Menú (☰) → Afegeix una carpeta de música…</translation>
     </message>
@@ -459,10 +455,6 @@ Funcionen els fluxos HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Treu la pestanya</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Amb dues pestanyes o més, una barra de pestanyes damunt de la biblioteca permet canviar-ne (per exemple, Música i Airchecks). Feu doble clic en una pestanya per canviar-ne el nom; arrossegueu-la per reordenar.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Carpetes de música</translation>
     </message>
@@ -635,20 +627,12 @@ Funcionen els fluxos HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Inclou les emissores de ràdio</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Mostra les caràtules (cercades per artista i àlbum a iTunes i MusicBrainz)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>Identificador d’aplicació de discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>Identificador d’aplicació</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Funciona amb l’aplicació del Discord i amb el Vesktop (activeu-ne l’opció arRPC / Rich Presence). Mostra la cançó, l’artista i la caràtula; per a la ràdio, només un «Artista - Títol» net i el logotip de l’emissora. No es comparteix res en pausa o aturat.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ Funcionen els fluxos HLS (.m3u8), Icecast i Shoutcast.</translation>
         <translation>Cerca actualitzacions</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Canvia el nom de la pestanya</translation>
+        <source>Rename playlist…</source>
+        <translation>Canvia el nom de la llista…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Nom:</translation>
+        <source>Import playlist…</source>
+        <translation>Importa una llista de reproducció…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Afegeix una carpeta de música a aquesta pestanya…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Tanca la pestanya</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Aquesta pestanya encara no té carpetes de música.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Feu doble clic a la pestanya per canviar-ne el nom; arrossegueu-la per moure-la.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>El nom d’una llista no pot contenir / \ : * ? " &lt; &gt; | ni començar amb un punt.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Ja hi ha una llista anomenada «%1».</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>S’ha creat la llista «%1». Arrossegueu-hi cançons a la barra lateral, o feu clic dret a les cançons → Afegeix a una llista.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Canvia el nom de la llista</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>No s’ha pogut canviar el nom de la llista.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Feu clic dret a una llista per canviar-ne el nom o suprimir-la</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Obre la carpeta</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Suprimeix-ho tot</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Registres d’errors greus</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Només s’escriuen si el Ruche falla: el que estava fent, per adjuntar a un informe d’error a GitHub. Se’n conserven com a molt els 20 més recents.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Cap</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>registre</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>registres</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>Les pestanyes funcionen com les d’un navegador: + a la barra en crea una, × o un clic del mig la tanca, doble clic li canvia el nom i arrossegar-la canvia l’ordre. Cada carpeta d’aquí sota pertany a una pestanya.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Pregunta abans de tancar una pestanya que té carpetes</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Fitxer de tema</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Importa…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Obre la carpeta de temes</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>Un fitxer de tema és un full d’estil de Qt (.qss) que pot canviar l’aspecte de qualsevol part del Ruche i fixar-ne els colors. Importeu un .qss, una carpeta de tema o un .zip baixat; els canvis al fitxer en ús es veuen de seguida. Com fer-ne un: THEMES.md (inclòs amb el Ruche i al codi font).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Versió %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Fixa els seus propis colors, de manera que el tema de dalt només compta per al que deixa igual.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Importa un tema</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Fitxer de tema o .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Temes (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Carpeta de tema…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Caràtula (la de l’àlbum, o el logotip de l’emissora per a la ràdio)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Logotip del Ruche</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>Les caràtules es cerquen per artista i àlbum (o cançó) a iTunes i MusicBrainz, perquè el Discord només pot mostrar imatges del web.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Imatge</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Funciona amb l’aplicació del Discord i amb el Vesktop (activeu-hi l’opció arRPC / Rich Presence). Mostra la cançó, l’artista i la imatge triada a dalt; per a la ràdio, només un «Artista - Títol» net, amb la caràtula de la cançó quan es troba. No es comparteix res en pausa o aturat.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>El Ruche es va tancar de manera inesperada l’última vegada.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>S’ha desat un registre de l’error. Si torna a passar, obriu una incidència a GitHub i adjunteu-lo; diu què feia el Ruche, sense res personal llevat dels noms dels fitxers que acabava de reproduir.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Ja hi ha una pestanya anomenada «%1».</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Pestanya nova %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Voleu tancar la pestanya «%1»?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>Les seves carpetes de música es treuen de la biblioteca:
+%1
+
+Els fitxers es queden on són, i si torneu a afegir les carpetes tornen.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>No ho tornis a preguntar</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ Funcionen els fluxos HLS (.m3u8), Icecast i Shoutcast.</translation>
         <source>Plays</source>
         <translation>Escoltes</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Afegida</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ Funcionen els fluxos HLS (.m3u8), Icecast i Shoutcast.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Aquesta còpia del Ruche no s’ha instal·lat des d’una versió publicada; s’ha obert la pàgina de la versió.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>No hi ha cap fitxer .qss en aquesta carpeta.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>No s’ha pogut copiar el tema.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>No es pot llegir aquest fitxer zip.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>Aquest fitxer zip conté camins perillosos.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>No hi ha cap fitxer .qss en aquest zip.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Aquest zip és massa gran per a un tema.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>No s’ha pogut descomprimir el tema.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Trieu un fitxer .qss, una carpeta de tema o un .zip.</translation>
     </message>
 </context>
 </TS>

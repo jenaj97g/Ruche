@@ -1,0 +1,28 @@
+/**
+ * @name Terminal
+ * @author Ruche
+ * @version 1.0
+ * @description Green phosphor on black, monospace everywhere, square corners.
+ * @window #050805
+ * @text #9dff9d
+ * @accent #33ff66
+ */
+
+* { font-family: "DejaVu Sans Mono", "Cascadia Mono", Consolas, monospace; }
+
+QLineEdit, QLineEdit#search, QPushButton, QComboBox, QMenu, QToolTip,
+QTreeWidget#navigator::item, QMenu::item, QToolButton, QProgressBar, QProgressBar::chunk {
+    border-radius: 0;
+}
+QToolButton#playButton { border-radius: 0; }
+
+QWidget#topBar, QWidget#playerBar, QWidget#statusBar { border-color: @accent; }
+QTreeWidget#navigator { border-right: 1px dashed @line4; }
+QTreeWidget#navigator::item:selected { background: @field; color: @accent; border-left: 2px solid @accent; }
+QTableView::item:selected, QListView::item:selected { background: @accent; color: @window; }
+QListView#browser::item:selected { background: @accent; color: @window; }
+
+QSlider::groove:horizontal { height: 2px; border-radius: 0; }
+QSlider::sub-page:horizontal, QSlider::add-page:horizontal { border-radius: 0; }
+QSlider::handle:horizontal { width: 8px; height: 12px; border-radius: 0; background: @accent; }
+QHeaderView::section { border-right: 1px dashed @line2; }

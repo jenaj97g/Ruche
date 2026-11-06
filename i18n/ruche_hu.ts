@@ -251,10 +251,6 @@ A HLS (.m3u8), Icecast és Shoutcast streamek mind működnek.</translation>
         <translation>LEJÁTSZÁSI LISTÁK</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Még nincs lista</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Még nincs zenei mappa. Menü (☰) → Zenei mappa hozzáadása…</translation>
     </message>
@@ -459,10 +455,6 @@ A HLS (.m3u8), Icecast és Shoutcast streamek mind működnek.</translation>
         <translation>Lap eltávolítása</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Két vagy több lap esetén a könyvtár fölötti lapsávval lehet váltani köztük (például Zene és Airchecks). Dupla kattintással átnevezhető egy lap; húzással átrendezhető.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Zenei mappák</translation>
     </message>
@@ -635,20 +627,12 @@ A HLS (.m3u8), Icecast és Shoutcast streamek mind működnek.</translation>
         <translation>Rádióadók is</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Albumborítók megjelenítése (előadó és album szerint keresve az iTunesban és a MusicBrainzben)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>Alkalmazásazonosító a discord.com/developers oldalról</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>Alkalmazásazonosító</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>A Discord alkalmazással és a Vesktoppal működik (kapcsolja be az arRPC / Rich Presence beállítását). Megmutatja a dalt, az előadót és a borítót; rádiónál csak egy tiszta „Előadó - Cím” párost és az adó logóját. Szünetben vagy leállítva semmit sem oszt meg.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ A HLS (.m3u8), Icecast és Shoutcast streamek mind működnek.</translation>
         <translation>Frissítések keresése</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Lap átnevezése</translation>
+        <source>Rename playlist…</source>
+        <translation>Lista átnevezése…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Név:</translation>
+        <source>Import playlist…</source>
+        <translation>Lejátszási lista importálása…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Zenemappa hozzáadása ehhez a laphoz…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Lap bezárása</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Ennek a lapnak még nincs zenemappája.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Kattintson duplán a lapra az átnevezéshez; húzza el az áthelyezéshez.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>A lista neve nem tartalmazhat / \ : * ? " &lt; &gt; | jelet, és nem kezdődhet ponttal.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Már van „%1” nevű lista.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>„%1” lista létrehozva. Húzzon rá számokat az oldalsávban, vagy jobb klikk a számokon → Hozzáadás lejátszási listához.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Lista átnevezése</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Nem sikerült átnevezni a listát.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Jobb klikk egy listára az átnevezéshez vagy törléshez</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Mappa megnyitása</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Összes törlése</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Összeomlási naplók</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Csak akkor készülnek, ha a Ruche összeomlik: mit csinált épp, hogy egy GitHub-hibajelentéshez csatolja. Legfeljebb a 20 legújabb marad meg.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Nincs</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>napló</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>napló</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>A lapok úgy működnek, mint egy böngészőben: a + a lapsávon újat nyit, a × vagy középső kattintás bezár, dupla kattintás átnevez, húzással pedig átrendezheti őket. Minden lenti mappa egy laphoz tartozik.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Kérdezzen, mielőtt bezár egy mappákat tartalmazó lapot</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Témafájl</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Importálás…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Témák mappájának megnyitása</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>A témafájl egy Qt stíluslap (.qss), amely a Ruche bármely részét átszabhatja, és saját színeket állíthat be. Importáljon egy .qss fájlt, egy témamappát vagy egy letöltött .zip fájlt; a használt fájl módosításai azonnal látszanak. Hogyan készítsen egyet: THEMES.md (a Ruche mellett és a forráskódban).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>%1. verzió</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Saját színeket állít be, így a fenti téma csak abban számít, amit érintetlenül hagy.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Téma importálása</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Témafájl vagy .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Témák (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Témamappa…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Borító (az album borítója, rádiónál az adó logója)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Ruche-logó</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>A borítókat előadó és album (vagy szám) alapján keresi az iTunes és a MusicBrainz oldalán, mert a Discord csak webes képeket tud megjeleníteni.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Kép</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Működik a Discord alkalmazással és a Vesktoppal (kapcsolja be benne az arRPC / Rich Presence beállítást). Megjeleníti a számot, az előadót és a fent választott képet; rádiónál csak egy tiszta „Előadó - Cím” látszik, a szám borítójával, ha talál ilyet. Szünet vagy leállítás alatt semmi sem látszik.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>A Ruche legutóbb váratlanul bezárult.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>Összeomlási napló készült. Ha ismét előfordul, nyisson egy hibajegyet a GitHubon, és csatolja a naplót; azt mutatja, mit csinált a Ruche, semmi személyeset nem tartalmaz az épp lejátszott fájlok nevén kívül.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Már van „%1” nevű lap.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Új lap %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Bezárja a(z) „%1” lapot?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>A zenemappái kikerülnek a könyvtárból:
+%1
+
+Maguk a fájlok a helyükön maradnak, és ha újra hozzáadja a mappákat, visszakerülnek.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Ne kérdezze többé</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ A HLS (.m3u8), Icecast és Shoutcast streamek mind működnek.</translation>
         <source>Plays</source>
         <translation>Lejátszások</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Hozzáadva</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ A HLS (.m3u8), Icecast és Shoutcast streamek mind működnek.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Ez a Ruche-példány nem kiadásból lett telepítve; helyette a kiadás oldala nyílt meg.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>Abban a mappában nincs .qss fájl.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Nem sikerült a témát átmásolni.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>A zip fájl nem olvasható.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>A zip fájlban nem biztonságos útvonalak vannak.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>Abban a zip fájlban nincs .qss fájl.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>A zip fájl túl nagy egy témához.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Nem sikerült a témát kicsomagolni.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Válasszon egy .qss fájlt, egy témamappát vagy egy .zip fájlt.</translation>
     </message>
 </context>
 </TS>

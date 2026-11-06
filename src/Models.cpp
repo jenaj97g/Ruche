@@ -6,6 +6,10 @@
 #include "Stations.h"
 
 #include <QCollator>
+#include <QMimeData>
+#include <QUrl>
+#include <QDateTime>
+#include <QLocale>
 #include <QFont>
 #include <QGuiApplication>
 #include <QPainter>
@@ -76,6 +80,45 @@ Qt::ItemFlags TrackTableModel::flags(const QModelIndex &index) const
     return index.isValid() ? Qt::ItemIsSelectable | Qt::ItemIsEnabled | Qt::ItemIsDragEnabled : Qt::NoItemFlags;
 }
 
+QStringList TrackTableModel::mimeTypes() const
+{
+    return {QString::fromLatin1(kIdsMime), QStringLiteral("text/uri-list")};
+}
+
+QMimeData *TrackTableModel::mimeData(const QModelIndexList &indexes) const
+{
+    QList<int> rows;
+    for (const QModelIndex &i : indexes)
+        if (i.isValid() && !rows.contains(i.row()))
+            rows << i.row();
+    std::sort(rows.begin(), rows.end());
+    QByteArray ids;
+    QList<QUrl> urls;
+    for (int r : std::as_const(rows)) {
+        const qint64 id = idAt(r);
+        if (const Track *t = m_lib->byId(id)) {
+            ids += QByteArray::number(id) + ' ';
+            urls << QUrl::fromLocalFile(t->filePath());
+        }
+    }
+    auto *m = new QMimeData;
+    m->setData(QString::fromLatin1(kIdsMime), ids.trimmed());
+    m->setUrls(urls);
+    return m;
+}
+
+QVector<qint64> TrackTableModel::idsFromMime(const QMimeData *m)
+{
+    QVector<qint64> out;
+    if (!m)
+        return out;
+    const QList<QByteArray> parts = m->data(QString::fromLatin1(kIdsMime)).split(' ');
+    for (const QByteArray &p : parts)
+        if (const qint64 id = p.toLongLong())
+            out << id;
+    return out;
+}
+
 QVariant TrackTableModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_ids.size())
@@ -105,11 +148,16 @@ QVariant TrackTableModel::data(const QModelIndex &index, int role) const
             return formatDuration(t->durationMs);
         case ColPlays:
             return t->plays > 0 ? QVariant(t->plays) : QVariant();
+        case ColAdded:
+            return t->added > 0 ? QLocale().toString(QDateTime::fromSecsSinceEpoch(t->added).date(), QLocale::ShortFormat)
+                                : QVariant();
         }
         break;
     case Qt::ToolTipRole:
         if (index.column() == ColTitle)
             return t->filePath();
+        if (index.column() == ColAdded && t->added > 0)
+            return QLocale().toString(QDateTime::fromSecsSinceEpoch(t->added), QLocale::LongFormat);
         break;
     case Qt::TextAlignmentRole:
         if (index.column() == ColNum || index.column() == ColTime || index.column() == ColPlays || index.column() == ColYear)
@@ -157,6 +205,8 @@ QVariant TrackTableModel::headerData(int section, Qt::Orientation o, int role) c
         return tr("Time");
     case ColPlays:
         return tr("Plays");
+    case ColAdded:
+        return tr("Added");
     }
     return {};
 }
@@ -218,6 +268,9 @@ void TrackTableModel::applySort()
             break;
         case ColPlays:
             c = a.plays - b.plays;
+            break;
+        case ColAdded:
+            c = a.added < b.added ? -1 : (a.added > b.added ? 1 : 0);
             break;
         case ColNum:
             c = a.trackNo - b.trackNo;

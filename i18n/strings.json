@@ -290,11 +290,6 @@
 "s": "PLAYLISTS"
 },
 {
-"i": 58,
-"c": "MainWindow",
-"s": "No playlists yet"
-},
-{
 "i": 59,
 "c": "MainWindow",
 "s": "No music folder yet. Use the menu (☰) → Add music folder…"
@@ -550,11 +545,6 @@
 "s": "Remove tab"
 },
 {
-"i": 110,
-"c": "MainWindow",
-"s": "With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder."
-},
-{
 "i": 111,
 "c": "MainWindow",
 "s": "Music folders"
@@ -770,11 +760,6 @@
 "s": "Include radio stations"
 },
 {
-"i": 154,
-"c": "MainWindow",
-"s": "Show album covers (looked up by artist and album on iTunes and MusicBrainz)"
-},
-{
 "i": 155,
 "c": "MainWindow",
 "s": "Application ID from discord.com/developers"
@@ -783,11 +768,6 @@
 "i": 156,
 "c": "MainWindow",
 "s": "Application ID"
-},
-{
-"i": 157,
-"c": "MainWindow",
-"s": "Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean \"Artist - Title\" and the station's logo. Nothing is shared while paused or stopped."
 },
 {
 "i": 158,
@@ -1053,16 +1033,6 @@
 "i": 210,
 "c": "MainWindow",
 "s": "Check for updates"
-},
-{
-"i": 211,
-"c": "MainWindow",
-"s": "Rename tab"
-},
-{
-"i": 212,
-"c": "MainWindow",
-"s": "Name:"
 },
 {
 "i": 213,
@@ -1493,5 +1463,275 @@
 "i": 298,
 "c": "Updater",
 "s": "This copy of Ruche wasn't installed from a release; the release page was opened instead."
+},
+{
+"i": 299,
+"c": "MainWindow",
+"s": "Rename playlist…"
+},
+{
+"i": 300,
+"c": "MainWindow",
+"s": "Import playlist…"
+},
+{
+"i": 301,
+"c": "MainWindow",
+"s": "Add music folder to this tab…"
+},
+{
+"i": 302,
+"c": "MainWindow",
+"s": "Close tab"
+},
+{
+"i": 303,
+"c": "MainWindow",
+"s": "This tab has no music folders yet."
+},
+{
+"i": 304,
+"c": "MainWindow",
+"s": "Double-click the tab to rename it; drag it to move it."
+},
+{
+"i": 305,
+"c": "MainWindow",
+"s": "A playlist name can't contain / \\ : * ? \" < > | or start with a dot."
+},
+{
+"i": 306,
+"c": "MainWindow",
+"s": "There's already a playlist called “%1”."
+},
+{
+"i": 307,
+"c": "MainWindow",
+"s": "Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist."
+},
+{
+"i": 308,
+"c": "MainWindow",
+"s": "Rename playlist"
+},
+{
+"i": 309,
+"c": "MainWindow",
+"s": "Couldn't rename the playlist."
+},
+{
+"i": 310,
+"c": "MainWindow",
+"s": "Right-click a playlist to rename or delete it"
+},
+{
+"i": 311,
+"c": "MainWindow",
+"s": "Open folder"
+},
+{
+"i": 312,
+"c": "MainWindow",
+"s": "Delete all"
+},
+{
+"i": 313,
+"c": "MainWindow",
+"s": "Crash logs"
+},
+{
+"i": 314,
+"c": "MainWindow",
+"s": "Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept."
+},
+{
+"i": 315,
+"c": "MainWindow",
+"s": "None"
+},
+{
+"i": 316,
+"c": "MainWindow",
+"s": "%1 (%2)"
+},
+{
+"i": 317,
+"c": "MainWindow",
+"s": "log"
+},
+{
+"i": 318,
+"c": "MainWindow",
+"s": "logs"
+},
+{
+"i": 319,
+"c": "MainWindow",
+"s": "Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab."
+},
+{
+"i": 320,
+"c": "MainWindow",
+"s": "Ask before closing a tab that has folders"
+},
+{
+"i": 321,
+"c": "MainWindow",
+"s": "Theme file"
+},
+{
+"i": 322,
+"c": "MainWindow",
+"s": "Import…"
+},
+{
+"i": 323,
+"c": "MainWindow",
+"s": "Open themes folder"
+},
+{
+"i": 324,
+"c": "MainWindow",
+"s": "A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source)."
+},
+{
+"i": 325,
+"c": "MainWindow",
+"s": "Version %1"
+},
+{
+"i": 326,
+"c": "MainWindow",
+"s": "Sets its own colours, so the theme above only matters for what it leaves alone."
+},
+{
+"i": 327,
+"c": "MainWindow",
+"s": "Import theme"
+},
+{
+"i": 328,
+"c": "MainWindow",
+"s": "Theme file or .zip…"
+},
+{
+"i": 329,
+"c": "MainWindow",
+"s": "Themes (*.qss *.zip)"
+},
+{
+"i": 330,
+"c": "MainWindow",
+"s": "Theme folder…"
+},
+{
+"i": 331,
+"c": "MainWindow",
+"s": "Cover art (album cover, or the station's logo for radio)"
+},
+{
+"i": 332,
+"c": "MainWindow",
+"s": "Ruche logo"
+},
+{
+"i": 333,
+"c": "MainWindow",
+"s": "Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web."
+},
+{
+"i": 334,
+"c": "MainWindow",
+"s": "Picture"
+},
+{
+"i": 335,
+"c": "MainWindow",
+"s": "Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean \"Artist - Title\", with the song's cover when one is found. Nothing is shared while paused or stopped."
+},
+{
+"i": 336,
+"c": "MainWindow",
+"s": "Ruche"
+},
+{
+"i": 337,
+"c": "MainWindow",
+"s": "Ruche closed unexpectedly last time."
+},
+{
+"i": 338,
+"c": "MainWindow",
+"s": "A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played."
+},
+{
+"i": 339,
+"c": "MainWindow",
+"s": "There's already a tab called “%1”."
+},
+{
+"i": 340,
+"c": "MainWindow",
+"s": "New tab %1"
+},
+{
+"i": 341,
+"c": "MainWindow",
+"s": "Close the tab “%1”?"
+},
+{
+"i": 342,
+"c": "MainWindow",
+"s": "Its music folders are taken out of the library:\n%1\n\nThe files themselves stay where they are, and adding the folders again brings them back."
+},
+{
+"i": 343,
+"c": "MainWindow",
+"s": "Don't ask again"
+},
+{
+"i": 344,
+"c": "Theme",
+"s": "There's no .qss file in that folder."
+},
+{
+"i": 345,
+"c": "Theme",
+"s": "Couldn't copy the theme."
+},
+{
+"i": 346,
+"c": "Theme",
+"s": "That zip file can't be read."
+},
+{
+"i": 347,
+"c": "Theme",
+"s": "That zip file has unsafe paths in it."
+},
+{
+"i": 348,
+"c": "Theme",
+"s": "There's no .qss file in that zip."
+},
+{
+"i": 349,
+"c": "Theme",
+"s": "That zip is too big for a theme."
+},
+{
+"i": 350,
+"c": "Theme",
+"s": "Couldn't unpack the theme."
+},
+{
+"i": 351,
+"c": "Theme",
+"s": "Pick a .qss file, a theme folder or a .zip."
+},
+{
+"i": 352,
+"c": "TrackTableModel",
+"s": "Added"
 }
 ]

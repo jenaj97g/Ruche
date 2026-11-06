@@ -56,7 +56,6 @@
 55	En reproducció
 56	Ràdio
 57	LLISTES DE REPRODUCCIÓ
-58	Encara cap llista
 59	Encara no hi ha cap carpeta de música. Menú (☰) → Afegeix una carpeta de música…
 60	pista
 61	pistes
@@ -108,7 +107,6 @@
 107	Pestanyes
 108	Afegeix una pestanya
 109	Treu la pestanya
-110	Amb dues pestanyes o més, una barra de pestanyes damunt de la biblioteca permet canviar-ne (per exemple, Música i Airchecks). Feu doble clic en una pestanya per canviar-ne el nom; arrossegueu-la per reordenar.
 111	Carpetes de música
 112	Carpeta
 113	Pestanya
@@ -152,10 +150,8 @@
 151	Mostra al Discord el que estic escoltant
 152	Discord
 153	Inclou les emissores de ràdio
-154	Mostra les caràtules (cercades per artista i àlbum a iTunes i MusicBrainz)
 155	Identificador d’aplicació de discord.com/developers
 156	Identificador d’aplicació
-157	Funciona amb l’aplicació del Discord i amb el Vesktop (activeu-ne l’opció arRPC / Rich Presence). Mostra la cançó, l’artista i la caràtula; per a la ràdio, només un «Artista - Títol» net i el logotip de l’emissora. No es comparteix res en pausa o aturat.
 158	Escriptori
 159	Configura…
 160	Registre…
@@ -209,8 +205,6 @@
 208	S’està reiniciant amb el Ruche %1…
 209	<h3>Ruche %1</h3><p>Un reproductor de música lleuger amb una disposició a l’estil del MusicBee.</p><p>Reproducció amb libmpv. Etiquetes amb TagLib. Títols dels fluxos en directe des d’ICY, etiquetes integrades, HLS #EXTINF i metadades ID3 temporitzades d’HLS.</p><p><a href="%2">%2</a></p>
 210	Cerca actualitzacions
-211	Canvia el nom de la pestanya
-212	Nom:
 213	Mostra el Ruche
 214	Següent
 215	No s’està reproduint res
@@ -297,3 +291,57 @@
 296	No s’ha pogut iniciar l’instal·lador %1.
 297	El Ruche %1 s’ha baixat a %2. Tanqueu el Ruche i descomprimiu-lo damunt d’aquesta còpia (%3).
 298	Aquesta còpia del Ruche no s’ha instal·lat des d’una versió publicada; s’ha obert la pàgina de la versió.
+299	Canvia el nom de la llista…
+300	Importa una llista de reproducció…
+301	Afegeix una carpeta de música a aquesta pestanya…
+302	Tanca la pestanya
+303	Aquesta pestanya encara no té carpetes de música.
+304	Feu doble clic a la pestanya per canviar-ne el nom; arrossegueu-la per moure-la.
+305	El nom d’una llista no pot contenir / \ : * ? " < > | ni començar amb un punt.
+306	Ja hi ha una llista anomenada «%1».
+307	S’ha creat la llista «%1». Arrossegueu-hi cançons a la barra lateral, o feu clic dret a les cançons → Afegeix a una llista.
+308	Canvia el nom de la llista
+309	No s’ha pogut canviar el nom de la llista.
+310	Feu clic dret a una llista per canviar-ne el nom o suprimir-la
+311	Obre la carpeta
+312	Suprimeix-ho tot
+313	Registres d’errors greus
+314	Només s’escriuen si el Ruche falla: el que estava fent, per adjuntar a un informe d’error a GitHub. Se’n conserven com a molt els 20 més recents.
+315	Cap
+316	%1 (%2)
+317	registre
+318	registres
+319	Les pestanyes funcionen com les d’un navegador: + a la barra en crea una, × o un clic del mig la tanca, doble clic li canvia el nom i arrossegar-la canvia l’ordre. Cada carpeta d’aquí sota pertany a una pestanya.
+320	Pregunta abans de tancar una pestanya que té carpetes
+321	Fitxer de tema
+322	Importa…
+323	Obre la carpeta de temes
+324	Un fitxer de tema és un full d’estil de Qt (.qss) que pot canviar l’aspecte de qualsevol part del Ruche i fixar-ne els colors. Importeu un .qss, una carpeta de tema o un .zip baixat; els canvis al fitxer en ús es veuen de seguida. Com fer-ne un: THEMES.md (inclòs amb el Ruche i al codi font).
+325	Versió %1
+326	Fixa els seus propis colors, de manera que el tema de dalt només compta per al que deixa igual.
+327	Importa un tema
+328	Fitxer de tema o .zip…
+329	Temes (*.qss *.zip)
+330	Carpeta de tema…
+331	Caràtula (la de l’àlbum, o el logotip de l’emissora per a la ràdio)
+332	Logotip del Ruche
+333	Les caràtules es cerquen per artista i àlbum (o cançó) a iTunes i MusicBrainz, perquè el Discord només pot mostrar imatges del web.
+334	Imatge
+335	Funciona amb l’aplicació del Discord i amb el Vesktop (activeu-hi l’opció arRPC / Rich Presence). Mostra la cançó, l’artista i la imatge triada a dalt; per a la ràdio, només un «Artista - Títol» net, amb la caràtula de la cançó quan es troba. No es comparteix res en pausa o aturat.
+336	Ruche
+337	El Ruche es va tancar de manera inesperada l’última vegada.
+338	S’ha desat un registre de l’error. Si torna a passar, obriu una incidència a GitHub i adjunteu-lo; diu què feia el Ruche, sense res personal llevat dels noms dels fitxers que acabava de reproduir.
+339	Ja hi ha una pestanya anomenada «%1».
+340	Pestanya nova %1
+341	Voleu tancar la pestanya «%1»?
+342	Les seves carpetes de música es treuen de la biblioteca:\n%1\n\nEls fitxers es queden on són, i si torneu a afegir les carpetes tornen.
+343	No ho tornis a preguntar
+344	No hi ha cap fitxer .qss en aquesta carpeta.
+345	No s’ha pogut copiar el tema.
+346	No es pot llegir aquest fitxer zip.
+347	Aquest fitxer zip conté camins perillosos.
+348	No hi ha cap fitxer .qss en aquest zip.
+349	Aquest zip és massa gran per a un tema.
+350	No s’ha pogut descomprimir el tema.
+351	Trieu un fitxer .qss, una carpeta de tema o un .zip.
+352	Afegida

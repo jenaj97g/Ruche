@@ -56,7 +56,6 @@
 55	Em reprodução
 56	Rádio
 57	LISTAS DE REPRODUÇÃO
-58	Ainda sem listas
 59	Ainda não há pasta de música. Menu (☰) → Adicionar pasta de música…
 60	faixa
 61	faixas
@@ -108,7 +107,6 @@
 107	Separadores
 108	Adicionar separador
 109	Remover separador
-110	Com dois separadores ou mais, uma barra de separadores por cima da biblioteca alterna entre eles (por exemplo, Música e Airchecks). Faça duplo clique num separador para lhe mudar o nome; arraste para reordenar.
 111	Pastas de música
 112	Pasta
 113	Separador
@@ -152,10 +150,8 @@
 151	Mostrar no Discord o que estou a ouvir
 152	Discord
 153	Incluir estações de rádio
-154	Mostrar capas (procuradas por artista e álbum no iTunes e no MusicBrainz)
 155	ID de aplicação de discord.com/developers
 156	ID de aplicação
-157	Funciona com a aplicação Discord e com o Vesktop (ligue a opção arRPC / Rich Presence). Mostra a música, o artista e a capa; na rádio, só um «Artista - Título» limpo e o logótipo da estação. Nada é partilhado em pausa ou parado.
 158	Ambiente de trabalho
 159	Configurar…
 160	Registo…
@@ -209,8 +205,6 @@
 208	A reiniciar no Ruche %1…
 209	<h3>Ruche %1</h3><p>Um leitor de música leve, com a disposição do MusicBee.</p><p>Reprodução pelo libmpv. Etiquetas pelo TagLib. Títulos dos fluxos em direto a partir de ICY, etiquetas no próprio fluxo, HLS #EXTINF e metadados ID3 temporizados do HLS.</p><p><a href="%2">%2</a></p>
 210	Procurar atualizações
-211	Mudar o nome do separador
-212	Nome:
 213	Mostrar o Ruche
 214	Seguinte
 215	Nada a tocar
@@ -297,6 +291,60 @@
 296	Não foi possível iniciar o instalador %1.
 297	O Ruche %1 foi transferido para %2. Feche o Ruche e descompacte-o por cima desta cópia (%3).
 298	Esta cópia do Ruche não foi instalada a partir de uma versão publicada; foi aberta a página da versão.
+299	Mudar o nome da lista…
+300	Importar lista de reprodução…
+301	Adicionar pasta de música a este separador…
+302	Fechar separador
+303	Este separador ainda não tem pastas de música.
+304	Faça duplo clique no separador para mudar o nome; arraste-o para o mover.
+305	O nome de uma lista não pode conter / \ : * ? " < > | nem começar por um ponto.
+306	Já existe uma lista chamada «%1».
+307	Lista «%1» criada. Arraste faixas para ela na barra lateral, ou clique com o botão direito em faixas → Adicionar a uma lista.
+308	Mudar o nome da lista
+309	Não foi possível mudar o nome da lista.
+310	Clique com o botão direito numa lista para mudar o nome ou eliminá-la
+311	Abrir pasta
+312	Eliminar tudo
+313	Registos de falhas
+314	Só são escritos se o Ruche falhar: o que estava a fazer, para anexar a um relatório de erro no GitHub. São guardados no máximo os 20 mais recentes.
+315	Nenhum
+316	%1 (%2)
+317	registo
+318	registos
+319	Os separadores funcionam como os de um navegador: + na barra cria um, × ou um clique do meio fecha-o, duplo clique muda o nome e arrastar muda a ordem. Cada pasta abaixo pertence a um separador.
+320	Perguntar antes de fechar um separador com pastas
+321	Ficheiro de tema
+322	Importar…
+323	Abrir pasta de temas
+324	Um ficheiro de tema é uma folha de estilos do Qt (.qss) que pode mudar o aspeto de qualquer parte do Ruche e definir as suas próprias cores. Importe um .qss, uma pasta de tema ou um .zip transferido; as alterações ao ficheiro em uso aparecem logo. Como fazer um: THEMES.md (incluído com o Ruche e no código-fonte).
+325	Versão %1
+326	Define as suas próprias cores, por isso o tema acima só conta para o que deixa igual.
+327	Importar tema
+328	Ficheiro de tema ou .zip…
+329	Temas (*.qss *.zip)
+330	Pasta de tema…
+331	Capa (a do álbum, ou o logótipo da estação para a rádio)
+332	Logótipo do Ruche
+333	As capas são procuradas por artista e álbum (ou faixa) no iTunes e no MusicBrainz, porque o Discord só pode mostrar imagens da web.
+334	Imagem
+335	Funciona com a aplicação Discord e com o Vesktop (ative a opção arRPC / Rich Presence). Mostra a faixa, o artista e a imagem escolhida acima; para a rádio, apenas um «Artista - Título» limpo, com a capa da faixa quando é encontrada. Nada é partilhado em pausa ou parado.
+336	Ruche
+337	O Ruche fechou inesperadamente da última vez.
+338	Foi guardado um registo da falha. Se voltar a acontecer, abra um problema no GitHub e anexe-o; diz o que o Ruche estava a fazer, sem nada pessoal além dos nomes dos ficheiros que tinha acabado de reproduzir.
+339	Já existe um separador chamado «%1».
+340	Novo separador %1
+341	Fechar o separador «%1»?
+342	As suas pastas de música saem da biblioteca:\n%1\n\nOs ficheiros ficam onde estão, e voltar a adicionar as pastas trá-los de volta.
+343	Não perguntar novamente
+344	Não há nenhum ficheiro .qss nessa pasta.
+345	Não foi possível copiar o tema.
+346	Não é possível ler esse ficheiro zip.
+347	Esse ficheiro zip tem caminhos perigosos.
+348	Não há nenhum ficheiro .qss nesse zip.
+349	Esse zip é grande demais para um tema.
+350	Não foi possível descompactar o tema.
+351	Escolha um ficheiro .qss, uma pasta de tema ou um .zip.
+352	Adicionada
 qt:OK	OK
 qt:Cancel	Cancelar
 qt:Close	Fechar

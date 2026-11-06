@@ -7,7 +7,7 @@
 namespace Icons {
 enum Name {
     Play, Pause, Next, Prev, Stop, Shuffle, Repeat, RepeatOne, Volume, Mute, Search, Music, Radio,
-    Queue, Playlist, Add, Remove, Import, Menu, Settings, Folder, Edit, Logo
+    Queue, Playlist, Add, Remove, Import, Menu, Settings, Folder, Edit, Logo, Close
 };
 void setColors(const QColor &normal, const QColor &active, const QColor &disabled, const QColor &accent);
 QIcon icon(Name n);

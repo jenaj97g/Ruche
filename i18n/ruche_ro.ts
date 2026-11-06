@@ -251,10 +251,6 @@ Fluxurile HLS (.m3u8), Icecast și Shoutcast funcționează toate.</translation>
         <translation>LISTE DE REDARE</translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation>Nicio listă încă</translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation>Încă nu există un dosar de muzică. Meniul (☰) → Adaugă un dosar de muzică…</translation>
     </message>
@@ -459,10 +455,6 @@ Fluxurile HLS (.m3u8), Icecast și Shoutcast funcționează toate.</translation>
         <translation>Elimină fila</translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation>Cu două file sau mai multe, o bară de file deasupra bibliotecii comută între ele (de exemplu Muzică și Airchecks). Dublu clic pe o filă pentru a o redenumi; trage pentru a reordona.</translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation>Dosare de muzică</translation>
     </message>
@@ -635,20 +627,12 @@ Fluxurile HLS (.m3u8), Icecast și Shoutcast funcționează toate.</translation>
         <translation>Include posturile de radio</translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation>Arată copertele albumelor (căutate după artist și album pe iTunes și MusicBrainz)</translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation>ID de aplicație de la discord.com/developers</translation>
     </message>
     <message>
         <source>Application ID</source>
         <translation>ID de aplicație</translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
-        <translation>Funcționează cu aplicația Discord și cu Vesktop (activează opțiunea arRPC / Rich Presence). Arată melodia, artistul și coperta; pentru radio, doar un „Artist - Titlu” curat și sigla postului. Nu se partajează nimic în pauză sau oprit.</translation>
     </message>
     <message>
         <source>Desktop</source>
@@ -863,12 +847,190 @@ Fluxurile HLS (.m3u8), Icecast și Shoutcast funcționează toate.</translation>
         <translation>Caută actualizări</translation>
     </message>
     <message>
-        <source>Rename tab</source>
-        <translation>Redenumește fila</translation>
+        <source>Rename playlist…</source>
+        <translation>Redenumește lista…</translation>
     </message>
     <message>
-        <source>Name:</source>
-        <translation>Nume:</translation>
+        <source>Import playlist…</source>
+        <translation>Importă o listă de redare…</translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation>Adaugă un dosar de muzică în această filă…</translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation>Închide fila</translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation>Această filă nu are încă dosare de muzică.</translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation>Faceți dublu clic pe filă ca s-o redenumiți; trageți-o ca s-o mutați.</translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation>Numele unei liste nu poate conține / \ : * ? " &lt; &gt; | și nici nu poate începe cu un punct.</translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation>Există deja o listă numită „%1”.</translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation>Lista „%1” a fost creată. Trageți piese peste ea în bara laterală, sau clic dreapta pe piese → Adaugă într-o listă.</translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation>Redenumește lista</translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation>Lista nu a putut fi redenumită.</translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation>Clic dreapta pe o listă ca s-o redenumiți sau s-o ștergeți</translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation>Deschide dosarul</translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation>Șterge tot</translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation>Jurnale de blocare</translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation>Scrise doar dacă Ruche se blochează: ce făcea, ca să fie atașat unui raport de eroare pe GitHub. Se păstrează cel mult cele mai noi 20.</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation>jurnal</translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation>jurnale</translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation>Filele funcționează ca într-un navigator: + pe bară creează una, × sau clic pe rotiță o închide, dublu clic o redenumește, iar tragerea schimbă ordinea. Fiecare dosar de mai jos aparține unei file.</translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation>Întreabă înainte de a închide o filă care are dosare</translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation>Fișier de temă</translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation>Importă…</translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation>Deschide dosarul de teme</translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation>Un fișier de temă este o foaie de stil Qt (.qss) care poate schimba orice parte a lui Ruche și își poate alege propriile culori. Importați un .qss, un dosar de temă sau un .zip descărcat; modificările fișierului folosit apar imediat. Cum se face una: THEMES.md (inclus cu Ruche și în sursă).</translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation>Versiunea %1</translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation>Își alege propriile culori, așa că tema de mai sus contează doar pentru ce lasă neschimbat.</translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation>Importă o temă</translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation>Fișier de temă sau .zip…</translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation>Teme (*.qss *.zip)</translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation>Dosar de temă…</translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation>Copertă (coperta albumului, sau sigla postului pentru radio)</translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation>Sigla Ruche</translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation>Copertele sunt căutate după artist și album (sau piesă) pe iTunes și MusicBrainz, fiindcă Discord poate afișa doar imagini de pe web.</translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation>Imagine</translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation>Funcționează cu aplicația Discord și cu Vesktop (activați opțiunea arRPC / Rich Presence). Arată piesa, artistul și imaginea aleasă mai sus; pentru radio, doar un „Artist - Titlu” curat, cu coperta piesei când e găsită. Nu se transmite nimic pe pauză sau oprit.</translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation>Ruche</translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation>Ruche s-a închis neașteptat data trecută.</translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation>A fost salvat un jurnal al blocării. Dacă se repetă, deschideți o problemă pe GitHub și atașați-l; arată ce făcea Ruche, fără nimic personal în afară de numele fișierelor pe care tocmai le redase.</translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation>Există deja o filă numită „%1”.</translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation>Filă nouă %1</translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation>Închideți fila „%1”?</translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation>Dosarele ei de muzică sunt scoase din bibliotecă:
+%1
+
+Fișierele rămân unde sunt, iar adăugarea din nou a dosarelor le aduce înapoi.</translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
+        <translation>Nu mai întreba</translation>
     </message>
 </context>
 <context>
@@ -1164,6 +1326,10 @@ Fluxurile HLS (.m3u8), Icecast și Shoutcast funcționează toate.</translation>
         <source>Plays</source>
         <translation>Redări</translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation>Adăugată</translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1248,6 +1414,41 @@ Fluxurile HLS (.m3u8), Icecast și Shoutcast funcționează toate.</translation>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
         <translation>Această copie Ruche nu a fost instalată dintr-o versiune publicată; în schimb a fost deschisă pagina versiunii.</translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation>Nu există niciun fișier .qss în acel dosar.</translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation>Tema nu a putut fi copiată.</translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation>Fișierul zip nu poate fi citit.</translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation>Fișierul zip conține căi nesigure.</translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation>Nu există niciun fișier .qss în acel zip.</translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation>Zip-ul e prea mare pentru o temă.</translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation>Tema nu a putut fi dezarhivată.</translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
+        <translation>Alegeți un fișier .qss, un dosar de temă sau un .zip.</translation>
     </message>
 </context>
 <context>

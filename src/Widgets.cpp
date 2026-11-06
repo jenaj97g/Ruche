@@ -5,6 +5,9 @@
 #include "Theme.h"
 
 #include <QBoxLayout>
+#include <QDateTime>
+#include <QToolTip>
+#include <QWheelEvent>
 #include <QListWidget>
 #include <QMouseEvent>
 #include <QPainter>
@@ -19,6 +22,52 @@ SeekSlider::SeekSlider(QWidget *parent) : QSlider(Qt::Horizontal, parent)
 {
     setFocusPolicy(Qt::NoFocus);
     setCursor(Qt::PointingHandCursor);
+    setMouseTracking(true); // for the time tooltip under the cursor
+}
+
+int SeekSlider::valueAt(int x) const
+{
+    QStyleOptionSlider opt;
+    initStyleOption(&opt);
+    const QRect handle = style()->subControlRect(QStyle::CC_Slider, &opt, QStyle::SC_SliderHandle, this);
+    return QStyle::sliderValueFromPosition(minimum(), maximum(), x - handle.width() / 2, width() - handle.width());
+}
+
+void SeekSlider::mouseMoveEvent(QMouseEvent *e)
+{
+    QSlider::mouseMoveEvent(e);
+    if (!isEnabled() || maximum() <= 0)
+        return;
+    const int v = isSliderDown() ? sliderPosition() : valueAt(int(e->position().x()));
+    // Show the time where a click would land, just above the bar
+    const QPoint at = mapToGlobal(QPoint(int(e->position().x()), 0)) - QPoint(0, 28);
+    QToolTip::showText(at, formatDuration(v), this, {}, 2000);
+}
+
+void SeekSlider::leaveEvent(QEvent *e)
+{
+    QToolTip::hideText();
+    QSlider::leaveEvent(e);
+}
+
+void SeekSlider::wheelEvent(QWheelEvent *e)
+{
+    e->accept(); // never let the wheel page the slider or scroll a parent
+    if (!isEnabled() || maximum() <= 0)
+        return;
+    // Touchpads send many small deltas; act on every full notch (120)
+    const QPoint d = e->angleDelta();
+    m_wheelAccum += qAbs(d.y()) >= qAbs(d.x()) ? d.y() : -d.x();
+    const int notches = m_wheelAccum / 120;
+    if (notches == 0)
+        return;
+    m_wheelAccum -= notches * 120;
+    int step = 5000;
+    if (e->modifiers() & Qt::ShiftModifier)
+        step = 30000;
+    else if (e->modifiers() & Qt::ControlModifier)
+        step = 1000;
+    Q_EMIT wheelSeek(notches * step);
 }
 
 void SeekSlider::mousePressEvent(QMouseEvent *e)
@@ -209,6 +258,7 @@ PlayerBar::PlayerBar(QWidget *parent) : QWidget(parent)
         m_dragging = false;
         Q_EMIT seekRequested(m_seek->sliderPosition() / 1000.0);
     });
+    connect(m_seek, &SeekSlider::wheelSeek, this, &PlayerBar::seekBy);
     auto *seekRow = new QHBoxLayout;
     seekRow->setSpacing(8);
     seekRow->addWidget(m_pos);
@@ -301,6 +351,22 @@ void PlayerBar::setPlaying(bool active, bool paused)
     m_play->setIcon(ic);
 }
 
+void PlayerBar::seekBy(int deltaMs)
+{
+    if (!m_seek->isEnabled() || m_seek->maximum() <= 0)
+        return;
+    // Quick notches add up from where the last one was heading, not from a position
+    // report that hasn't caught up with the seek yet.
+    const qint64 now = QDateTime::currentMSecsSinceEpoch();
+    const qint64 from = (m_wheelTarget >= 0 && now - m_wheelTime < 600) ? m_wheelTarget : m_seek->value();
+    const qint64 to = qBound(qint64(0), from + deltaMs, qint64(m_seek->maximum()));
+    m_wheelTarget = to;
+    m_wheelTime = now;
+    m_seek->setValue(int(to));
+    m_pos->setText(formatDuration(to));
+    Q_EMIT seekRequested(to / 1000.0);
+}
+
 void PlayerBar::setPosition(double pos, double dur, bool seekable, bool live)
 {
     if (live) {
@@ -312,8 +378,8 @@ void PlayerBar::setPosition(double pos, double dur, bool seekable, bool live)
         return;
     }
     m_seek->setEnabled(seekable && dur > 0);
-    if (m_dragging)
-        return;
+    if (m_dragging || QDateTime::currentMSecsSinceEpoch() - m_wheelTime < 600)
+        return; // keep showing where the user is seeking to
     m_seek->setRange(0, qMax(0, int(dur * 1000)));
     m_seek->setValue(int(pos * 1000));
     m_pos->setText(dur > 0 || pos > 0 ? formatDuration(qint64(pos * 1000)) : QStringLiteral("0:00"));

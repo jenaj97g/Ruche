@@ -1,3 +1,4 @@
+#include "CrashLog.h"
 #include "DesktopEntry.h"
 #include "Icons.h"
 #include "Library.h"
@@ -179,6 +180,7 @@ static void messageFilter(QtMsgType type, const QMessageLogContext &ctx, const Q
         msg.startsWith(QLatin1String("Available client buffer integrations")))
         return;
     g_defaultHandler(type, ctx, msg);
+    crashlog::remember(qFormatLogMessage(type, ctx, msg)); // the last ones go into a crash log
     // A Windows GUI program has no terminal to print to: RUCHE_LOG_FILE=path collects
     // the same messages (with RUCHE_DEBUG=1 / RUCHE_MPV_LOG=v for more detail).
     static QFile *logFile = [] {
@@ -223,6 +225,15 @@ int main(int argc, char **argv)
     // Inside Flatpak the menu entry, icon and Wayland app id are the Flatpak app id.
     QApplication::setDesktopFileName(qEnvironmentVariable("FLATPAK_ID", QStringLiteral("ruche")));
     QApplication app(argc, argv);
+    crashlog::install();
+    crashlog::prune();
+    if (qEnvironmentVariableIsSet("RUCHE_CRASH_TEST")) { // for testing the crash log only
+        QTimer::singleShot(qEnvironmentVariableIntValue("RUCHE_CRASH_TEST") * 1000, [] {
+            qWarning("RUCHE_CRASH_TEST: crashing on purpose");
+            volatile int *p = nullptr;
+            *p = 42;
+        });
+    }
     i18n::install(app);
     Theme::apply(app, Theme::loadChoice());
 

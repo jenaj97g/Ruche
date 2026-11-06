@@ -8,7 +8,7 @@ set -euo pipefail
 HERE=$(cd "$(dirname "$0")" && pwd)
 ROOT=$(cd "$HERE/../.." && pwd)
 APPDIR=$ROOT/build-appimage/AppDir
-APPID=be.weizkule.Ruche
+APPID=fr.jenaj97g.Ruche
 BRANCH=stable
 RUNTIME_VERSION=24.08
 VERSION=$(sed -n 's/^project(ruche VERSION \([0-9.]*\).*/\1/p' "$ROOT/CMakeLists.txt")

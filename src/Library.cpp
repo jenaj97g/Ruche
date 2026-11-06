@@ -474,7 +474,14 @@ void Library::bumpPlayCount(qint64 id)
 // ---------------------------------------------------------------------------
 // Playlists
 
-static QString playlistFile(const QString &name) { return paths::playlistDir() + QLatin1Char('/') + name + QLatin1String(".m3u8"); }
+// The playlist's file: an existing .m3u8 or .m3u by that name, else where a new .m3u8 goes.
+static QString playlistFile(const QString &name)
+{
+    const QString base = paths::playlistDir() + QLatin1Char('/') + name;
+    if (!QFileInfo::exists(base + QLatin1String(".m3u8")) && QFileInfo::exists(base + QLatin1String(".m3u")))
+        return base + QLatin1String(".m3u");
+    return base + QLatin1String(".m3u8");
+}
 
 QStringList Library::playlists() const
 {
@@ -530,6 +537,19 @@ bool Library::appendToPlaylist(const QString &name, const QVector<qint64> &ids)
     QVector<qint64> all = playlistTracks(name);
     all += ids;
     return savePlaylist(name, all);
+}
+
+bool Library::renamePlaylist(const QString &from, const QString &to)
+{
+    if (from == to)
+        return true;
+    // a case-only rename needs a stop in between on case-insensitive file systems
+    const QString src = playlistFile(from);
+    const QString dst = paths::playlistDir() + QLatin1Char('/') + to + QLatin1String(".m3u8");
+    const QString tmp = dst + QLatin1String(".renaming");
+    const bool ok = QFile::rename(src, tmp) && QFile::rename(tmp, dst);
+    Q_EMIT playlistsChanged();
+    return ok;
 }
 
 bool Library::deletePlaylist(const QString &name)

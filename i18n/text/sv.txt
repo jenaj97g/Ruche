@@ -56,7 +56,6 @@
 55	Spelas nu
 56	Radio
 57	SPELLISTOR
-58	Inga spellistor än
 59	Ingen musikmapp än. Använd menyn (☰) → Lägg till musikmapp…
 60	spår
 61	spår
@@ -108,7 +107,6 @@
 107	Flikar
 108	Lägg till flik
 109	Ta bort flik
-110	Med två flikar eller fler växlar en flikrad ovanför biblioteket mellan dem (till exempel Musik och Airchecks). Dubbelklicka på en flik för att byta namn; dra för att ändra ordning.
 111	Musikmappar
 112	Mapp
 113	Flik
@@ -152,10 +150,8 @@
 151	Visa på Discord vad jag lyssnar på
 152	Discord
 153	Ta med radiostationer
-154	Visa skivomslag (söks efter artist och album på iTunes och MusicBrainz)
 155	Program-ID från discord.com/developers
 156	Program-ID
-157	Fungerar med Discord-appen och med Vesktop (slå på dess alternativ arRPC / Rich Presence). Visar låten, artisten och omslaget; för radio bara en ren ”Artist - Titel” och stationens logotyp. Inget delas när uppspelningen är pausad eller stoppad.
 158	Skrivbord
 159	Konfigurera…
 160	Logg…
@@ -209,8 +205,6 @@
 208	Startar om med Ruche %1…
 209	<h3>Ruche %1</h3><p>En lätt musikspelare med en layout som MusicBee.</p><p>Uppspelning med libmpv. Taggar med TagLib. Livetitlar från ICY, inbäddade taggar, HLS #EXTINF och tidsstyrda ID3-metadata i HLS.</p><p><a href="%2">%2</a></p>
 210	Leta efter uppdateringar
-211	Byt namn på flik
-212	Namn:
 213	Visa Ruche
 214	Nästa
 215	Inget spelas
@@ -297,6 +291,60 @@
 296	Kunde inte starta installeraren %1.
 297	Ruche %1 laddades ner till %2. Stäng Ruche och packa upp det över den här kopian (%3).
 298	Den här kopian av Ruche installerades inte från en version; versionssidan öppnades i stället.
+299	Byt namn på spellistan…
+300	Importera spellista…
+301	Lägg till musikmapp i den här fliken…
+302	Stäng flik
+303	Den här fliken har inga musikmappar än.
+304	Dubbelklicka på fliken för att byta namn; dra den för att flytta den.
+305	Ett spellistnamn får inte innehålla / \ : * ? " < > | eller börja med en punkt.
+306	Det finns redan en spellista som heter ”%1”.
+307	Spellistan ”%1” skapad. Dra spår till den i sidofältet, eller högerklicka på spår → Lägg till i spellista.
+308	Byt namn på spellistan
+309	Kunde inte byta namn på spellistan.
+310	Högerklicka på en spellista för att byta namn på den eller ta bort den
+311	Öppna mappen
+312	Ta bort alla
+313	Kraschloggar
+314	Skrivs bara om Ruche kraschar: vad den höll på med, att bifoga till en felrapport på GitHub. Högst de 20 senaste sparas.
+315	Inga
+316	%1 (%2)
+317	logg
+318	loggar
+319	Flikar fungerar som i en webbläsare: + på flikraden skapar en, × eller ett mittenklick stänger en, dubbelklick byter namn och dra ändrar ordningen. Varje mapp nedan hör till en flik.
+320	Fråga innan en flik med mappar stängs
+321	Temafil
+322	Importera…
+323	Öppna temamappen
+324	En temafil är en Qt-stilmall (.qss) som kan ändra utseendet på alla delar av Ruche och sätta egna färger. Importera en .qss, en temamapp eller en nedladdad .zip; ändringar i filen som används syns direkt. Hur man gör en: THEMES.md (följer med Ruche och finns i källkoden).
+325	Version %1
+326	Sätter egna färger, så temat ovan gäller bara det den lämnar orört.
+327	Importera tema
+328	Temafil eller .zip…
+329	Teman (*.qss *.zip)
+330	Temamapp…
+331	Omslag (albumomslaget, eller stationens logga för radio)
+332	Ruches logga
+333	Omslag söks efter artist och album (eller låt) på iTunes och MusicBrainz, eftersom Discord bara kan visa bilder från webben.
+334	Bild
+335	Fungerar med Discord-appen och med Vesktop (slå på dess alternativ arRPC / Rich Presence). Visar låten, artisten och bilden som valts ovan; för radio bara en ren ”Artist - Titel”, med låtens omslag när ett hittas. Inget delas när uppspelningen är pausad eller stoppad.
+336	Ruche
+337	Ruche stängdes oväntat förra gången.
+338	En kraschlogg sparades. Om det händer igen, öppna ett ärende på GitHub och bifoga loggen; den visar vad Ruche gjorde, utan något personligt förutom namnen på filer den just hade spelat.
+339	Det finns redan en flik som heter ”%1”.
+340	Ny flik %1
+341	Stäng fliken ”%1”?
+342	Dess musikmappar tas bort ur biblioteket:\n%1\n\nSjälva filerna ligger kvar där de är, och lägger du till mapparna igen kommer de tillbaka.
+343	Fråga inte igen
+344	Det finns ingen .qss-fil i den mappen.
+345	Kunde inte kopiera temat.
+346	Zip-filen kan inte läsas.
+347	Zip-filen innehåller osäkra sökvägar.
+348	Det finns ingen .qss-fil i den zip-filen.
+349	Zip-filen är för stor för ett tema.
+350	Kunde inte packa upp temat.
+351	Välj en .qss-fil, en temamapp eller en .zip.
+352	Tillagd
 qt:OK	OK
 qt:Cancel	Avbryt
 qt:Close	Stäng

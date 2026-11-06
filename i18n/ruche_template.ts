@@ -248,10 +248,6 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No playlists yet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>No music folder yet. Use the menu (☰) → Add music folder…</source>
         <translation type="unfinished"></translation>
     </message>
@@ -456,10 +452,6 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Music folders</source>
         <translation type="unfinished"></translation>
     </message>
@@ -632,19 +624,11 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show album covers (looked up by artist and album on iTunes and MusicBrainz)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Application ID from discord.com/developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Application ID</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean "Artist - Title" and the station's logo. Nothing is shared while paused or stopped.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -860,11 +844,186 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Rename tab</source>
+        <source>Rename playlist…</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Name:</source>
+        <source>Import playlist…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add music folder to this tab…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This tab has no music folders yet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Double-click the tab to rename it; drag it to move it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A playlist name can't contain / \ : * ? " &lt; &gt; | or start with a dot.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There's already a playlist called “%1”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Playlist “%1” created. Drag tracks onto it in the sidebar, or right-click tracks → Add to playlist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rename playlist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn't rename the playlist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right-click a playlist to rename or delete it</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Delete all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crash logs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Written only if Ruche crashes: what it was doing, to attach to a bug report on GitHub. At most the 20 newest are kept.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 (%2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>logs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tabs work like a browser's: + on the tab bar makes one, × or a middle-click closes one, double-click renames, and dragging reorders. Each folder below belongs to one tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ask before closing a tab that has folders</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Theme file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open themes folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A theme file is a Qt stylesheet (.qss) that can restyle every part of Ruche and set its own colours. Import a .qss, a theme folder or a downloaded .zip; edits to the file in use show up straight away. How to make one: THEMES.md (shipped with Ruche and in the source).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sets its own colours, so the theme above only matters for what it leaves alone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Theme file or .zip…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Themes (*.qss *.zip)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Theme folder…</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cover art (album cover, or the station's logo for radio)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruche logo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Covers are looked up by artist and album (or song) on iTunes and MusicBrainz, since Discord can only show pictures from the web.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the picture chosen above; for radio, only a clean "Artist - Title", with the song's cover when one is found. Nothing is shared while paused or stopped.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruche</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruche closed unexpectedly last time.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A crash log was saved. If it keeps happening, please open an issue on GitHub and attach the log; it says what Ruche was doing, nothing personal beyond file names it had just played.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There's already a tab called “%1”.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New tab %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close the tab “%1”?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Its music folders are taken out of the library:
+%1
+
+The files themselves stay where they are, and adding the folders again brings them back.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Don't ask again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1161,6 +1320,10 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
         <source>Plays</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Added</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Updater</name>
@@ -1243,6 +1406,41 @@ HLS (.m3u8) streams, Icecast and Shoutcast all work.</source>
     </message>
     <message>
         <source>This copy of Ruche wasn't installed from a release; the release page was opened instead.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Theme</name>
+    <message>
+        <source>There's no .qss file in that folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn't copy the theme.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>That zip file can't be read.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>That zip file has unsafe paths in it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>There's no .qss file in that zip.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>That zip is too big for a theme.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn't unpack the theme.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pick a .qss file, a theme folder or a .zip.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

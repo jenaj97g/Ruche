@@ -1,4 +1,5 @@
 #include "Theme.h"
+#include "ThemeFiles.h"
 #include "Icons.h"
 #include "Library.h"
 
@@ -25,6 +26,7 @@ struct Current {
     QColor window{0x1c, 0x1d, 0x20}, text{0xe3, 0xe3, 0xe5}, accent = Theme::Brand;
     QColor accentText = Theme::Brand, onAccent{0x1c, 0x1d, 0x20};
     int generation = 0;
+    QString file; // theme file in use
 };
 Current g;
 
@@ -177,6 +179,7 @@ Theme::Choice Theme::loadChoice()
     c.accent = QColor(s.value(QStringLiteral("appearance/accent")).toString());
     c.customWindow = QColor(s.value(QStringLiteral("appearance/customBackground"), QStringLiteral("#1c1d20")).toString());
     c.customText = QColor(s.value(QStringLiteral("appearance/customText"), QStringLiteral("#e3e3e5")).toString());
+    c.file = s.value(QStringLiteral("appearance/themeFile")).toString();
     return c;
 }
 
@@ -185,6 +188,7 @@ void Theme::saveChoice(const Choice &c)
     QSettings s(paths::configFile(), QSettings::IniFormat);
     s.setValue(QStringLiteral("appearance/theme"), c.theme);
     s.setValue(QStringLiteral("appearance/accent"), c.accent.isValid() ? hex(c.accent) : QString());
+    s.setValue(QStringLiteral("appearance/themeFile"), c.file);
     if (c.customWindow.isValid())
         s.setValue(QStringLiteral("appearance/customBackground"), hex(c.customWindow));
     if (c.customText.isValid())
@@ -238,6 +242,15 @@ void Theme::apply(QApplication &app, const Choice &c)
             if (x.id == c.theme)
                 p = x;
     }
+    // A theme file can bring its own colours; the accent picked in Settings still wins.
+    const File tf = c.file.isEmpty() ? File() : fileById(c.file);
+    g.file = tf.path;
+    if (tf.window.isValid() && tf.text.isValid()) {
+        p.window = tf.window;
+        p.text = tf.text;
+    }
+    if (tf.accent.isValid())
+        p.accent = tf.accent;
     g.window = p.window;
     g.text = p.text;
     g.accent = c.accent.isValid() ? c.accent : p.accent;
@@ -317,6 +330,8 @@ void Theme::apply(QApplication &app, const Choice &c)
         {QStringLiteral("scrollhover"), shade(0.19)},
     };
     QString css = QString::fromUtf8(kCss);
+    if (!tf.path.isEmpty())
+        css += QStringLiteral("\n/* ---- theme file: %1 ---- */\n").arg(tf.name) + fileStylesheet(tf);
     static const QRegularExpression token(QStringLiteral("@([a-z0-9]+)"));
     QString out;
     out.reserve(css.size());
@@ -337,6 +352,7 @@ void Theme::apply(QApplication &app, const Choice &c)
 }
 
 int Theme::generation() { return g.generation; }
+QString Theme::activeFilePath() { return g.file; }
 bool Theme::isDark() { return g.dark; }
 QColor Theme::window() { return g.window; }
 QColor Theme::text() { return g.text; }
