@@ -1,0 +1,314 @@
+0	(Anaithnid)
+1	rian
+2	rianta
+3	As
+4	Teastaíonn aitheantas feidhmchláir Discord
+5	Ag lorg Discord…
+6	Níl Discord ná Vesktop ag rith (nó tá a Rich Presence múchta); triailfear arís gach 15 s
+7	Ceangailte le Discord
+8	Ceangailte le Discord mar %1
+9	Raidió beo
+10	Níorbh fhéidir an athsheachadán sruthaithe áitiúil a oscailt: %1
+11	Gach seánra
+12	Gach ealaíontóir
+13	Gach albam
+14	Leabharlann á scanadh… %1 / %2
+15	Leabharlann nuashonraithe: %1 curtha leis, %2 athraithe, %3 bainte
+16	Lógó do %1: %2
+17	Roghchlár
+18	Cuardaigh an leabharlann  (Ctrl+F)
+19	Seinn
+20	Cuir le Á Sheinm Anois
+21	Scrios an seinnliosta
+22	An seinnliosta “%1” a scriosadh?
+23	Athainmnigh an cluaisín…
+24	Cluaisíní agus fillteáin…
+25	Cuir stáisiún leis
+26	Iompórtáil M3U / M3U8 / PLS
+27	Iompórtáil ó sheoladh
+28	Cuir in eagar
+29	Bain
+30	Easpórtáil
+31	Sábháil an liosta stáisiún mar M3U8 lena lógónna
+32	Níl aon stáisiún ann fós.\n\nCuir stáisiún leis le seoladh srutha, nó iompórtáil liosta M3U / M3U8 / PLS.\nOibríonn sruthanna HLS (.m3u8), Icecast agus Shoutcast.
+33	Cóipeáil an teideal
+34	Cóipeáil an stair ar fad
+35	Bain as Á Sheinm Anois
+36	Cuir fillteán ceoil leis…
+37	Athscan an leabharlann
+38	Oscail comhaid…
+39	Oscail comhaid
+40	Fuaim agus seinnliostaí (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Gach comhad (*)
+41	Iompórtáil seinnliosta nó liosta stáisiún…
+42	Iompórtáil
+43	Seinnliostaí (*.m3u *.m3u8 *.pls)
+44	Sábháil Á Sheinm Anois mar sheinnliosta…
+45	Tá Á Sheinm Anois folamh.
+46	Sábháil an seinnliosta
+47	Ainm an tseinnliosta:
+48	Breiseáin
+49	Bainistigh breiseáin…
+50	Socruithe…
+51	Maidir le Ruche
+52	Scoir
+53	LEABHARLANN
+54	Ceol
+55	Á Sheinm Anois
+56	Raidió
+57	SEINNLIOSTAÍ
+58	Níl aon seinnliosta ann fós
+59	Níl aon fhillteán ceoil ann fós. Roghchlár (☰) → Cuir fillteán ceoil leis…
+60	rian
+61	rianta
+62	mona
+63	Beo  ·  HLS
+64	Sruth beo
+65	Ag ceangal…
+66	Stair an chraolta
+67	Le seinm ina dhiaidh seo
+68	Cuir le seinnliosta
+69	Seinnliosta nua…
+70	Seinnliosta nua
+71	%1 curtha le “%2”
+72	Seinn ina dhiaidh seo
+73	Bain as an seinnliosta
+74	Oscail an fillteán
+75	Cuir an stáisiún in eagar
+76	Roghnaigh lógó
+77	Lógó
+78	Níl íomhá ná seoladh íomhá sa ghearrthaisce.
+79	Níl aon stáisiún le heaspórtáil.
+80	Easpórtáil stáisiúin
+81	Liosta stáisiún M3U8 (*.m3u8)
+82	%1 easpórtáilte lena lógónna
+83	stáisiún
+84	stáisiún
+85	Iompórtáil stáisiúin
+86	Liostaí stáisiún (*.m3u *.m3u8 *.pls);;Gach comhad (*)
+87	Iompórtáilte: %1
+88	Níl aon stáisiún nua sa chomhad seo.
+89	Seoladh liosta stáisiún M3U/M3U8/PLS, srutha HLS nó srutha:
+90	Cuir in eagar…
+91	Cóipeáil an seoladh
+92	Lógó ó chomhad…
+93	Lógó ó sheoladh gréasáin…
+94	Seoladh íomhá an lógó:
+95	Greamaigh lógó
+96	Bain an lógó
+97	Cuir fillteán ceoil leis
+98	Socruithe
+99	Teanga an chórais
+100	Teanga
+101	Tagann sé i bhfeidhm nuair a atosaíonn Ruche. Is aistriúcháin mheaisín iad seo agus d’fhéadfadh botúin a bheith iontu; fáiltítear roimh cheartúcháin ar GitHub.
+102	Seiceáil an bhfuil leagan nua ann nuair a thosaíonn Ruche
+103	Seiceáil anois
+104	Nuashonruithe
+105	An chóip seo: %1 (%2). Tagann nuashonruithe ó %3.
+106	Ginearálta
+107	Cluaisíní
+108	Cuir cluaisín leis
+109	Bain an cluaisín
+110	Nuair atá dhá chluaisín nó níos mó ann, taispeántar barra cluaisíní os cionn na leabharlainne chun athrú eatarthu (mar shampla Ceol agus Airchecks). Déchliceáil ar chluaisín chun é a athainmniú; tarraing chun an t-ord a athrú.
+111	Fillteáin cheoil
+112	Fillteán
+113	Cluaisín
+114	Gan teideal
+115	Cluaisín nua
+116	Cuir fillteán leis…
+117	Bain an fillteán
+118	Leabharlann
+119	As
+120	De réir riain
+121	De réir albaim
+122	ReplayGain
+123	Athsheinm
+124	Cosúil leis an gcóras (dorcha nó geal)
+125	Saincheaptha…
+126	Téama
+127	Mil
+128	Coiréal
+129	Dearg
+130	Bándearg
+131	Corcra
+132	Gorm
+133	Turcaid
+134	Glas
+135	Aiceann an téama féin
+136	Eile…
+137	Aiceann
+138	Cúlra
+139	Téacs
+140	Déantar téama saincheaptha as an dá dhath seo agus an t-aiceann; meascann gach scáth eile uathu.
+141	Dath an aicinn
+142	Cuma
+143	Nuair nach é Ruche an fhuinneog ghníomhach
+144	I gcónaí
+145	Fógraí amhrán
+146	Preabfhuinneog leis an teideal, an t-ealaíontóir agus an clúdach nuair a thosaíonn rian nó nuair a athraíonn teideal ar an raidió.
+147	Lean ort ag seinm sa tráidire córais nuair a dhúntar an fhuinneog
+148	Íoslaghdaigh go dtí an tráidire
+149	Taispeáin Ruche i roghchlár na bhfeidhmchlár ionas gur féidir é a phionnáil ar an tascbharra
+150	Roghchlár na bhfeidhmchlár
+151	Taispeáin ar Discord cad atá á éisteacht agam
+152	Discord
+153	Stáisiúin raidió san áireamh
+154	Taispeáin clúdaigh albam (lorgtar iad de réir ealaíontóra agus albaim ar iTunes agus MusicBrainz)
+155	Aitheantas feidhmchláir ó discord.com/developers
+156	Aitheantas feidhmchláir
+157	Oibríonn sé leis an aip Discord agus le Vesktop (cuir arRPC / Rich Presence ar siúl ann). Taispeánann sé an t-amhrán, an t-ealaíontóir agus an clúdach; don raidió, “Ealaíontóir - Teideal” glan agus lógó an stáisiúin amháin. Ní thaispeántar faic nuair atá sé ar sos nó stoptha.
+158	Deasc
+159	Cumraigh…
+160	Logchomhad…
+161	Oscail fillteán na mbreiseán
+162	Athlódáil
+163	Is scripteanna Lua i %1 iad breiseáin. Ritheann siad le do cheadanna féin, mar sin ná cuir ar siúl ach na cinn a bhfuil muinín agat astu. Conas ceann a scríobh: PLUGINS.md (tagann sé le Ruche agus tá sé sa chód foinseach).
+164	sampla
+165	Earráid: %1
+166	Údar: %1
+167	Níl aon bhreiseán ann fós. Cuir breiseán i bhfillteán na mbreiseán agus cliceáil Athlódáil.
+168	%1: logchomhad
+169	Tá an logchomhad folamh fós.
+170	Ruche a atosú anois chun an teanga a athrú?
+171	Úsáidfear an teanga nua an chéad uair eile a thosaíonn Ruche.
+172	Tá Ruche i roghchlár na bhfeidhmchlár anois. Deaschliceáil air ansin nó ar an tascbharra chun é a phionnáil.
+173	Bainte as roghchlár na bhfeidhmchlár.
+174	Tá na stáisiúin sin ar do liosta cheana.
+175	Níl aon rud in-seinnte i %1
+176	Seinnliosta “%1” iompórtáilte
+177	Seinn / Sos
+178	An chéad rian eile
+179	An rian roimhe
+180	Taispeáin Ruche
+181	Stoptha
+182	Ar sos
+183	Níl aon rud á sheinm
+184	Sos
+185	Folaigh Ruche
+186	Leanann an ceol ar aghaidh sa tráidire córais. Deaschliceáil ar an deilbhín chun scor.
+187	%1: socruithe
+188	Seiceáil an bhfuil leagan nua de Ruche ann gach uair a thosaíonn sé?
+189	Fiafraíonn Ruche de GitHub cén scaoileadh is nuaí; ní sheoltar aon rud eile. Má tá ceann níos nuaí ann, fiafróidh Ruche díot sula suiteálfaidh sé é. Is féidir é seo a athrú níos déanaí i Socruithe → Ginearálta.
+190	Seiceáil ag an tús
+191	Ná seiceáil
+192	Á sheiceáil…
+193	Níorbh fhéidir nuashonruithe a sheiceáil: %1
+194	Tá an leagan is nuaí agat (%1).
+195	Tá Ruche %1 ar fáil.
+196	Nuashonrú ar fáil
+197	<h3>Tá Ruche %1 ar fáil</h3>Tá %2 agat (%3).
+198	Níl aon nótaí scaoilte ann.
+199	Nuashonraigh anois
+200	Íoslódáil
+201	Oscail leathanach an scaoilte
+202	Ar ball
+203	Scipeáil an leagan seo
+204	Ruche %1 á íoslódáil…
+205	Cealaigh
+206	Nuashonrú
+207	Theip ar an nuashonrú: %1
+208	Ag atosú i Ruche %1…
+209	<h3>Ruche %1</h3><p>Seinnteoir ceoil éadrom le leagan amach i stíl MusicBee.</p><p>Athsheinm le libmpv. Clibeanna le TagLib. Teidil bheo ó ICY, ó chlibeanna leabaithe, ó HLS #EXTINF agus ó mheiteashonraí ID3 amaithe in HLS.</p><p><a href="%2">%2</a></p>
+210	Seiceáil le haghaidh nuashonruithe
+211	Athainmnigh an cluaisín
+212	Ainm:
+213	Taispeáin Ruche
+214	Ar aghaidh
+215	Níl aon rud á sheinm
+216	chríochnaigh an sruth
+217	Níorbh fhéidir %1 a sheinm: %2
+218	Ag éirí as %1: %2
+219	Briseadh an sruth (%1), ag athcheangal i gceann %2 s
+220	Suaitheadh
+221	Roimhe (Ctrl+Clé)
+222	Seinn / Sos (Spás)
+223	Ar aghaidh (Ctrl+Deas)
+224	Athdhéan
+225	Balbhaigh
+226	Níl aon rud á sheinm
+227	BEO
+228	Athdhéanamh: as
+229	Athdhéanamh: gach rud
+230	Athdhéanamh: rian amháin
+231	níl go leor cuimhne ann
+232	ní féidir %1 a léamh
+233	ag rith
+234	Níorbh fhéidir %1 a scríobh
+235	Ní oibríonn sé seo ach nuair a ritheann Ruche óna AppImage.
+236	Níorbh fhéidir %1 a bhaint
+237	%1 l %2 u
+238	%1 u %2 nóim
+239	%1 s
+240	%1 nóim
+241	Íomhánna (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Gach comhad (*)
+242	Ainm
+243	Seoladh
+244	Roghnaigh íomhá…
+245	Greamaigh
+246	Bain
+247	Lógó
+248	nó seoladh gréasáin: https://…/logo.png (roghnach)
+249	Gan lógó
+250	Roghnaigh lógó
+251	Ní íomhá í %1 is féidir le Ruche a léamh.
+252	Cuir fillteán ceoil leis
+253	Dorcha
+254	Geal
+255	Meán Oíche
+256	Sioc
+257	Foraois
+258	Pluma
+259	Gríosach
+260	Páipéar
+261	Dubh (OLED)
+262	Nuashonrú á shuiteáil…
+263	Stáisiún
+264	Anois / an ceann deireanach
+265	Seoladh
+266	Ní íomhá í %1 is féidir le Ruche a léamh.
+267	Ní raibh íomhá ag an seoladh is féidir le Ruche a léamh.
+268	Níorbh fhéidir an lógó a shábháil.
+269	Níor aimsíodh aon stáisiún ag an seoladh sin.
+270	Níl aon rud in-seinnte sa seinnliosta.
+271	Ní féidir %1 a oscailt
+272	Teideal
+273	Ealaíontóir
+274	Albam
+275	Bliain
+276	Seánra
+277	Fad
+278	Seinmeanna
+279	suiteálaí Windows
+280	zip iniompartha
+281	tógáil féin
+282	Níl uimhir leagain i gclib an scaoilte is déanaí (%1).
+283	Níl comhad sa scaoileadh seo don chineál suiteála seo (%1).
+284	Ní féidir %1 a scríobh
+285	Níor críochnaíodh an íoslódáil.
+286	Níorbh fhéidir na seiceálacha suime a fháil chun an íoslódáil a fhíorú: %1
+287	Ní féidir an íoslódáil a léamh.
+288	Níl %1 i seiceálacha suime an scaoilte.
+289	Ní mheaitseálann an íoslódáil seiceáil suime an scaoilte; scriosadh í.
+290	Tá Ruche %1 i %2. Rith é as sin.
+291	Íoslódáilte go %1. Suiteáil é le: sudo %2
+292	Níor suiteáladh an nuashonrú (níor tugadh cead).
+293	Níorbh fhéidir an nuashonrú a shuiteáil:\n%1
+294	Comhad: %1; is féidir é a shuiteáil freisin le: sudo %2
+295	Íoslódáladh Ruche %1 go %2 agus osclaíodh é i do lárionad bogearraí. Mura n-osclaíodh aon rud, suiteáil é le: flatpak install --user "%2"
+296	Níorbh fhéidir suiteálaí %1 a thosú.
+297	Íoslódáladh Ruche %1 go %2. Dún Ruche agus bain é amach os cionn na cóipe seo (%3).
+298	Níor suiteáladh an chóip seo de Ruche ó scaoileadh; osclaíodh leathanach an scaoilte ina ionad.
+qt:OK	OK
+qt:Cancel	Cealaigh
+qt:Close	Dún
+qt:Yes	Tá
+qt:No	Níl
+qt:Apply	Cuir i bhfeidhm
+qt:Save	Sábháil
+qt:Open	Oscail
+qt:Undo	&Cealaigh
+qt:Redo	&Athdhéan
+qt:Cut	&Gearr
+qt:Copy	&Cóipeáil
+qt:Paste	&Greamaigh
+qt:Delete	Scrios
+qt:Select All	Roghnaigh gach rud

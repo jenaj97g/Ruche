@@ -1,0 +1,299 @@
+0	(Desconhecido)
+1	faixa
+2	faixas
+3	Desativado
+4	É preciso um ID de aplicativo do Discord
+5	Procurando o Discord…
+6	O Discord ou o Vesktop não está aberto (ou o Rich Presence está desativado); nova tentativa a cada 15 s
+7	Conectado ao Discord
+8	Conectado ao Discord como %1
+9	Rádio ao vivo
+10	Não foi possível abrir o retransmissor local do fluxo: %1
+11	Todos os gêneros
+12	Todos os artistas
+13	Todos os álbuns
+14	Analisando a biblioteca… %1 / %2
+15	Biblioteca atualizada: %1 adicionadas, %2 alteradas, %3 removidas
+16	Logotipo de %1: %2
+17	Menu
+18	Buscar na biblioteca  (Ctrl+F)
+19	Reproduzir
+20	Adicionar a Tocando agora
+21	Excluir lista de reprodução
+22	Excluir a lista de reprodução «%1»?
+23	Renomear aba…
+24	Abas e pastas…
+25	Adicionar estação
+26	Importar M3U / M3U8 / PLS
+27	Importar de um endereço
+28	Editar
+29	Remover
+30	Exportar
+31	Salvar a lista de estações como M3U8, com os logotipos
+32	Ainda não há estações.\n\nAdicione uma com o endereço do fluxo, ou importe uma lista M3U / M3U8 / PLS.\nFluxos HLS (.m3u8), Icecast e Shoutcast funcionam todos.
+33	Copiar título
+34	Copiar todo o histórico
+35	Remover de Tocando agora
+36	Adicionar pasta de música…
+37	Analisar a biblioteca novamente
+38	Abrir arquivos…
+39	Abrir arquivos
+40	Áudio e listas de reprodução (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Todos os arquivos (*)
+41	Importar lista de reprodução ou de estações…
+42	Importar
+43	Listas de reprodução (*.m3u *.m3u8 *.pls)
+44	Salvar Tocando agora como lista…
+45	Tocando agora está vazio.
+46	Salvar lista de reprodução
+47	Nome da lista:
+48	Extensões
+49	Gerenciar extensões…
+50	Configurações…
+51	Sobre o Ruche
+52	Sair
+53	BIBLIOTECA
+54	Música
+55	Tocando agora
+56	Rádio
+57	LISTAS DE REPRODUÇÃO
+58	Nenhuma lista ainda
+59	Ainda não há pasta de música. Menu (☰) → Adicionar pasta de música…
+60	faixa
+61	faixas
+62	mono
+63	Ao vivo  ·  HLS
+64	Stream ao vivo
+65	Conectando…
+66	Histórico da transmissão
+67	A seguir
+68	Adicionar a lista de reprodução
+69	Nova lista de reprodução…
+70	Nova lista de reprodução
+71	%1 adicionado a «%2»
+72	Reproduzir a seguir
+73	Remover da lista de reprodução
+74	Abrir a pasta
+75	Editar estação
+76	Escolher um logotipo
+77	Logotipo
+78	A área de transferência não tem imagem nem endereço de imagem.
+79	Não há estações para exportar.
+80	Exportar estações
+81	Lista de estações M3U8 (*.m3u8)
+82	%1 exportado com os logotipos
+83	estação
+84	estações
+85	Importar estações
+86	Listas de estações (*.m3u *.m3u8 *.pls);;Todos os arquivos (*)
+87	%1 importado
+88	Não há estações novas nesse arquivo.
+89	Endereço de uma lista de estações M3U/M3U8/PLS, de um fluxo HLS ou de um fluxo:
+90	Editar…
+91	Copiar endereço
+92	Logotipo a partir de um arquivo…
+93	Logotipo a partir de um endereço web…
+94	Endereço da imagem do logotipo:
+95	Colar logotipo
+96	Remover logotipo
+97	Adicionar pasta de música
+98	Configurações
+99	Idioma do sistema
+100	Idioma
+101	Aplica-se quando o Ruche for reiniciado. As traduções foram feitas por máquina e podem ter erros; as correções são bem-vindas no GitHub.
+102	Procurar uma nova versão quando o Ruche é iniciado
+103	Verificar agora
+104	Atualizações
+105	Esta cópia: %1 (%2). As atualizações vêm de %3.
+106	Geral
+107	Abas
+108	Adicionar aba
+109	Remover aba
+110	Com duas abas ou mais, uma barra de abas acima da biblioteca alterna entre elas (por exemplo, Música e Airchecks). Clique duas vezes em uma aba para renomeá-la; arraste para reordenar.
+111	Pastas de música
+112	Pasta
+113	Aba
+114	Sem título
+115	Nova aba
+116	Adicionar pasta…
+117	Remover pasta
+118	Biblioteca
+119	Desativado
+120	Ganho da faixa
+121	Ganho do álbum
+122	ReplayGain
+123	Reprodução
+124	Como o sistema (escuro ou claro)
+125	Personalizado…
+126	Tema
+127	Mel
+128	Coral
+129	Vermelho
+130	Rosa
+131	Violeta
+132	Azul
+133	Verde-azulado
+134	Verde
+135	O destaque próprio do tema
+136	Outro…
+137	Destaque
+138	Fundo
+139	Texto
+140	Um tema personalizado é feito com estas duas cores e o destaque; todos os outros tons são misturados a partir delas.
+141	Cor de destaque
+142	Aparência
+143	Quando o Ruche não é a janela ativa
+144	Sempre
+145	Notificações de músicas
+146	Uma janela com o título, o artista e a capa quando começa uma faixa ou muda o título da rádio.
+147	Continuar tocando na bandeja do sistema quando a janela é fechada
+148	Fechar para a bandeja do sistema
+149	Mostrar o Ruche no menu de aplicativos, para poder fixá-lo na barra de tarefas
+150	Menu de aplicações
+151	Mostrar no Discord o que estou ouvindo
+152	Discord
+153	Incluir estações de rádio
+154	Mostrar capas (procuradas por artista e álbum no iTunes e no MusicBrainz)
+155	ID de aplicativo de discord.com/developers
+156	ID de aplicativo
+157	Funciona com o aplicativo Discord e com o Vesktop (ative a opção arRPC / Rich Presence). Mostra a música, o artista e a capa; na rádio, só um «Artista - Título» limpo e o logotipo da estação. Nada é compartilhado em pausa ou parado.
+158	Área de trabalho
+159	Configurar…
+160	Registro…
+161	Abrir a pasta das extensões
+162	Recarregar
+163	As extensões são scripts Lua em %1. São executadas com as suas permissões, por isso ative só as que forem de confiança. Como escrever uma: PLUGINS.md (incluído no Ruche e no código-fonte).
+164	exemplo
+165	Erro: %1
+166	Por %1
+167	Ainda não há extensões. Coloque uma na pasta das extensões e clique em Recarregar.
+168	%1: registro
+169	Ainda não há nada registrado.
+170	Reiniciar o Ruche agora para mudar o idioma?
+171	O novo idioma é usado na próxima vez que o Ruche for iniciado.
+172	O Ruche está no menu de aplicativos. Clique com o botão direito nele, ali ou na barra de tarefas, para fixá-lo.
+173	Removido do menu de aplicativos.
+174	Essas estações já estão na sua lista.
+175	Nada reproduzível em %1
+176	Lista de reprodução «%1» importada
+177	Reproduzir / Pausa
+178	Faixa seguinte
+179	Faixa anterior
+180	Mostrar o Ruche
+181	Parado
+182	Em pausa
+183	Nada tocando
+184	Pausa
+185	Esconder o Ruche
+186	Continua tocando na bandeja do sistema. Clique com o botão direito no ícone para sair.
+187	%1: configurações
+188	O Ruche deve procurar uma nova versão sempre que é iniciado?
+189	Pergunta ao GitHub qual a versão mais recente do Ruche; mais nada é enviado. Se houver uma, o Ruche pergunta antes de instalá-la. Você pode mudar isso mais tarde em Configurações → Geral.
+190	Verificar ao iniciar
+191	Não verificar
+192	Verificando…
+193	Não foi possível procurar atualizações: %1
+194	Você tem a versão mais recente (%1).
+195	O Ruche %1 está disponível.
+196	Atualização disponível
+197	<h3>O Ruche %1 está disponível</h3>Você tem a %2 (%3).
+198	Sem notas da versão.
+199	Atualizar agora
+200	Baixar
+201	Abrir a página da versão
+202	Mais tarde
+203	Ignorar esta versão
+204	Baixando o Ruche %1…
+205	Cancelar
+206	Atualização
+207	A atualização falhou: %1
+208	Reiniciando no Ruche %1…
+209	<h3>Ruche %1</h3><p>Um player de música leve, com o layout do MusicBee.</p><p>Reprodução pelo libmpv. Tags pelo TagLib. Títulos dos fluxos ao vivo a partir de ICY, tags no próprio fluxo, HLS #EXTINF e metadados ID3 temporizados do HLS.</p><p><a href="%2">%2</a></p>
+210	Procurar atualizações
+211	Renomear aba
+212	Nome:
+213	Mostrar o Ruche
+214	Seguinte
+215	Nada tocando
+216	o fluxo terminou
+217	Não foi possível reproduzir %1: %2
+218	Desistiu de %1: %2
+219	Stream interrompido (%1), reconectando em %2 s
+220	Aleatório
+221	Anterior (Ctrl+Esquerda)
+222	Reproduzir / Pausa (Espaço)
+223	Seguinte (Ctrl+Direita)
+224	Repetir
+225	Silenciar
+226	Nada tocando
+227	AO VIVO
+228	Repetir: não
+229	Repetir: tudo
+230	Repetir: uma faixa
+231	memória insuficiente
+232	não é possível ler %1
+233	iniciada
+234	Não foi possível escrever %1
+235	Só funciona quando o Ruche é executado pela AppImage.
+236	Não foi possível remover %1
+237	%1 d %2 h
+238	%1 h %2 min
+239	%1 s
+240	%1 min
+241	Imagens (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Todos os arquivos (*)
+242	Nome
+243	Endereço
+244	Escolher imagem…
+245	Colar
+246	Remover
+247	Logotipo
+248	ou um endereço web: https://…/logo.png (opcional)
+249	Sem logotipo
+250	Escolher um logotipo
+251	%1 não é uma imagem que o Ruche consiga ler.
+252	Adicionar pasta de música
+253	Escuro
+254	Claro
+255	Meia-noite
+256	Geada
+257	Floresta
+258	Ameixa
+259	Brasa
+260	Papel
+261	Preto (OLED)
+262	Instalando a atualização…
+263	Estação
+264	Tocando / ouvido por último
+265	Endereço
+266	%1 não é uma imagem que o Ruche consiga ler.
+267	O endereço não devolveu uma imagem que o Ruche consiga ler.
+268	Não foi possível salvar o logotipo.
+269	Nenhuma estação encontrada nesse endereço.
+270	A lista de reprodução não tem nada reproduzível.
+271	Não é possível abrir %1
+272	Título
+273	Artista
+274	Álbum
+275	Ano
+276	Gênero
+277	Duração
+278	Reproduções
+279	instalador do Windows
+280	zip portátil
+281	compilação própria
+282	A versão mais recente (%1) não tem número de versão na tag.
+283	Esta versão não tem arquivo para este tipo de instalação (%1).
+284	Não é possível escrever %1
+285	O download está incompleto.
+286	Não foi possível obter as somas de verificação para conferir o download: %1
+287	Não é possível ler o download.
+288	As somas de verificação da versão não incluem %1.
+289	O download não corresponde à soma de verificação da versão; foi apagado.
+290	O Ruche %1 está em %2. Inicie-o por lá.
+291	Baixado para %1. Instale-o com: sudo %2
+292	A atualização não foi instalada (não foi dada permissão).
+293	Não foi possível instalar a atualização:\n%1
+294	O arquivo é %1; também pode ser instalado com: sudo %2
+295	O Ruche %1 foi baixado para %2 e aberto com a sua central de programas. Se nada abriu, instale-o com: flatpak install --user "%2"
+296	Não foi possível iniciar o instalador %1.
+297	O Ruche %1 foi baixado para %2. Feche o Ruche e extraia-o por cima desta cópia (%3).
+298	Esta cópia do Ruche não foi instalada a partir de uma versão publicada; foi aberta a página da versão.

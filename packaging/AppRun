@@ -1,0 +1,17 @@
+#!/bin/sh
+HERE="$(dirname "$(readlink -f "$0")")"
+# Native Wayland where it gives proper window frames; XWayland on GNOME (no server-side
+# decorations there) and plain X11 everywhere else.
+if [ -z "$QT_QPA_PLATFORM" ]; then
+  if [ -n "$WAYLAND_DISPLAY" ]; then
+    case "$XDG_CURRENT_DESKTOP" in
+      *GNOME*|*gnome*|*Unity*) [ -n "$DISPLAY" ] && export QT_QPA_PLATFORM="xcb" || export QT_QPA_PLATFORM="wayland" ;;
+      *) export QT_QPA_PLATFORM="wayland;xcb" ;;
+    esac
+  else
+    export QT_QPA_PLATFORM="xcb"
+  fi
+fi
+# Keep host GTK/KDE platform theme plugins out: they would load a whole toolkit.
+unset QT_QPA_PLATFORMTHEME QT_STYLE_OVERRIDE
+exec "$HERE/usr/bin/ruche" "$@"

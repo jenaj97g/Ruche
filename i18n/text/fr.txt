@@ -1,0 +1,299 @@
+0	(Inconnu)
+1	morceau
+2	morceaux
+3	Désactivé
+4	Il faut un identifiant d’application Discord
+5	Recherche de Discord…
+6	Discord ou Vesktop ne tourne pas (ou sa Rich Presence est désactivée) ; nouvel essai toutes les 15 s
+7	Connecté à Discord
+8	Connecté à Discord en tant que %1
+9	Radio en direct
+10	Impossible d’ouvrir le relais local du flux : %1
+11	Tous les genres
+12	Tous les artistes
+13	Tous les albums
+14	Analyse de la bibliothèque… %1 / %2
+15	Bibliothèque mise à jour : %1 ajoutés, %2 modifiés, %3 retirés
+16	Logo de %1 : %2
+17	Menu
+18	Rechercher dans la bibliothèque  (Ctrl+F)
+19	Lire
+20	Ajouter à la lecture en cours
+21	Supprimer la liste de lecture
+22	Supprimer la liste de lecture « %1 » ?
+23	Renommer l’onglet…
+24	Onglets et dossiers…
+25	Ajouter une station
+26	Importer M3U / M3U8 / PLS
+27	Importer depuis une adresse
+28	Modifier
+29	Retirer
+30	Exporter
+31	Enregistrer la liste des stations en M3U8, logos compris
+32	Aucune station pour l’instant.\n\nAjoutez-en une avec son adresse de flux, ou importez une liste M3U / M3U8 / PLS.\nLes flux HLS (.m3u8), Icecast et Shoutcast fonctionnent tous.
+33	Copier le titre
+34	Copier tout l’historique
+35	Retirer de la lecture en cours
+36	Ajouter un dossier de musique…
+37	Réanalyser la bibliothèque
+38	Ouvrir des fichiers…
+39	Ouvrir des fichiers
+40	Audio et listes de lecture (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Tous les fichiers (*)
+41	Importer une liste de lecture ou de stations…
+42	Importer
+43	Listes de lecture (*.m3u *.m3u8 *.pls)
+44	Enregistrer la lecture en cours comme liste…
+45	La lecture en cours est vide.
+46	Enregistrer la liste de lecture
+47	Nom de la liste :
+48	Extensions
+49	Gérer les extensions…
+50	Paramètres…
+51	À propos de Ruche
+52	Quitter
+53	BIBLIOTHÈQUE
+54	Musique
+55	Lecture en cours
+56	Radio
+57	LISTES DE LECTURE
+58	Pas encore de liste
+59	Pas encore de dossier de musique. Menu (☰) → Ajouter un dossier de musique…
+60	morceau
+61	morceaux
+62	mono
+63	Direct  ·  HLS
+64	Flux en direct
+65	Connexion…
+66	Historique de l’antenne
+67	À suivre
+68	Ajouter à une liste de lecture
+69	Nouvelle liste de lecture…
+70	Nouvelle liste de lecture
+71	%1 ajouté à « %2 »
+72	Lire ensuite
+73	Retirer de la liste de lecture
+74	Ouvrir le dossier
+75	Modifier la station
+76	Choisir un logo
+77	Logo
+78	Le presse-papiers ne contient ni image ni adresse d’image.
+79	Aucune station à exporter.
+80	Exporter les stations
+81	Liste de stations M3U8 (*.m3u8)
+82	%1 exporté, avec les logos
+83	station
+84	stations
+85	Importer des stations
+86	Listes de stations (*.m3u *.m3u8 *.pls);;Tous les fichiers (*)
+87	%1 importé
+88	Aucune nouvelle station dans ce fichier.
+89	Adresse d’une liste de stations M3U/M3U8/PLS, d’un flux HLS ou d’un flux :
+90	Modifier…
+91	Copier l’adresse
+92	Logo depuis un fichier…
+93	Logo depuis une adresse web…
+94	Adresse de l’image du logo :
+95	Coller le logo
+96	Retirer le logo
+97	Ajouter un dossier de musique
+98	Paramètres
+99	Langue du système
+100	Langue
+101	S’applique au prochain démarrage de Ruche. Les traductions ont été faites par une machine et peuvent contenir des erreurs ; les corrections sont les bienvenues sur GitHub.
+102	Chercher une nouvelle version au démarrage de Ruche
+103	Vérifier maintenant
+104	Mises à jour
+105	Cette copie : %1 (%2). Les mises à jour viennent de %3.
+106	Général
+107	Onglets
+108	Ajouter un onglet
+109	Retirer l’onglet
+110	À partir de deux onglets, une barre d’onglets au-dessus de la bibliothèque permet de passer de l’un à l’autre (par exemple Musique et Airchecks). Double-cliquez sur un onglet pour le renommer ; faites-le glisser pour changer l’ordre.
+111	Dossiers de musique
+112	Dossier
+113	Onglet
+114	Sans titre
+115	Nouvel onglet
+116	Ajouter un dossier…
+117	Retirer le dossier
+118	Bibliothèque
+119	Désactivé
+120	Gain du morceau
+121	Gain de l’album
+122	ReplayGain
+123	Lecture
+124	Comme le système (sombre ou clair)
+125	Personnalisé…
+126	Thème
+127	Miel
+128	Corail
+129	Rouge
+130	Rose
+131	Violet
+132	Bleu
+133	Sarcelle
+134	Vert
+135	L’accent propre au thème
+136	Autre…
+137	Accent
+138	Arrière-plan
+139	Texte
+140	Un thème personnalisé est fait de ces deux couleurs et de l’accent ; toutes les autres nuances en sont mélangées.
+141	Couleur d’accent
+142	Apparence
+143	Quand Ruche n’est pas la fenêtre active
+144	Toujours
+145	Notifications de chanson
+146	Une fenêtre avec le titre, l’artiste et la pochette quand un morceau commence ou que le titre de la radio change.
+147	Continuer la lecture dans la zone de notification quand la fenêtre est fermée
+148	Réduire dans la zone de notification
+149	Afficher Ruche dans le menu des applications, pour pouvoir l’épingler à la barre des tâches
+150	Menu des applications
+151	Montrer ce que j’écoute sur Discord
+152	Discord
+153	Inclure les stations de radio
+154	Afficher les pochettes (cherchées par artiste et album sur iTunes et MusicBrainz)
+155	Identifiant d’application de discord.com/developers
+156	Identifiant d’application
+157	Fonctionne avec l’application Discord et avec Vesktop (activez son option arRPC / Rich Presence). Affiche la chanson, l’artiste et la pochette ; pour la radio, seulement un « Artiste - Titre » propre et le logo de la station. Rien n’est partagé en pause ou à l’arrêt.
+158	Bureau
+159	Configurer…
+160	Journal…
+161	Ouvrir le dossier des extensions
+162	Recharger
+163	Les extensions sont des scripts Lua dans %1. Elles ont vos droits : n’activez que celles en qui vous avez confiance. Pour en écrire une : PLUGINS.md (fourni avec Ruche et dans ses sources).
+164	exemple
+165	Erreur : %1
+166	Par %1
+167	Pas encore d’extension. Mettez-en une dans le dossier des extensions et cliquez sur Recharger.
+168	%1 : journal
+169	Rien dans le journal pour l’instant.
+170	Redémarrer Ruche maintenant pour changer de langue ?
+171	La nouvelle langue sera utilisée au prochain démarrage de Ruche.
+172	Ruche est dans votre menu des applications. Faites un clic droit dessus, là ou dans la barre des tâches, pour l’épingler.
+173	Retiré du menu des applications.
+174	Ces stations sont déjà dans votre liste.
+175	Rien de lisible dans %1
+176	Liste de lecture « %1 » importée
+177	Lecture / Pause
+178	Morceau suivant
+179	Morceau précédent
+180	Afficher Ruche
+181	Arrêté
+182	En pause
+183	Rien en lecture
+184	Pause
+185	Masquer Ruche
+186	La lecture continue dans la zone de notification. Clic droit sur l’icône pour quitter.
+187	%1 : paramètres
+188	Ruche doit-il chercher une nouvelle version à chaque démarrage ?
+189	Il demande à GitHub la dernière version de Ruche ; rien d’autre n’est envoyé. S’il y en a une, Ruche demande avant de l’installer. Vous pourrez changer cela dans Paramètres → Général.
+190	Vérifier au démarrage
+191	Ne pas vérifier
+192	Vérification…
+193	Impossible de vérifier les mises à jour : %1
+194	Vous avez la dernière version (%1).
+195	Ruche %1 est disponible.
+196	Mise à jour disponible
+197	<h3>Ruche %1 est disponible</h3>Vous avez la %2 (%3).
+198	Pas de notes de version.
+199	Mettre à jour
+200	Télécharger
+201	Ouvrir la page de la version
+202	Plus tard
+203	Ignorer cette version
+204	Téléchargement de Ruche %1…
+205	Annuler
+206	Mise à jour
+207	La mise à jour a échoué : %1
+208	Redémarrage vers Ruche %1…
+209	<h3>Ruche %1</h3><p>Un lecteur de musique léger, disposé comme MusicBee.</p><p>Lecture par libmpv. Tags par TagLib. Titres des flux en direct depuis ICY, les tags intégrés, HLS #EXTINF et les métadonnées ID3 de HLS.</p><p><a href="%2">%2</a></p>
+210	Rechercher des mises à jour
+211	Renommer l’onglet
+212	Nom :
+213	Afficher Ruche
+214	Suivant
+215	Rien en lecture
+216	fin du flux
+217	Impossible de lire %1 : %2
+218	Abandon de %1 : %2
+219	Flux coupé (%1), reconnexion dans %2 s
+220	Aléatoire
+221	Précédent (Ctrl+Gauche)
+222	Lecture / Pause (Espace)
+223	Suivant (Ctrl+Droite)
+224	Répéter
+225	Muet
+226	Rien en lecture
+227	DIRECT
+228	Répétition : désactivée
+229	Répétition : tout
+230	Répétition : un morceau
+231	mémoire insuffisante
+232	impossible de lire %1
+233	démarrée
+234	Impossible d’écrire %1
+235	Cela ne fonctionne que quand Ruche tourne depuis son AppImage.
+236	Impossible de supprimer %1
+237	%1 j %2 h
+238	%1 h %2 min
+239	%1 s
+240	%1 min
+241	Images (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Tous les fichiers (*)
+242	Nom
+243	Adresse
+244	Choisir une image…
+245	Coller
+246	Retirer
+247	Logo
+248	ou une adresse web : https://…/logo.png (facultatif)
+249	Pas de logo
+250	Choisir un logo
+251	%1 n’est pas une image que Ruche sait lire.
+252	Ajouter un dossier de musique
+253	Sombre
+254	Clair
+255	Minuit
+256	Givre
+257	Forêt
+258	Prune
+259	Braise
+260	Papier
+261	Noir (OLED)
+262	Installation de la mise à jour…
+263	Station
+264	En cours / dernier entendu
+265	Adresse
+266	%1 n’est pas une image que Ruche sait lire.
+267	L’adresse n’a pas renvoyé d’image lisible par Ruche.
+268	Impossible d’enregistrer le logo.
+269	Aucune station trouvée à cette adresse.
+270	La liste de lecture ne contient rien de lisible.
+271	Impossible d’ouvrir %1
+272	Titre
+273	Artiste
+274	Album
+275	Année
+276	Genre
+277	Durée
+278	Écoutes
+279	installateur Windows
+280	zip portable
+281	compilation personnelle
+282	La dernière version (%1) n’a pas de numéro de version dans son tag.
+283	Cette version n’a pas de fichier pour ce type d’installation (%1).
+284	Impossible d’écrire %1
+285	Le téléchargement est incomplet.
+286	Impossible d’obtenir les sommes de contrôle pour vérifier le téléchargement : %1
+287	Impossible de lire le téléchargement.
+288	Les sommes de contrôle de la version ne mentionnent pas %1.
+289	Le téléchargement ne correspond pas à la somme de contrôle de la version ; il a été supprimé.
+290	Ruche %1 est dans %2. Lancez-le depuis là.
+291	Téléchargé dans %1. Installez-le avec : sudo %2
+292	La mise à jour n’a pas été installée (autorisation refusée).
+293	La mise à jour n’a pas pu être installée :\n%1
+294	Le fichier est %1 ; il peut aussi être installé avec : sudo %2
+295	Ruche %1 a été téléchargé dans %2 et ouvert avec votre logithèque. Si rien ne s’est ouvert, installez-le avec : flatpak install --user "%2"
+296	Impossible de lancer l’installateur %1.
+297	Ruche %1 a été téléchargé dans %2. Fermez Ruche et décompressez-le par-dessus cette copie (%3).
+298	Cette copie de Ruche n’a pas été installée depuis une version publiée ; la page de la version a été ouverte à la place.

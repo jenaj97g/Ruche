@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>ruche</id>
+  <name>Ruche</name>
+  <summary>Light music player with a MusicBee-style layout and live radio titles</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <description>
+    <p>Ruche browses your library by genre, artist and album, plays gapless through libmpv,
+    and plays Icecast, Shoutcast and HLS radio with titles that follow the audio. It pops up
+    the new song when a track starts or the radio title changes.</p>
+  </description>
+  <launchable type="desktop-id">ruche.desktop</launchable>
+  <categories><category>Audio</category><category>Player</category></categories>
+  <releases>
+    <release version="0.1.6" date="2026-11-06"/>
+    <release version="0.1.5" date="2026-11-06"/>
+    <release version="0.1.4" date="2026-11-06"/>
+  </releases>
+</component>

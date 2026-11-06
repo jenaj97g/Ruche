@@ -1,0 +1,314 @@
+0	(Okänd)
+1	spår
+2	spår
+3	Av
+4	Behöver ett program-ID från Discord
+5	Letar efter Discord…
+6	Discord eller Vesktop körs inte (eller så är Rich Presence avstängt); nytt försök var 15:e sekund
+7	Ansluten till Discord
+8	Ansluten till Discord som %1
+9	Liveradio
+10	Kunde inte öppna det lokala strömreläet: %1
+11	Alla genrer
+12	Alla artister
+13	Alla album
+14	Söker igenom biblioteket… %1 / %2
+15	Biblioteket uppdaterat: %1 tillagda, %2 ändrade, %3 borttagna
+16	Logotyp för %1: %2
+17	Meny
+18	Sök i biblioteket  (Ctrl+F)
+19	Spela
+20	Lägg till i Spelas nu
+21	Ta bort spellista
+22	Ta bort spellistan ”%1”?
+23	Byt namn på flik…
+24	Flikar och mappar…
+25	Lägg till station
+26	Importera M3U / M3U8 / PLS
+27	Importera från adress
+28	Redigera
+29	Ta bort
+30	Exportera
+31	Spara stationslistan som M3U8, med logotyper
+32	Inga stationer än.\n\nLägg till en med dess strömadress, eller importera en M3U- / M3U8- / PLS-lista.\nHLS-strömmar (.m3u8), Icecast och Shoutcast fungerar alla.
+33	Kopiera titel
+34	Kopiera hela historiken
+35	Ta bort från Spelas nu
+36	Lägg till musikmapp…
+37	Sök igenom biblioteket igen
+38	Öppna filer…
+39	Öppna filer
+40	Ljud och spellistor (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Alla filer (*)
+41	Importera spellista eller stationslista…
+42	Importera
+43	Spellistor (*.m3u *.m3u8 *.pls)
+44	Spara Spelas nu som spellista…
+45	Spelas nu är tom.
+46	Spara spellista
+47	Spellistans namn:
+48	Insticksmoduler
+49	Hantera insticksmoduler…
+50	Inställningar…
+51	Om Ruche
+52	Avsluta
+53	BIBLIOTEK
+54	Musik
+55	Spelas nu
+56	Radio
+57	SPELLISTOR
+58	Inga spellistor än
+59	Ingen musikmapp än. Använd menyn (☰) → Lägg till musikmapp…
+60	spår
+61	spår
+62	mono
+63	Live  ·  HLS
+64	Liveström
+65	Ansluter…
+66	Sändningshistorik
+67	Härnäst
+68	Lägg till i spellista
+69	Ny spellista…
+70	Ny spellista
+71	%1 tillagd i ”%2”
+72	Spela härnäst
+73	Ta bort från spellistan
+74	Öppna mappen
+75	Redigera station
+76	Välj en logotyp
+77	Logotyp
+78	Urklipp innehåller ingen bild eller bildadress.
+79	Inga stationer att exportera.
+80	Exportera stationer
+81	M3U8-stationslista (*.m3u8)
+82	Exporterade %1 med logotyper
+83	station
+84	stationer
+85	Importera stationer
+86	Stationslistor (*.m3u *.m3u8 *.pls);;Alla filer (*)
+87	Importerade %1
+88	Inga nya stationer i den filen.
+89	Adress till en M3U/M3U8/PLS-stationslista, en HLS-ström eller en ström:
+90	Redigera…
+91	Kopiera adress
+92	Logotyp från fil…
+93	Logotyp från webbadress…
+94	Adress till logotypbilden:
+95	Klistra in logotyp
+96	Ta bort logotyp
+97	Lägg till musikmapp
+98	Inställningar
+99	Systemets språk
+100	Språk
+101	Gäller när Ruche startas om. Översättningarna är maskingjorda och kan innehålla fel; rättelser tas gärna emot på GitHub.
+102	Leta efter en ny version när Ruche startar
+103	Kontrollera nu
+104	Uppdateringar
+105	Den här kopian: %1 (%2). Uppdateringar kommer från %3.
+106	Allmänt
+107	Flikar
+108	Lägg till flik
+109	Ta bort flik
+110	Med två flikar eller fler växlar en flikrad ovanför biblioteket mellan dem (till exempel Musik och Airchecks). Dubbelklicka på en flik för att byta namn; dra för att ändra ordning.
+111	Musikmappar
+112	Mapp
+113	Flik
+114	Namnlös
+115	Ny flik
+116	Lägg till mapp…
+117	Ta bort mapp
+118	Bibliotek
+119	Av
+120	Spårförstärkning
+121	Albumförstärkning
+122	ReplayGain
+123	Uppspelning
+124	Som systemet (mörkt eller ljust)
+125	Eget…
+126	Tema
+127	Honung
+128	Korall
+129	Röd
+130	Ros
+131	Violett
+132	Blå
+133	Blågrön
+134	Grön
+135	Temats egen accentfärg
+136	Annan…
+137	Accent
+138	Bakgrund
+139	Text
+140	Ett eget tema görs av de här två färgerna och accenten; alla andra nyanser blandas fram ur dem.
+141	Accentfärg
+142	Utseende
+143	När Ruche inte är det aktiva fönstret
+144	Alltid
+145	Låtaviseringar
+146	En avisering med titel, artist och omslag när ett spår börjar eller radiotiteln ändras.
+147	Fortsätt spela i systemfältet när fönstret stängs
+148	Stäng till systemfältet
+149	Visa Ruche i programmenyn, så att det kan fästas i aktivitetsfältet
+150	Programmeny
+151	Visa på Discord vad jag lyssnar på
+152	Discord
+153	Ta med radiostationer
+154	Visa skivomslag (söks efter artist och album på iTunes och MusicBrainz)
+155	Program-ID från discord.com/developers
+156	Program-ID
+157	Fungerar med Discord-appen och med Vesktop (slå på dess alternativ arRPC / Rich Presence). Visar låten, artisten och omslaget; för radio bara en ren ”Artist - Titel” och stationens logotyp. Inget delas när uppspelningen är pausad eller stoppad.
+158	Skrivbord
+159	Konfigurera…
+160	Logg…
+161	Öppna mappen för insticksmoduler
+162	Läs in igen
+163	Insticksmoduler är Lua-skript i %1. De körs med dina rättigheter, så slå bara på sådana du litar på. Skriva en: PLUGINS.md (följer med Ruche och finns i källkoden).
+164	exempel
+165	Fel: %1
+166	Av %1
+167	Inga insticksmoduler än. Lägg en i mappen för insticksmoduler och klicka på Läs in igen.
+168	%1: logg
+169	Inget loggat än.
+170	Starta om Ruche nu för att byta språk?
+171	Det nya språket används nästa gång Ruche startar.
+172	Ruche finns nu i programmenyn. Högerklicka på det där eller i aktivitetsfältet för att fästa det.
+173	Borttaget från programmenyn.
+174	De stationerna finns redan i din lista.
+175	Inget spelbart hittades i %1
+176	Importerade spellistan ”%1”
+177	Spela / Pausa
+178	Nästa spår
+179	Föregående spår
+180	Visa Ruche
+181	Stoppad
+182	Pausad
+183	Inget spelas
+184	Pausa
+185	Dölj Ruche
+186	Spelar vidare i systemfältet. Högerklicka på ikonen för att avsluta.
+187	%1: inställningar
+188	Ska Ruche leta efter en ny version varje gång det startar?
+189	Det frågar GitHub efter den senaste versionen av Ruche; inget annat skickas. Finns det en frågar Ruche innan den installeras. Du kan ändra det senare under Inställningar → Allmänt.
+190	Kontrollera vid start
+191	Kontrollera inte
+192	Kontrollerar…
+193	Kunde inte leta efter uppdateringar: %1
+194	Du har den senaste versionen (%1).
+195	Ruche %1 finns.
+196	Uppdatering finns
+197	<h3>Ruche %1 finns</h3>Du har %2 (%3).
+198	Inga versionsanteckningar.
+199	Uppdatera nu
+200	Ladda ner
+201	Öppna versionssidan
+202	Senare
+203	Hoppa över den här versionen
+204	Laddar ner Ruche %1…
+205	Avbryt
+206	Uppdatering
+207	Uppdateringen misslyckades: %1
+208	Startar om med Ruche %1…
+209	<h3>Ruche %1</h3><p>En lätt musikspelare med en layout som MusicBee.</p><p>Uppspelning med libmpv. Taggar med TagLib. Livetitlar från ICY, inbäddade taggar, HLS #EXTINF och tidsstyrda ID3-metadata i HLS.</p><p><a href="%2">%2</a></p>
+210	Leta efter uppdateringar
+211	Byt namn på flik
+212	Namn:
+213	Visa Ruche
+214	Nästa
+215	Inget spelas
+216	strömmen tog slut
+217	Kunde inte spela %1: %2
+218	Gav upp %1: %2
+219	Strömmen bröts (%1), ansluter igen om %2 s
+220	Blanda
+221	Föregående (Ctrl+Vänster)
+222	Spela / Pausa (Mellanslag)
+223	Nästa (Ctrl+Höger)
+224	Upprepa
+225	Ljud av
+226	Inget spelas
+227	LIVE
+228	Upprepa: av
+229	Upprepa: alla
+230	Upprepa: ett spår
+231	slut på minne
+232	kan inte läsa %1
+233	startad
+234	Kunde inte skriva %1
+235	Det fungerar bara när Ruche körs från sin AppImage.
+236	Kunde inte ta bort %1
+237	%1 d %2 h
+238	%1 h %2 min
+239	%1 s
+240	%1 min
+241	Bilder (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Alla filer (*)
+242	Namn
+243	Adress
+244	Välj bild…
+245	Klistra in
+246	Ta bort
+247	Logotyp
+248	eller en webbadress: https://…/logo.png (valfritt)
+249	Ingen logotyp
+250	Välj en logotyp
+251	%1 är inte en bild som Ruche kan läsa.
+252	Lägg till musikmapp
+253	Mörkt
+254	Ljust
+255	Midnatt
+256	Frost
+257	Skog
+258	Plommon
+259	Glöd
+260	Papper
+261	Svart (OLED)
+262	Installerar uppdateringen…
+263	Station
+264	Spelas nu / senast hörd
+265	Adress
+266	%1 är inte en bild som Ruche kan läsa.
+267	Adressen gav ingen bild som Ruche kan läsa.
+268	Kunde inte spara logotypen.
+269	Inga stationer hittades på den adressen.
+270	Spellistan innehåller inget spelbart.
+271	Kan inte öppna %1
+272	Titel
+273	Artist
+274	Album
+275	År
+276	Genre
+277	Tid
+278	Spelningar
+279	Windows-installerare
+280	portabel zip
+281	eget bygge
+282	Den senaste versionen (%1) har inget versionsnummer i sin tagg.
+283	Den här versionen har ingen fil för den här sortens installation (%1).
+284	Kan inte skriva %1
+285	Nedladdningen är ofullständig.
+286	Kunde inte hämta kontrollsummorna för att kontrollera nedladdningen: %1
+287	Kan inte läsa nedladdningen.
+288	Versionens kontrollsummor tar inte upp %1.
+289	Nedladdningen stämmer inte med versionens kontrollsumma; den har tagits bort.
+290	Ruche %1 finns i %2. Starta det därifrån.
+291	Nedladdad till %1. Installera den med: sudo %2
+292	Uppdateringen installerades inte (ingen behörighet gavs).
+293	Uppdateringen kunde inte installeras:\n%1
+294	Filen är %1; den kan också installeras med: sudo %2
+295	Ruche %1 laddades ner till %2 och öppnades i programcentret. Om inget öppnades, installera det med: flatpak install --user "%2"
+296	Kunde inte starta installeraren %1.
+297	Ruche %1 laddades ner till %2. Stäng Ruche och packa upp det över den här kopian (%3).
+298	Den här kopian av Ruche installerades inte från en version; versionssidan öppnades i stället.
+qt:OK	OK
+qt:Cancel	Avbryt
+qt:Close	Stäng
+qt:Yes	Ja
+qt:No	Nej
+qt:Apply	Verkställ
+qt:Save	Spara
+qt:Open	Öppna
+qt:Undo	&Ångra
+qt:Redo	&Gör om
+qt:Cut	K&lipp ut
+qt:Copy	&Kopiera
+qt:Paste	K&listra in
+qt:Delete	Ta bort
+qt:Select All	Markera allt

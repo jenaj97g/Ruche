@@ -1,0 +1,314 @@
+0	(Necunoscut)
+1	piesă
+2	piese
+3	Oprit
+4	Este nevoie de un ID de aplicație Discord
+5	Se caută Discord…
+6	Discord sau Vesktop nu rulează (sau Rich Presence este oprit); se reîncearcă la fiecare 15 s
+7	Conectat la Discord
+8	Conectat la Discord ca %1
+9	Radio în direct
+10	Nu s-a putut deschide releul local al fluxului: %1
+11	Toate genurile
+12	Toți artiștii
+13	Toate albumele
+14	Se scanează biblioteca… %1 / %2
+15	Bibliotecă actualizată: %1 adăugate, %2 modificate, %3 eliminate
+16	Siglă pentru %1: %2
+17	Meniu
+18	Caută în bibliotecă  (Ctrl+F)
+19	Redă
+20	Adaugă la În redare
+21	Șterge lista de redare
+22	Ștergi lista de redare „%1”?
+23	Redenumește fila…
+24	File și dosare…
+25	Adaugă un post
+26	Importă M3U / M3U8 / PLS
+27	Importă de la o adresă
+28	Editează
+29	Elimină
+30	Exportă
+31	Salvează lista de posturi ca M3U8, cu tot cu sigle
+32	Încă nu există posturi.\n\nAdaugă unul cu adresa fluxului sau importă o listă M3U / M3U8 / PLS.\nFluxurile HLS (.m3u8), Icecast și Shoutcast funcționează toate.
+33	Copiază titlul
+34	Copiază tot istoricul
+35	Elimină din În redare
+36	Adaugă un dosar de muzică…
+37	Rescanează biblioteca
+38	Deschide fișiere…
+39	Deschide fișiere
+40	Audio și liste de redare (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Toate fișierele (*)
+41	Importă o listă de redare sau de posturi…
+42	Importă
+43	Liste de redare (*.m3u *.m3u8 *.pls)
+44	Salvează În redare ca listă…
+45	În redare este gol.
+46	Salvează lista de redare
+47	Numele listei:
+48	Module
+49	Gestionează modulele…
+50	Setări…
+51	Despre Ruche
+52	Ieșire
+53	BIBLIOTECĂ
+54	Muzică
+55	În redare
+56	Radio
+57	LISTE DE REDARE
+58	Nicio listă încă
+59	Încă nu există un dosar de muzică. Meniul (☰) → Adaugă un dosar de muzică…
+60	piesă
+61	piese
+62	mono
+63	Direct  ·  HLS
+64	Flux în direct
+65	Se conectează…
+66	Istoricul emisiei
+67	Urmează
+68	Adaugă la lista de redare
+69	Listă de redare nouă…
+70	Listă de redare nouă
+71	%1 a fost adăugat la „%2”
+72	Redă în continuare
+73	Elimină din lista de redare
+74	Deschide dosarul
+75	Editează postul
+76	Alege o siglă
+77	Siglă
+78	Clipboardul nu conține o imagine sau o adresă de imagine.
+79	Nu există posturi de exportat.
+80	Exportă posturile
+81	Listă de posturi M3U8 (*.m3u8)
+82	%1 a fost exportat cu sigle
+83	post
+84	posturi
+85	Importă posturi
+86	Liste de posturi (*.m3u *.m3u8 *.pls);;Toate fișierele (*)
+87	%1 a fost importat
+88	Niciun post nou în acel fișier.
+89	Adresa unei liste de posturi M3U/M3U8/PLS, a unui flux HLS sau a unui flux:
+90	Editează…
+91	Copiază adresa
+92	Siglă dintr-un fișier…
+93	Siglă de la o adresă web…
+94	Adresa imaginii siglei:
+95	Lipește sigla
+96	Elimină sigla
+97	Adaugă un dosar de muzică
+98	Setări
+99	Limba sistemului
+100	Limbă
+101	Se aplică la repornirea Ruche. Traducerile au fost făcute automat și pot avea greșeli; corecturile sunt binevenite pe GitHub.
+102	Caută o versiune nouă la pornirea Ruche
+103	Verifică acum
+104	Actualizări
+105	Această copie: %1 (%2). Actualizările vin de la %3.
+106	General
+107	File
+108	Adaugă o filă
+109	Elimină fila
+110	Cu două file sau mai multe, o bară de file deasupra bibliotecii comută între ele (de exemplu Muzică și Airchecks). Dublu clic pe o filă pentru a o redenumi; trage pentru a reordona.
+111	Dosare de muzică
+112	Dosar
+113	Filă
+114	Fără titlu
+115	Filă nouă
+116	Adaugă un dosar…
+117	Elimină dosarul
+118	Bibliotecă
+119	Oprit
+120	Câștigul piesei
+121	Câștigul albumului
+122	ReplayGain
+123	Redare
+124	Ca sistemul (întunecat sau luminos)
+125	Personalizat…
+126	Temă
+127	Miere
+128	Coral
+129	Roșu
+130	Roz
+131	Violet
+132	Albastru
+133	Turcoaz închis
+134	Verde
+135	Accentul propriu al temei
+136	Altul…
+137	Accent
+138	Fundal
+139	Text
+140	O temă personalizată se face din aceste două culori și accent; toate celelalte nuanțe se amestecă din ele.
+141	Culoarea de accent
+142	Aspect
+143	Când Ruche nu este fereastra activă
+144	Întotdeauna
+145	Notificări despre melodii
+146	O fereastră cu titlul, artistul și coperta când începe o piesă sau se schimbă titlul radioului.
+147	Continuă redarea în zona de notificare când fereastra este închisă
+148	Închide în zona de notificare
+149	Arată Ruche în meniul de aplicații, ca să poată fi fixat în bara de activități
+150	Meniul de aplicații
+151	Arată pe Discord ce ascult
+152	Discord
+153	Include posturile de radio
+154	Arată copertele albumelor (căutate după artist și album pe iTunes și MusicBrainz)
+155	ID de aplicație de la discord.com/developers
+156	ID de aplicație
+157	Funcționează cu aplicația Discord și cu Vesktop (activează opțiunea arRPC / Rich Presence). Arată melodia, artistul și coperta; pentru radio, doar un „Artist - Titlu” curat și sigla postului. Nu se partajează nimic în pauză sau oprit.
+158	Desktop
+159	Configurează…
+160	Jurnal…
+161	Deschide dosarul modulelor
+162	Reîncarcă
+163	Modulele sunt scripturi Lua în %1. Rulează cu permisiunile tale, așa că activează doar module în care ai încredere. Cum scrii unul: PLUGINS.md (inclus cu Ruche și în sursele sale).
+164	exemplu
+165	Eroare: %1
+166	De %1
+167	Încă nu există module. Pune unul în dosarul modulelor și apasă Reîncarcă.
+168	%1: jurnal
+169	Nimic în jurnal încă.
+170	Repornești Ruche acum pentru a schimba limba?
+171	Noua limbă va fi folosită la următoarea pornire a Ruche.
+172	Ruche este în meniul de aplicații. Clic dreapta pe el, acolo sau în bara de activități, pentru a-l fixa.
+173	Eliminat din meniul de aplicații.
+174	Aceste posturi sunt deja în lista ta.
+175	Nu s-a găsit nimic redabil în %1
+176	Lista de redare „%1” a fost importată
+177	Redă / Pauză
+178	Piesa următoare
+179	Piesa anterioară
+180	Arată Ruche
+181	Oprit
+182	În pauză
+183	Nu se redă nimic
+184	Pauză
+185	Ascunde Ruche
+186	Redarea continuă în zona de notificare. Clic dreapta pe pictogramă pentru a ieși.
+187	%1: setări
+188	Ruche să caute o versiune nouă la fiecare pornire?
+189	Întreabă GitHub care este cea mai nouă versiune Ruche; nu se trimite nimic altceva. Dacă există una, Ruche întreabă înainte de a o instala. Poți schimba asta mai târziu din Setări → General.
+190	Verifică la pornire
+191	Nu verifica
+192	Se verifică…
+193	Nu s-a putut căuta o actualizare: %1
+194	Ai cea mai nouă versiune (%1).
+195	Ruche %1 este disponibil.
+196	Actualizare disponibilă
+197	<h3>Ruche %1 este disponibil</h3>Ai %2 (%3).
+198	Fără note de versiune.
+199	Actualizează acum
+200	Descarcă
+201	Deschide pagina versiunii
+202	Mai târziu
+203	Sari peste această versiune
+204	Se descarcă Ruche %1…
+205	Anulează
+206	Actualizare
+207	Actualizarea a eșuat: %1
+208	Se repornește în Ruche %1…
+209	<h3>Ruche %1</h3><p>Un player de muzică ușor, cu o așezare în stilul MusicBee.</p><p>Redare cu libmpv. Etichete cu TagLib. Titluri ale fluxurilor în direct din ICY, etichete din flux, HLS #EXTINF și metadate ID3 temporizate din HLS.</p><p><a href="%2">%2</a></p>
+210	Caută actualizări
+211	Redenumește fila
+212	Nume:
+213	Arată Ruche
+214	Următoarea
+215	Nu se redă nimic
+216	fluxul s-a încheiat
+217	Nu s-a putut reda %1: %2
+218	S-a renunțat la %1: %2
+219	Flux întrerupt (%1), reconectare în %2 s
+220	Amestecă
+221	Anterioara (Ctrl+Stânga)
+222	Redă / Pauză (Spațiu)
+223	Următoarea (Ctrl+Dreapta)
+224	Repetă
+225	Fără sunet
+226	Nu se redă nimic
+227	DIRECT
+228	Repetare: oprită
+229	Repetare: toate
+230	Repetare: o piesă
+231	memorie insuficientă
+232	nu se poate citi %1
+233	pornit
+234	Nu s-a putut scrie %1
+235	Funcționează doar când Ruche rulează din AppImage-ul său.
+236	Nu s-a putut elimina %1
+237	%1 z %2 h
+238	%1 h %2 min
+239	%1 s
+240	%1 min
+241	Imagini (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Toate fișierele (*)
+242	Nume
+243	Adresă
+244	Alege o imagine…
+245	Lipește
+246	Elimină
+247	Siglă
+248	sau o adresă web: https://…/logo.png (opțional)
+249	Fără siglă
+250	Alege o siglă
+251	%1 nu este o imagine pe care Ruche o poate citi.
+252	Adaugă un dosar de muzică
+253	Întunecat
+254	Luminos
+255	Miezul nopții
+256	Brumă
+257	Pădure
+258	Prună
+259	Jar
+260	Hârtie
+261	Negru (OLED)
+262	Se instalează actualizarea…
+263	Post
+264	Acum / ultima ascultată
+265	Adresă
+266	%1 nu este o imagine pe care Ruche o poate citi.
+267	Adresa nu a returnat o imagine pe care Ruche o poate citi.
+268	Nu s-a putut salva sigla.
+269	Niciun post găsit la acea adresă.
+270	Lista de redare nu conține nimic redabil.
+271	Nu se poate deschide %1
+272	Titlu
+273	Artist
+274	Album
+275	An
+276	Gen
+277	Durată
+278	Redări
+279	program de instalare Windows
+280	zip portabil
+281	versiune compilată local
+282	Cea mai nouă versiune (%1) nu are număr de versiune în etichetă.
+283	Această versiune nu are un fișier pentru acest tip de instalare (%1).
+284	Nu se poate scrie %1
+285	Descărcarea este incompletă.
+286	Nu s-au putut obține sumele de control pentru verificarea descărcării: %1
+287	Nu se poate citi descărcarea.
+288	Sumele de control ale versiunii nu conțin %1.
+289	Descărcarea nu corespunde sumei de control a versiunii; a fost ștearsă.
+290	Ruche %1 este în %2. Pornește-l de acolo.
+291	Descărcat în %1. Instalează-l cu: sudo %2
+292	Actualizarea nu a fost instalată (nu s-a dat permisiunea).
+293	Actualizarea nu a putut fi instalată:\n%1
+294	Fișierul este %1; poate fi instalat și cu: sudo %2
+295	Ruche %1 a fost descărcat în %2 și deschis cu centrul de software. Dacă nu s-a deschis nimic, instalează-l cu: flatpak install --user "%2"
+296	Nu s-a putut porni programul de instalare %1.
+297	Ruche %1 a fost descărcat în %2. Închide Ruche și dezarhivează-l peste această copie (%3).
+298	Această copie Ruche nu a fost instalată dintr-o versiune publicată; în schimb a fost deschisă pagina versiunii.
+qt:OK	OK
+qt:Cancel	Anulează
+qt:Close	Închide
+qt:Yes	Da
+qt:No	Nu
+qt:Apply	Aplică
+qt:Save	Salvează
+qt:Open	Deschide
+qt:Undo	&Anulează
+qt:Redo	&Refă
+qt:Cut	&Taie
+qt:Copy	&Copiază
+qt:Paste	&Lipește
+qt:Delete	Șterge
+qt:Select All	Selectează tot

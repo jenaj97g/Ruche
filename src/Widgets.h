@@ -1,0 +1,117 @@
+#pragma once
+
+#include <QLabel>
+#include <QPixmap>
+#include <QSlider>
+#include <QWidget>
+
+class QToolButton;
+class QListWidget;
+class QListWidgetItem;
+
+class SeekSlider : public QSlider {
+    Q_OBJECT
+public:
+    explicit SeekSlider(QWidget *parent = nullptr);
+
+protected:
+    void mousePressEvent(QMouseEvent *e) override;
+};
+
+class ElidedLabel : public QLabel {
+    Q_OBJECT
+public:
+    explicit ElidedLabel(QWidget *parent = nullptr);
+    void setFullText(const QString &t);
+    QString fullText() const { return m_text; }
+    QSize minimumSizeHint() const override;
+
+protected:
+    void resizeEvent(QResizeEvent *e) override;
+
+private:
+    void refresh();
+    QString m_text;
+};
+
+class CoverView : public QWidget {
+    Q_OBJECT
+public:
+    explicit CoverView(int radius = 6, QWidget *parent = nullptr);
+    void setImage(const QImage &img);
+    void setLogo(const QImage &img); // fitted on a backdrop instead of cropped like album art
+    void setPlaceholder(int icon) { m_placeholder = icon; update(); }
+    bool hasHeightForWidth() const override { return true; }
+    int heightForWidth(int w) const override { return w; }
+    QSize sizeHint() const override { return {260, 260}; }
+
+Q_SIGNALS:
+    void clicked();
+
+protected:
+    void paintEvent(QPaintEvent *) override;
+    void mouseReleaseEvent(QMouseEvent *) override { Q_EMIT clicked(); }
+
+private:
+    QPixmap m_pix;
+    int m_radius;
+    int m_placeholder;
+    bool m_contain = false;
+    QColor m_backdrop;
+};
+
+class PlayerBar : public QWidget {
+    Q_OBJECT
+public:
+    explicit PlayerBar(QWidget *parent = nullptr);
+    void setTrack(const QString &title, const QString &subtitle);
+    void setCover(const QImage &img, int placeholderIcon);
+    void setLogo(const QImage &img);
+    void setPlaying(bool active, bool paused);
+    void setPosition(double pos, double dur, bool seekable, bool live);
+    void setShuffle(bool on);
+    void setRepeat(int mode); // 0 off, 1 all, 2 one
+    void setVolume(int v);
+    void setQueueControlsEnabled(bool on); // off for live radio: nothing to skip to
+    void refreshTheme() { setPlaying(m_active, m_paused); } // the play glyph is drawn in the theme's colours
+
+Q_SIGNALS:
+    void playPause();
+    void next();
+    void previous();
+    void shuffleToggled(bool on);
+    void repeatClicked();
+    void seekRequested(double seconds);
+    void volumeChanged(int v);
+    void coverClicked();
+
+private:
+    CoverView *m_cover;
+    ElidedLabel *m_title, *m_artist;
+    QToolButton *m_play, *m_next, *m_prev, *m_shuffle, *m_repeat, *m_mute;
+    SeekSlider *m_seek;
+    QSlider *m_volume;
+    QLabel *m_pos, *m_dur;
+    bool m_dragging = false;
+    int m_lastVolume = 80;
+    bool m_active = false, m_paused = false;
+};
+
+class NowPlayingPanel : public QWidget {
+    Q_OBJECT
+public:
+    explicit NowPlayingPanel(QWidget *parent = nullptr);
+    void setInfo(const QString &title, const QString &artist, const QString &album, const QString &tech);
+    void setCover(const QImage &img, int placeholderIcon);
+    void setLogo(const QImage &img);
+    void setListTitle(const QString &t);
+    QListWidget *list() const { return m_list; }
+
+Q_SIGNALS:
+    void itemActivated(int row);
+
+private:
+    CoverView *m_cover;
+    QLabel *m_title, *m_artist, *m_album, *m_tech, *m_listTitle;
+    QListWidget *m_list;
+};

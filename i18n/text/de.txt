@@ -1,0 +1,299 @@
+0	(Unbekannt)
+1	Titel
+2	Titel
+3	Aus
+4	Braucht eine Discord-Anwendungs-ID
+5	Suche Discord…
+6	Discord oder Vesktop läuft nicht (oder Rich Presence ist aus); neuer Versuch alle 15 s
+7	Mit Discord verbunden
+8	Mit Discord verbunden als %1
+9	Live-Radio
+10	Das lokale Stream-Relay konnte nicht geöffnet werden: %1
+11	Alle Genres
+12	Alle Interpreten
+13	Alle Alben
+14	Bibliothek wird durchsucht… %1 / %2
+15	Bibliothek aktualisiert: %1 neu, %2 geändert, %3 entfernt
+16	Logo für %1: %2
+17	Menü
+18	Bibliothek durchsuchen  (Strg+F)
+19	Abspielen
+20	Zur Wiedergabe hinzufügen
+21	Wiedergabeliste löschen
+22	Die Wiedergabeliste „%1“ löschen?
+23	Tab umbenennen…
+24	Tabs und Ordner…
+25	Sender hinzufügen
+26	M3U / M3U8 / PLS importieren
+27	Von Adresse importieren
+28	Bearbeiten
+29	Entfernen
+30	Exportieren
+31	Die Senderliste als M3U8 speichern, mit Logos
+32	Noch keine Sender.\n\nFüge einen mit seiner Stream-Adresse hinzu oder importiere eine M3U- / M3U8- / PLS-Liste.\nHLS-Streams (.m3u8), Icecast und Shoutcast funktionieren alle.
+33	Titel kopieren
+34	Ganzen Verlauf kopieren
+35	Aus der Wiedergabe entfernen
+36	Musikordner hinzufügen…
+37	Bibliothek neu durchsuchen
+38	Dateien öffnen…
+39	Dateien öffnen
+40	Audio und Wiedergabelisten (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Alle Dateien (*)
+41	Wiedergabeliste oder Senderliste importieren…
+42	Importieren
+43	Wiedergabelisten (*.m3u *.m3u8 *.pls)
+44	Wiedergabe als Liste speichern…
+45	Die Wiedergabe ist leer.
+46	Wiedergabeliste speichern
+47	Name der Liste:
+48	Plugins
+49	Plugins verwalten…
+50	Einstellungen…
+51	Über Ruche
+52	Beenden
+53	BIBLIOTHEK
+54	Musik
+55	Wiedergabe
+56	Radio
+57	WIEDERGABELISTEN
+58	Noch keine Wiedergabelisten
+59	Noch kein Musikordner. Menü (☰) → Musikordner hinzufügen…
+60	Titel
+61	Titel
+62	Mono
+63	Live  ·  HLS
+64	Live-Stream
+65	Verbinde…
+66	Gesendet
+67	Als Nächstes
+68	Zur Wiedergabeliste hinzufügen
+69	Neue Wiedergabeliste…
+70	Neue Wiedergabeliste
+71	%1 zu „%2“ hinzugefügt
+72	Als Nächstes abspielen
+73	Aus der Wiedergabeliste entfernen
+74	Ordner öffnen
+75	Sender bearbeiten
+76	Logo wählen
+77	Logo
+78	In der Zwischenablage ist weder ein Bild noch eine Bildadresse.
+79	Keine Sender zum Exportieren.
+80	Sender exportieren
+81	M3U8-Senderliste (*.m3u8)
+82	%1 mit Logos exportiert
+83	Sender
+84	Sender
+85	Sender importieren
+86	Senderlisten (*.m3u *.m3u8 *.pls);;Alle Dateien (*)
+87	%1 importiert
+88	Keine neuen Sender in dieser Datei.
+89	Adresse einer M3U-/M3U8-/PLS-Senderliste, eines HLS-Streams oder eines Streams:
+90	Bearbeiten…
+91	Adresse kopieren
+92	Logo aus Datei…
+93	Logo von Webadresse…
+94	Adresse des Logobilds:
+95	Logo einfügen
+96	Logo entfernen
+97	Musikordner hinzufügen
+98	Einstellungen
+99	Systemsprache
+100	Sprache
+101	Gilt nach einem Neustart von Ruche. Die Übersetzungen wurden maschinell erstellt und können Fehler enthalten; Korrekturen sind auf GitHub willkommen.
+102	Beim Start von Ruche nach einer neuen Version suchen
+103	Jetzt prüfen
+104	Aktualisierungen
+105	Diese Kopie: %1 (%2). Aktualisierungen kommen von %3.
+106	Allgemein
+107	Tabs
+108	Tab hinzufügen
+109	Tab entfernen
+110	Ab zwei Tabs wechselt eine Tableiste über der Bibliothek zwischen ihnen (etwa Musik und Airchecks). Doppelklick auf einen Tab benennt ihn um; zum Sortieren ziehen.
+111	Musikordner
+112	Ordner
+113	Tab
+114	Unbenannt
+115	Neuer Tab
+116	Ordner hinzufügen…
+117	Ordner entfernen
+118	Bibliothek
+119	Aus
+120	Titelverstärkung
+121	Albumverstärkung
+122	ReplayGain
+123	Wiedergabe
+124	Wie das System (dunkel oder hell)
+125	Eigenes…
+126	Design
+127	Honig
+128	Koralle
+129	Rot
+130	Rosa
+131	Violett
+132	Blau
+133	Petrol
+134	Grün
+135	Die eigene Akzentfarbe des Designs
+136	Andere…
+137	Akzent
+138	Hintergrund
+139	Text
+140	Ein eigenes Design entsteht aus diesen beiden Farben und dem Akzent; alle anderen Töne werden daraus gemischt.
+141	Akzentfarbe
+142	Erscheinungsbild
+143	Wenn Ruche nicht das aktive Fenster ist
+144	Immer
+145	Songbenachrichtigungen
+146	Ein Hinweis mit Titel, Interpret und Cover, wenn ein Titel beginnt oder sich der Radiotitel ändert.
+147	Im Systembereich weiterspielen, wenn das Fenster geschlossen wird
+148	In den Systembereich schließen
+149	Ruche im Anwendungsmenü zeigen, damit es an die Taskleiste angeheftet werden kann
+150	Anwendungsmenü
+151	Auf Discord zeigen, was ich höre
+152	Discord
+153	Radiosender einbeziehen
+154	Albumcover zeigen (nach Interpret und Album bei iTunes und MusicBrainz gesucht)
+155	Anwendungs-ID von discord.com/developers
+156	Anwendungs-ID
+157	Funktioniert mit der Discord-App und mit Vesktop (dort die Option arRPC / Rich Presence einschalten). Zeigt Song, Interpret und Cover; bei Radio nur ein sauberes „Interpret - Titel“ und das Senderlogo. Bei Pause oder Stopp wird nichts geteilt.
+158	Desktop
+159	Einrichten…
+160	Protokoll…
+161	Plugin-Ordner öffnen
+162	Neu laden
+163	Plugins sind Lua-Skripte in %1. Sie laufen mit deinen Rechten, schalte also nur Plugins ein, denen du vertraust. Eines schreiben: PLUGINS.md (bei Ruche dabei und in den Quellen).
+164	Beispiel
+165	Fehler: %1
+166	Von %1
+167	Noch keine Plugins. Lege eines in den Plugin-Ordner und klicke auf Neu laden.
+168	%1: Protokoll
+169	Noch nichts protokolliert.
+170	Ruche jetzt neu starten, um die Sprache zu wechseln?
+171	Die neue Sprache gilt beim nächsten Start von Ruche.
+172	Ruche ist jetzt im Anwendungsmenü. Mit Rechtsklick darauf, dort oder in der Taskleiste, kannst du es anheften.
+173	Aus dem Anwendungsmenü entfernt.
+174	Diese Sender sind schon in deiner Liste.
+175	Nichts Abspielbares in %1 gefunden
+176	Wiedergabeliste „%1“ importiert
+177	Abspielen / Pause
+178	Nächster Titel
+179	Vorheriger Titel
+180	Ruche zeigen
+181	Gestoppt
+182	Pausiert
+183	Nichts wird gespielt
+184	Pause
+185	Ruche ausblenden
+186	Spielt im Systembereich weiter. Zum Beenden mit der rechten Maustaste auf das Symbol klicken.
+187	%1: Einstellungen
+188	Soll Ruche bei jedem Start nach einer neuen Version suchen?
+189	Es fragt GitHub nach der neuesten Ruche-Version; sonst wird nichts gesendet. Gibt es eine, fragt Ruche vor der Installation. Das lässt sich später unter Einstellungen → Allgemein ändern.
+190	Beim Start prüfen
+191	Nicht prüfen
+192	Prüfe…
+193	Suche nach Aktualisierungen fehlgeschlagen: %1
+194	Du hast die neueste Version (%1).
+195	Ruche %1 ist verfügbar.
+196	Aktualisierung verfügbar
+197	<h3>Ruche %1 ist verfügbar</h3>Du hast %2 (%3).
+198	Keine Versionshinweise.
+199	Jetzt aktualisieren
+200	Herunterladen
+201	Versionsseite öffnen
+202	Später
+203	Diese Version überspringen
+204	Ruche %1 wird heruntergeladen…
+205	Abbrechen
+206	Aktualisierung
+207	Die Aktualisierung ist fehlgeschlagen: %1
+208	Neustart mit Ruche %1…
+209	<h3>Ruche %1</h3><p>Ein leichter Musikplayer mit einem Aufbau wie MusicBee.</p><p>Wiedergabe mit libmpv. Tags mit TagLib. Live-Streamtitel aus ICY, eingebetteten Tags, HLS #EXTINF und zeitgesteuerten ID3-Metadaten in HLS.</p><p><a href="%2">%2</a></p>
+210	Nach Aktualisierungen suchen
+211	Tab umbenennen
+212	Name:
+213	Ruche zeigen
+214	Weiter
+215	Nichts wird gespielt
+216	Stream beendet
+217	%1 konnte nicht abgespielt werden: %2
+218	%1 aufgegeben: %2
+219	Stream abgebrochen (%1), neue Verbindung in %2 s
+220	Zufall
+221	Zurück (Strg+Links)
+222	Abspielen / Pause (Leertaste)
+223	Weiter (Strg+Rechts)
+224	Wiederholen
+225	Stumm
+226	Nichts wird gespielt
+227	LIVE
+228	Wiederholen: aus
+229	Wiederholen: alle
+230	Wiederholen: ein Titel
+231	nicht genug Speicher
+232	%1 kann nicht gelesen werden
+233	gestartet
+234	%1 konnte nicht geschrieben werden
+235	Das geht nur, wenn Ruche aus seinem AppImage läuft.
+236	%1 konnte nicht entfernt werden
+237	%1 T %2 h
+238	%1 h %2 min
+239	%1 s
+240	%1 min
+241	Bilder (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Alle Dateien (*)
+242	Name
+243	Adresse
+244	Bild wählen…
+245	Einfügen
+246	Entfernen
+247	Logo
+248	oder eine Webadresse: https://…/logo.png (optional)
+249	Kein Logo
+250	Logo wählen
+251	%1 ist kein Bild, das Ruche lesen kann.
+252	Musikordner hinzufügen
+253	Dunkel
+254	Hell
+255	Mitternacht
+256	Frost
+257	Wald
+258	Pflaume
+259	Glut
+260	Papier
+261	Schwarz (OLED)
+262	Aktualisierung wird installiert…
+263	Sender
+264	Läuft gerade / zuletzt gehört
+265	Adresse
+266	%1 ist kein Bild, das Ruche lesen kann.
+267	Die Adresse hat kein Bild geliefert, das Ruche lesen kann.
+268	Das Logo konnte nicht gespeichert werden.
+269	Unter dieser Adresse wurden keine Sender gefunden.
+270	Die Wiedergabeliste enthält nichts Abspielbares.
+271	%1 kann nicht geöffnet werden
+272	Titel
+273	Interpret
+274	Album
+275	Jahr
+276	Genre
+277	Dauer
+278	Gespielt
+279	Windows-Installationsprogramm
+280	portables ZIP
+281	eigener Build
+282	Die neueste Version (%1) hat keine Versionsnummer in ihrem Tag.
+283	Diese Version hat keine Datei für diese Art von Installation (%1).
+284	%1 kann nicht geschrieben werden
+285	Der Download ist unvollständig.
+286	Die Prüfsummen zum Prüfen des Downloads konnten nicht geladen werden: %1
+287	Der Download kann nicht gelesen werden.
+288	Die Prüfsummen der Version führen %1 nicht auf.
+289	Der Download passt nicht zur Prüfsumme der Version; er wurde gelöscht.
+290	Ruche %1 liegt in %2. Starte es von dort.
+291	Heruntergeladen nach %1. Installieren mit: sudo %2
+292	Die Aktualisierung wurde nicht installiert (keine Berechtigung erteilt).
+293	Die Aktualisierung konnte nicht installiert werden:\n%1
+294	Die Datei ist %1; sie lässt sich auch so installieren: sudo %2
+295	Ruche %1 wurde nach %2 heruntergeladen und in der Softwareverwaltung geöffnet. Falls sich nichts geöffnet hat, installiere es mit: flatpak install --user "%2"
+296	Das Installationsprogramm %1 konnte nicht gestartet werden.
+297	Ruche %1 wurde nach %2 heruntergeladen. Schließe Ruche und entpacke es über diese Kopie (%3).
+298	Diese Ruche-Kopie wurde nicht aus einer Veröffentlichung installiert; stattdessen wurde die Versionsseite geöffnet.

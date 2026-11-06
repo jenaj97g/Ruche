@@ -1,0 +1,299 @@
+0	(Ismeretlen)
+1	szám
+2	szám
+3	Ki
+4	Discord-alkalmazásazonosító szükséges
+5	Discord keresése…
+6	A Discord vagy a Vesktop nem fut (vagy a Rich Presence ki van kapcsolva); újrapróbálás 15 másodpercenként
+7	Csatlakozva a Discordhoz
+8	Csatlakozva a Discordhoz ezként: %1
+9	Élő rádió
+10	Nem sikerült megnyitni a helyi adatfolyam-továbbítót: %1
+11	Minden műfaj
+12	Minden előadó
+13	Minden album
+14	Könyvtár átvizsgálása… %1 / %2
+15	Könyvtár frissítve: %1 hozzáadva, %2 módosítva, %3 eltávolítva
+16	%1 logója: %2
+17	Menü
+18	Keresés a könyvtárban  (Ctrl+F)
+19	Lejátszás
+20	Hozzáadás a Most szólhoz
+21	Lejátszási lista törlése
+22	Törli a(z) „%1” lejátszási listát?
+23	Lap átnevezése…
+24	Lapok és mappák…
+25	Adó hozzáadása
+26	M3U / M3U8 / PLS importálása
+27	Importálás címről
+28	Szerkesztés
+29	Eltávolítás
+30	Exportálás
+31	Az adólista mentése M3U8-ként, logókkal együtt
+32	Még nincsenek adók.\n\nAdjon hozzá egyet a stream címével, vagy importáljon egy M3U / M3U8 / PLS listát.\nA HLS (.m3u8), Icecast és Shoutcast streamek mind működnek.
+33	Cím másolása
+34	A teljes előzmény másolása
+35	Eltávolítás a Most szólból
+36	Zenei mappa hozzáadása…
+37	Könyvtár újbóli átvizsgálása
+38	Fájlok megnyitása…
+39	Fájlok megnyitása
+40	Hang és lejátszási listák (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Minden fájl (*)
+41	Lejátszási lista vagy adólista importálása…
+42	Importálás
+43	Lejátszási listák (*.m3u *.m3u8 *.pls)
+44	A Most szól mentése lejátszási listaként…
+45	A Most szól üres.
+46	Lejátszási lista mentése
+47	A lista neve:
+48	Bővítmények
+49	Bővítmények kezelése…
+50	Beállítások…
+51	A Ruche névjegye
+52	Kilépés
+53	KÖNYVTÁR
+54	Zene
+55	Most szól
+56	Rádió
+57	LEJÁTSZÁSI LISTÁK
+58	Még nincs lista
+59	Még nincs zenei mappa. Menü (☰) → Zenei mappa hozzáadása…
+60	szám
+61	szám
+62	monó
+63	Élő  ·  HLS
+64	Élő stream
+65	Csatlakozás…
+66	Adás előzménye
+67	Következik
+68	Hozzáadás lejátszási listához
+69	Új lejátszási lista…
+70	Új lejátszási lista
+71	%1 hozzáadva ehhez: „%2”
+72	Lejátszás következőként
+73	Eltávolítás a lejátszási listából
+74	Tartalmazó mappa megnyitása
+75	Adó szerkesztése
+76	Logó kiválasztása
+77	Logó
+78	A vágólapon nincs kép vagy képcím.
+79	Nincs exportálható adó.
+80	Adók exportálása
+81	M3U8 adólista (*.m3u8)
+82	%1 exportálva, logókkal
+83	adó
+84	adó
+85	Adók importálása
+86	Adólisták (*.m3u *.m3u8 *.pls);;Minden fájl (*)
+87	%1 importálva
+88	A fájlban nincs új adó.
+89	M3U/M3U8/PLS adólista, HLS stream vagy stream címe:
+90	Szerkesztés…
+91	Cím másolása
+92	Logó fájlból…
+93	Logó webcímről…
+94	A logókép címe:
+95	Logó beillesztése
+96	Logó eltávolítása
+97	Zenei mappa hozzáadása
+98	Beállítások
+99	Rendszer nyelve
+100	Nyelv
+101	A Ruche újraindítása után lép életbe. A fordítások gépi fordítások, és hibásak lehetnek; a javításokat szívesen fogadjuk a GitHubon.
+102	Új verzió keresése a Ruche indításakor
+103	Ellenőrzés most
+104	Frissítések
+105	Ez a példány: %1 (%2). A frissítések innen jönnek: %3.
+106	Általános
+107	Lapok
+108	Lap hozzáadása
+109	Lap eltávolítása
+110	Két vagy több lap esetén a könyvtár fölötti lapsávval lehet váltani köztük (például Zene és Airchecks). Dupla kattintással átnevezhető egy lap; húzással átrendezhető.
+111	Zenei mappák
+112	Mappa
+113	Lap
+114	Névtelen
+115	Új lap
+116	Mappa hozzáadása…
+117	Mappa eltávolítása
+118	Könyvtár
+119	Ki
+120	Számerősítés
+121	Albumerősítés
+122	ReplayGain
+123	Lejátszás
+124	A rendszer szerint (sötét vagy világos)
+125	Egyéni…
+126	Téma
+127	Méz
+128	Korall
+129	Piros
+130	Rózsa
+131	Ibolya
+132	Kék
+133	Kékeszöld
+134	Zöld
+135	A téma saját kiemelőszíne
+136	Más…
+137	Kiemelés
+138	Háttér
+139	Szöveg
+140	Az egyéni téma ebből a két színből és a kiemelőszínből készül; minden más árnyalat ezekből keveredik.
+141	Kiemelőszín
+142	Megjelenés
+143	Amikor nem a Ruche az aktív ablak
+144	Mindig
+145	Dalértesítések
+146	Felugró értesítés a címmel, előadóval és borítóval, amikor egy szám elindul vagy a rádió címe megváltozik.
+147	Lejátszás folytatása a tálcán, amikor az ablak bezárul
+148	Bezárás a tálcára
+149	A Ruche megjelenítése az alkalmazásmenüben, hogy a tálcára rögzíthető legyen
+150	Alkalmazásmenü
+151	Mutassa a Discordon, mit hallgatok
+152	Discord
+153	Rádióadók is
+154	Albumborítók megjelenítése (előadó és album szerint keresve az iTunesban és a MusicBrainzben)
+155	Alkalmazásazonosító a discord.com/developers oldalról
+156	Alkalmazásazonosító
+157	A Discord alkalmazással és a Vesktoppal működik (kapcsolja be az arRPC / Rich Presence beállítását). Megmutatja a dalt, az előadót és a borítót; rádiónál csak egy tiszta „Előadó - Cím” párost és az adó logóját. Szünetben vagy leállítva semmit sem oszt meg.
+158	Asztal
+159	Beállítás…
+160	Napló…
+161	Bővítménymappa megnyitása
+162	Újratöltés
+163	A bővítmények Lua-szkriptek itt: %1. Az Ön jogosultságaival futnak, ezért csak megbízható bővítményeket kapcsoljon be. Ha írna egyet: PLUGINS.md (a Ruche mellékeli, és a forráskódban is megtalálható).
+164	példa
+165	Hiba: %1
+166	Készítő: %1
+167	Még nincsenek bővítmények. Tegyen egyet a bővítménymappába, majd nyomja meg az Újratöltés gombot.
+168	%1: napló
+169	Még nincs semmi a naplóban.
+170	Újraindítja most a Ruche-t a nyelv váltásához?
+171	Az új nyelv a Ruche következő indításakor lép életbe.
+172	A Ruche megjelent az alkalmazásmenüben. Jobb kattintással rögzítheti ott vagy a tálcán.
+173	Eltávolítva az alkalmazásmenüből.
+174	Ezek az adók már szerepelnek a listájában.
+175	Nincs lejátszható elem itt: %1
+176	„%1” lejátszási lista importálva
+177	Lejátszás / Szünet
+178	Következő szám
+179	Előző szám
+180	A Ruche megjelenítése
+181	Leállítva
+182	Szüneteltetve
+183	Nincs lejátszás
+184	Szünet
+185	A Ruche elrejtése
+186	A lejátszás a tálcán folytatódik. Kilépéshez kattintson jobb gombbal az ikonra.
+187	%1: beállítások
+188	Keressen-e a Ruche új verziót minden indításkor?
+189	A GitHubtól kérdezi le a Ruche legújabb kiadását; mást nem küld. Ha van újabb, a Ruche telepítés előtt rákérdez. Ezt később a Beállítások → Általános alatt módosíthatja.
+190	Ellenőrzés indításkor
+191	Ne ellenőrizze
+192	Ellenőrzés…
+193	Nem sikerült frissítést keresni: %1
+194	A legújabb verzió van telepítve (%1).
+195	Elérhető a Ruche %1.
+196	Frissítés érhető el
+197	<h3>Elérhető a Ruche %1</h3>Az Ön verziója: %2 (%3).
+198	Nincsenek kiadási megjegyzések.
+199	Frissítés most
+200	Letöltés
+201	A kiadás oldalának megnyitása
+202	Később
+203	Ennek a verziónak a kihagyása
+204	A Ruche %1 letöltése…
+205	Mégse
+206	Frissítés
+207	A frissítés nem sikerült: %1
+208	Újraindítás a Ruche %1 verzióval…
+209	<h3>Ruche %1</h3><p>Könnyű zenelejátszó MusicBee-szerű elrendezéssel.</p><p>Lejátszás: libmpv. Címkék: TagLib. Élő stream-címek ICY-ból, a streambe ágyazott címkékből, HLS #EXTINF-ből és HLS időzített ID3-metaadatokból.</p><p><a href="%2">%2</a></p>
+210	Frissítések keresése
+211	Lap átnevezése
+212	Név:
+213	A Ruche megjelenítése
+214	Következő
+215	Nincs lejátszás
+216	a stream véget ért
+217	Nem sikerült lejátszani: %1: %2
+218	Feladva: %1: %2
+219	A stream megszakadt (%1), újracsatlakozás %2 mp múlva
+220	Véletlen sorrend
+221	Előző (Ctrl+Bal)
+222	Lejátszás / Szünet (Szóköz)
+223	Következő (Ctrl+Jobb)
+224	Ismétlés
+225	Némítás
+226	Nincs lejátszás
+227	ÉLŐ
+228	Ismétlés: ki
+229	Ismétlés: mind
+230	Ismétlés: egy szám
+231	elfogyott a memória
+232	nem olvasható: %1
+233	elindult
+234	Nem sikerült írni: %1
+235	Ez csak akkor működik, ha a Ruche az AppImage-ből fut.
+236	Nem sikerült eltávolítani: %1
+237	%1 n %2 ó
+238	%1 ó %2 perc
+239	%1 mp
+240	%1 perc
+241	Képek (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Minden fájl (*)
+242	Név
+243	Cím
+244	Kép kiválasztása…
+245	Beillesztés
+246	Eltávolítás
+247	Logó
+248	vagy egy webcím: https://…/logo.png (nem kötelező)
+249	Nincs logó
+250	Logó kiválasztása
+251	A(z) %1 nem olyan kép, amelyet a Ruche be tud olvasni.
+252	Zenei mappa hozzáadása
+253	Sötét
+254	Világos
+255	Éjfél
+256	Dér
+257	Erdő
+258	Szilva
+259	Parázs
+260	Papír
+261	Fekete (OLED)
+262	A frissítés telepítése…
+263	Adó
+264	Most szól / utoljára hallott
+265	Cím
+266	A(z) %1 nem olyan kép, amelyet a Ruche be tud olvasni.
+267	A cím nem adott vissza olyan képet, amelyet a Ruche be tud olvasni.
+268	Nem sikerült menteni a logót.
+269	Ezen a címen nem található adó.
+270	A lejátszási listában nincs lejátszható elem.
+271	Nem nyitható meg: %1
+272	Cím
+273	Előadó
+274	Album
+275	Év
+276	Műfaj
+277	Idő
+278	Lejátszások
+279	Windows-telepítő
+280	hordozható zip
+281	saját fordítás
+282	A legújabb kiadás (%1) címkéjében nincs verziószám.
+283	Ennek a kiadásnak nincs fájlja ehhez a telepítéstípushoz (%1).
+284	Nem írható: %1
+285	A letöltés hiányos.
+286	Nem sikerült lekérni az ellenőrzőösszegeket a letöltés ellenőrzéséhez: %1
+287	A letöltés nem olvasható.
+288	A kiadás ellenőrzőösszegei között nem szerepel: %1.
+289	A letöltés nem egyezik a kiadás ellenőrzőösszegével; törölve lett.
+290	A Ruche %1 itt van: %2. Onnan indítsa el.
+291	Letöltve ide: %1. Telepítés: sudo %2
+292	A frissítés nem lett telepítve (nem kapott engedélyt).
+293	A frissítést nem sikerült telepíteni:\n%1
+294	A fájl: %1; így is telepíthető: sudo %2
+295	A Ruche %1 letöltve ide: %2, és megnyitva a szoftverközpontban. Ha semmi sem nyílt meg, telepítse így: flatpak install --user "%2"
+296	Nem sikerült elindítani a telepítőt: %1.
+297	A Ruche %1 letöltve ide: %2. Zárja be a Ruche-t, és csomagolja ki ennek a példánynak a helyére (%3).
+298	Ez a Ruche-példány nem kiadásból lett telepítve; helyette a kiadás oldala nyílt meg.

@@ -1,0 +1,1497 @@
+[
+{
+"i": 0,
+"c": "BrowserModel",
+"s": "(Unknown)"
+},
+{
+"i": 1,
+"c": "BrowserModel",
+"s": "track"
+},
+{
+"i": 2,
+"c": "BrowserModel",
+"s": "tracks"
+},
+{
+"i": 3,
+"c": "DiscordPresence",
+"s": "Off"
+},
+{
+"i": 4,
+"c": "DiscordPresence",
+"s": "Needs a Discord application ID"
+},
+{
+"i": 5,
+"c": "DiscordPresence",
+"s": "Looking for Discord…"
+},
+{
+"i": 6,
+"c": "DiscordPresence",
+"s": "Discord or Vesktop isn't running (or its Rich Presence is off); trying again every 15 s"
+},
+{
+"i": 7,
+"c": "DiscordPresence",
+"s": "Connected to Discord"
+},
+{
+"i": 8,
+"c": "DiscordPresence",
+"s": "Connected to Discord as %1"
+},
+{
+"i": 9,
+"c": "DiscordPresence",
+"s": "Live radio"
+},
+{
+"i": 10,
+"c": "HlsProxy",
+"s": "Could not open the local stream relay: %1"
+},
+{
+"i": 11,
+"c": "MainWindow",
+"s": "All genres"
+},
+{
+"i": 12,
+"c": "MainWindow",
+"s": "All artists"
+},
+{
+"i": 13,
+"c": "MainWindow",
+"s": "All albums"
+},
+{
+"i": 14,
+"c": "MainWindow",
+"s": "Scanning library… %1 / %2"
+},
+{
+"i": 15,
+"c": "MainWindow",
+"s": "Library updated: %1 added, %2 changed, %3 removed"
+},
+{
+"i": 16,
+"c": "MainWindow",
+"s": "Logo for %1: %2"
+},
+{
+"i": 17,
+"c": "MainWindow",
+"s": "Menu"
+},
+{
+"i": 18,
+"c": "MainWindow",
+"s": "Search library  (Ctrl+F)"
+},
+{
+"i": 19,
+"c": "MainWindow",
+"s": "Play"
+},
+{
+"i": 20,
+"c": "MainWindow",
+"s": "Add to Now Playing"
+},
+{
+"i": 21,
+"c": "MainWindow",
+"s": "Delete playlist"
+},
+{
+"i": 22,
+"c": "MainWindow",
+"s": "Delete the playlist “%1”?"
+},
+{
+"i": 23,
+"c": "MainWindow",
+"s": "Rename tab…"
+},
+{
+"i": 24,
+"c": "MainWindow",
+"s": "Tabs and folders…"
+},
+{
+"i": 25,
+"c": "MainWindow",
+"s": "Add station"
+},
+{
+"i": 26,
+"c": "MainWindow",
+"s": "Import M3U / M3U8 / PLS"
+},
+{
+"i": 27,
+"c": "MainWindow",
+"s": "Import from URL"
+},
+{
+"i": 28,
+"c": "MainWindow",
+"s": "Edit"
+},
+{
+"i": 29,
+"c": "MainWindow",
+"s": "Remove"
+},
+{
+"i": 30,
+"c": "MainWindow",
+"s": "Export"
+},
+{
+"i": 31,
+"c": "MainWindow",
+"s": "Save the station list as M3U8, logos included"
+},
+{
+"i": 32,
+"c": "MainWindow",
+"s": "No stations yet.\n\nAdd one with its stream address, or import an M3U / M3U8 / PLS list.\nHLS (.m3u8) streams, Icecast and Shoutcast all work."
+},
+{
+"i": 33,
+"c": "MainWindow",
+"s": "Copy title"
+},
+{
+"i": 34,
+"c": "MainWindow",
+"s": "Copy whole history"
+},
+{
+"i": 35,
+"c": "MainWindow",
+"s": "Remove from Now Playing"
+},
+{
+"i": 36,
+"c": "MainWindow",
+"s": "Add music folder…"
+},
+{
+"i": 37,
+"c": "MainWindow",
+"s": "Rescan library"
+},
+{
+"i": 38,
+"c": "MainWindow",
+"s": "Open files…"
+},
+{
+"i": 39,
+"c": "MainWindow",
+"s": "Open files"
+},
+{
+"i": 40,
+"c": "MainWindow",
+"s": "Audio and playlists (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;All files (*)"
+},
+{
+"i": 41,
+"c": "MainWindow",
+"s": "Import playlist or station list…"
+},
+{
+"i": 42,
+"c": "MainWindow",
+"s": "Import"
+},
+{
+"i": 43,
+"c": "MainWindow",
+"s": "Playlists (*.m3u *.m3u8 *.pls)"
+},
+{
+"i": 44,
+"c": "MainWindow",
+"s": "Save Now Playing as playlist…"
+},
+{
+"i": 45,
+"c": "MainWindow",
+"s": "Now Playing is empty."
+},
+{
+"i": 46,
+"c": "MainWindow",
+"s": "Save playlist"
+},
+{
+"i": 47,
+"c": "MainWindow",
+"s": "Playlist name:"
+},
+{
+"i": 48,
+"c": "MainWindow",
+"s": "Plugins"
+},
+{
+"i": 49,
+"c": "MainWindow",
+"s": "Manage plugins…"
+},
+{
+"i": 50,
+"c": "MainWindow",
+"s": "Settings…"
+},
+{
+"i": 51,
+"c": "MainWindow",
+"s": "About Ruche"
+},
+{
+"i": 52,
+"c": "MainWindow",
+"s": "Quit"
+},
+{
+"i": 53,
+"c": "MainWindow",
+"s": "LIBRARY"
+},
+{
+"i": 54,
+"c": "MainWindow",
+"s": "Music"
+},
+{
+"i": 55,
+"c": "MainWindow",
+"s": "Now Playing"
+},
+{
+"i": 56,
+"c": "MainWindow",
+"s": "Radio"
+},
+{
+"i": 57,
+"c": "MainWindow",
+"s": "PLAYLISTS"
+},
+{
+"i": 58,
+"c": "MainWindow",
+"s": "No playlists yet"
+},
+{
+"i": 59,
+"c": "MainWindow",
+"s": "No music folder yet. Use the menu (☰) → Add music folder…"
+},
+{
+"i": 60,
+"c": "MainWindow",
+"s": "track"
+},
+{
+"i": 61,
+"c": "MainWindow",
+"s": "tracks"
+},
+{
+"i": 62,
+"c": "MainWindow",
+"s": "mono"
+},
+{
+"i": 63,
+"c": "MainWindow",
+"s": "Live  ·  HLS"
+},
+{
+"i": 64,
+"c": "MainWindow",
+"s": "Live stream"
+},
+{
+"i": 65,
+"c": "MainWindow",
+"s": "Connecting…"
+},
+{
+"i": 66,
+"c": "MainWindow",
+"s": "On air history"
+},
+{
+"i": 67,
+"c": "MainWindow",
+"s": "Up next"
+},
+{
+"i": 68,
+"c": "MainWindow",
+"s": "Add to playlist"
+},
+{
+"i": 69,
+"c": "MainWindow",
+"s": "New playlist…"
+},
+{
+"i": 70,
+"c": "MainWindow",
+"s": "New playlist"
+},
+{
+"i": 71,
+"c": "MainWindow",
+"s": "Added %1 to “%2”"
+},
+{
+"i": 72,
+"c": "MainWindow",
+"s": "Play next"
+},
+{
+"i": 73,
+"c": "MainWindow",
+"s": "Remove from playlist"
+},
+{
+"i": 74,
+"c": "MainWindow",
+"s": "Open containing folder"
+},
+{
+"i": 75,
+"c": "MainWindow",
+"s": "Edit station"
+},
+{
+"i": 76,
+"c": "MainWindow",
+"s": "Choose a logo"
+},
+{
+"i": 77,
+"c": "MainWindow",
+"s": "Logo"
+},
+{
+"i": 78,
+"c": "MainWindow",
+"s": "The clipboard has no image or image address."
+},
+{
+"i": 79,
+"c": "MainWindow",
+"s": "No stations to export."
+},
+{
+"i": 80,
+"c": "MainWindow",
+"s": "Export stations"
+},
+{
+"i": 81,
+"c": "MainWindow",
+"s": "M3U8 station list (*.m3u8)"
+},
+{
+"i": 82,
+"c": "MainWindow",
+"s": "Exported %1 with logos"
+},
+{
+"i": 83,
+"c": "MainWindow",
+"s": "station"
+},
+{
+"i": 84,
+"c": "MainWindow",
+"s": "stations"
+},
+{
+"i": 85,
+"c": "MainWindow",
+"s": "Import stations"
+},
+{
+"i": 86,
+"c": "MainWindow",
+"s": "Station lists (*.m3u *.m3u8 *.pls);;All files (*)"
+},
+{
+"i": 87,
+"c": "MainWindow",
+"s": "Imported %1"
+},
+{
+"i": 88,
+"c": "MainWindow",
+"s": "No new stations in that file."
+},
+{
+"i": 89,
+"c": "MainWindow",
+"s": "Address of an M3U/M3U8/PLS station list, an HLS stream or a stream:"
+},
+{
+"i": 90,
+"c": "MainWindow",
+"s": "Edit…"
+},
+{
+"i": 91,
+"c": "MainWindow",
+"s": "Copy address"
+},
+{
+"i": 92,
+"c": "MainWindow",
+"s": "Set logo from file…"
+},
+{
+"i": 93,
+"c": "MainWindow",
+"s": "Set logo from web address…"
+},
+{
+"i": 94,
+"c": "MainWindow",
+"s": "Address of the logo image:"
+},
+{
+"i": 95,
+"c": "MainWindow",
+"s": "Paste logo"
+},
+{
+"i": 96,
+"c": "MainWindow",
+"s": "Remove logo"
+},
+{
+"i": 97,
+"c": "MainWindow",
+"s": "Add music folder"
+},
+{
+"i": 98,
+"c": "MainWindow",
+"s": "Settings"
+},
+{
+"i": 99,
+"c": "MainWindow",
+"s": "System language"
+},
+{
+"i": 100,
+"c": "MainWindow",
+"s": "Language"
+},
+{
+"i": 101,
+"c": "MainWindow",
+"s": "Takes effect when Ruche restarts. The translations were made by machine and may have mistakes; corrections are welcome on GitHub."
+},
+{
+"i": 102,
+"c": "MainWindow",
+"s": "Check for a new version when Ruche starts"
+},
+{
+"i": 103,
+"c": "MainWindow",
+"s": "Check now"
+},
+{
+"i": 104,
+"c": "MainWindow",
+"s": "Updates"
+},
+{
+"i": 105,
+"c": "MainWindow",
+"s": "This copy: %1 (%2). Updates come from %3."
+},
+{
+"i": 106,
+"c": "MainWindow",
+"s": "General"
+},
+{
+"i": 107,
+"c": "MainWindow",
+"s": "Tabs"
+},
+{
+"i": 108,
+"c": "MainWindow",
+"s": "Add tab"
+},
+{
+"i": 109,
+"c": "MainWindow",
+"s": "Remove tab"
+},
+{
+"i": 110,
+"c": "MainWindow",
+"s": "With two tabs or more, a tab bar over the library switches between them (say, Music and Airchecks). Double-click a tab to rename it; drag to reorder."
+},
+{
+"i": 111,
+"c": "MainWindow",
+"s": "Music folders"
+},
+{
+"i": 112,
+"c": "MainWindow",
+"s": "Folder"
+},
+{
+"i": 113,
+"c": "MainWindow",
+"s": "Tab"
+},
+{
+"i": 114,
+"c": "MainWindow",
+"s": "Untitled"
+},
+{
+"i": 115,
+"c": "MainWindow",
+"s": "New tab"
+},
+{
+"i": 116,
+"c": "MainWindow",
+"s": "Add folder…"
+},
+{
+"i": 117,
+"c": "MainWindow",
+"s": "Remove folder"
+},
+{
+"i": 118,
+"c": "MainWindow",
+"s": "Library"
+},
+{
+"i": 119,
+"c": "MainWindow",
+"s": "Off"
+},
+{
+"i": 120,
+"c": "MainWindow",
+"s": "Track gain"
+},
+{
+"i": 121,
+"c": "MainWindow",
+"s": "Album gain"
+},
+{
+"i": 122,
+"c": "MainWindow",
+"s": "ReplayGain"
+},
+{
+"i": 123,
+"c": "MainWindow",
+"s": "Playback"
+},
+{
+"i": 124,
+"c": "MainWindow",
+"s": "Match the system (dark or light)"
+},
+{
+"i": 125,
+"c": "MainWindow",
+"s": "Custom…"
+},
+{
+"i": 126,
+"c": "MainWindow",
+"s": "Theme"
+},
+{
+"i": 127,
+"c": "MainWindow",
+"s": "Honey"
+},
+{
+"i": 128,
+"c": "MainWindow",
+"s": "Coral"
+},
+{
+"i": 129,
+"c": "MainWindow",
+"s": "Red"
+},
+{
+"i": 130,
+"c": "MainWindow",
+"s": "Rose"
+},
+{
+"i": 131,
+"c": "MainWindow",
+"s": "Violet"
+},
+{
+"i": 132,
+"c": "MainWindow",
+"s": "Blue"
+},
+{
+"i": 133,
+"c": "MainWindow",
+"s": "Teal"
+},
+{
+"i": 134,
+"c": "MainWindow",
+"s": "Green"
+},
+{
+"i": 135,
+"c": "MainWindow",
+"s": "The theme's own accent"
+},
+{
+"i": 136,
+"c": "MainWindow",
+"s": "Other…"
+},
+{
+"i": 137,
+"c": "MainWindow",
+"s": "Accent"
+},
+{
+"i": 138,
+"c": "MainWindow",
+"s": "Background"
+},
+{
+"i": 139,
+"c": "MainWindow",
+"s": "Text"
+},
+{
+"i": 140,
+"c": "MainWindow",
+"s": "A custom theme is made from these two colours and the accent; every other shade is mixed from them."
+},
+{
+"i": 141,
+"c": "MainWindow",
+"s": "Accent colour"
+},
+{
+"i": 142,
+"c": "MainWindow",
+"s": "Appearance"
+},
+{
+"i": 143,
+"c": "MainWindow",
+"s": "When Ruche isn't the active window"
+},
+{
+"i": 144,
+"c": "MainWindow",
+"s": "Always"
+},
+{
+"i": 145,
+"c": "MainWindow",
+"s": "Song notifications"
+},
+{
+"i": 146,
+"c": "MainWindow",
+"s": "A pop-up with the title, artist and cover when a track starts or the radio title changes."
+},
+{
+"i": 147,
+"c": "MainWindow",
+"s": "Keep playing in the system tray when the window is closed"
+},
+{
+"i": 148,
+"c": "MainWindow",
+"s": "Close to tray"
+},
+{
+"i": 149,
+"c": "MainWindow",
+"s": "Show Ruche in the applications menu, so it can be pinned to the taskbar"
+},
+{
+"i": 150,
+"c": "MainWindow",
+"s": "Applications menu"
+},
+{
+"i": 151,
+"c": "MainWindow",
+"s": "Show what I'm listening to on Discord"
+},
+{
+"i": 152,
+"c": "MainWindow",
+"s": "Discord"
+},
+{
+"i": 153,
+"c": "MainWindow",
+"s": "Include radio stations"
+},
+{
+"i": 154,
+"c": "MainWindow",
+"s": "Show album covers (looked up by artist and album on iTunes and MusicBrainz)"
+},
+{
+"i": 155,
+"c": "MainWindow",
+"s": "Application ID from discord.com/developers"
+},
+{
+"i": 156,
+"c": "MainWindow",
+"s": "Application ID"
+},
+{
+"i": 157,
+"c": "MainWindow",
+"s": "Works with the Discord app and with Vesktop (turn on its arRPC / Rich Presence option). Shows the song, the artist and the cover; for radio, only a clean \"Artist - Title\" and the station's logo. Nothing is shared while paused or stopped."
+},
+{
+"i": 158,
+"c": "MainWindow",
+"s": "Desktop"
+},
+{
+"i": 159,
+"c": "MainWindow",
+"s": "Configure…"
+},
+{
+"i": 160,
+"c": "MainWindow",
+"s": "Log…"
+},
+{
+"i": 161,
+"c": "MainWindow",
+"s": "Open plugins folder"
+},
+{
+"i": 162,
+"c": "MainWindow",
+"s": "Reload"
+},
+{
+"i": 163,
+"c": "MainWindow",
+"s": "Plugins are Lua scripts in %1. They run with your permissions, so only turn on plugins you trust. Writing one: PLUGINS.md (shipped with Ruche and in its source)."
+},
+{
+"i": 164,
+"c": "MainWindow",
+"s": "example"
+},
+{
+"i": 165,
+"c": "MainWindow",
+"s": "Error: %1"
+},
+{
+"i": 166,
+"c": "MainWindow",
+"s": "By %1"
+},
+{
+"i": 167,
+"c": "MainWindow",
+"s": "No plugins yet. Put one in the plugins folder and press Reload."
+},
+{
+"i": 168,
+"c": "MainWindow",
+"s": "%1: log"
+},
+{
+"i": 169,
+"c": "MainWindow",
+"s": "Nothing logged yet."
+},
+{
+"i": 170,
+"c": "MainWindow",
+"s": "Restart Ruche now to change the language?"
+},
+{
+"i": 171,
+"c": "MainWindow",
+"s": "The new language is used the next time Ruche starts."
+},
+{
+"i": 172,
+"c": "MainWindow",
+"s": "Ruche is in your applications menu. Right-click it there or in the taskbar to pin it."
+},
+{
+"i": 173,
+"c": "MainWindow",
+"s": "Removed from the applications menu."
+},
+{
+"i": 174,
+"c": "MainWindow",
+"s": "Those stations are already in your list."
+},
+{
+"i": 175,
+"c": "MainWindow",
+"s": "Nothing playable found in %1"
+},
+{
+"i": 176,
+"c": "MainWindow",
+"s": "Imported playlist “%1”"
+},
+{
+"i": 177,
+"c": "MainWindow",
+"s": "Play / Pause"
+},
+{
+"i": 178,
+"c": "MainWindow",
+"s": "Next track"
+},
+{
+"i": 179,
+"c": "MainWindow",
+"s": "Previous track"
+},
+{
+"i": 180,
+"c": "MainWindow",
+"s": "Show Ruche"
+},
+{
+"i": 181,
+"c": "MainWindow",
+"s": "Stopped"
+},
+{
+"i": 182,
+"c": "MainWindow",
+"s": "Paused"
+},
+{
+"i": 183,
+"c": "MainWindow",
+"s": "Nothing playing"
+},
+{
+"i": 184,
+"c": "MainWindow",
+"s": "Pause"
+},
+{
+"i": 185,
+"c": "MainWindow",
+"s": "Hide Ruche"
+},
+{
+"i": 186,
+"c": "MainWindow",
+"s": "Still playing in the system tray. Right-click the tray icon to quit."
+},
+{
+"i": 187,
+"c": "MainWindow",
+"s": "%1: settings"
+},
+{
+"i": 188,
+"c": "MainWindow",
+"s": "Should Ruche check for a new version each time it starts?"
+},
+{
+"i": 189,
+"c": "MainWindow",
+"s": "It asks GitHub for the newest release of Ruche; nothing else is sent. When there is one, Ruche asks before installing it. You can change this later in Settings → General."
+},
+{
+"i": 190,
+"c": "MainWindow",
+"s": "Check on start"
+},
+{
+"i": 191,
+"c": "MainWindow",
+"s": "Don't check"
+},
+{
+"i": 192,
+"c": "MainWindow",
+"s": "Checking…"
+},
+{
+"i": 193,
+"c": "MainWindow",
+"s": "Couldn't check for updates: %1"
+},
+{
+"i": 194,
+"c": "MainWindow",
+"s": "You have the newest version (%1)."
+},
+{
+"i": 195,
+"c": "MainWindow",
+"s": "Ruche %1 is available."
+},
+{
+"i": 196,
+"c": "MainWindow",
+"s": "Update available"
+},
+{
+"i": 197,
+"c": "MainWindow",
+"s": "<h3>Ruche %1 is available</h3>You have %2 (%3)."
+},
+{
+"i": 198,
+"c": "MainWindow",
+"s": "No release notes."
+},
+{
+"i": 199,
+"c": "MainWindow",
+"s": "Update now"
+},
+{
+"i": 200,
+"c": "MainWindow",
+"s": "Download"
+},
+{
+"i": 201,
+"c": "MainWindow",
+"s": "Open the release page"
+},
+{
+"i": 202,
+"c": "MainWindow",
+"s": "Later"
+},
+{
+"i": 203,
+"c": "MainWindow",
+"s": "Skip this version"
+},
+{
+"i": 204,
+"c": "MainWindow",
+"s": "Downloading Ruche %1…"
+},
+{
+"i": 205,
+"c": "MainWindow",
+"s": "Cancel"
+},
+{
+"i": 206,
+"c": "MainWindow",
+"s": "Update"
+},
+{
+"i": 207,
+"c": "MainWindow",
+"s": "The update failed: %1"
+},
+{
+"i": 208,
+"c": "MainWindow",
+"s": "Restarting into Ruche %1…"
+},
+{
+"i": 209,
+"c": "MainWindow",
+"s": "<h3>Ruche %1</h3><p>A light music player with a MusicBee-style layout.</p><p>Playback by libmpv. Tags by TagLib. Live stream titles from ICY, in-band tags, HLS #EXTINF and HLS ID3 timed metadata.</p><p><a href=\"%2\">%2</a></p>"
+},
+{
+"i": 210,
+"c": "MainWindow",
+"s": "Check for updates"
+},
+{
+"i": 211,
+"c": "MainWindow",
+"s": "Rename tab"
+},
+{
+"i": 212,
+"c": "MainWindow",
+"s": "Name:"
+},
+{
+"i": 213,
+"c": "Notifier",
+"s": "Show Ruche"
+},
+{
+"i": 214,
+"c": "Notifier",
+"s": "Next"
+},
+{
+"i": 215,
+"c": "NowPlayingPanel",
+"s": "Nothing playing"
+},
+{
+"i": 216,
+"c": "PlaybackController",
+"s": "stream ended"
+},
+{
+"i": 217,
+"c": "PlaybackController",
+"s": "Could not play %1: %2"
+},
+{
+"i": 218,
+"c": "PlaybackController",
+"s": "Gave up on %1: %2"
+},
+{
+"i": 219,
+"c": "PlaybackController",
+"s": "Stream dropped (%1), reconnecting in %2 s"
+},
+{
+"i": 220,
+"c": "PlayerBar",
+"s": "Shuffle"
+},
+{
+"i": 221,
+"c": "PlayerBar",
+"s": "Previous (Ctrl+Left)"
+},
+{
+"i": 222,
+"c": "PlayerBar",
+"s": "Play / Pause (Space)"
+},
+{
+"i": 223,
+"c": "PlayerBar",
+"s": "Next (Ctrl+Right)"
+},
+{
+"i": 224,
+"c": "PlayerBar",
+"s": "Repeat"
+},
+{
+"i": 225,
+"c": "PlayerBar",
+"s": "Mute"
+},
+{
+"i": 226,
+"c": "PlayerBar",
+"s": "Nothing playing"
+},
+{
+"i": 227,
+"c": "PlayerBar",
+"s": "LIVE"
+},
+{
+"i": 228,
+"c": "PlayerBar",
+"s": "Repeat: off"
+},
+{
+"i": 229,
+"c": "PlayerBar",
+"s": "Repeat: all"
+},
+{
+"i": 230,
+"c": "PlayerBar",
+"s": "Repeat: one track"
+},
+{
+"i": 231,
+"c": "PluginHost",
+"s": "out of memory"
+},
+{
+"i": 232,
+"c": "PluginHost",
+"s": "can't read %1"
+},
+{
+"i": 233,
+"c": "PluginHost",
+"s": "started"
+},
+{
+"i": 234,
+"c": "QObject",
+"s": "Could not write %1"
+},
+{
+"i": 235,
+"c": "QObject",
+"s": "This only works when Ruche runs from its AppImage."
+},
+{
+"i": 236,
+"c": "QObject",
+"s": "Could not remove %1"
+},
+{
+"i": 237,
+"c": "QObject",
+"s": "%1 d %2 h"
+},
+{
+"i": 238,
+"c": "QObject",
+"s": "%1 h %2 min"
+},
+{
+"i": 239,
+"c": "QObject",
+"s": "%1 s"
+},
+{
+"i": 240,
+"c": "QObject",
+"s": "%1 min"
+},
+{
+"i": 241,
+"c": "QObject",
+"s": "Images (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;All files (*)"
+},
+{
+"i": 242,
+"c": "QObject",
+"s": "Name"
+},
+{
+"i": 243,
+"c": "QObject",
+"s": "Address"
+},
+{
+"i": 244,
+"c": "QObject",
+"s": "Choose image…"
+},
+{
+"i": 245,
+"c": "QObject",
+"s": "Paste"
+},
+{
+"i": 246,
+"c": "QObject",
+"s": "Remove"
+},
+{
+"i": 247,
+"c": "QObject",
+"s": "Logo"
+},
+{
+"i": 248,
+"c": "QObject",
+"s": "or a web address: https://…/logo.png (optional)"
+},
+{
+"i": 249,
+"c": "QObject",
+"s": "No logo"
+},
+{
+"i": 250,
+"c": "QObject",
+"s": "Choose a logo"
+},
+{
+"i": 251,
+"c": "QObject",
+"s": "%1 is not an image Ruche can read."
+},
+{
+"i": 252,
+"c": "QObject",
+"s": "Add music folder"
+},
+{
+"i": 253,
+"c": "QObject",
+"s": "Dark"
+},
+{
+"i": 254,
+"c": "QObject",
+"s": "Light"
+},
+{
+"i": 255,
+"c": "QObject",
+"s": "Midnight"
+},
+{
+"i": 256,
+"c": "QObject",
+"s": "Frost"
+},
+{
+"i": 257,
+"c": "QObject",
+"s": "Forest"
+},
+{
+"i": 258,
+"c": "QObject",
+"s": "Plum"
+},
+{
+"i": 259,
+"c": "QObject",
+"s": "Ember"
+},
+{
+"i": 260,
+"c": "QObject",
+"s": "Paper"
+},
+{
+"i": 261,
+"c": "QObject",
+"s": "Black (OLED)"
+},
+{
+"i": 262,
+"c": "QObject",
+"s": "Installing the update…"
+},
+{
+"i": 263,
+"c": "StationModel",
+"s": "Station"
+},
+{
+"i": 264,
+"c": "StationModel",
+"s": "Now playing / last heard"
+},
+{
+"i": 265,
+"c": "StationModel",
+"s": "Address"
+},
+{
+"i": 266,
+"c": "Stations",
+"s": "%1 is not an image Ruche can read."
+},
+{
+"i": 267,
+"c": "Stations",
+"s": "The address did not return an image Ruche can read."
+},
+{
+"i": 268,
+"c": "Stations",
+"s": "Could not save the logo."
+},
+{
+"i": 269,
+"c": "Stations",
+"s": "No stations found at that address."
+},
+{
+"i": 270,
+"c": "StreamResolver",
+"s": "The playlist has no playable entries."
+},
+{
+"i": 271,
+"c": "StreamResolver",
+"s": "Cannot open %1"
+},
+{
+"i": 272,
+"c": "TrackTableModel",
+"s": "Title"
+},
+{
+"i": 273,
+"c": "TrackTableModel",
+"s": "Artist"
+},
+{
+"i": 274,
+"c": "TrackTableModel",
+"s": "Album"
+},
+{
+"i": 275,
+"c": "TrackTableModel",
+"s": "Year"
+},
+{
+"i": 276,
+"c": "TrackTableModel",
+"s": "Genre"
+},
+{
+"i": 277,
+"c": "TrackTableModel",
+"s": "Time"
+},
+{
+"i": 278,
+"c": "TrackTableModel",
+"s": "Plays"
+},
+{
+"i": 279,
+"c": "Updater",
+"s": "Windows installer"
+},
+{
+"i": 280,
+"c": "Updater",
+"s": "portable zip"
+},
+{
+"i": 281,
+"c": "Updater",
+"s": "own build"
+},
+{
+"i": 282,
+"c": "Updater",
+"s": "The newest release (%1) has no version number in its tag."
+},
+{
+"i": 283,
+"c": "Updater",
+"s": "This release has no file for this kind of install (%1)."
+},
+{
+"i": 284,
+"c": "Updater",
+"s": "Can't write %1"
+},
+{
+"i": 285,
+"c": "Updater",
+"s": "The download is incomplete."
+},
+{
+"i": 286,
+"c": "Updater",
+"s": "Couldn't get the checksums to verify the download: %1"
+},
+{
+"i": 287,
+"c": "Updater",
+"s": "Can't read the download."
+},
+{
+"i": 288,
+"c": "Updater",
+"s": "The release's checksums don't list %1."
+},
+{
+"i": 289,
+"c": "Updater",
+"s": "The download doesn't match the release's checksum; it was deleted."
+},
+{
+"i": 290,
+"c": "Updater",
+"s": "Ruche %1 is in %2. Start it from there."
+},
+{
+"i": 291,
+"c": "Updater",
+"s": "Downloaded to %1. Install it with: sudo %2"
+},
+{
+"i": 292,
+"c": "Updater",
+"s": "The update wasn't installed (no permission was given)."
+},
+{
+"i": 293,
+"c": "Updater",
+"s": "The update couldn't be installed:\n%1"
+},
+{
+"i": 294,
+"c": "Updater",
+"s": "The file is %1; it can also be installed with: sudo %2"
+},
+{
+"i": 295,
+"c": "Updater",
+"s": "Ruche %1 was downloaded to %2 and opened with your software centre. If nothing opened, install it with: flatpak install --user \"%2\""
+},
+{
+"i": 296,
+"c": "Updater",
+"s": "Couldn't start the installer %1."
+},
+{
+"i": 297,
+"c": "Updater",
+"s": "Ruche %1 was downloaded to %2. Close Ruche and unzip it over this copy (%3)."
+},
+{
+"i": 298,
+"c": "Updater",
+"s": "This copy of Ruche wasn't installed from a release; the release page was opened instead."
+}
+]

@@ -1,0 +1,15 @@
+{
+  "name": "ListenBrainz",
+  "version": "1.0",
+  "description": "Sends what you listen to to ListenBrainz (listenbrainz.org), the open alternative to Last.fm.",
+  "author": "Ruche",
+  "settings": [
+    { "key": "token", "label": "User token", "type": "password", "default": "",
+      "help": "From listenbrainz.org/settings (\"User token\")." },
+    { "key": "radio", "label": "Also send radio songs", "type": "bool", "default": false,
+      "help": "Uses the station's \"Artist - Title\". Off by default: stations' titles are often ads or jingles." },
+    { "key": "now_playing", "label": "Show \"playing now\" on your profile", "type": "bool", "default": true },
+    { "key": "server", "label": "Server", "type": "string", "default": "https://api.listenbrainz.org",
+      "help": "Change only for a self-hosted ListenBrainz." }
+  ]
+}

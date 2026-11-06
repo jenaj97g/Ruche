@@ -1,0 +1,299 @@
+0	(Onbekend)
+1	nummer
+2	nummers
+3	Uit
+4	Er is een Discord-applicatie-ID nodig
+5	Discord zoeken…
+6	Discord of Vesktop draait niet (of Rich Presence staat uit); elke 15 s opnieuw proberen
+7	Verbonden met Discord
+8	Verbonden met Discord als %1
+9	Luistert naar de radio
+10	Kon de lokale streamdoorgifte niet openen: %1
+11	Alle genres
+12	Alle artiesten
+13	Alle albums
+14	Bibliotheek scannen… %1 / %2
+15	Bibliotheek bijgewerkt: %1 toegevoegd, %2 gewijzigd, %3 verwijderd
+16	Logo voor %1: %2
+17	Menu
+18	Bibliotheek doorzoeken  (Ctrl+F)
+19	Afspelen
+20	Toevoegen aan Nu aan het spelen
+21	Afspeellijst verwijderen
+22	Afspeellijst ‘%1’ verwijderen?
+23	Tabblad hernoemen…
+24	Tabbladen en mappen…
+25	Zender toevoegen
+26	M3U / M3U8 / PLS importeren
+27	Importeren van adres
+28	Bewerken
+29	Verwijderen
+30	Exporteren
+31	Zenderlijst als M3U8 opslaan, met logo’s
+32	Nog geen zenders.\n\nVoeg een zender toe via het adres van de stream, of importeer een M3U / M3U8 / PLS-lijst.\nHLS- (.m3u8), Icecast- en Shoutcast-streams werken.
+33	Titel kopiëren
+34	Hele geschiedenis kopiëren
+35	Verwijderen uit Nu aan het spelen
+36	Muziekmap toevoegen…
+37	Bibliotheek opnieuw scannen
+38	Bestanden openen…
+39	Bestanden openen
+40	Audio en afspeellijsten (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Alle bestanden (*)
+41	Afspeellijst of zenderlijst importeren…
+42	Importeren
+43	Afspeellijsten (*.m3u *.m3u8 *.pls)
+44	Nu aan het spelen opslaan als afspeellijst…
+45	Nu aan het spelen is leeg.
+46	Afspeellijst opslaan
+47	Naam van de afspeellijst:
+48	Plug-ins
+49	Plug-ins beheren…
+50	Instellingen…
+51	Over Ruche
+52	Afsluiten
+53	BIBLIOTHEEK
+54	Muziek
+55	Nu aan het spelen
+56	Radio
+57	AFSPEELLIJSTEN
+58	Nog geen afspeellijsten
+59	Nog geen muziekmap. Menu (☰) → Muziekmap toevoegen…
+60	nummer
+61	nummers
+62	mono
+63	Live  ·  HLS
+64	Livestream
+65	Verbinden…
+66	Uitzendgeschiedenis
+67	Hierna
+68	Toevoegen aan afspeellijst
+69	Nieuwe afspeellijst…
+70	Nieuwe afspeellijst
+71	%1 toegevoegd aan ‘%2’
+72	Hierna afspelen
+73	Verwijderen uit afspeellijst
+74	Map openen
+75	Zender bewerken
+76	Logo kiezen
+77	Logo
+78	Het klembord bevat geen afbeelding of adres van een afbeelding.
+79	Geen zenders om te exporteren.
+80	Zenders exporteren
+81	M3U8-zenderlijst (*.m3u8)
+82	%1 geëxporteerd met logo’s
+83	zender
+84	zenders
+85	Zenders importeren
+86	Zenderlijsten (*.m3u *.m3u8 *.pls);;Alle bestanden (*)
+87	Geïmporteerd: %1
+88	Geen nieuwe zenders in dit bestand.
+89	Adres van een M3U/M3U8/PLS-zenderlijst, HLS-stream of stream:
+90	Bewerken…
+91	Adres kopiëren
+92	Logo uit bestand…
+93	Logo van webadres…
+94	Adres van de logo-afbeelding:
+95	Logo plakken
+96	Logo verwijderen
+97	Muziekmap toevoegen
+98	Instellingen
+99	Systeemtaal
+100	Taal
+101	Gaat in na een herstart van Ruche. De vertalingen zijn automatisch gemaakt en kunnen fouten bevatten; verbeteringen zijn welkom op GitHub.
+102	Bij het starten van Ruche op een nieuwe versie controleren
+103	Nu controleren
+104	Updates
+105	Deze kopie: %1 (%2). Updates komen van %3.
+106	Algemeen
+107	Tabbladen
+108	Tabblad toevoegen
+109	Tabblad verwijderen
+110	Met twee of meer tabbladen verschijnt boven de bibliotheek een tabbalk om te wisselen (bijvoorbeeld Muziek en Airchecks). Dubbelklik op een tabblad om het te hernoemen; sleep om de volgorde te wijzigen.
+111	Muziekmappen
+112	Map
+113	Tabblad
+114	Naamloos
+115	Nieuw tabblad
+116	Map toevoegen…
+117	Map verwijderen
+118	Bibliotheek
+119	Uit
+120	Per nummer
+121	Per album
+122	ReplayGain
+123	Afspelen
+124	Systeem volgen (donker of licht)
+125	Aangepast…
+126	Thema
+127	Honing
+128	Koraal
+129	Rood
+130	Roze
+131	Paars
+132	Blauw
+133	Blauwgroen
+134	Groen
+135	Eigen accent van het thema
+136	Andere…
+137	Accent
+138	Achtergrond
+139	Tekst
+140	Een aangepast thema wordt gemaakt uit deze twee kleuren en het accent; alle andere tinten worden ervan gemengd.
+141	Accentkleur
+142	Uiterlijk
+143	Als Ruche niet het actieve venster is
+144	Altijd
+145	Meldingen bij nummers
+146	Een pop-up met de titel, artiest en hoes als een nummer begint of de titel op de radio verandert.
+147	Blijven spelen in het systeemvak als het venster sluit
+148	Minimaliseren naar systeemvak
+149	Ruche in het toepassingenmenu tonen, zodat het aan de taakbalk kan worden vastgemaakt
+150	Toepassingenmenu
+151	Op Discord tonen waar ik naar luister
+152	Discord
+153	Ook radiozenders
+154	Albumhoezen tonen (opgezocht op artiest en album bij iTunes en MusicBrainz)
+155	Applicatie-ID van discord.com/developers
+156	Applicatie-ID
+157	Werkt met de Discord-app en met Vesktop (zet daarin arRPC / Rich Presence aan). Toont het nummer, de artiest en de hoes; bij radio alleen een schone ‘Artiest - Titel’ en het zenderlogo. Tijdens pauze of stop wordt niets getoond.
+158	Bureaublad
+159	Instellen…
+160	Logboek…
+161	Plug-inmap openen
+162	Opnieuw laden
+163	Plug-ins zijn Lua-scripts in %1. Ze draaien met jouw rechten, dus zet alleen plug-ins aan die je vertrouwt. Zelf een schrijven: PLUGINS.md (meegeleverd met Ruche en in de broncode).
+164	voorbeeld
+165	Fout: %1
+166	Door %1
+167	Nog geen plug-ins. Zet een plug-in in de plug-inmap en klik op Opnieuw laden.
+168	%1: logboek
+169	Het logboek is nog leeg.
+170	Ruche nu herstarten om de taal te wijzigen?
+171	De nieuwe taal wordt gebruikt de volgende keer dat Ruche start.
+172	Ruche staat nu in het toepassingenmenu. Klik er daar of op de taakbalk met de rechtermuisknop op om het vast te maken.
+173	Verwijderd uit het toepassingenmenu.
+174	Die zenders staan al in je lijst.
+175	Niets afspeelbaar in %1
+176	Afspeellijst ‘%1’ geïmporteerd
+177	Afspelen / Pauzeren
+178	Volgend nummer
+179	Vorig nummer
+180	Ruche tonen
+181	Gestopt
+182	Gepauzeerd
+183	Er speelt niets
+184	Pauzeren
+185	Ruche verbergen
+186	De muziek speelt door in het systeemvak. Klik met de rechtermuisknop op het pictogram om af te sluiten.
+187	%1: instellingen
+188	Bij elke start controleren of er een nieuwe versie van Ruche is?
+189	Ruche vraagt GitHub wat de nieuwste release is; er wordt niets anders verstuurd. Is er een nieuwere, dan vraagt Ruche het eerst voordat die wordt geïnstalleerd. Je kunt dit later wijzigen in Instellingen → Algemeen.
+190	Controleren bij starten
+191	Niet controleren
+192	Controleren…
+193	Kon niet op updates controleren: %1
+194	Je hebt de nieuwste versie (%1).
+195	Ruche %1 is beschikbaar.
+196	Update beschikbaar
+197	<h3>Ruche %1 is beschikbaar</h3>Je hebt %2 (%3).
+198	Geen releaseopmerkingen.
+199	Nu bijwerken
+200	Downloaden
+201	Releasepagina openen
+202	Later
+203	Deze versie overslaan
+204	Ruche %1 downloaden…
+205	Annuleren
+206	Bijwerken
+207	Bijwerken mislukt: %1
+208	Herstarten in Ruche %1…
+209	<h3>Ruche %1</h3><p>Een lichte muziekspeler met een indeling in de stijl van MusicBee.</p><p>Afspelen met libmpv. Tags met TagLib. Livetitels uit ICY, ingebedde tags, HLS #EXTINF en getimede ID3-metadata in HLS.</p><p><a href="%2">%2</a></p>
+210	Op updates controleren
+211	Tabblad hernoemen
+212	Naam:
+213	Ruche tonen
+214	Volgende
+215	Er speelt niets
+216	stream beëindigd
+217	Kon %1 niet afspelen: %2
+218	%1 opgegeven: %2
+219	Stream onderbroken (%1), opnieuw verbinden over %2 s
+220	Willekeurig
+221	Vorige (Ctrl+Links)
+222	Afspelen / Pauzeren (Spatie)
+223	Volgende (Ctrl+Rechts)
+224	Herhalen
+225	Dempen
+226	Er speelt niets
+227	LIVE
+228	Herhalen: uit
+229	Herhalen: alles
+230	Herhalen: één nummer
+231	onvoldoende geheugen
+232	kan %1 niet lezen
+233	actief
+234	Kon %1 niet schrijven
+235	Dit werkt alleen als Ruche vanuit zijn AppImage draait.
+236	Kon %1 niet verwijderen
+237	%1 d %2 u
+238	%1 u %2 min
+239	%1 s
+240	%1 min
+241	Afbeeldingen (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Alle bestanden (*)
+242	Naam
+243	Adres
+244	Afbeelding kiezen…
+245	Plakken
+246	Verwijderen
+247	Logo
+248	of een webadres: https://…/logo.png (optioneel)
+249	Geen logo
+250	Logo kiezen
+251	%1 is geen afbeelding die Ruche kan lezen.
+252	Muziekmap toevoegen
+253	Donker
+254	Licht
+255	Middernacht
+256	Rijp
+257	Bos
+258	Pruim
+259	Gloed
+260	Papier
+261	Zwart (OLED)
+262	Update installeren…
+263	Zender
+264	Nu / laatst
+265	Adres
+266	%1 is geen afbeelding die Ruche kan lezen.
+267	Het adres bevatte geen afbeelding die Ruche kan lezen.
+268	Kon het logo niet opslaan.
+269	Geen zenders gevonden op dat adres.
+270	Niets afspeelbaar in de afspeellijst.
+271	Kan %1 niet openen
+272	Titel
+273	Artiest
+274	Album
+275	Jaar
+276	Genre
+277	Duur
+278	Keer gespeeld
+279	Windows-installatieprogramma
+280	draagbare zip
+281	eigen build
+282	De tag van de nieuwste release (%1) bevat geen versienummer.
+283	Deze release heeft geen bestand voor deze installatiewijze (%1).
+284	Kan niet schrijven naar %1
+285	De download is niet voltooid.
+286	Kon de controlesommen om de download te controleren niet ophalen: %1
+287	Kan de download niet lezen.
+288	De controlesommen van de release bevatten %1 niet.
+289	De download komt niet overeen met de controlesom van de release; hij is verwijderd.
+290	Ruche %1 staat in %2. Start het van daaruit.
+291	Gedownload naar %1. Installeer het met: sudo %2
+292	De update is niet geïnstalleerd (geen toestemming gegeven).
+293	De update kon niet worden geïnstalleerd:\n%1
+294	Het bestand is %1; het kan ook worden geïnstalleerd met: sudo %2
+295	Ruche %1 is gedownload naar %2 en geopend in je softwarecentrum. Als er niets openging, installeer het dan met: flatpak install --user "%2"
+296	Kon het installatieprogramma %1 niet starten.
+297	Ruche %1 is gedownload naar %2. Sluit Ruche en pak het uit over deze kopie (%3).
+298	Deze kopie van Ruche is niet vanuit een release geïnstalleerd; in plaats daarvan is de releasepagina geopend.

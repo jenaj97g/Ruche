@@ -1,0 +1,13 @@
+{
+  "name": "Now playing file",
+  "version": "1.0",
+  "description": "Writes the current song to a text file, for OBS and other stream overlays.",
+  "author": "Ruche",
+  "settings": [
+    { "key": "path", "label": "File", "type": "string", "default": "",
+      "help": "Leave empty for now-playing.txt in the plugin's data folder (its path shows in the log)." },
+    { "key": "format", "label": "Format", "type": "string", "default": "{artist} - {title}",
+      "help": "Fields: {title} {artist} {album} {year} {station}. Parts with an empty field are dropped." },
+    { "key": "clear_when_stopped", "label": "Empty the file when stopped or paused", "type": "bool", "default": true }
+  ]
+}

@@ -1,0 +1,299 @@
+0	(Neznámé)
+1	skladba
+2	skladeb
+3	Vypnuto
+4	Je potřeba ID aplikace Discord
+5	Hledá se Discord…
+6	Discord ani Vesktop neběží (nebo mají vypnuté Rich Presence); nový pokus každých 15 s
+7	Připojeno k Discordu
+8	Připojeno k Discordu jako %1
+9	Poslech rádia
+10	Nepodařilo se otevřít místní přenos streamu: %1
+11	Všechny žánry
+12	Všichni interpreti
+13	Všechna alba
+14	Prohledávání knihovny… %1 / %2
+15	Knihovna aktualizována: přidáno %1, změněno %2, odebráno %3
+16	Logo pro %1: %2
+17	Nabídka
+18	Hledat v knihovně  (Ctrl+F)
+19	Přehrát
+20	Přidat do Právě hraje
+21	Smazat seznam skladeb
+22	Smazat seznam skladeb „%1“?
+23	Přejmenovat kartu…
+24	Karty a složky…
+25	Přidat stanici
+26	Importovat M3U / M3U8 / PLS
+27	Importovat z adresy
+28	Upravit
+29	Odebrat
+30	Exportovat
+31	Uložit seznam stanic jako M3U8 i s logy
+32	Zatím žádné stanice.\n\nPřidejte stanici podle adresy streamu nebo importujte seznam M3U / M3U8 / PLS.\nFungují streamy HLS (.m3u8), Icecast i Shoutcast.
+33	Kopírovat název
+34	Kopírovat celou historii
+35	Odebrat z Právě hraje
+36	Přidat složku s hudbou…
+37	Znovu prohledat knihovnu
+38	Otevřít soubory…
+39	Otevřít soubory
+40	Zvuk a seznamy skladeb (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Všechny soubory (*)
+41	Importovat seznam skladeb nebo stanic…
+42	Importovat
+43	Seznamy skladeb (*.m3u *.m3u8 *.pls)
+44	Uložit Právě hraje jako seznam skladeb…
+45	Právě hraje je prázdné.
+46	Uložit seznam skladeb
+47	Název seznamu skladeb:
+48	Zásuvné moduly
+49	Spravovat zásuvné moduly…
+50	Nastavení…
+51	O aplikaci Ruche
+52	Ukončit
+53	KNIHOVNA
+54	Hudba
+55	Právě hraje
+56	Rádio
+57	SEZNAMY SKLADEB
+58	Zatím žádné seznamy
+59	Zatím žádná složka s hudbou. Nabídka (☰) → Přidat složku s hudbou…
+60	skladba
+61	skladeb
+62	mono
+63	Živě  ·  HLS
+64	Živý stream
+65	Připojování…
+66	Historie vysílání
+67	Následuje
+68	Přidat do seznamu skladeb
+69	Nový seznam skladeb…
+70	Nový seznam skladeb
+71	%1 přidáno do „%2“
+72	Přehrát jako další
+73	Odebrat ze seznamu skladeb
+74	Otevřít složku
+75	Upravit stanici
+76	Vybrat logo
+77	Logo
+78	Ve schránce není obrázek ani adresa obrázku.
+79	Žádné stanice k exportu.
+80	Exportovat stanice
+81	Seznam stanic M3U8 (*.m3u8)
+82	%1 exportován i s logy
+83	stanice
+84	stanic
+85	Importovat stanice
+86	Seznamy stanic (*.m3u *.m3u8 *.pls);;Všechny soubory (*)
+87	Importováno: %1
+88	V tomto souboru nejsou žádné nové stanice.
+89	Adresa seznamu stanic M3U/M3U8/PLS, streamu HLS nebo streamu:
+90	Upravit…
+91	Kopírovat adresu
+92	Logo ze souboru…
+93	Logo z webové adresy…
+94	Adresa obrázku loga:
+95	Vložit logo
+96	Odebrat logo
+97	Přidat složku s hudbou
+98	Nastavení
+99	Jazyk systému
+100	Jazyk
+101	Projeví se po restartu aplikace Ruche. Překlady jsou strojové a mohou obsahovat chyby; opravy jsou na GitHubu vítány.
+102	Při spuštění Ruche zkontrolovat novou verzi
+103	Zkontrolovat nyní
+104	Aktualizace
+105	Tato kopie: %1 (%2). Aktualizace přicházejí z %3.
+106	Obecné
+107	Karty
+108	Přidat kartu
+109	Odebrat kartu
+110	Když jsou karty dvě nebo víc, nad knihovnou se zobrazí lišta karet pro přepínání (třeba Hudba a Airchecks). Dvojklik na kartu ji přejmenuje; přetažením změníte pořadí.
+111	Složky s hudbou
+112	Složka
+113	Karta
+114	Bez názvu
+115	Nová karta
+116	Přidat složku…
+117	Odebrat složku
+118	Knihovna
+119	Vypnuto
+120	Podle skladby
+121	Podle alba
+122	ReplayGain
+123	Přehrávání
+124	Podle systému (tmavý nebo světlý)
+125	Vlastní…
+126	Motiv
+127	Med
+128	Korál
+129	Červená
+130	Růžová
+131	Fialová
+132	Modrá
+133	Tyrkysová
+134	Zelená
+135	Vlastní zvýraznění motivu
+136	Jiná…
+137	Zvýraznění
+138	Pozadí
+139	Text
+140	Vlastní motiv vzniká z těchto dvou barev a zvýraznění; všechny ostatní odstíny se z nich míchají.
+141	Barva zvýraznění
+142	Vzhled
+143	Když Ruche není aktivní okno
+144	Vždy
+145	Oznámení o skladbách
+146	Vyskakovací okno s názvem, interpretem a obalem, když začne skladba nebo se změní název v rádiu.
+147	Po zavření okna hrát dál v systémové liště
+148	Minimalizovat do lišty
+149	Zobrazit Ruche v nabídce aplikací, aby šel připnout na hlavní panel
+150	Nabídka aplikací
+151	Zobrazovat na Discordu, co poslouchám
+152	Discord
+153	Včetně rádiových stanic
+154	Zobrazovat obaly alb (hledají se podle interpreta a alba na iTunes a MusicBrainz)
+155	ID aplikace z discord.com/developers
+156	ID aplikace
+157	Funguje s aplikací Discord i s Vesktopem (v něm zapněte arRPC / Rich Presence). Zobrazuje skladbu, interpreta a obal; u rádia jen čisté „Interpret - Název“ a logo stanice. Při pozastavení a zastavení se nezobrazuje nic.
+158	Plocha
+159	Nastavit…
+160	Protokol…
+161	Otevřít složku zásuvných modulů
+162	Znovu načíst
+163	Zásuvné moduly jsou skripty v Lua ve složce %1. Běží s vašimi oprávněními, takže zapínejte jen ty, kterým věříte. Jak napsat vlastní: PLUGINS.md (dodáván s Ruche a ve zdrojovém kódu).
+164	ukázka
+165	Chyba: %1
+166	Autor: %1
+167	Zatím žádné zásuvné moduly. Vložte modul do složky zásuvných modulů a klikněte na Znovu načíst.
+168	%1: protokol
+169	Protokol je zatím prázdný.
+170	Restartovat Ruche hned a změnit jazyk?
+171	Nový jazyk se použije při příštím spuštění Ruche.
+172	Ruche je teď v nabídce aplikací. Klikněte na něj pravým tlačítkem tam nebo na hlavním panelu a připněte ho.
+173	Odebráno z nabídky aplikací.
+174	Tyto stanice už v seznamu máte.
+175	V %1 není nic k přehrání
+176	Seznam skladeb „%1“ importován
+177	Přehrát / Pozastavit
+178	Další skladba
+179	Předchozí skladba
+180	Zobrazit Ruche
+181	Zastaveno
+182	Pozastaveno
+183	Nic nehraje
+184	Pozastavit
+185	Skrýt Ruche
+186	Hudba hraje dál v systémové liště. Pro ukončení klikněte pravým tlačítkem na ikonu.
+187	%1: nastavení
+188	Kontrolovat při každém spuštění novou verzi Ruche?
+189	Ruche se zeptá GitHubu, které vydání je nejnovější; nic dalšího se neposílá. Když je k dispozici novější, Ruche se před instalací zeptá. Změnit to můžete později v Nastavení → Obecné.
+190	Kontrolovat při spuštění
+191	Nekontrolovat
+192	Kontrola…
+193	Nepodařilo se zkontrolovat aktualizace: %1
+194	Máte nejnovější verzi (%1).
+195	Je k dispozici Ruche %1.
+196	K dispozici je aktualizace
+197	<h3>Je k dispozici Ruche %1</h3>Máte %2 (%3).
+198	Bez poznámek k vydání.
+199	Aktualizovat nyní
+200	Stáhnout
+201	Otevřít stránku vydání
+202	Později
+203	Tuto verzi přeskočit
+204	Stahování Ruche %1…
+205	Zrušit
+206	Aktualizace
+207	Aktualizace se nezdařila: %1
+208	Restartování do Ruche %1…
+209	<h3>Ruche %1</h3><p>Lehký hudební přehrávač s rozvržením ve stylu MusicBee.</p><p>Přehrávání zajišťuje libmpv, štítky TagLib. Živé názvy z ICY, vložených štítků, HLS #EXTINF a časovaných metadat ID3 v HLS.</p><p><a href="%2">%2</a></p>
+210	Zkontrolovat aktualizace
+211	Přejmenovat kartu
+212	Název:
+213	Zobrazit Ruche
+214	Další
+215	Nic nehraje
+216	stream skončil
+217	Nepodařilo se přehrát %1: %2
+218	Vzdává se %1: %2
+219	Stream se přerušil (%1), nové připojení za %2 s
+220	Náhodně
+221	Předchozí (Ctrl+Vlevo)
+222	Přehrát / Pozastavit (Mezerník)
+223	Další (Ctrl+Vpravo)
+224	Opakovat
+225	Ztlumit
+226	Nic nehraje
+227	ŽIVĚ
+228	Opakování: vypnuto
+229	Opakování: vše
+230	Opakování: jedna skladba
+231	nedostatek paměti
+232	nelze přečíst %1
+233	běží
+234	Nepodařilo se zapsat %1
+235	Funguje to jen tehdy, když Ruche běží ze svého AppImage.
+236	Nepodařilo se odebrat %1
+237	%1 d %2 h
+238	%1 h %2 min
+239	%1 s
+240	%1 min
+241	Obrázky (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Všechny soubory (*)
+242	Název
+243	Adresa
+244	Vybrat obrázek…
+245	Vložit
+246	Odebrat
+247	Logo
+248	nebo webová adresa: https://…/logo.png (nepovinné)
+249	Bez loga
+250	Vybrat logo
+251	%1 není obrázek, který Ruche umí přečíst.
+252	Přidat složku s hudbou
+253	Tmavý
+254	Světlý
+255	Půlnoc
+256	Jinovatka
+257	Les
+258	Švestka
+259	Žhavé uhlíky
+260	Papír
+261	Černý (OLED)
+262	Instalace aktualizace…
+263	Stanice
+264	Teď / naposledy
+265	Adresa
+266	%1 není obrázek, který Ruche umí přečíst.
+267	Na adrese nebyl obrázek, který Ruche umí přečíst.
+268	Logo se nepodařilo uložit.
+269	Na této adrese nebyly nalezeny žádné stanice.
+270	V seznamu skladeb není nic k přehrání.
+271	Nelze otevřít %1
+272	Název
+273	Interpret
+274	Album
+275	Rok
+276	Žánr
+277	Délka
+278	Přehrání
+279	instalátor pro Windows
+280	přenosný zip
+281	vlastní sestavení
+282	Štítek nejnovějšího vydání (%1) neobsahuje číslo verze.
+283	Toto vydání nemá soubor pro tento způsob instalace (%1).
+284	Nelze zapsat %1
+285	Stahování nebylo dokončeno.
+286	Nepodařilo se získat kontrolní součty k ověření stažení: %1
+287	Stažený soubor nelze přečíst.
+288	Kontrolní součty vydání neobsahují %1.
+289	Stažený soubor neodpovídá kontrolnímu součtu vydání; byl smazán.
+290	Ruche %1 je v %2. Spusťte ho odtud.
+291	Staženo do %1. Nainstalujte příkazem: sudo %2
+292	Aktualizace nebyla nainstalována (oprávnění nebylo uděleno).
+293	Aktualizaci se nepodařilo nainstalovat:\n%1
+294	Soubor: %1; lze ho nainstalovat i příkazem: sudo %2
+295	Ruche %1 byl stažen do %2 a otevřen v centru softwaru. Pokud se nic neotevřelo, nainstalujte ho příkazem: flatpak install --user "%2"
+296	Instalátor %1 se nepodařilo spustit.
+297	Ruche %1 byl stažen do %2. Zavřete Ruche a rozbalte ho přes tuto kopii (%3).
+298	Tato kopie Ruche nebyla nainstalována z vydání; místo toho se otevřela stránka vydání.

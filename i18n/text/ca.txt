@@ -1,0 +1,299 @@
+0	(Desconegut)
+1	pista
+2	pistes
+3	Desactivat
+4	Cal un identificador d’aplicació de Discord
+5	S’està cercant el Discord…
+6	El Discord o el Vesktop no s’està executant (o el seu Rich Presence està desactivat); es torna a provar cada 15 s
+7	Connectat al Discord
+8	Connectat al Discord com a %1
+9	Ràdio en directe
+10	No s’ha pogut obrir el repetidor local del flux: %1
+11	Tots els gèneres
+12	Tots els artistes
+13	Tots els àlbums
+14	S’està analitzant la biblioteca… %1 / %2
+15	Biblioteca actualitzada: %1 afegides, %2 canviades, %3 suprimides
+16	Logotip de %1: %2
+17	Menú
+18	Cerca a la biblioteca  (Ctrl+F)
+19	Reprodueix
+20	Afegeix a En reproducció
+21	Suprimeix la llista de reproducció
+22	Voleu suprimir la llista de reproducció «%1»?
+23	Canvia el nom de la pestanya…
+24	Pestanyes i carpetes…
+25	Afegeix una emissora
+26	Importa M3U / M3U8 / PLS
+27	Importa des d’una adreça
+28	Edita
+29	Treu
+30	Exporta
+31	Desa la llista d’emissores com a M3U8, amb els logotips
+32	Encara no hi ha cap emissora.\n\nAfegiu-ne una amb l’adreça del flux, o importeu una llista M3U / M3U8 / PLS.\nFuncionen els fluxos HLS (.m3u8), Icecast i Shoutcast.
+33	Copia el títol
+34	Copia tot l’historial
+35	Treu d’En reproducció
+36	Afegeix una carpeta de música…
+37	Torna a analitzar la biblioteca
+38	Obre fitxers…
+39	Obre fitxers
+40	Àudio i llistes de reproducció (*.mp3 *.flac *.ogg *.oga *.opus *.m4a *.m4b *.mp4 *.aac *.wav *.wv *.ape *.aif *.aiff *.wma *.mpc *.m3u *.m3u8 *.pls);;Tots els fitxers (*)
+41	Importa una llista de reproducció o d’emissores…
+42	Importa
+43	Llistes de reproducció (*.m3u *.m3u8 *.pls)
+44	Desa En reproducció com a llista…
+45	En reproducció és buida.
+46	Desa la llista de reproducció
+47	Nom de la llista:
+48	Connectors
+49	Gestiona els connectors…
+50	Configuració…
+51	Quant al Ruche
+52	Surt
+53	BIBLIOTECA
+54	Música
+55	En reproducció
+56	Ràdio
+57	LLISTES DE REPRODUCCIÓ
+58	Encara cap llista
+59	Encara no hi ha cap carpeta de música. Menú (☰) → Afegeix una carpeta de música…
+60	pista
+61	pistes
+62	mono
+63	Directe  ·  HLS
+64	Flux en directe
+65	S’està connectant…
+66	Historial d’emissió
+67	A continuació
+68	Afegeix a una llista de reproducció
+69	Llista de reproducció nova…
+70	Llista de reproducció nova
+71	S’ha afegit %1 a «%2»
+72	Reprodueix a continuació
+73	Treu de la llista de reproducció
+74	Obre la carpeta que el conté
+75	Edita l’emissora
+76	Trieu un logotip
+77	Logotip
+78	El porta-retalls no conté cap imatge ni adreça d’imatge.
+79	No hi ha emissores per exportar.
+80	Exporta les emissores
+81	Llista d’emissores M3U8 (*.m3u8)
+82	S’ha exportat %1 amb els logotips
+83	emissora
+84	emissores
+85	Importa emissores
+86	Llistes d’emissores (*.m3u *.m3u8 *.pls);;Tots els fitxers (*)
+87	S’ha importat %1
+88	No hi ha emissores noves en aquest fitxer.
+89	Adreça d’una llista d’emissores M3U/M3U8/PLS, d’un flux HLS o d’un flux:
+90	Edita…
+91	Copia l’adreça
+92	Logotip des d’un fitxer…
+93	Logotip des d’una adreça web…
+94	Adreça de la imatge del logotip:
+95	Enganxa el logotip
+96	Treu el logotip
+97	Afegeix una carpeta de música
+98	Configuració
+99	Llengua del sistema
+100	Llengua
+101	S’aplica quan es reinicia el Ruche. Les traduccions s’han fet automàticament i poden tenir errors; les correccions són benvingudes a GitHub.
+102	Cerca una versió nova quan s’inicia el Ruche
+103	Comprova-ho ara
+104	Actualitzacions
+105	Aquesta còpia: %1 (%2). Les actualitzacions vénen de %3.
+106	General
+107	Pestanyes
+108	Afegeix una pestanya
+109	Treu la pestanya
+110	Amb dues pestanyes o més, una barra de pestanyes damunt de la biblioteca permet canviar-ne (per exemple, Música i Airchecks). Feu doble clic en una pestanya per canviar-ne el nom; arrossegueu-la per reordenar.
+111	Carpetes de música
+112	Carpeta
+113	Pestanya
+114	Sense títol
+115	Pestanya nova
+116	Afegeix una carpeta…
+117	Treu la carpeta
+118	Biblioteca
+119	Desactivat
+120	Guany de la pista
+121	Guany de l’àlbum
+122	ReplayGain
+123	Reproducció
+124	Com el sistema (fosc o clar)
+125	Personalitzat…
+126	Tema
+127	Mel
+128	Corall
+129	Vermell
+130	Rosa
+131	Violeta
+132	Blau
+133	Verd blavós
+134	Verd
+135	L’accent propi del tema
+136	Un altre…
+137	Accent
+138	Fons
+139	Text
+140	Un tema personalitzat es fa amb aquests dos colors i l’accent; tots els altres tons se’n barregen.
+141	Color d’accent
+142	Aparença
+143	Quan el Ruche no és la finestra activa
+144	Sempre
+145	Notificacions de cançons
+146	Una finestra emergent amb el títol, l’artista i la caràtula quan comença una pista o canvia el títol de la ràdio.
+147	Continua sonant a la safata del sistema quan es tanca la finestra
+148	Tanca a la safata
+149	Mostra el Ruche al menú d’aplicacions, perquè es pugui fixar a la barra de tasques
+150	Menú d’aplicacions
+151	Mostra al Discord el que estic escoltant
+152	Discord
+153	Inclou les emissores de ràdio
+154	Mostra les caràtules (cercades per artista i àlbum a iTunes i MusicBrainz)
+155	Identificador d’aplicació de discord.com/developers
+156	Identificador d’aplicació
+157	Funciona amb l’aplicació del Discord i amb el Vesktop (activeu-ne l’opció arRPC / Rich Presence). Mostra la cançó, l’artista i la caràtula; per a la ràdio, només un «Artista - Títol» net i el logotip de l’emissora. No es comparteix res en pausa o aturat.
+158	Escriptori
+159	Configura…
+160	Registre…
+161	Obre la carpeta de connectors
+162	Torna a carregar
+163	Els connectors són scripts Lua a %1. S’executen amb els vostres permisos, així que activeu només els que siguin de confiança. Com escriure’n un: PLUGINS.md (inclòs amb el Ruche i al seu codi font).
+164	exemple
+165	Error: %1
+166	Per %1
+167	Encara no hi ha connectors. Poseu-ne un a la carpeta de connectors i premeu Torna a carregar.
+168	%1: registre
+169	Encara no s’ha registrat res.
+170	Voleu reiniciar el Ruche ara per canviar la llengua?
+171	La llengua nova s’utilitzarà la propera vegada que s’iniciï el Ruche.
+172	El Ruche és al menú d’aplicacions. Feu-hi clic amb el botó dret, allà o a la barra de tasques, per fixar-lo.
+173	S’ha tret del menú d’aplicacions.
+174	Aquestes emissores ja són a la vostra llista.
+175	No s’ha trobat res reproduïble a %1
+176	S’ha importat la llista de reproducció «%1»
+177	Reprodueix / Pausa
+178	Pista següent
+179	Pista anterior
+180	Mostra el Ruche
+181	Aturat
+182	En pausa
+183	No s’està reproduint res
+184	Pausa
+185	Amaga el Ruche
+186	Continua sonant a la safata del sistema. Feu clic amb el botó dret a la icona per sortir.
+187	%1: configuració
+188	Voleu que el Ruche cerqui una versió nova cada vegada que s’inicia?
+189	Pregunta a GitHub quina és la darrera versió del Ruche; no s’envia res més. Si n’hi ha una, el Ruche pregunta abans d’instal·lar-la. Podeu canviar-ho més endavant a Configuració → General.
+190	Comprova a l’inici
+191	No ho comprovis
+192	S’està comprovant…
+193	No s’han pogut cercar actualitzacions: %1
+194	Teniu la versió més recent (%1).
+195	El Ruche %1 està disponible.
+196	Actualització disponible
+197	<h3>El Ruche %1 està disponible</h3>Teniu la %2 (%3).
+198	Sense notes de la versió.
+199	Actualitza ara
+200	Baixa
+201	Obre la pàgina de la versió
+202	Més tard
+203	Omet aquesta versió
+204	S’està baixant el Ruche %1…
+205	Cancel·la
+206	Actualització
+207	L’actualització ha fallat: %1
+208	S’està reiniciant amb el Ruche %1…
+209	<h3>Ruche %1</h3><p>Un reproductor de música lleuger amb una disposició a l’estil del MusicBee.</p><p>Reproducció amb libmpv. Etiquetes amb TagLib. Títols dels fluxos en directe des d’ICY, etiquetes integrades, HLS #EXTINF i metadades ID3 temporitzades d’HLS.</p><p><a href="%2">%2</a></p>
+210	Cerca actualitzacions
+211	Canvia el nom de la pestanya
+212	Nom:
+213	Mostra el Ruche
+214	Següent
+215	No s’està reproduint res
+216	el flux s’ha acabat
+217	No s’ha pogut reproduir %1: %2
+218	S’ha abandonat %1: %2
+219	Flux interromput (%1), es torna a connectar d’aquí a %2 s
+220	Aleatori
+221	Anterior (Ctrl+Esquerra)
+222	Reprodueix / Pausa (Espai)
+223	Següent (Ctrl+Dreta)
+224	Repeteix
+225	Silencia
+226	No s’està reproduint res
+227	DIRECTE
+228	Repeteix: no
+229	Repeteix: tot
+230	Repeteix: una pista
+231	no hi ha prou memòria
+232	no es pot llegir %1
+233	iniciat
+234	No s’ha pogut escriure %1
+235	Només funciona quan el Ruche s’executa des de la seva AppImage.
+236	No s’ha pogut suprimir %1
+237	%1 d %2 h
+238	%1 h %2 min
+239	%1 s
+240	%1 min
+241	Imatges (*.png *.jpg *.jpeg *.svg *.svgz *.webp *.ico *.gif *.bmp);;Tots els fitxers (*)
+242	Nom
+243	Adreça
+244	Trieu una imatge…
+245	Enganxa
+246	Treu
+247	Logotip
+248	o una adreça web: https://…/logo.png (opcional)
+249	Sense logotip
+250	Trieu un logotip
+251	%1 no és una imatge que el Ruche pugui llegir.
+252	Afegeix una carpeta de música
+253	Fosc
+254	Clar
+255	Mitjanit
+256	Gebre
+257	Bosc
+258	Pruna
+259	Brasa
+260	Paper
+261	Negre (OLED)
+262	S’està instal·lant l’actualització…
+263	Emissora
+264	Ara sona / darrera escoltada
+265	Adreça
+266	%1 no és una imatge que el Ruche pugui llegir.
+267	L’adreça no ha retornat cap imatge que el Ruche pugui llegir.
+268	No s’ha pogut desar el logotip.
+269	No s’ha trobat cap emissora en aquesta adreça.
+270	La llista de reproducció no té res reproduïble.
+271	No es pot obrir %1
+272	Títol
+273	Artista
+274	Àlbum
+275	Any
+276	Gènere
+277	Durada
+278	Escoltes
+279	instal·lador de Windows
+280	zip portable
+281	compilació pròpia
+282	La darrera versió (%1) no té número de versió a l’etiqueta.
+283	Aquesta versió no té cap fitxer per a aquest tipus d’instal·lació (%1).
+284	No es pot escriure %1
+285	La baixada és incompleta.
+286	No s’han pogut obtenir les sumes de verificació per comprovar la baixada: %1
+287	No es pot llegir la baixada.
+288	Les sumes de verificació de la versió no inclouen %1.
+289	La baixada no coincideix amb la suma de verificació de la versió; s’ha esborrat.
+290	El Ruche %1 és a %2. Inicieu-lo des d’allà.
+291	S’ha baixat a %1. Instal·leu-lo amb: sudo %2
+292	No s’ha instal·lat l’actualització (no s’ha donat permís).
+293	No s’ha pogut instal·lar l’actualització:\n%1
+294	El fitxer és %1; també es pot instal·lar amb: sudo %2
+295	El Ruche %1 s’ha baixat a %2 i s’ha obert amb el centre de programari. Si no s’ha obert res, instal·leu-lo amb: flatpak install --user "%2"
+296	No s’ha pogut iniciar l’instal·lador %1.
+297	El Ruche %1 s’ha baixat a %2. Tanqueu el Ruche i descomprimiu-lo damunt d’aquesta còpia (%3).
+298	Aquesta còpia del Ruche no s’ha instal·lat des d’una versió publicada; s’ha obert la pàgina de la versió.

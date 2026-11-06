@@ -1,0 +1,33 @@
+<RCC>
+  <qresource prefix="/i18n">
+    <file>ruche_be.qm</file>
+    <file>ruche_ca.qm</file>
+    <file>ruche_cs.qm</file>
+    <file>ruche_de.qm</file>
+    <file>ruche_es.qm</file>
+    <file>ruche_fr.qm</file>
+    <file>ruche_ga.qm</file>
+    <file>ruche_hu.qm</file>
+    <file>ruche_ja.qm</file>
+    <file>ruche_nl.qm</file>
+    <file>ruche_pt.qm</file>
+    <file>ruche_pt_BR.qm</file>
+    <file>ruche_ro.qm</file>
+    <file>ruche_ru.qm</file>
+    <file>ruche_sr.qm</file>
+    <file>ruche_sr_Latn.qm</file>
+    <file>ruche_sv.qm</file>
+    <file>ruche_zh_CN.qm</file>
+    <file alias="qtbase_ca.qm">qt/qtbase_ca.qm</file>
+    <file alias="qtbase_cs.qm">qt/qtbase_cs.qm</file>
+    <file alias="qtbase_de.qm">qt/qtbase_de.qm</file>
+    <file alias="qtbase_es.qm">qt/qtbase_es.qm</file>
+    <file alias="qtbase_fr.qm">qt/qtbase_fr.qm</file>
+    <file alias="qtbase_hu.qm">qt/qtbase_hu.qm</file>
+    <file alias="qtbase_ja.qm">qt/qtbase_ja.qm</file>
+    <file alias="qtbase_nl.qm">qt/qtbase_nl.qm</file>
+    <file alias="qtbase_pt_BR.qm">qt/qtbase_pt_BR.qm</file>
+    <file alias="qtbase_ru.qm">qt/qtbase_ru.qm</file>
+    <file alias="qtbase_zh_CN.qm">qt/qtbase_zh_CN.qm</file>
+  </qresource>
+</RCC>

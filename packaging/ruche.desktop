@@ -1,0 +1,27 @@
+[Desktop Entry]
+Type=Application
+Name=Ruche
+GenericName=Music Player
+Comment=Light music player with a MusicBee-style layout and accurate live stream titles
+Exec=ruche %U
+TryExec=ruche
+Icon=ruche
+Terminal=false
+StartupNotify=true
+Categories=AudioVideo;Audio;Player;
+MimeType=audio/mpeg;audio/flac;audio/ogg;audio/x-vorbis+ogg;audio/opus;audio/mp4;audio/aac;audio/x-wav;audio/x-mpegurl;audio/mpegurl;application/vnd.apple.mpegurl;application/x-mpegurl;audio/x-scpls;
+Keywords=music;player;radio;stream;m3u8;hls;icecast;
+StartupWMClass=ruche
+Actions=PlayPause;Next;Previous;
+
+[Desktop Action PlayPause]
+Name=Play / Pause
+Exec=ruche --play-pause
+
+[Desktop Action Next]
+Name=Next track
+Exec=ruche --next
+
+[Desktop Action Previous]
+Name=Previous track
+Exec=ruche --previous
