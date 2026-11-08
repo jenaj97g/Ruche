@@ -345,3 +345,24 @@
 350	Impossible de décompresser le thème.
 351	Choisissez un fichier .qss, un dossier de thème ou un .zip.
 352	Ajouté
+353	Copier
+354	Chercher dans la bibliothèque
+355	Genius (paroles)
+356	Afficher la pochette du titre diffusé à la radio, cherchée sur iTunes et MusicBrainz
+357	Le logo de la station reste dans le coin. Désactivé : seulement le logo de la station.
+358	Plat
+359	Basses renforcées
+360	Aigus renforcés
+361	Voix
+362	Rock
+363	Électronique
+364	Classique
+365	Écoute à faible volume
+366	Égaliseur
+367	Utiliser l’égaliseur
+368	Personnalisé
+369	Fondu enchaîné
+370	Enchaîner les morceaux en fondu
+371	 s
+372	Aussi entre les morceaux qui se suivent sur un album
+373	Seulement quand un morceau se termine de lui-même : ceux que vous choisissez démarrent tout de suite, et la radio n’est jamais fondue. Les albums faits pour s’enchaîner sans blanc (live, mixes DJ) restent sans blanc sauf si la case ci-dessus est cochée.

@@ -1032,6 +1032,90 @@ Fișierele rămân unde sunt, iar adăugarea din nou a dosarelor le aduce înapo
         <source>Don't ask again</source>
         <translation>Nu mai întreba</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copiază</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Caută în bibliotecă</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (versuri)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Arată coperta piesei care se aude la radio, căutată pe iTunes și MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Sigla postului rămâne în colț. Dezactivat: doar sigla postului.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Plat</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Bas accentuat</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Înalte accentuate</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Voce</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Electronică</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Clasică</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Volum mic</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Egalizator</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Folosește egalizatorul</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Personalizat</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Tranziție</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Trece treptat de la o piesă la următoarea</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Și între piesele care se succed pe un album</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Doar când o piesă se termină singură: cele alese de dvs. pornesc imediat, iar radioul nu are niciodată tranziții. Albumele făcute să curgă fără pauze (live, mixuri DJ) rămân fără pauze dacă nu bifați caseta de mai sus.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

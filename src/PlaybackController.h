@@ -61,6 +61,10 @@ public:
     Repeat repeat() const { return m_repeat; }
     void setReplayGain(const QString &mode);
     void setTitleLog(const QString &file);
+    void setEqualizer(const QVector<double> &gains); // 10 bands in dB; empty: off
+    // Crossfade between library tracks that follow each other on their own. With
+    // betweenAlbumTracks off, consecutive tracks of one album still play gaplessly.
+    void setCrossfade(bool on, int seconds, bool betweenAlbumTracks);
 
     Mode mode() const { return m_mode; }
     bool isPaused() const;
@@ -95,6 +99,11 @@ private:
     void setStreamTitle(const QString &title);
     void pollStream();
     void scheduleReconnect(const QString &why);
+    void maybeStartCrossfade();
+    void beginFade();
+    void fadeStep();
+    void endCrossfade();
+    bool crossfadeAllowed(int from, int to) const;
 
     Library *m_lib;
     Player *m_player;
@@ -126,4 +135,21 @@ private:
     bool m_userStopped = false;
     QFile m_titleLog;
     QElapsedTimer m_stationClock;
+
+    QStringList m_mpvOptions;
+    QString m_replayGain = QStringLiteral("no");
+    QVector<double> m_eq;
+    bool m_xfade = false;
+    int m_xfadeSecs = 4;
+    bool m_xfadeAlbums = false;
+    // Crossfade: a second, short-lived player takes over the end of the outgoing track and
+    // fades it out while the main player moves on and fades the next one in.
+    Player *m_tail = nullptr;
+    bool m_fading = false;
+    QTimer m_fade;
+    QTimer m_tailGuard;
+    QTimer m_tailWait;        // waits for the main player to reach where the tail starts
+    double m_tailStart = 0;
+    bool m_tailReady = false;
+    QElapsedTimer m_fadeClock;
 };

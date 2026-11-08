@@ -345,3 +345,24 @@
 350	Motiv se nepodařilo rozbalit.
 351	Vyberte soubor .qss, složku motivu nebo .zip.
 352	Přidáno
+353	Kopírovat
+354	Najít v knihovně
+355	Genius (texty)
+356	Zobrazovat obal skladby, která hraje v rádiu, vyhledaný na iTunes a MusicBrainz
+357	Logo stanice zůstane v rohu. Vypnuto: jen logo stanice.
+358	Plochý
+359	Zvýrazněné basy
+360	Zvýrazněné výšky
+361	Zpěv
+362	Rock
+363	Elektronika
+364	Klasika
+365	Tichý poslech
+366	Ekvalizér
+367	Používat ekvalizér
+368	Vlastní
+369	Prolínání
+370	Prolínat skladbu do další
+371	 s
+372	I mezi skladbami, které na albu jdou po sobě
+373	Jen když skladba skončí sama: skladby, které vyberete, začnou hned a rádio se nikdy neprolíná. Alba určená k přehrávání bez mezer (živá alba, DJ mixy) zůstanou bez mezer, pokud není zaškrtnuté políčko výše.

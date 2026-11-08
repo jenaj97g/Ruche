@@ -1032,6 +1032,90 @@ Själva filerna ligger kvar där de är, och lägger du till mapparna igen komme
         <source>Don't ask again</source>
         <translation>Fråga inte igen</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopiera</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Sök i biblioteket</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (låttexter)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Visa omslaget till låten som spelas på radion, sökt på iTunes och MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Stationens logga stannar i hörnet. Av: bara stationens logga.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Platt</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Förstärkt bas</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Förstärkt diskant</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Sång</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Elektroniskt</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Klassiskt</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Låg volym</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Equalizer</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Använd equalizern</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Anpassad</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Övertoning</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Tona över från ett spår till nästa</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Även mellan spår som följer varandra på ett album</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Bara när ett spår tar slut av sig självt: spår du väljer startar direkt, och radio tonas aldrig över. Album som ska spelas utan pauser (livealbum, DJ-mixar) förblir sömlösa om inte rutan ovan är ikryssad.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

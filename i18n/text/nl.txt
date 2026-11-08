@@ -345,3 +345,24 @@
 350	Kon het thema niet uitpakken.
 351	Kies een .qss-bestand, een themamap of een .zip.
 352	Toegevoegd
+353	Kopiëren
+354	Zoeken in de bibliotheek
+355	Genius (songteksten)
+356	De hoes tonen van het nummer dat op de radio speelt, opgezocht bij iTunes en MusicBrainz
+357	Het zenderlogo blijft in de hoek. Uit: alleen het zenderlogo.
+358	Vlak
+359	Extra bas
+360	Extra hoog
+361	Zang
+362	Rock
+363	Elektronisch
+364	Klassiek
+365	Zacht luisteren
+366	Equalizer
+367	De equalizer gebruiken
+368	Aangepast
+369	Crossfade
+370	Het ene nummer in het volgende laten overvloeien
+371	 s
+372	Ook tussen nummers die op een album op elkaar volgen
+373	Alleen als een nummer vanzelf afloopt: nummers die je kiest beginnen meteen, en radio wordt nooit overgevloeid. Albums die zonder pauzes horen te spelen (live-albums, dj-mixen) blijven naadloos, tenzij het vakje hierboven is aangevinkt.

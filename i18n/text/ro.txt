@@ -345,6 +345,27 @@
 350	Tema nu a putut fi dezarhivată.
 351	Alegeți un fișier .qss, un dosar de temă sau un .zip.
 352	Adăugată
+353	Copiază
+354	Caută în bibliotecă
+355	Genius (versuri)
+356	Arată coperta piesei care se aude la radio, căutată pe iTunes și MusicBrainz
+357	Sigla postului rămâne în colț. Dezactivat: doar sigla postului.
+358	Plat
+359	Bas accentuat
+360	Înalte accentuate
+361	Voce
+362	Rock
+363	Electronică
+364	Clasică
+365	Volum mic
+366	Egalizator
+367	Folosește egalizatorul
+368	Personalizat
+369	Tranziție
+370	Trece treptat de la o piesă la următoarea
+371	 s
+372	Și între piesele care se succed pe un album
+373	Doar când o piesă se termină singură: cele alese de dvs. pornesc imediat, iar radioul nu are niciodată tranziții. Albumele făcute să curgă fără pauze (live, mixuri DJ) rămân fără pauze dacă nu bifați caseta de mai sus.
 qt:OK	OK
 qt:Cancel	Anulează
 qt:Close	Închide

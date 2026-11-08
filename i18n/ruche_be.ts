@@ -1032,6 +1032,90 @@ The files themselves stay where they are, and adding the folders again brings th
         <source>Don't ask again</source>
         <translation>Больш не пытацца</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Капіраваць</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Знайсці ў бібліятэцы</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (тэксты)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Паказваць вокладку песні, якая гучыць на радыё (шукаецца ў iTunes і MusicBrainz)</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Лагатып станцыі застаецца ў куце. Выключана: толькі лагатып станцыі.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Роўны</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Узмоцненыя басы</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Узмоцненыя высокія</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Вакал</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Рок</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Электроніка</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Класіка</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Ціхае слуханне</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Эквалайзер</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Выкарыстоўваць эквалайзер</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Свой</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Плаўны пераход</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Плаўна пераходзіць ад трэка да наступнага</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> с</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Таксама паміж трэкамі, што ідуць запар на альбоме</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Толькі калі трэк сканчаецца сам: выбраныя вамі трэкі пачынаюцца адразу, а радыё ніколі не міксуецца. Альбомы, разлічаныя на прайграванне без паўз (канцэртныя, DJ-міксы), граюць без паўз, калі не адзначаны сцяжок вышэй.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

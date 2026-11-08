@@ -1032,6 +1032,90 @@ Samotné soubory zůstanou, kde jsou, a když složky přidáte znovu, vrátí s
         <source>Don't ask again</source>
         <translation>Už se neptat</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopírovat</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Najít v knihovně</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (texty)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Zobrazovat obal skladby, která hraje v rádiu, vyhledaný na iTunes a MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Logo stanice zůstane v rohu. Vypnuto: jen logo stanice.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Plochý</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Zvýrazněné basy</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Zvýrazněné výšky</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Zpěv</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Elektronika</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Klasika</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Tichý poslech</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Ekvalizér</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Používat ekvalizér</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Vlastní</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Prolínání</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Prolínat skladbu do další</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>I mezi skladbami, které na albu jdou po sobě</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Jen když skladba skončí sama: skladby, které vyberete, začnou hned a rádio se nikdy neprolíná. Alba určená k přehrávání bez mezer (živá alba, DJ mixy) zůstanou bez mezer, pokud není zaškrtnuté políčko výše.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

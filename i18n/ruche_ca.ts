@@ -1032,6 +1032,90 @@ Els fitxers es queden on són, i si torneu a afegir les carpetes tornen.</transl
         <source>Don't ask again</source>
         <translation>No ho tornis a preguntar</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copia</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Cerca a la biblioteca</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (lletres)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Mostra la caràtula de la cançó que sona a la ràdio, cercada a iTunes i MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>El logotip de l’emissora queda a la cantonada. Desactivat: només el logotip de l’emissora.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Pla</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Greus reforçats</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Aguts reforçats</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Veu</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Electrònica</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Clàssica</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Volum baix</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Equalitzador</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Fes servir l’equalitzador</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Personalitzat</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Fos encadenat</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Fon una cançó amb la següent</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>També entre cançons seguides d’un mateix àlbum</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Només quan una cançó acaba sola: les que trieu comencen de seguida, i la ràdio no es fon mai. Els àlbums fets per sonar sense pauses (en directe, sessions de DJ) continuen sense pauses llevat que marqueu la casella de dalt.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

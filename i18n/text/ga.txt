@@ -345,6 +345,27 @@
 350	Níorbh fhéidir an téama a dhíphacáil.
 351	Roghnaigh comhad .qss, fillteán téama nó .zip.
 352	Curtha leis
+353	Cóipeáil
+354	Aimsigh sa leabharlann
+355	Genius (liricí)
+356	Taispeáin clúdach an amhráin atá ar an raidió, aimsithe ar iTunes agus MusicBrainz
+357	Fanann lógó an stáisiúin sa chúinne. As: lógó an stáisiúin amháin.
+358	Cothrom
+359	Dord treisithe
+360	Tribil treisithe
+361	Guth
+362	Rac
+363	Leictreonach
+364	Clasaiceach
+365	Éisteacht chiúin
+366	Cothromóir
+367	Úsáid an cothromóir
+368	Saincheaptha
+369	Traschéimniú
+370	Traschéimnigh ó rian amháin go dtí an chéad cheann eile
+371	 s
+372	Idir rianta a leanann a chéile ar albam freisin
+373	Ach amháin nuair a chríochnaíonn rian leis féin: tosaíonn rianta a roghnaíonn tú láithreach, agus ní dhéantar traschéimniú riamh ar an raidió. Fanann albaim atá le seinm gan bhearnaí (albaim bheo, meascáin DJ) gan bhearnaí mura bhfuil an bosca thuas ticeáilte.
 qt:OK	OK
 qt:Cancel	Cealaigh
 qt:Close	Dún

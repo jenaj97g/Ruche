@@ -1032,6 +1032,90 @@ Les fichiers eux-mêmes restent où ils sont, et ajouter à nouveau les dossiers
         <source>Don't ask again</source>
         <translation>Ne plus demander</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Copier</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Chercher dans la bibliothèque</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (paroles)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Afficher la pochette du titre diffusé à la radio, cherchée sur iTunes et MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Le logo de la station reste dans le coin. Désactivé : seulement le logo de la station.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Plat</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Basses renforcées</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Aigus renforcés</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Voix</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Électronique</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Classique</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Écoute à faible volume</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Égaliseur</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Utiliser l’égaliseur</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Personnalisé</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Fondu enchaîné</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Enchaîner les morceaux en fondu</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Aussi entre les morceaux qui se suivent sur un album</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Seulement quand un morceau se termine de lui-même : ceux que vous choisissez démarrent tout de suite, et la radio n’est jamais fondue. Les albums faits pour s’enchaîner sans blanc (live, mixes DJ) restent sans blanc sauf si la case ci-dessus est cochée.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

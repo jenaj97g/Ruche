@@ -1032,6 +1032,90 @@ The files themselves stay where they are, and adding the folders again brings th
         <source>Don't ask again</source>
         <translation>不再询问</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>复制</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>在音乐库中查找</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius(歌词)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>显示电台正在播放的歌曲封面(在 iTunes 和 MusicBrainz 上查找)</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>电台台标保留在角落。关闭:只显示电台台标。</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>平直</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>低音增强</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>高音增强</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>人声</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>摇滚</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>电子</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>古典</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>小音量</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>均衡器</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>使用均衡器</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>自定义</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>淡入淡出</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>从一首曲目淡入淡出到下一首</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> 秒</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>专辑中相邻的曲目之间也淡入淡出</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>仅在曲目自然播放完时生效:你自己选择的曲目会立即开始,电台从不淡入淡出。为无间隙播放而制作的专辑(现场专辑、DJ 混音)保持无间隙,除非勾选上面的选项。</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

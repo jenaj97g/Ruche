@@ -51,6 +51,8 @@ public:
     explicit CoverView(int radius = 6, QWidget *parent = nullptr);
     void setImage(const QImage &img);
     void setLogo(const QImage &img); // fitted on a backdrop instead of cropped like album art
+    // A small picture in the corner over the cover (the station's logo on a radio song's cover).
+    void setBadge(const QImage &img);
     void setPlaceholder(int icon) { m_placeholder = icon; update(); }
     bool hasHeightForWidth() const override { return true; }
     int heightForWidth(int w) const override { return w; }
@@ -65,6 +67,8 @@ protected:
 
 private:
     QPixmap m_pix;
+    QPixmap m_badge;
+    QColor m_badgeBackdrop;
     int m_radius;
     int m_placeholder;
     bool m_contain = false;
@@ -94,6 +98,7 @@ Q_SIGNALS:
     void shuffleToggled(bool on);
     void repeatClicked();
     void seekRequested(double seconds);
+    void lookupRequested(bool artist, const QPoint &globalPos); // the title or artist was clicked
     void volumeChanged(int v);
     void coverClicked();
 
@@ -118,11 +123,13 @@ public:
     void setInfo(const QString &title, const QString &artist, const QString &album, const QString &tech);
     void setCover(const QImage &img, int placeholderIcon);
     void setLogo(const QImage &img);
+    void setCoverWithBadge(const QImage &cover, const QImage &badge); // radio: the song's cover, the station's logo
     void setListTitle(const QString &t);
     QListWidget *list() const { return m_list; }
 
 Q_SIGNALS:
     void itemActivated(int row);
+    void lookupRequested(bool artist, const QPoint &globalPos);
 
 private:
     CoverView *m_cover;

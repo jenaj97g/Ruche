@@ -5,6 +5,7 @@
 #include "Theme.h"
 
 #include <QBoxLayout>
+#include <functional>
 #include <QDateTime>
 #include <QToolTip>
 #include <QWheelEvent>
@@ -125,12 +126,21 @@ void CoverView::setImage(const QImage &img)
 {
     m_contain = false;
     m_pix = img.isNull() ? QPixmap() : QPixmap::fromImage(img);
+    m_badge = QPixmap();
+    update();
+}
+
+void CoverView::setBadge(const QImage &img)
+{
+    m_badge = img.isNull() ? QPixmap() : QPixmap::fromImage(img);
+    m_badgeBackdrop = Logo::backdropFor(img);
     update();
 }
 
 void CoverView::setLogo(const QImage &img)
 {
     m_contain = true;
+    m_badge = QPixmap();
     m_backdrop = Logo::backdropFor(img);
     m_pix = img.isNull() ? QPixmap() : QPixmap::fromImage(img);
     update();
@@ -170,9 +180,51 @@ void CoverView::paintEvent(QPaintEvent *)
     ps.scale(r.size(), Qt::KeepAspectRatioByExpanding);
     const QRectF target(r.center().x() - ps.width() / 2, r.center().y() - ps.height() / 2, ps.width(), ps.height());
     p.drawPixmap(target, m_pix, m_pix.rect());
+    if (!m_badge.isNull() && side >= 120) { // too small to read on the player bar's thumbnail
+        const qreal b = side * 0.26, m = side * 0.045;
+        const QRectF tile(r.right() - m - b, r.bottom() - m - b, b, b);
+        p.setClipping(false);
+        QPainterPath round;
+        round.addRoundedRect(tile, b * 0.16, b * 0.16);
+        p.fillPath(round, m_badgeBackdrop);
+        p.setPen(QPen(QColor(0, 0, 0, 70), 1));
+        p.drawPath(round);
+        const qreal pad = b * 0.12;
+        QSizeF ls = m_badge.size() / m_badge.devicePixelRatio();
+        ls.scale(tile.adjusted(pad, pad, -pad, -pad).size(), Qt::KeepAspectRatio);
+        p.setClipPath(round);
+        p.drawPixmap(QRectF(tile.center().x() - ls.width() / 2, tile.center().y() - ls.height() / 2, ls.width(), ls.height()),
+                     m_badge, m_badge.rect());
+    }
 }
 
 // ---------------------------------------------------------------------------
+
+namespace {
+// Makes a label act like a link: a left click calls `fn` with where it happened.
+class ClickFilter : public QObject {
+public:
+    ClickFilter(QWidget *w, std::function<void(QPoint)> fn) : QObject(w), m_fn(std::move(fn))
+    {
+        w->setCursor(Qt::PointingHandCursor);
+        w->installEventFilter(this);
+    }
+    bool eventFilter(QObject *o, QEvent *e) override
+    {
+        if (e->type() == QEvent::MouseButtonRelease) {
+            auto *me = static_cast<QMouseEvent *>(e);
+            if (me->button() == Qt::LeftButton && static_cast<QWidget *>(o)->rect().contains(me->position().toPoint())) {
+                m_fn(me->globalPosition().toPoint());
+                return true;
+            }
+        }
+        return false;
+    }
+
+private:
+    std::function<void(QPoint)> m_fn;
+};
+} // namespace
 
 static QToolButton *makeButton(Icons::Name icon, const QString &tip, int size, QWidget *parent)
 {
@@ -198,6 +250,8 @@ PlayerBar::PlayerBar(QWidget *parent) : QWidget(parent)
     m_title = new ElidedLabel(this);
     m_title->setObjectName(QStringLiteral("barTitle"));
     m_artist = new ElidedLabel(this);
+    new ClickFilter(m_title, [this](QPoint at) { Q_EMIT lookupRequested(false, at); });
+    new ClickFilter(m_artist, [this](QPoint at) { Q_EMIT lookupRequested(true, at); });
     m_artist->setObjectName(QStringLiteral("barArtist"));
     auto *info = new QVBoxLayout;
     info->setSpacing(2);
@@ -426,6 +480,8 @@ NowPlayingPanel::NowPlayingPanel(QWidget *parent) : QWidget(parent)
     m_title->setWordWrap(true);
     m_title->setTextInteractionFlags(Qt::TextSelectableByMouse);
     m_artist = new QLabel(this);
+    new ClickFilter(m_title, [this](QPoint at) { Q_EMIT lookupRequested(false, at); });
+    new ClickFilter(m_artist, [this](QPoint at) { Q_EMIT lookupRequested(true, at); });
     m_artist->setObjectName(QStringLiteral("npArtist"));
     m_artist->setWordWrap(true);
     m_album = new QLabel(this);
@@ -473,6 +529,13 @@ void NowPlayingPanel::setCover(const QImage &img, int placeholderIcon)
 {
     m_cover->setPlaceholder(placeholderIcon);
     m_cover->setImage(img);
+}
+
+void NowPlayingPanel::setCoverWithBadge(const QImage &cover, const QImage &badge)
+{
+    m_cover->setPlaceholder(Icons::Radio);
+    m_cover->setImage(cover);
+    m_cover->setBadge(badge);
 }
 
 void NowPlayingPanel::setLogo(const QImage &img)

@@ -13,6 +13,7 @@
 #include <QTimer>
 
 class QLocalSocket;
+class CoverLookup;
 class QNetworkAccessManager;
 class PlaybackController;
 class Library;
@@ -21,7 +22,7 @@ class Stations;
 class DiscordPresence : public QObject {
     Q_OBJECT
 public:
-    DiscordPresence(PlaybackController *pc, Library *lib, Stations *stations, QObject *parent = nullptr);
+    DiscordPresence(PlaybackController *pc, Library *lib, Stations *stations, CoverLookup *covers, QObject *parent = nullptr);
     ~DiscordPresence() override;
 
     // The application registered at discord.com/developers; its name is what Discord shows
@@ -58,17 +59,12 @@ private:
     void scheduleUpdate();
     void pushActivity();
     QJsonObject buildActivity();
-    QString coverFor(const QString &artist, const QString &album, const QString &title); // URL, or empty
-    void lookUpCover(const QString &key, const QString &artist, const QString &album, const QString &title);
-    void lookUpMusicBrainz(const QString &key, const QString &artist, const QString &album);
-    void coverFound(const QString &key, const QString &url);
-    void loadCoverCache();
-    void saveCoverCache();
     void restart();
 
     PlaybackController *m_pc;
     Library *m_lib;
     Stations *m_stations;
+    CoverLookup *m_covers;
     QLocalSocket *m_sock = nullptr;
     QStringList m_candidates;
     int m_candidate = 0;
@@ -77,10 +73,6 @@ private:
     bool m_ready = false;
     bool m_showRadio = true;
     bool m_lookUpCovers = true;
-    QNetworkAccessManager *m_nam = nullptr;
-    QHash<QString, QString> m_covers; // "artist\nalbum" -> cover URL ("" = none found)
-    QSet<QString> m_coverPending;
-    bool m_coverCacheLoaded = false;
     QString m_clientId;
     QString m_user;
     Status m_status = Status::Off;

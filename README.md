@@ -34,17 +34,23 @@ The Windows files aren't code-signed, so SmartScreen may warn the first time
   AIFF, WMA, MPC, TTA), keeps it in SQLite, browses by genre, artist and album, and searches
   ignoring accents ("ete" finds "Été"). Click a column header to sort by it (title,
   artist, time, plays, date added…); click again to reverse, a third time for album order.
-- Playback through libmpv: gapless, ReplayGain (Settings), shuffle and repeat. Scroll over
+- Playback through libmpv: gapless, ReplayGain, a 10-band equalizer and crossfade (both off
+  until turned on in Settings → Playback), shuffle and repeat. Scroll over
   the progress bar to skip 5 s per notch (Shift: 30 s, Ctrl: 1 s); hovering shows the time
   under the cursor; Shift+← / Shift+→ skip 5 s from the keyboard.
 - Library tabs that work like a browser's: say Music in one tab and radio airchecks in
   another. See "Library tabs" below.
 - Playlists are plain `.m3u8` files in `~/.local/share/ruche/playlists`. Make, rename and
-  delete them by right-clicking the sidebar; drag tracks onto one to add them.
+  delete them by right-clicking the sidebar. To add songs, drag tracks from the list, or
+  music files and folders from your file manager, onto a playlist in the sidebar or into an
+  open playlist.
 - Radio: Icecast/Shoutcast, `.pls`, M3U/M3U8 station lists, and HLS (`.m3u8`) streams.
   Import a list from a file or URL, or pass it on the command line: `ruche mes-radios.m3u8`.
 - Station logos, shown in the station list, the now-playing panel, the player bar and
-  MPRIS (desktop media widgets). See "Station logos" below.
+  MPRIS (desktop media widgets). See "Station logos" below. When the song on air is found
+  on iTunes or MusicBrainz, its cover is shown instead, with the logo in the corner.
+- Click the title or artist of what's playing to copy it, find it in the library, or look it
+  up on MusicBrainz, Last.fm, Discogs, Genius, YouTube or Wikipedia.
 - Song notifications: a pop-up with the title, artist and cover (or station logo) when a
   track starts or the radio title changes. See "Song notifications" below.
 - Plugins in Lua: react to songs, control playback, add menu entries, call web services.
@@ -166,7 +172,7 @@ and `--play-pause`/`--next`/`--previous`, work without a display (TTY, SSH, scri
 
 - **General**: language, whether to check for updates on start, and crash logs.
 - **Library**: tabs and the music folders in each, and whether closing a tab asks first.
-- **Playback**: ReplayGain.
+- **Playback**: ReplayGain, radio song covers, the equalizer and crossfade.
 - **Appearance**: theme and accent colour. Changes show straight away; Cancel puts the old
   look back. "Match the system" follows the desktop's dark/light setting as it changes.
   A custom theme takes a background and a text colour (plus the accent) and mixes every
@@ -247,6 +253,18 @@ The translations were machine-made and may have mistakes. To fix one, edit
 patterns survived, and send a pull request. For a new language, start from
 `i18n/ruche_template.ts` in Qt Linguist, or copy a text file. Cherokee isn't included:
 it needs a native speaker to translate it, and the template is there for one.
+
+## Equalizer and crossfade
+
+Both are in Settings → Playback and stay off until you turn them on.
+
+- **Equalizer**: 10 bands from 31 Hz to 16 kHz, ±12 dB, with presets. You hear changes while
+  you move the sliders; Cancel puts the old sound back. Boosts are balanced by turning the
+  whole signal down a little, so they don't clip.
+- **Crossfade**: 1 to 12 seconds. It only happens when a track ends on its own. Tracks you
+  pick yourself start straight away, and radio is never faded. Consecutive tracks of the same
+  album (live albums, DJ mixes, albums that flow into each other) stay gapless unless you
+  tick "Also between tracks that follow each other on an album".
 
 ## Song notifications
 

@@ -345,3 +345,24 @@
 350	Das Design konnte nicht entpackt werden.
 351	Wählen Sie eine .qss-Datei, einen Design-Ordner oder eine .zip.
 352	Hinzugefügt
+353	Kopieren
+354	In der Bibliothek suchen
+355	Genius (Songtexte)
+356	Cover des Titels im Radio zeigen, gesucht bei iTunes und MusicBrainz
+357	Das Senderlogo bleibt in der Ecke. Aus: nur das Senderlogo.
+358	Linear
+359	Bass verstärkt
+360	Höhen verstärkt
+361	Gesang
+362	Rock
+363	Elektronisch
+364	Klassik
+365	Leise hören
+366	Equalizer
+367	Equalizer verwenden
+368	Eigene
+369	Überblenden
+370	Von einem Titel in den nächsten überblenden
+371	 s
+372	Auch zwischen aufeinanderfolgenden Titeln eines Albums
+373	Nur wenn ein Titel von selbst endet: Titel, die Sie auswählen, starten sofort, und Radio wird nie überblendet. Alben, die ohne Pausen laufen sollen (Live-Alben, DJ-Mixe), bleiben lückenlos, außer das Kästchen oben ist angehakt.

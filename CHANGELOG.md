@@ -1,5 +1,34 @@
 # Changelog
 
+## 0.1.9 (2026-11-08)
+
+### Added
+- **Equalizer** in Settings → Playback: 10 bands, presets (Bass boost, Vocal, Rock,
+  Electronic, Classical, Quiet listening…), heard while you adjust it. Off until ticked.
+- **Crossfade** in Settings → Playback: 1 to 12 seconds between tracks that end on their own.
+  Tracks you pick start straight away, radio is never faded, and consecutive tracks of an
+  album stay gapless unless you choose otherwise. Off until ticked.
+- **Radio song covers**: when the song on air is found on iTunes or MusicBrainz, its cover
+  replaces the station logo in the now-playing panel, the player bar and desktop media
+  widgets, with the logo in the corner. Jingles, ads and talk show the logo. Can be turned
+  off in Settings → Playback.
+- Click the **title or artist** of what's playing for a menu: Copy, Find in the library, and
+  look-ups on MusicBrainz, Last.fm, Discogs, Genius (lyrics), YouTube and Wikipedia (in
+  Ruche's language).
+
+### Changed
+- Covers looked up for Discord and for the radio share one cache, so a song is only looked
+  up once.
+
+## 0.1.8 (2026-11-08)
+
+### Added
+- Music files and folders dragged in from a file manager can be dropped on a playlist in the
+  sidebar, on "New playlist…" (which then asks for a name), or into an open playlist, and
+  are added to it. Folders add every song inside, in name order. Files outside the library
+  work too.
+- Tracks and files dropped on **Now Playing** in the sidebar are queued.
+
 ## 0.1.7 (2026-11-06)
 
 ### Added

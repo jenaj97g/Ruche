@@ -1032,6 +1032,90 @@ Fanann na comhaid féin san áit a bhfuil siad, agus má chuireann tú na fillte
         <source>Don't ask again</source>
         <translation>Ná fiafraigh arís</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Cóipeáil</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Aimsigh sa leabharlann</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (liricí)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Taispeáin clúdach an amhráin atá ar an raidió, aimsithe ar iTunes agus MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Fanann lógó an stáisiúin sa chúinne. As: lógó an stáisiúin amháin.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Cothrom</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Dord treisithe</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Tribil treisithe</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Guth</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rac</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Leictreonach</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Clasaiceach</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Éisteacht chiúin</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Cothromóir</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Úsáid an cothromóir</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Saincheaptha</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Traschéimniú</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Traschéimnigh ó rian amháin go dtí an chéad cheann eile</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Idir rianta a leanann a chéile ar albam freisin</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Ach amháin nuair a chríochnaíonn rian leis féin: tosaíonn rianta a roghnaíonn tú láithreach, agus ní dhéantar traschéimniú riamh ar an raidió. Fanann albaim atá le seinm gan bhearnaí (albaim bheo, meascáin DJ) gan bhearnaí mura bhfuil an bosca thuas ticeáilte.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

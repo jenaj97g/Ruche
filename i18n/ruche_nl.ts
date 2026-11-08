@@ -1032,6 +1032,90 @@ De bestanden zelf blijven waar ze zijn, en als je de mappen weer toevoegt zijn z
         <source>Don't ask again</source>
         <translation>Niet meer vragen</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopiëren</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Zoeken in de bibliotheek</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (songteksten)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>De hoes tonen van het nummer dat op de radio speelt, opgezocht bij iTunes en MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Het zenderlogo blijft in de hoek. Uit: alleen het zenderlogo.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Vlak</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Extra bas</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Extra hoog</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Zang</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Elektronisch</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Klassiek</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Zacht luisteren</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Equalizer</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>De equalizer gebruiken</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Aangepast</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Crossfade</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Het ene nummer in het volgende laten overvloeien</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Ook tussen nummers die op een album op elkaar volgen</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Alleen als een nummer vanzelf afloopt: nummers die je kiest beginnen meteen, en radio wordt nooit overgevloeid. Albums die zonder pauzes horen te spelen (live-albums, dj-mixen) blijven naadloos, tenzij het vakje hierboven is aangevinkt.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

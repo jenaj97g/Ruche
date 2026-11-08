@@ -171,6 +171,55 @@ void Player::setVolume(int percent)
     mpv_set_property(m_mpv, "volume", MPV_FORMAT_DOUBLE, &v);
 }
 
+void Player::setVolumeF(double percent)
+{
+    if (!m_mpv)
+        return;
+    double v = qBound(0.0, percent, 100.0);
+    mpv_set_property(m_mpv, "volume", MPV_FORMAT_DOUBLE, &v);
+}
+
+void Player::setEqualizer(const QVector<double> &gains)
+{
+    if (!m_mpv)
+        return;
+    static const int kFreq[] = {31, 62, 125, 250, 500, 1000, 2000, 4000, 8000, 16000};
+    QByteArray af;
+    bool any = false;
+    double top = 0;
+    for (double g : gains) {
+        any = any || qAbs(g) >= 0.05;
+        top = qMax(top, g);
+    }
+    if (any && gains.size() == 10) {
+        // Peaking filters an octave wide; the volume step before them keeps boosts from clipping.
+        QByteArrayList chain;
+        if (top > 0)
+            chain << "volume=" + QByteArray::number(-top, 'f', 1) + "dB";
+        for (int i = 0; i < 10; ++i)
+            if (qAbs(gains[i]) >= 0.05)
+                chain << "equalizer=f=" + QByteArray::number(kFreq[i]) + ":t=o:w=1:g=" + QByteArray::number(gains[i], 'f', 1);
+        af = "@eq:lavfi=[" + chain.join(',') + "]";
+    }
+    mpv_set_property_string(m_mpv, "af", af.constData());
+}
+
+void Player::setStartAt(double seconds)
+{
+    if (!m_mpv)
+        return;
+    const QByteArray v = seconds < 0 ? QByteArray("none") : QByteArray::number(seconds, 'f', 3);
+    mpv_set_property_string(m_mpv, "start", v.constData());
+}
+
+void Player::playlistNext()
+{
+    if (!m_mpv)
+        return;
+    const char *args[] = {"playlist-next", "force", nullptr};
+    mpv_command(m_mpv, args);
+}
+
 void Player::setReplayGain(const QString &mode)
 {
     if (!m_mpv)

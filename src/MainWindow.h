@@ -62,6 +62,9 @@ private:
     void buildUi();
     void setupShortcuts();
     bool navDropEvent(QEvent *ev);
+    QVector<qint64> tracksFromPaths(const QStringList &paths);
+    QVector<qint64> tracksFromDrop(const class QMimeData *m);
+    void addToPlaylist(const QString &name, const QVector<qint64> &ids);
     QString askPlaylistName(const QString &title, const QString &current = QString());
     void newPlaylist();
     void renamePlaylist(const QString &name);
@@ -115,6 +118,10 @@ private:
     void applyTheme(const Theme::Choice &c);
     void watchThemeFile();
     void showCrashNotice();
+    QVector<double> eqSettings() const;
+    void showStationLogo();
+    void showLookupMenu(bool artistClicked, const QPoint &at);
+    void onRadioCover(const QString &url, const QImage &img);
     void addFolder();
     void openFiles(const QStringList &paths, bool play);
     void importPlaylistFile(const QString &file);
@@ -172,6 +179,9 @@ private:
     QWidget *m_tabRow = nullptr;
     QWidget *m_tabHint = nullptr;
     class QFileSystemWatcher *m_themeWatch = nullptr;
+    class CoverLookup *m_covers = nullptr;
+    QString m_radioCoverUrl; // the song cover shown for the radio, or empty for the station logo
+    bool m_radioCovers = true;
     QStringList m_tabNames;
     QHash<QString, QString> m_folderTab; // folder -> tab name
     bool m_tabsUpdating = false;

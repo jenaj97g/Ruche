@@ -1032,6 +1032,90 @@ Maguk a fájlok a helyükön maradnak, és ha újra hozzáadja a mappákat, viss
         <source>Don't ask again</source>
         <translation>Ne kérdezze többé</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Másolás</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Keresés a könyvtárban</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (dalszövegek)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>A rádióban szóló dal borítójának megjelenítése, az iTunes és a MusicBrainz alapján</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Az adó logója a sarokban marad. Kikapcsolva: csak az adó logója.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Sima</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Mélyek kiemelése</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Magasak kiemelése</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Ének</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Elektronikus</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Klasszikus</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Halk hallgatás</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Hangszínszabályzó</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Hangszínszabályzó használata</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Egyéni</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Áttűnés</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Áttűnés egyik számból a következőbe</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> mp</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Akkor is, ha a számok egy albumon követik egymást</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Csak akkor, ha egy szám magától ér véget: a kiválasztott számok azonnal indulnak, a rádiónál pedig sosincs áttűnés. A szünet nélküli lejátszásra szánt albumok (koncertlemezek, DJ-mixek) szünet nélkül szólnak, hacsak nincs bejelölve a fenti négyzet.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

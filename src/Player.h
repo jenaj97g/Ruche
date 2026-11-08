@@ -2,6 +2,7 @@
 #pragma once
 
 #include <QObject>
+#include <QVector>
 #include <QStringList>
 #include <QVariantMap>
 #include <atomic>
@@ -22,7 +23,12 @@ public:
     void togglePause();
     void seek(double seconds);
     void setVolume(int percent);
+    void setVolumeF(double percent); // for fades
     void setReplayGain(const QString &mode);
+    // 10 bands (31 Hz … 16 kHz), in dB; empty turns the equalizer off.
+    void setEqualizer(const QVector<double> &gains);
+    void setStartAt(double seconds); // where the next loaded file starts (< 0: the beginning)
+    void playlistNext();             // move on to the appended entry now
 
     bool isPaused() const { return m_paused; }
     bool isIdle() const { return m_idle; }

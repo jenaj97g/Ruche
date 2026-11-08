@@ -1032,6 +1032,90 @@ The files themselves stay where they are, and adding the folders again brings th
         <source>Don't ask again</source>
         <translation>Не питај поново</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Копирај</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>Пронађи у библиотеци</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (текстови)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Прикажи омот песме која иде на радију (тражи се на iTunes-у и MusicBrainz-у)</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Лого станице остаје у углу. Искључено: само лого станице.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Равно</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Појачан бас</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Појачани високи</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Вокал</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Рок</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Електроника</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Класика</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Тихо слушање</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Еквилајзер</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Користи еквилајзер</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Прилагођено</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Претапање</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Претапај једну нумеру у следећу</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> с</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>И између нумера које иду једна за другом на албуму</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Само када се нумера заврши сама: нумере које изаберете почињу одмах, а радио се никад не претапа. Албуми предвиђени за пуштање без пауза (живи албуми, DJ миксеви) остају без пауза ако поље изнад није штиклирано.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

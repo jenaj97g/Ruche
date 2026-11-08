@@ -1733,5 +1733,110 @@
 "i": 352,
 "c": "TrackTableModel",
 "s": "Added"
+},
+{
+"i": 353,
+"c": "MainWindow",
+"s": "Copy"
+},
+{
+"i": 354,
+"c": "MainWindow",
+"s": "Find in the library"
+},
+{
+"i": 355,
+"c": "MainWindow",
+"s": "Genius (lyrics)"
+},
+{
+"i": 356,
+"c": "MainWindow",
+"s": "Show the cover of the song on the radio, looked up on iTunes and MusicBrainz"
+},
+{
+"i": 357,
+"c": "MainWindow",
+"s": "The station's logo stays in the corner. Off: the station's logo only."
+},
+{
+"i": 358,
+"c": "MainWindow",
+"s": "Flat"
+},
+{
+"i": 359,
+"c": "MainWindow",
+"s": "Bass boost"
+},
+{
+"i": 360,
+"c": "MainWindow",
+"s": "Treble boost"
+},
+{
+"i": 361,
+"c": "MainWindow",
+"s": "Vocal"
+},
+{
+"i": 362,
+"c": "MainWindow",
+"s": "Rock"
+},
+{
+"i": 363,
+"c": "MainWindow",
+"s": "Electronic"
+},
+{
+"i": 364,
+"c": "MainWindow",
+"s": "Classical"
+},
+{
+"i": 365,
+"c": "MainWindow",
+"s": "Quiet listening"
+},
+{
+"i": 366,
+"c": "MainWindow",
+"s": "Equalizer"
+},
+{
+"i": 367,
+"c": "MainWindow",
+"s": "Use the equalizer"
+},
+{
+"i": 368,
+"c": "MainWindow",
+"s": "Custom"
+},
+{
+"i": 369,
+"c": "MainWindow",
+"s": "Crossfade"
+},
+{
+"i": 370,
+"c": "MainWindow",
+"s": "Fade from one track into the next"
+},
+{
+"i": 371,
+"c": "MainWindow",
+"s": " s"
+},
+{
+"i": 372,
+"c": "MainWindow",
+"s": "Also between tracks that follow each other on an album"
+},
+{
+"i": 373,
+"c": "MainWindow",
+"s": "Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked."
 }
 ]

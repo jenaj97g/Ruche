@@ -13,7 +13,9 @@
 #include "I18n.h"
 #include "PlaybackController.h"
 #include "Stations.h"
+#include "CoverLookup.h"
 #include "CrashLog.h"
+#include "NowPlaying.h"
 #include "Theme.h"
 #include "ThemeFiles.h"
 #include "Widgets.h"
@@ -54,6 +56,9 @@
 #include <QRegularExpression>
 #include <QLocale>
 #include <QSettings>
+#include <QUrlQuery>
+#include <QSlider>
+#include <QGridLayout>
 #include <QSignalBlocker>
 #include <QFileSystemWatcher>
 #include <QMouseEvent>
@@ -231,6 +236,8 @@ MainWindow::MainWindow(Library *lib, PlaybackController *pc, Stations *stations,
     connect(m_bar, &PlayerBar::next, m_pc, &PlaybackController::next);
     connect(m_bar, &PlayerBar::previous, m_pc, &PlaybackController::previous);
     connect(m_bar, &PlayerBar::seekRequested, m_pc, &PlaybackController::seek);
+    connect(m_bar, &PlayerBar::lookupRequested, this, &MainWindow::showLookupMenu);
+    connect(m_np, &NowPlayingPanel::lookupRequested, this, &MainWindow::showLookupMenu);
     connect(m_bar, &PlayerBar::volumeChanged, m_pc, &PlaybackController::setVolume);
     connect(m_bar, &PlayerBar::shuffleToggled, m_pc, &PlaybackController::setShuffle);
     connect(m_bar, &PlayerBar::repeatClicked, this, [this] {
@@ -269,7 +276,13 @@ MainWindow::MainWindow(Library *lib, PlaybackController *pc, Stations *stations,
                                           this, SLOT(onPortalSetting(QString, QString, QDBusVariant)));
 #endif
     m_notifier = new Notifier(this);
-    m_discord = new DiscordPresence(m_pc, m_lib, m_stations, this);
+    m_covers = new CoverLookup(this);
+    connect(m_covers, &CoverLookup::imageReady, this, &MainWindow::onRadioCover);
+    connect(m_covers, &CoverLookup::found, this, [this] {
+        if (m_pc->mode() == PlaybackController::Mode::Radio)
+            updateNowPlaying(); // the song on air may be the one just looked up
+    });
+    m_discord = new DiscordPresence(m_pc, m_lib, m_stations, m_covers, this);
     m_plugins = new PluginHost(m_pc, m_lib, m_stations, this);
     m_plugins->notifyHook = [this](const QString &summary, const QString &body) {
         if (m_notifier)
@@ -909,6 +922,16 @@ void MainWindow::deletePlaylist(const QString &name)
     m_lib->deletePlaylist(name);
 }
 
+// The equalizer's 10 gains as saved (all 0 if never set), whether it's on or not.
+QVector<double> MainWindow::eqSettings() const
+{
+    const QStringList parts = QSettings(paths::configFile(), QSettings::IniFormat).value(QStringLiteral("playback/eqGains")).toString().split(QLatin1Char(','));
+    QVector<double> g(10, 0.0);
+    for (int i = 0; i < 10 && i < parts.size(); ++i)
+        g[i] = qBound(-12.0, parts[i].toDouble(), 12.0);
+    return g;
+}
+
 void MainWindow::rebuildNavigator()
 {
     m_nav->clear();
@@ -1236,6 +1259,7 @@ void MainWindow::onTrackChanged(qint64 id)
         }
     } else if (id == 0) {
         m_logoKey.clear();
+        m_radioCoverUrl.clear();
         m_coverFor = 0;
         m_coverImage = QImage();
         ++m_artToken;
@@ -1303,6 +1327,113 @@ QString MainWindow::techLine() const
     return {};
 }
 
+// Clicking the title or artist of what's playing: copy it, find it in the library, or
+// look it up on the web. Just links, no accounts.
+void MainWindow::showLookupMenu(bool artistClicked, const QPoint &at)
+{
+    QString artist, title;
+    if (m_pc->mode() == PlaybackController::Mode::Library) {
+        if (const Track *t = m_lib->byId(m_pc->currentTrackId())) {
+            artist = t->artist;
+            title = t->displayTitle();
+        }
+    } else if (m_pc->mode() == PlaybackController::Mode::Radio) {
+        const QString station = m_pc->stationName().isEmpty() ? m_pc->stationUrl().host() : m_pc->stationName();
+        const QString st = m_pc->streamTitle();
+        QString a, t;
+        if (nowplaying::splitStreamTitle(st, &a, &t) && nowplaying::looksLikeSong(a, t, station)) {
+            artist = a;
+            title = t;
+        } else {
+            title = st.isEmpty() ? station : st; // the station talking about itself
+        }
+        artistClicked = false; // on the radio, the second line is the station
+    }
+    if (artist.isEmpty() && title.isEmpty())
+        return;
+    const bool forArtist = artistClicked && !artist.isEmpty();
+    const QString shown = forArtist ? artist : (artist.isEmpty() ? title : artist + QStringLiteral(" - ") + title);
+    const QString q = forArtist ? artist : (artist.isEmpty() ? title : artist + QLatin1Char(' ') + title);
+
+    auto withQuery = [](const QString &base, const QString &key, const QString &value, const QStringList &extra = {}) {
+        QUrl u(base);
+        QUrlQuery qq;
+        qq.addQueryItem(key, value);
+        for (int i = 0; i + 1 < extra.size(); i += 2)
+            qq.addQueryItem(extra[i], extra[i + 1]);
+        u.setQuery(qq);
+        return u;
+    };
+    auto lastfmPart = [](const QString &x) { // Last.fm paths use + for spaces
+        return QString::fromLatin1(QUrl::toPercentEncoding(x).replace("%20", "+"));
+    };
+    QString wikiLang = i18n::current().section(QLatin1Char('_'), 0, 0);
+    if (wikiLang.isEmpty())
+        wikiLang = QStringLiteral("en");
+
+    QMenu menu(this);
+    QAction *head = menu.addAction(shown);
+    head->setEnabled(false);
+    menu.addSeparator();
+    menu.addAction(tr("Copy"), this, [shown] { QGuiApplication::clipboard()->setText(shown); });
+    menu.addAction(Icons::icon(Icons::Search), tr("Find in the library"), this, [this, forArtist, artist, title] {
+        switchView(View::Library);
+        m_search->setText(forArtist ? artist : title);
+        m_search->setFocus();
+    });
+    menu.addSeparator();
+    auto site = [&menu, this](const QString &name, const QUrl &url) {
+        menu.addAction(name, this, [url] { QDesktopServices::openUrl(url); });
+    };
+    if (forArtist)
+        site(QStringLiteral("MusicBrainz"), withQuery(QStringLiteral("https://musicbrainz.org/search"), QStringLiteral("query"), artist,
+                                                      {QStringLiteral("type"), QStringLiteral("artist")}));
+    else
+        site(QStringLiteral("MusicBrainz"),
+             withQuery(QStringLiteral("https://musicbrainz.org/search"), QStringLiteral("query"),
+                       artist.isEmpty() ? title : QStringLiteral("recording:\"%1\" AND artist:\"%2\"").arg(title, artist),
+                       {QStringLiteral("type"), QStringLiteral("recording"), QStringLiteral("method"), QStringLiteral("advanced")}));
+    if (!artist.isEmpty())
+        site(QStringLiteral("Last.fm"), QUrl::fromEncoded(("https://www.last.fm/music/" + lastfmPart(artist) +
+                                                           (forArtist ? QString() : QStringLiteral("/_/") + lastfmPart(title)))
+                                                              .toLatin1()));
+    else
+        site(QStringLiteral("Last.fm"), withQuery(QStringLiteral("https://www.last.fm/search"), QStringLiteral("q"), q));
+    site(QStringLiteral("Discogs"), withQuery(QStringLiteral("https://www.discogs.com/search/"), QStringLiteral("q"), q,
+                                              {QStringLiteral("type"), forArtist ? QStringLiteral("artist") : QStringLiteral("all")}));
+    site(tr("Genius (lyrics)"), withQuery(QStringLiteral("https://genius.com/search"), QStringLiteral("q"), q));
+    site(QStringLiteral("YouTube"), withQuery(QStringLiteral("https://www.youtube.com/results"), QStringLiteral("search_query"), q));
+    site(QStringLiteral("Wikipedia"),
+         withQuery(QStringLiteral("https://%1.wikipedia.org/w/index.php").arg(wikiLang), QStringLiteral("search"), q));
+    menu.exec(at);
+}
+
+void MainWindow::showStationLogo()
+{
+    const QString path = m_stations->logoPathForUrl(m_pc->stationUrl().toString());
+    const QImage logo = path.isEmpty() ? QImage() : QImage(path);
+    m_np->setLogo(logo);
+    m_bar->setLogo(logo);
+    if (m_mpris)
+        m_mpris->setArtFile(path);
+}
+
+void MainWindow::onRadioCover(const QString &url, const QImage &img)
+{
+    if (m_pc->mode() != PlaybackController::Mode::Radio || url != m_radioCoverUrl || img.isNull())
+        return;
+    const QString path = m_stations->logoPathForUrl(m_pc->stationUrl().toString());
+    m_np->setCoverWithBadge(img, path.isEmpty() ? QImage() : QImage(path));
+    m_bar->setCover(img.scaled(112, 112, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation), Icons::Radio);
+    if (m_mpris && m_mpris->isRegistered()) {
+        const QString dir = QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation);
+        const QString file = (dir.isEmpty() ? QDir::tempPath() : dir) +
+                             QStringLiteral("/ruche-radio-cover-%1.jpg").arg(QCoreApplication::applicationPid());
+        img.scaled(256, 256, Qt::KeepAspectRatio, Qt::SmoothTransformation).save(file, "JPG", 88);
+        m_mpris->setArtFile(file);
+    }
+}
+
 void MainWindow::updateNowPlaying()
 {
     const auto mode = m_pc->mode();
@@ -1323,14 +1454,25 @@ void MainWindow::updateNowPlaying()
         const QString kind = m_pc->streamIsHls() ? tr("Live  ·  HLS") : tr("Live stream");
         m_np->setInfo(title.isEmpty() ? station : title, title.isEmpty() ? QString() : station, kind, techLine());
         const QString key = m_pc->stationUrl().toString();
+        // The song on air gets its own cover when one is found; otherwise (and for jingles,
+        // ads, talk) the station's logo.
+        QString coverUrl;
+        if (m_radioCovers) {
+            QString artist, song;
+            if (nowplaying::splitStreamTitle(title, &artist, &song) && nowplaying::looksLikeSong(artist, song, station))
+                coverUrl = m_covers->url(artist, QString(), song);
+        }
         if (key != m_logoKey) {
             m_logoKey = key;
-            const QString path = m_stations->logoPathForUrl(key);
-            const QImage logo = path.isEmpty() ? QImage() : QImage(path);
-            m_np->setLogo(logo);
-            m_bar->setLogo(logo);
-            if (m_mpris)
-                m_mpris->setArtFile(path);
+            m_radioCoverUrl.clear();
+            showStationLogo();
+        }
+        if (coverUrl != m_radioCoverUrl) {
+            m_radioCoverUrl = coverUrl;
+            if (coverUrl.isEmpty())
+                showStationLogo();
+            else
+                m_covers->fetchImage(coverUrl); // shown by onRadioCover()
         }
         m_bar->setTrack(title.isEmpty() ? station : title, title.isEmpty() ? tr("Connecting…") : station);
         setWindowTitle(QStringLiteral("%1 · Ruche").arg(title.isEmpty() ? station : title));
@@ -1925,6 +2067,129 @@ void MainWindow::openSettings(const QString &page)
     rg->addItem(tr("Album gain"), QStringLiteral("album"));
     rg->setCurrentIndex(qMax(0, rg->findData(s.value(QStringLiteral("replaygain"), QStringLiteral("no")).toString())));
     pf->addRow(tr("ReplayGain"), rg);
+    auto *radioCovers = new QCheckBox(tr("Show the cover of the song on the radio, looked up on iTunes and MusicBrainz"), playPage);
+    radioCovers->setChecked(m_radioCovers);
+    radioCovers->setToolTip(tr("The station's logo stays in the corner. Off: the station's logo only."));
+    pf->addRow(tr("Radio"), radioCovers);
+
+    // Equalizer: off until ticked; moving a slider is heard straight away
+    struct EqPreset { QString name; QVector<double> g; };
+    const QVector<EqPreset> eqPresets = {
+        {tr("Flat"), {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}},
+        {tr("Bass boost"), {6, 5, 4, 2, 0, 0, 0, 0, 0, 0}},
+        {tr("Treble boost"), {0, 0, 0, 0, 0, 1, 2, 4, 5, 6}},
+        {tr("Vocal"), {-2, -2, -1, 1, 3, 3, 2, 1, 0, -1}},
+        {tr("Rock"), {4, 3, 2, 0, -1, -1, 0, 2, 3, 4}},
+        {tr("Electronic"), {5, 4, 1, 0, -2, 0, 1, 3, 4, 4}},
+        {tr("Classical"), {3, 2, 1, 0, 0, 0, -1, -1, 1, 2}},
+        {tr("Quiet listening"), {5, 3, 0, 0, -1, 0, 0, 0, 3, 4}},
+    };
+    auto *eqSep = new QLabel(tr("Equalizer"), playPage);
+    eqSep->setObjectName(QStringLiteral("sectionLabel"));
+    pf->addRow(eqSep);
+    auto *eqOn = new QCheckBox(tr("Use the equalizer"), playPage);
+    eqOn->setChecked(s.value(QStringLiteral("playback/eqOn"), false).toBool());
+    auto *eqPreset = new QComboBox(playPage);
+    for (const EqPreset &p : eqPresets)
+        eqPreset->addItem(p.name);
+    eqPreset->addItem(tr("Custom"));
+    auto *eqTop = new QHBoxLayout;
+    eqTop->addWidget(eqOn);
+    eqTop->addStretch();
+    eqTop->addWidget(eqPreset);
+    pf->addRow(eqTop);
+    auto *eqBands = new QWidget(playPage);
+    auto *eqGrid = new QGridLayout(eqBands);
+    eqGrid->setContentsMargins(0, 0, 0, 0);
+    const QStringList freqs = {QStringLiteral("31"), QStringLiteral("62"), QStringLiteral("125"), QStringLiteral("250"),
+                               QStringLiteral("500"), QStringLiteral("1k"), QStringLiteral("2k"), QStringLiteral("4k"),
+                               QStringLiteral("8k"), QStringLiteral("16k")};
+    QVector<QSlider *> eqSliders;
+    QVector<QLabel *> eqValues;
+    const QVector<double> savedEq = eqSettings();
+    for (int i = 0; i < 10; ++i) {
+        auto *value = new QLabel(eqBands);
+        value->setObjectName(QStringLiteral("hint"));
+        value->setAlignment(Qt::AlignCenter);
+        auto *sl = new QSlider(Qt::Vertical, eqBands);
+        sl->setRange(-12, 12);
+        sl->setPageStep(3);
+        sl->setFixedHeight(120);
+        sl->setValue(qRound(savedEq.value(i)));
+        auto *f = new QLabel(freqs[i], eqBands);
+        f->setObjectName(QStringLiteral("hint"));
+        f->setAlignment(Qt::AlignCenter);
+        eqGrid->addWidget(value, 0, i, Qt::AlignHCenter);
+        eqGrid->addWidget(sl, 1, i, Qt::AlignHCenter);
+        eqGrid->addWidget(f, 2, i, Qt::AlignHCenter);
+        eqSliders << sl;
+        eqValues << value;
+    }
+    pf->addRow(eqBands);
+    auto currentEq = [eqSliders] {
+        QVector<double> g;
+        for (QSlider *sl : eqSliders)
+            g << sl->value();
+        return g;
+    };
+    auto syncEq = [=] {
+        const QVector<double> g = currentEq();
+        for (int i = 0; i < 10; ++i)
+            eqValues[i]->setText(g[i] > 0 ? QStringLiteral("+%1").arg(g[i]) : QString::number(g[i]));
+        int match = int(eqPresets.size()); // "Custom"
+        for (int p = 0; p < eqPresets.size(); ++p)
+            if (eqPresets[p].g == g)
+                match = p;
+        QSignalBlocker block(eqPreset);
+        eqPreset->setCurrentIndex(match);
+        eqBands->setEnabled(eqOn->isChecked());
+        eqPreset->setEnabled(eqOn->isChecked());
+        m_pc->setEqualizer(eqOn->isChecked() ? g : QVector<double>()); // heard while the dialog is open
+    };
+    for (QSlider *sl : eqSliders)
+        connect(sl, &QSlider::valueChanged, &d, syncEq);
+    connect(eqOn, &QCheckBox::toggled, &d, syncEq);
+    connect(eqPreset, &QComboBox::activated, &d, [=](int p) {
+        if (p < 0 || p >= eqPresets.size())
+            return;
+        for (int i = 0; i < 10; ++i) {
+            QSignalBlocker block(eqSliders[i]);
+            eqSliders[i]->setValue(int(eqPresets[p].g[i]));
+        }
+        syncEq();
+    });
+    syncEq();
+
+    // Crossfade: off until ticked
+    auto *xfSep = new QLabel(tr("Crossfade"), playPage);
+    xfSep->setObjectName(QStringLiteral("sectionLabel"));
+    pf->addRow(xfSep);
+    auto *xfOn = new QCheckBox(tr("Fade from one track into the next"), playPage);
+    xfOn->setChecked(s.value(QStringLiteral("playback/crossfade"), false).toBool());
+    auto *xfSecs = new QSpinBox(playPage);
+    xfSecs->setRange(1, 12);
+    xfSecs->setSuffix(tr(" s"));
+    xfSecs->setValue(s.value(QStringLiteral("playback/crossfadeSecs"), 4).toInt());
+    auto *xfTop = new QHBoxLayout;
+    xfTop->addWidget(xfOn);
+    xfTop->addStretch();
+    xfTop->addWidget(xfSecs);
+    pf->addRow(xfTop);
+    auto *xfAlbum = new QCheckBox(tr("Also between tracks that follow each other on an album"), playPage);
+    xfAlbum->setChecked(s.value(QStringLiteral("playback/crossfadeAlbums"), false).toBool());
+    pf->addRow(xfAlbum);
+    auto *xfHint = new QLabel(tr("Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. "
+                                 "Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked."),
+                              playPage);
+    xfHint->setObjectName(QStringLiteral("hint"));
+    xfHint->setWordWrap(true);
+    pf->addRow(xfHint);
+    auto syncXf = [=] {
+        xfSecs->setEnabled(xfOn->isChecked());
+        xfAlbum->setEnabled(xfOn->isChecked());
+    };
+    connect(xfOn, &QCheckBox::toggled, &d, syncXf);
+    syncXf();
     tabs->addTab(playPage, tr("Playback"));
 
     // --- Appearance: changes show at once; Cancel puts the old look back.
@@ -2393,9 +2658,30 @@ void MainWindow::openSettings(const QString &page)
     s.setValue(QStringLiteral("window/settingsTab"), tabs->currentIndex());
     if (!ok) {
         applyTheme(before);
+        m_pc->setEqualizer(s.value(QStringLiteral("playback/eqOn"), false).toBool() ? eqSettings() : QVector<double>());
         return;
     }
     Theme::saveChoice(*choice);
+    {
+        QStringList g;
+        for (double v : currentEq())
+            g << QString::number(v);
+        s.setValue(QStringLiteral("playback/eqOn"), eqOn->isChecked());
+        s.setValue(QStringLiteral("playback/eqGains"), g.join(QLatin1Char(',')));
+        s.setValue(QStringLiteral("radio/covers"), radioCovers->isChecked());
+        if (radioCovers->isChecked() != m_radioCovers) {
+            m_radioCovers = radioCovers->isChecked();
+            m_radioCoverUrl.clear();
+            if (m_pc->mode() == PlaybackController::Mode::Radio) {
+                showStationLogo();
+                updateNowPlaying();
+            }
+        }
+        s.setValue(QStringLiteral("playback/crossfade"), xfOn->isChecked());
+        s.setValue(QStringLiteral("playback/crossfadeSecs"), xfSecs->value());
+        s.setValue(QStringLiteral("playback/crossfadeAlbums"), xfAlbum->isChecked());
+        m_pc->setCrossfade(xfOn->isChecked(), xfSecs->value(), xfAlbum->isChecked());
+    }
     s.setValue(QStringLiteral("updates/onStartup"), updBox->isChecked());
     s.setValue(QStringLiteral("library/confirmCloseTab"), confirmClose->isChecked());
     if (lang->currentData().toString() != langBefore) {
@@ -2527,6 +2813,64 @@ void MainWindow::importPlaylistFile(const QString &file)
     flash(tr("Imported playlist “%1”").arg(name));
 }
 
+// Audio files, and the audio inside folders (sorted), as tracks: library tracks when they
+// are in the library, otherwise tracks Ruche reads on the spot. Playlist files are skipped.
+QVector<qint64> MainWindow::tracksFromPaths(const QStringList &pathsIn)
+{
+    QVector<qint64> ids;
+    for (const QString &p : pathsIn) {
+        const QFileInfo fi(p);
+        if (fi.isDir()) {
+            QStringList files;
+            QDirIterator it(fi.absoluteFilePath(), QDir::Files, QDirIterator::Subdirectories);
+            while (it.hasNext()) {
+                const QString f = it.next();
+                if (isAudioFile(f))
+                    files << f;
+            }
+            const QCollator coll = makeCollator();
+            std::sort(files.begin(), files.end(), [&coll](const QString &a, const QString &b) { return coll.compare(a, b) < 0; });
+            for (const QString &f : files)
+                ids << m_lib->addExternal(f);
+        } else if (fi.exists() && isAudioFile(fi.fileName())) {
+            ids << m_lib->addExternal(fi.absoluteFilePath());
+        }
+    }
+    return ids;
+}
+
+// Tracks carried by a drag: rows from Ruche's own list, or files from a file manager.
+QVector<qint64> MainWindow::tracksFromDrop(const QMimeData *m)
+{
+    if (m->hasFormat(QString::fromLatin1(TrackTableModel::kIdsMime)))
+        return TrackTableModel::idsFromMime(m);
+    QStringList files;
+    for (const QUrl &u : m->urls())
+        if (u.isLocalFile())
+            files << u.toLocalFile();
+    return tracksFromPaths(files);
+}
+
+static bool dragHasTracks(const QMimeData *m)
+{
+    if (m->hasFormat(QString::fromLatin1(TrackTableModel::kIdsMime)))
+        return true;
+    for (const QUrl &u : m->urls())
+        if (u.isLocalFile())
+            return true;
+    return false;
+}
+
+void MainWindow::addToPlaylist(const QString &name, const QVector<qint64> &ids)
+{
+    if (ids.isEmpty()) // nothing playable came along (a picture, a text file…)
+        return;
+    m_lib->appendToPlaylist(name, ids);
+    flash(tr("Added %1 to “%2”").arg(countOf(ids.size(), tr("track"), tr("tracks")), name));
+    if (m_view == View::Playlist && m_playlist == name)
+        switchView(View::Playlist, name);
+}
+
 void MainWindow::openFiles(const QStringList &pathsIn, bool play)
 {
     QVector<qint64> ids;
@@ -2609,11 +2953,12 @@ void MainWindow::openArguments(const QStringList &args)
 bool MainWindow::navDropEvent(QEvent *ev)
 {
     auto *de = static_cast<QDropEvent *>(ev);
-    if (!de->mimeData()->hasFormat(QString::fromLatin1(TrackTableModel::kIdsMime)))
+    if (!dragHasTracks(de->mimeData()))
         return false;
     QTreeWidgetItem *it = m_nav->itemAt(de->position().toPoint());
     const QString kind = it ? it->data(0, NavKind).toString() : QString();
-    const bool target = kind == QLatin1String("playlist") || kind == QLatin1String("newplaylist");
+    const bool target = kind == QLatin1String("playlist") || kind == QLatin1String("newplaylist") ||
+                        kind == QLatin1String("queue");
     if (ev->type() == QEvent::DragEnter) {
         de->acceptProposedAction(); // keep receiving moves; the target is decided per position
         return true;
@@ -2628,21 +2973,23 @@ bool MainWindow::navDropEvent(QEvent *ev)
         return true;
     }
     // Drop
-    const QVector<qint64> ids = TrackTableModel::idsFromMime(de->mimeData());
-    if (target && !ids.isEmpty()) {
-        de->acceptProposedAction();
-        QString name = it->data(0, NavName).toString();
-        if (kind == QLatin1String("newplaylist")) {
-            name = askPlaylistName(tr("New playlist"));
-            if (name.isEmpty()) {
-                rebuildNavigator();
-                return true;
-            }
+    if (!target) {
+        rebuildNavigator();
+        return true;
+    }
+    de->acceptProposedAction();
+    const QVector<qint64> ids = tracksFromDrop(de->mimeData());
+    if (kind == QLatin1String("queue")) {
+        if (!ids.isEmpty()) {
+            m_pc->enqueue(ids);
+            flash(tr("Added %1 to “%2”").arg(countOf(ids.size(), tr("track"), tr("tracks")), tr("Now Playing")));
         }
-        m_lib->appendToPlaylist(name, ids);
-        flash(tr("Added %1 to “%2”").arg(countOf(ids.size(), tr("track"), tr("tracks")), name));
-        if (m_view == View::Playlist && m_playlist == name)
-            switchView(View::Playlist, name);
+    } else {
+        QString name = it->data(0, NavName).toString();
+        if (kind == QLatin1String("newplaylist") && !ids.isEmpty())
+            name = askPlaylistName(tr("New playlist"));
+        if (!name.isEmpty())
+            addToPlaylist(name, ids);
     }
     rebuildNavigator();
     return true;
@@ -2692,8 +3039,14 @@ void MainWindow::dropEvent(QDropEvent *e)
             switchView(View::Radio);
         }
     }
-    if (!files.isEmpty())
-        openFiles(files, false);
+    if (files.isEmpty())
+        return;
+    if (m_view == View::Playlist && !m_playlist.isEmpty()) { // dropped onto an open playlist: into it
+        e->acceptProposedAction();
+        addToPlaylist(m_playlist, tracksFromPaths(files));
+        return;
+    }
+    openFiles(files, false);
 }
 
 void MainWindow::flash(const QString &text)
@@ -2732,6 +3085,11 @@ void MainWindow::loadSettings()
     m_pc->setShuffle(s.value(QStringLiteral("player/shuffle"), false).toBool());
     m_pc->setRepeat(PlaybackController::Repeat(s.value(QStringLiteral("player/repeat"), 0).toInt()));
     m_pc->setReplayGain(s.value(QStringLiteral("replaygain"), QStringLiteral("no")).toString());
+    m_radioCovers = s.value(QStringLiteral("radio/covers"), true).toBool();
+    m_pc->setEqualizer(s.value(QStringLiteral("playback/eqOn"), false).toBool() ? eqSettings() : QVector<double>());
+    m_pc->setCrossfade(s.value(QStringLiteral("playback/crossfade"), false).toBool(),
+                       s.value(QStringLiteral("playback/crossfadeSecs"), 4).toInt(),
+                       s.value(QStringLiteral("playback/crossfadeAlbums"), false).toBool());
     if (s.value(QStringLiteral("window/closeToTray"), false).toBool())
         setCloseToTray(true, false);
     setNotifyWhen(s.value(QStringLiteral("notify/when"), QStringLiteral("background")).toString(), false);

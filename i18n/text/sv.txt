@@ -345,6 +345,27 @@
 350	Kunde inte packa upp temat.
 351	Välj en .qss-fil, en temamapp eller en .zip.
 352	Tillagd
+353	Kopiera
+354	Sök i biblioteket
+355	Genius (låttexter)
+356	Visa omslaget till låten som spelas på radion, sökt på iTunes och MusicBrainz
+357	Stationens logga stannar i hörnet. Av: bara stationens logga.
+358	Platt
+359	Förstärkt bas
+360	Förstärkt diskant
+361	Sång
+362	Rock
+363	Elektroniskt
+364	Klassiskt
+365	Låg volym
+366	Equalizer
+367	Använd equalizern
+368	Anpassad
+369	Övertoning
+370	Tona över från ett spår till nästa
+371	 s
+372	Även mellan spår som följer varandra på ett album
+373	Bara när ett spår tar slut av sig självt: spår du väljer startar direkt, och radio tonas aldrig över. Album som ska spelas utan pauser (livealbum, DJ-mixar) förblir sömlösa om inte rutan ovan är ikryssad.
 qt:OK	OK
 qt:Cancel	Avbryt
 qt:Close	Stäng

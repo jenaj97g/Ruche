@@ -345,3 +345,24 @@
 350	Nem sikerült a témát kicsomagolni.
 351	Válasszon egy .qss fájlt, egy témamappát vagy egy .zip fájlt.
 352	Hozzáadva
+353	Másolás
+354	Keresés a könyvtárban
+355	Genius (dalszövegek)
+356	A rádióban szóló dal borítójának megjelenítése, az iTunes és a MusicBrainz alapján
+357	Az adó logója a sarokban marad. Kikapcsolva: csak az adó logója.
+358	Sima
+359	Mélyek kiemelése
+360	Magasak kiemelése
+361	Ének
+362	Rock
+363	Elektronikus
+364	Klasszikus
+365	Halk hallgatás
+366	Hangszínszabályzó
+367	Hangszínszabályzó használata
+368	Egyéni
+369	Áttűnés
+370	Áttűnés egyik számból a következőbe
+371	 mp
+372	Akkor is, ha a számok egy albumon követik egymást
+373	Csak akkor, ha egy szám magától ér véget: a kiválasztott számok azonnal indulnak, a rádiónál pedig sosincs áttűnés. A szünet nélküli lejátszásra szánt albumok (koncertlemezek, DJ-mixek) szünet nélkül szólnak, hacsak nincs bejelölve a fenti négyzet.

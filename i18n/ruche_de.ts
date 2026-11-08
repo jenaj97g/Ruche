@@ -1032,6 +1032,90 @@ Die Dateien selbst bleiben, wo sie sind; wenn Sie die Ordner wieder hinzufügen,
         <source>Don't ask again</source>
         <translation>Nicht mehr fragen</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>Kopieren</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>In der Bibliothek suchen</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (Songtexte)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>Cover des Titels im Radio zeigen, gesucht bei iTunes und MusicBrainz</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>Das Senderlogo bleibt in der Ecke. Aus: nur das Senderlogo.</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>Linear</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>Bass verstärkt</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>Höhen verstärkt</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>Gesang</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>Rock</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>Elektronisch</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>Klassik</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>Leise hören</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>Equalizer</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>Equalizer verwenden</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>Eigene</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>Überblenden</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>Von einem Titel in den nächsten überblenden</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> s</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>Auch zwischen aufeinanderfolgenden Titeln eines Albums</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>Nur wenn ein Titel von selbst endet: Titel, die Sie auswählen, starten sofort, und Radio wird nie überblendet. Alben, die ohne Pausen laufen sollen (Live-Alben, DJ-Mixe), bleiben lückenlos, außer das Kästchen oben ist angehakt.</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

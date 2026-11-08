@@ -345,3 +345,24 @@
 350	No se pudo descomprimir el tema.
 351	Elige un archivo .qss, una carpeta de tema o un .zip.
 352	Añadida
+353	Copiar
+354	Buscar en la biblioteca
+355	Genius (letras)
+356	Mostrar la carátula de la canción que suena en la radio, buscada en iTunes y MusicBrainz
+357	El logo de la emisora queda en la esquina. Desactivado: solo el logo de la emisora.
+358	Plano
+359	Graves realzados
+360	Agudos realzados
+361	Voz
+362	Rock
+363	Electrónica
+364	Clásica
+365	Volumen bajo
+366	Ecualizador
+367	Usar el ecualizador
+368	Personalizado
+369	Fundido
+370	Fundir una canción con la siguiente
+371	 s
+372	También entre canciones seguidas de un mismo álbum
+373	Solo cuando una canción termina sola: las que eliges empiezan al momento y la radio nunca se funde. Los álbumes pensados para sonar sin pausas (en directo, sesiones de DJ) siguen sin pausas salvo que marques la casilla de arriba.

@@ -1032,6 +1032,90 @@ The files themselves stay where they are, and adding the folders again brings th
         <source>Don't ask again</source>
         <translation>今後は確認しない</translation>
     </message>
+    <message>
+        <source>Copy</source>
+        <translation>コピー</translation>
+    </message>
+    <message>
+        <source>Find in the library</source>
+        <translation>ライブラリで探す</translation>
+    </message>
+    <message>
+        <source>Genius (lyrics)</source>
+        <translation>Genius (歌詞)</translation>
+    </message>
+    <message>
+        <source>Show the cover of the song on the radio, looked up on iTunes and MusicBrainz</source>
+        <translation>ラジオで流れている曲のカバーを表示する (iTunes と MusicBrainz で検索)</translation>
+    </message>
+    <message>
+        <source>The station's logo stays in the corner. Off: the station's logo only.</source>
+        <translation>局のロゴは隅に表示されます。オフ: 局のロゴのみ。</translation>
+    </message>
+    <message>
+        <source>Flat</source>
+        <translation>フラット</translation>
+    </message>
+    <message>
+        <source>Bass boost</source>
+        <translation>低音強調</translation>
+    </message>
+    <message>
+        <source>Treble boost</source>
+        <translation>高音強調</translation>
+    </message>
+    <message>
+        <source>Vocal</source>
+        <translation>ボーカル</translation>
+    </message>
+    <message>
+        <source>Rock</source>
+        <translation>ロック</translation>
+    </message>
+    <message>
+        <source>Electronic</source>
+        <translation>エレクトロニック</translation>
+    </message>
+    <message>
+        <source>Classical</source>
+        <translation>クラシック</translation>
+    </message>
+    <message>
+        <source>Quiet listening</source>
+        <translation>小音量</translation>
+    </message>
+    <message>
+        <source>Equalizer</source>
+        <translation>イコライザー</translation>
+    </message>
+    <message>
+        <source>Use the equalizer</source>
+        <translation>イコライザーを使う</translation>
+    </message>
+    <message>
+        <source>Custom</source>
+        <translation>カスタム</translation>
+    </message>
+    <message>
+        <source>Crossfade</source>
+        <translation>クロスフェード</translation>
+    </message>
+    <message>
+        <source>Fade from one track into the next</source>
+        <translation>曲から次の曲へクロスフェードする</translation>
+    </message>
+    <message>
+        <source> s</source>
+        <translation> 秒</translation>
+    </message>
+    <message>
+        <source>Also between tracks that follow each other on an album</source>
+        <translation>アルバム内で続く曲の間でもクロスフェードする</translation>
+    </message>
+    <message>
+        <source>Only when a track ends on its own: tracks you pick start straight away, and radio is never faded. Albums meant to play without gaps (live albums, DJ mixes) stay gapless unless the box above is ticked.</source>
+        <translation>曲が最後まで再生されたときだけ有効です。自分で選んだ曲はすぐに始まり、ラジオではクロスフェードしません。曲間なしで聴くためのアルバム (ライブ盤、DJ ミックス) は、上のチェックボックスをオンにしない限り曲間なしのままです。</translation>
+    </message>
 </context>
 <context>
     <name>Notifier</name>

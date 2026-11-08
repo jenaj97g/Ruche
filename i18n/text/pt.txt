@@ -345,6 +345,27 @@
 350	Não foi possível descompactar o tema.
 351	Escolha um ficheiro .qss, uma pasta de tema ou um .zip.
 352	Adicionada
+353	Copiar
+354	Procurar na biblioteca
+355	Genius (letras)
+356	Mostrar a capa da faixa que está a tocar na rádio, procurada no iTunes e no MusicBrainz
+357	O logótipo da estação fica no canto. Desligado: só o logótipo da estação.
+358	Plano
+359	Graves reforçados
+360	Agudos reforçados
+361	Voz
+362	Rock
+363	Eletrónica
+364	Clássica
+365	Volume baixo
+366	Equalizador
+367	Usar o equalizador
+368	Personalizado
+369	Transição
+370	Fazer a transição gradual entre faixas
+371	 s
+372	Também entre faixas seguidas de um álbum
+373	Só quando uma faixa acaba sozinha: as que escolhe começam logo, e a rádio nunca tem transição. Os álbuns feitos para tocar sem pausas (ao vivo, mixes de DJ) continuam sem pausas, a não ser que marque a caixa acima.
 qt:OK	OK
 qt:Cancel	Cancelar
 qt:Close	Fechar

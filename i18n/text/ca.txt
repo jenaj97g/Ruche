@@ -345,3 +345,24 @@
 350	No s’ha pogut descomprimir el tema.
 351	Trieu un fitxer .qss, una carpeta de tema o un .zip.
 352	Afegida
+353	Copia
+354	Cerca a la biblioteca
+355	Genius (lletres)
+356	Mostra la caràtula de la cançó que sona a la ràdio, cercada a iTunes i MusicBrainz
+357	El logotip de l’emissora queda a la cantonada. Desactivat: només el logotip de l’emissora.
+358	Pla
+359	Greus reforçats
+360	Aguts reforçats
+361	Veu
+362	Rock
+363	Electrònica
+364	Clàssica
+365	Volum baix
+366	Equalitzador
+367	Fes servir l’equalitzador
+368	Personalitzat
+369	Fos encadenat
+370	Fon una cançó amb la següent
+371	 s
+372	També entre cançons seguides d’un mateix àlbum
+373	Només quan una cançó acaba sola: les que trieu comencen de seguida, i la ràdio no es fon mai. Els àlbums fets per sonar sense pauses (en directe, sessions de DJ) continuen sense pauses llevat que marqueu la casella de dalt.

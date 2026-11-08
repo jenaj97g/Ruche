@@ -103,7 +103,7 @@ if [ ! -f "$PREFIX/lib/libavcodec.a" ]; then
     --enable-demuxer=mp3,aac,flac,ogg,mov,matroska,wav,w64,aiff,ape,wv,asf,mpc,mpc8,tta,hls,mpegts,ac3,eac3,dts,caf,dsf,loas,truehd,mlp,tak,shorten \
     --enable-parser=aac,aac_latm,ac3,flac,mpegaudio,opus,vorbis,dca,mlp,tak \
     --enable-protocol=file,http,https,httpproxy,tcp,tls,hls,crypto,data,pipe \
-    --enable-filter=abuffer,abuffersink,aformat,anull,aresample,volume,buffer,buffersink,format,null,scale \
+    --enable-filter=abuffer,abuffersink,aformat,anull,aresample,volume,equalizer,buffer,buffersink,format,null,scale \
     --enable-bsf=null >/dev/null
   make -j"$JOBS" >/dev/null && make install >/dev/null
 fi

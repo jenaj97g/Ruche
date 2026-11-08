@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(ruche VERSION 0.1.7 LANGUAGES C CXX)
+project(ruche VERSION 0.1.9 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -59,6 +59,7 @@ set(RUCHE_SOURCES
   src/Theme.cpp
   src/ThemeFiles.cpp
   src/CrashLog.cpp
+  src/CoverLookup.cpp
   src/Stations.cpp
   src/Logo.cpp
   src/Mpris.cpp

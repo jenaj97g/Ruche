@@ -8,16 +8,35 @@
 #include <QNetworkAccessManager>
 #include <QRandomGenerator>
 #include <algorithm>
+#include <cmath>
 
 PlaybackController::PlaybackController(Library *lib, const QStringList &mpvOptions, QObject *parent)
     : QObject(parent), m_lib(lib), m_player(new Player(mpvOptions, this)), m_nam(new QNetworkAccessManager(this)),
-      m_proxy(new HlsProxy(m_nam, this)), m_resolver(new StreamResolver(m_nam, this))
+      m_proxy(new HlsProxy(m_nam, this)), m_resolver(new StreamResolver(m_nam, this)), m_mpvOptions(mpvOptions)
 {
+    m_fade.setInterval(40);
+    connect(&m_fade, &QTimer::timeout, this, &PlaybackController::fadeStep);
+    m_tailWait.setInterval(5);
+    connect(&m_tailWait, &QTimer::timeout, this, [this] {
+        // start the tail exactly where the main player has got to, so the outgoing track
+        // carries on seamlessly in it
+        if (m_tailReady && m_player->position() >= m_tailStart - 0.01) {
+            m_tailWait.stop();
+            beginFade();
+        }
+    });
+    m_tailGuard.setSingleShot(true);
+    connect(&m_tailGuard, &QTimer::timeout, this, [this] {
+        if (!m_fading)
+            endCrossfade(); // the tail never got going: let the track end as usual
+    });
     m_nam->setAutoDeleteReplies(false);
     m_tick.setInterval(250);
     connect(&m_tick, &QTimer::timeout, this, [this] {
         if (m_mode == Mode::Radio)
             pollStream();
+        else if (m_mode == Mode::Library)
+            maybeStartCrossfade();
         Q_EMIT positionChanged(position(), duration());
     });
     m_reconnect.setSingleShot(true);
@@ -98,6 +117,7 @@ void PlaybackController::playTracks(const QVector<qint64> &ids, int start)
 
 void PlaybackController::playQueueIndex(int i)
 {
+    endCrossfade();
     if (i < 0 || i >= m_queue.size())
         return;
     const Track *t = m_lib->byId(m_queue[i]);
@@ -338,6 +358,7 @@ void PlaybackController::previous()
 
 void PlaybackController::playStation(const QString &name, const QUrl &url)
 {
+    endCrossfade();
     m_reconnect.stop();
     m_reconnectAttempts = 0;
     m_userStopped = false;
@@ -456,6 +477,7 @@ bool PlaybackController::isPaused() const { return m_player->isPaused(); }
 
 void PlaybackController::togglePause()
 {
+    endCrossfade(); // pausing mid-fade: the outgoing track is cut, the new one stays
     if (m_mode == Mode::Idle) {
         if (!m_queue.isEmpty())
             playQueueIndex(qMax(0, m_index));
@@ -472,12 +494,14 @@ void PlaybackController::play()
 
 void PlaybackController::pause()
 {
+    endCrossfade();
     if (m_mode != Mode::Idle && !isPaused())
         m_player->setPaused(true);
 }
 
 void PlaybackController::stop()
 {
+    endCrossfade();
     m_userStopped = true;
     m_reconnect.stop();
     m_resolver->cancel();
@@ -492,6 +516,7 @@ void PlaybackController::stop()
 
 void PlaybackController::seek(double seconds)
 {
+    endCrossfade();
     if (m_mode == Mode::Library)
         m_player->seek(seconds);
 }
@@ -499,7 +524,8 @@ void PlaybackController::seek(double seconds)
 void PlaybackController::setVolume(int v)
 {
     m_volume = qBound(0, v, 100);
-    m_player->setVolume(m_volume);
+    if (!m_fading) // mid-fade, the next step picks the new volume up
+        m_player->setVolume(m_volume);
 }
 
 void PlaybackController::setShuffle(bool on)
@@ -518,7 +544,129 @@ void PlaybackController::setRepeat(Repeat r)
     Q_EMIT stateChanged();
 }
 
-void PlaybackController::setReplayGain(const QString &mode) { m_player->setReplayGain(mode); }
+void PlaybackController::setReplayGain(const QString &mode)
+{
+    m_replayGain = mode;
+    m_player->setReplayGain(mode);
+}
+
+void PlaybackController::setEqualizer(const QVector<double> &gains)
+{
+    m_eq = gains;
+    m_player->setEqualizer(gains);
+    if (m_tail)
+        m_tail->setEqualizer(gains);
+}
+
+void PlaybackController::setCrossfade(bool on, int seconds, bool betweenAlbumTracks)
+{
+    m_xfade = on;
+    m_xfadeSecs = qBound(1, seconds, 12);
+    m_xfadeAlbums = betweenAlbumTracks;
+    if (!on)
+        endCrossfade();
+}
+
+// ---------------------------------------------------------------------------
+// Crossfade
+
+bool PlaybackController::crossfadeAllowed(int from, int to) const
+{
+    if (to < 0 || to == from) // repeat-one, or nothing next
+        return false;
+    if (m_xfadeAlbums)
+        return true;
+    const Track *a = m_lib->byId(m_queue.value(from));
+    const Track *b = m_lib->byId(m_queue.value(to));
+    if (!a || !b)
+        return false;
+    // the next track of the same album (live albums, DJ mixes, concept albums) stays gapless
+    const bool sameAlbum = !a->album.isEmpty() && a->album.compare(b->album, Qt::CaseInsensitive) == 0 &&
+                           a->displayAlbumArtist().compare(b->displayAlbumArtist(), Qt::CaseInsensitive) == 0;
+    return !(sameAlbum && b->discNo == a->discNo && b->trackNo == a->trackNo + 1);
+}
+
+void PlaybackController::maybeStartCrossfade()
+{
+    if (!m_xfade || m_tail || isPaused() || m_nextEntry < 0)
+        return;
+    const double dur = m_player->duration();
+    const double left = dur - m_player->position();
+    // the tail needs about half a second to load, so it starts that much before the fade
+    if (dur < m_xfadeSecs * 2 + 2 || left > m_xfadeSecs + 0.6 || left < 1.0)
+        return;
+    if (!crossfadeAllowed(m_index, m_entryIndex.value(m_nextEntry, -1)))
+        return;
+    const Track *t = m_lib->byId(m_queue.value(m_index));
+    if (!t)
+        return;
+    // The tail starts silent, a little ahead of the main player (it needs a moment to load);
+    // once it plays, the main player moves on and the two cross over.
+    m_tail = new Player(m_mpvOptions, this);
+    m_tail->setReplayGain(m_replayGain);
+    m_tail->setEqualizer(m_eq);
+    m_tail->setVolume(0);
+    m_tailStart = m_player->position() + 0.4;
+    m_tailReady = false;
+    m_tail->setStartAt(m_tailStart);
+    connect(m_tail, &Player::playbackRestarted, this, [this] {
+        m_tailReady = true; // loaded, paused at m_tailStart
+    });
+    m_tail->load(t->filePath());
+    m_tail->setPaused(true);
+    m_tailWait.start();
+    m_tailGuard.start(2000);
+}
+
+void PlaybackController::beginFade()
+{
+    if (!m_tail || m_mode != Mode::Library || m_nextEntry < 0) {
+        endCrossfade();
+        return;
+    }
+    m_fading = true;
+    m_tailGuard.stop();
+    m_tail->setPaused(false);
+    if (!qEnvironmentVariableIsEmpty("RUCHE_DEBUG"))
+        qInfo("[crossfade] %d s, from %.2f s before the end; outgoing track carries on at %.3f s (main at %.3f s)",
+              m_xfadeSecs, m_player->duration() - m_player->position(), m_tail->position(), m_player->position());
+    m_tail->setVolume(m_volume);
+    m_player->setVolumeF(0);
+    m_player->playlistNext(); // the usual hand-over to the appended track, a few seconds early
+    m_fadeClock.start();
+    m_fade.start();
+}
+
+void PlaybackController::fadeStep()
+{
+    const double t = m_fadeClock.elapsed() / (m_xfadeSecs * 1000.0);
+    if (t >= 1 || !m_tail) {
+        endCrossfade();
+        return;
+    }
+    // Equal power: sin/cos amplitudes. mpv's volume is cubic, hence the cube roots.
+    constexpr double kQuarter = 1.5707963267948966; // pi / 2
+    const double in = std::sin(t * kQuarter), out = std::cos(t * kQuarter);
+    m_player->setVolumeF(m_volume * std::cbrt(in));
+    m_tail->setVolumeF(m_volume * std::cbrt(out));
+}
+
+void PlaybackController::endCrossfade()
+{
+    m_fade.stop();
+    m_tailGuard.stop();
+    m_tailWait.stop();
+    const bool was = m_fading;
+    m_fading = false;
+    if (m_tail) {
+        m_tail->disconnect(this);
+        m_tail->stop();
+        m_tail->deleteLater();
+        m_tail = nullptr;
+    }
+    if (was)
+        m_player->setVolume(m_volume);
+}
 
 double PlaybackController::position() const { return m_mode == Mode::Idle ? 0 : m_player->position(); }
 double PlaybackController::duration() const { return m_mode == Mode::Library ? m_player->duration() : 0; }
